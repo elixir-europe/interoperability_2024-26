@@ -2,6 +2,8 @@
 title: EIP 24-26
 title_url: /index
 subitems:
+  - title: Portfolio of FAIR-enabling products
+    url: portfolio
   - title: FAIRification Framework
     url: /framework
     subitems:

@@ -39,6 +39,11 @@ defaults:
       path: "pages/resources"
     values:
       sidebar: resources
+  -
+    scope:
+      path: "pages/portfolio"
+    values:
+      sidebar: portfolio
 
 theme_variables:
   # git_host: GitHub
