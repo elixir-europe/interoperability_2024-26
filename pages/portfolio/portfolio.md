@@ -9,8 +9,7 @@ The ELIXIR Interoperability Platform helps people and machines discover, access,
 
 This "portfolio of FAIR-enabling products and services" consists of the [ELIXIR "Recommended Interoperability Resources" (RIRs)](https://elixir-europe.org/platforms/interoperability/rirs), select FAIRsharing collections and the [ELIXIR Research Data Management guidelines and FAQs](https://elixir-europe.org/what-we-offer/guidelines/data-management). It is curated by the Interoperability Platform in collaboration with ELIXIR communities and end users.
 
-## The ELIXIR "Recommended Interoperability Resources" (RIRs)
-
+## From "Recommended Interoperability Resources" to "ELIXIR FAIR-Enabling Resources"
 The ELIXIR Recommended Interoperability Resources (RIRs) are tools and registries that have been selected by a panel of external reviewers and are identified as resources that facilitate the FAIR-supporting activities in scientific research, such as:
 
 - Establishing connections between data (and other) resources
@@ -19,8 +18,6 @@ The ELIXIR Recommended Interoperability Resources (RIRs) are tools and registrie
 - Using interoperability resources to support delivery of FAIR principles
 
 The first round of RIRs were selected in 2018, with further rounds in 2019 and 2023. A total of 21 resources are currently included on the list of RIRs.
-
-### From "Recommended Interoperability Resources" to "ELIXIR FAIR-Enabling Resources"
 
 As our understanding of the FAIR principles and their application evolved, the remit of the RIR portfolio shifted away from its original interoperability focus to a wider "FAIR-enabling" view. To reflect this and other concerns with the RIR selection process, the ELIXIR Interoperability programme of work 2024-2026 included a review and redesign of the RIR process, which resulted in the reimagined "ELIXIR FAIR-Enabling Resources" or ELIXIR FERs.
 
