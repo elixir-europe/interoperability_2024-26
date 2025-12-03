@@ -7,7 +7,7 @@ This page is a **USER GUIDE** to ELIXIR FAIR service portfolio, including FAIRsh
 
 The ELIXIR Interoperability Platform helps people and machines discover, access, integrate and analyse biological data. A big part of this remit includes maintaining an overview of tools, services, resources and standards that help users with making their data more compliant with one or more aspects of FAIR.
 
-This "portfolio of FAIR-enabling products and services" consists of the [ELIXIR "Recommended Interoperability Resources" (RIRs)](https://elixir-europe.org/platforms/interoperability/rirs), select FAIRsharing collections and the [ELIXIR Research Data Management guidelines and FAQs](https://elixir-europe.org/what-we-offer/guidelines/data-management). It is curated by the Interoperability Platform in collaboration with ELIXIR communities and end users.
+This "portfolio of FAIR-enabling products and services" consists of the [ELIXIR "Recommended Interoperability Resources" (RIRs)](https://elixir-europe.org/platforms/interoperability/rirs), select FAIRsharing resources and the [ELIXIR Research Data Management guidelines and FAQs](https://elixir-europe.org/what-we-offer/guidelines/data-management). It is curated by the Interoperability Platform in collaboration with ELIXIR communities and end users.
 
 ## From "Recommended Interoperability Resources" to "ELIXIR FAIR-Enabling Resources"
 The ELIXIR Recommended Interoperability Resources (RIRs) are tools and registries that have been selected by a panel of external reviewers and are identified as resources that facilitate the FAIR-supporting activities in scientific research, such as:
@@ -23,23 +23,29 @@ As our understanding of the FAIR principles and their application evolved, the r
 
 The new ELIXIR FERs benefit from an improved and clearer scope definition, a clear and conscise set of evaluation criteria and a more transparent governance process, from application to review to acceptance and continued re-evaluation. The first round of the new FER process is planned for Q2-2026.
 
-## FAIRsharing Collections
+## Illustrating ELIXIR discipline-specific recommendations
 
-FAIRsharing Collections group together one or more types of resource (standard, database or policy) by domain, project or organisation. In the context of the ELIXIR Interoperability Platform, FAIRsharing worked with representatives from the ELIXIR Biodiversity and Toxicology communities to create FAIRsharing Collections to represent the best practice in their respective domains. Each collection has an associatated report published on Zenodo.
+ELIXIR Communities, focus groups and discipline experts are highly knowledgeable about both ELIXIR- and externally-developed resources that help life science researchers enable FAIR. To supplement the ELIXIR FERs, these groups have been developing informative and educational material that helps place the FERs within the wider setting of global life science resources useful to their research disciplines.
 
-### ELIXIR Toxicology Community
+### FAIRsharing Collections
+
+FAIRsharing collections group together community-relevant resources (standards, databases or policies) by domain, project or organisation. In the context of the ELIXIR Interoperability Platform, FAIRsharing and ELIXIR community representatives are building a comprehensive picture of those resource types for all ELIXIR Communities, creating enriched ELIXIR content and highlighting recommendations from these communities. This picture of discipline-specific resources has the ELIXIR FERs at its central focus. The ELIXIR community collections are discipline-specific, live representations of standards and related databases in FAIRsharing that allow the communities to track their status and maximise their use. FAIRsharing is working with six ELIXIR communities and in discussions with the remaining communities; of these, the ELIXIR Biodiversity and Toxicology communities have already completed their core contributions. They have created FAIRsharing collections and associated automated reports representing and describing the resources that encourage best practices in their respective domains (see links below). The community representatives engaged with this activity are attributed as ELIXIR (and FAIRsharing) [Community Champions](https://fairsharing.org/community_champions), gaining extra privileges to curate ELIXIR-relevant content within FAIRsharing and ensuring they are credited for their efforts via their ORCID profiles.
+
+To further supplement FERs and community FAIRsharing collections, closer ties between RDMkit and FAIRsharing have been developed. Each domain-specific page in RDMkit already had a complete table of cited resources, including cross references to FAIRsharing. In recent updates, FAIRsharing collections are automatically created and maintained from RDMkit "Your domain" pages. The curation of the collections therefore happens directly on RDMkit, by the page authors in collaboration with the RDMkit editorial team. Moving from the educational content in RDMkit to the graph of interconnected standards, databases and policies relevant to that content makes for a more enriched and comprehensive experience for discipline-specific researchers in the life sciences.
+
+#### ELIXIR Toxicology Community
 
 - [Collection page on FAIRsharing](https://doi.org/10.25504/FAIRsharing.f60a10)
 - [Collection report on Zenodo](https://doi.org/10.5281/zenodo.15799783)
 
-### ELIXIR Biodiversity Community
+#### ELIXIR Biodiversity Community
 
 - [Collection page on FAIRsharing](https://doi.org/10.25504/FAIRsharing.8427cb)
 - [Collection report on Zenodo](https://doi.org/10.5281/zenodo.15797609)
 
-## FAIRsharing Factsheets
+### FAIRsharing Factsheets
 
-FAIRsharing publishes a range of educational resources, known as ["Factsheets"](https://fairsharing.org/educational), to educate and guide users not only through FAIRsharing itself but also through the world of FAIR.
+FAIRsharing publishes a range of educational resources, known as ["Factsheets"](https://fairsharing.org/educational), to educate and guide users not only through FAIRsharing itself but also through the world of FAIR. ELIXIR FERs will have a high alignment with FAIR, and each resource can learn more about FAIR and how to improve their visibility and engagement within the wider ecosystem of community resources by referring to the Factsheet appropriate to their stakeholder and resource types. These Factsheets can also be used by FERs as educational resources for the members of their communities, to help them better understand and utilise FAIR and the FERs themselves.
 
 Factsheets that are of particular interest in the context of FAIR-enabling resources include:
 
