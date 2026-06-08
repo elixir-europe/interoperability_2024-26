@@ -7,16 +7,18 @@ subitems:
   - title: FAIRification Framework
     url: /framework
     subitems:
-      - title: FAIRification process
+      - title: Process
         url: /fairification_process
-      - title: Framework comparison & context
-        url: /framework_comparison
+      - title: Template
+        url: /fairification_template
+      - title: Workplan
+        url: /fairification_workplan
   - title: Library of Interoperability stories
     url: /stories
     subitems:
-      - title: Interoperability stories
+      - title: All stories
         url: /interoperability_stories
-      - title: Alignment with the framework
+      - title: Browse by FAIRification Template step
         url: /alignment
   - title: Resources
     url: /resources
