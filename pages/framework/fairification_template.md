@@ -289,3 +289,7 @@ _How the data object and metadata object are represented and formatted_
 </div>
 {% endif %}
 {% endfor %}
+
+# The FAIRification Framework
+{% include image.html file="framework/FAIRificationTemplate.png" caption="The FAIRification Template." alt="FAIRificationTemplate" %}
+  
