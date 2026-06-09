@@ -1,23 +1,7 @@
 ---
-title: FAIRification Process
+title: The FAIRification Process
 ---
-# The FAIRification Framework
 
-The FAIRification Framework (Figure 1) provides a structured, step-by-step approach and supporting resources for transforming datasets, digital objects, or data management practices into FAIR-compliant assets.
-It guides users through the entire FAIRification journey — from assessing the initial state of their assets, to implementing targeted FAIRification goals, to re-evaluating the FAIR status of the assets after implementation.
-
-The Framework embraces the  FAIR principles by making optimal use of available resources and enhancing an organization’s capacity for FAIR data management. It does so by prioritizing needs based on a thorough analysis of the specific FAIR challenges unique to each project or use case. By following its structured phases, organizations can ensure their data becomes more discoverable, accessible, interoperable, and reusable in line with their specific FAIR needs – unlocking the data’s full potential for scientific research, innovation, and collaboration.
-
-The Framework, illustrated in Figure 1, is comprised of three components:
-1.	**The FAIRification Process** is the reusable process which outlines the main phases of a FAIRification activity.
-2.	**The FAIRification Template** breaks down the key elements of the process into a series of steps to follow when undertaking a FAIR transformation.
-3.	**The FAIRification Workplan** provides a structure for organizing FAIR implementation work tailored to the needs of a specific project or use case.
-
-_The FAIRification Template and the FAIRification Workplan are available to support users as needed. Unlike the FAIRification Process however, where every phase should be followed, the Template steps should be selected as appropriate on a case-by-case basis, and inserted into the Workplan in whichever way best addresses the users’ needs._
-
-{% include image.html file="framework/FAIRificationFramework.png" caption="**Figure 1**. Overview of the FAIRification Framework." alt="FAIRificationFramework.png" %} 
-
-### 1. The FAIRification Process  
 {% include image.html file="framework/FAIRificationProcess-menu-00.png" alt="FAIRificationProcess-menu-00" %}
 The FAIRification Process structures the FAIRification project into 4 distinct phases described below.
 
@@ -53,10 +37,3 @@ During this phase, the planned tasks are executed within the established timefra
 {% include image.html file="framework/FAIRificationProcess-menu-04.png" caption="The FAIRification Process - phase 4." alt="FAIRificationProcess-menu-04" %}
 In this final phase, the cumulative outputs of all FAIRification activities are reviewed against the initial project goals to evaluate the overall success of the process. The review should include a summary of key achievements, documented FAIR improvements, an overview of the FAIRification processes, and any lessons learned.
 
-### 2. The FAIRification Template  
-{% include image.html file="framework/FAIRificationTemplate.png" caption="The FAIRification Template." alt="FAIRificationTemplate" %}
-The FAIRification Template operationalizes the FAIRification Process by outlining a set of clear, distinct steps for the implementation stage within the FAIRification Cycle. It comprises eight steps covering areas such as hosting capabilities (e.g., data access, data retrieval, versioning, etc.), data representation and format (e.g., applying data standards and aligning vocabularies, etc.), and data content (e.g., identifier minting and annotation with controlled vocabularies, etc). The Template supports users as needed by offering concrete tasks commonly encountered across FAIRification efforts. While the Template presents the different steps in a recommended logical sequence (e.g. data cannot be transformed to an interoperable data model if no such model exists or if the data type is not properly understood), not all steps will be required for nor relevant to each FAIRification scenario.
-
-### 3. The FAIRification Workplan  
-{% include image.html file="framework/FAIRificationWorkplan.png" caption="The FAIRification Workplan." alt="FAIRificationWorkplan" %}
-The FAIRification Workplan is a tailored design and implementation plan, customized for a specific project or use case by selecting relevant elements from the FAIRification Template. These elements are chosen based on the project examination to achieve the defined FAIRification goals. As such, the Workplan directly supports the overall FAIRification Process. It is advisable to create a separate Workplan for each iteration of a FAIRification cycle.
