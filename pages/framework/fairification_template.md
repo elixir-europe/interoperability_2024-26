@@ -2,7 +2,7 @@
 title: The FAIRification Template
 ---
 
-{% include image.html file="framework/FAIRplusFAIRificationTemplate-upper-bar.png" caption="The FAIRification Template." alt="FAIRificationTemplate" %}
+{% include image.html file="framework/FAIRificationTemplate-upper-bar.png" caption="The FAIRification Template." alt="FAIRificationTemplate" %}
 
 The FAIRification Template operationalizes the FAIRification Process by outlining a set of clear, distinct steps for the implementation stage within the FAIRification Cycle. It comprises eight steps (covering) grouped in 3 main dimensions :  
 * hosting capabilities (e.g., data access, data retrieval, versioning, etc.)
@@ -15,7 +15,7 @@ The Template supports users as needed by offering concrete tasks commonly encoun
     
 ## Hosting Environment Capabilities
 _What capabilities of the hosting environment are provided to enable and support the use of FAIR data_
-{% include image.html file="framework/FAIRplusFAIRificationTemplate-hosting.png" caption="Hosting capabilities." alt="FAIRificationTemplate" %}
+{% include image.html file="framework/FAIRificationTemplate-hosting.png" caption="Hosting capabilities." alt="FAIRificationTemplate" %}
 {% assign categories = site.data.library-interop-stories.dsm_data %}
 
 {% for category in categories %}
@@ -107,7 +107,7 @@ _What capabilities of the hosting environment are provided to enable and support
 
 ## Content and Context
 _What is reported in the data object and the metadata object_
-{% include image.html file="framework/FAIRplusFAIRificationTemplate-content.png" caption="The FAIRification Template - Content & Context capabilities." alt="FAIRificationTemplate" %}
+{% include image.html file="framework/FAIRificationTemplate-content.png" caption="The FAIRification Template - Content & Context capabilities." alt="FAIRificationTemplate" %}
 
 
 {% for category in categories %}
@@ -200,7 +200,7 @@ _What is reported in the data object and the metadata object_
 
 ## Representation and Format
 _How the data object and metadata object are represented and formatted_
-{% include image.html file="framework/FAIRplusFAIRificationTemplate-representation.png" caption="The FAIRification Template - Representation and Format capabilities." alt="FAIRificationTemplate" %}
+{% include image.html file="framework/FAIRificationTemplate-representation.png" caption="The FAIRification Template - Representation and Format capabilities." alt="FAIRificationTemplate" %}
 
 {% assign categories = site.data.library-interop-stories.dsm_data %}
 
