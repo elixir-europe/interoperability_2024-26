@@ -45,24 +45,44 @@ Get category color from the first ftID of the step
                 <p class="card-text">{{ item.ftDescription }}</p>
             </div>
             <div class="card-footer">
-                {% assign mappings = site.data.library-interop-stories.stories_ft_mapping
-                | where: "ftID", item.ftID %}
-                {% if mappings.size > 0 %}
-                <div>
-                    <strong>Stories: </strong>
-                    {% for item in mappings %}
-                    {% assign story = site.data.library-interop-stories.stories_data
-                    | where: "storyID", item.storyID
-                    | first %}
-                    <span class="badge" style="background-color: darkmagenta">
-                        {{ story.storyTitle }}
-                    </span>
-                    {% endfor %}
-
-                </div>
-
-                {% endif %}
-
+                <ul class="list-inline mb-0">
+                    {% assign mappings = site.data.library-interop-stories.stories_ft_mapping
+                    | where: "ftID", item.ftID %}
+                    {% if mappings.size > 0 %}
+                    <li class="list-inline-item m-0 me-3">
+                        <span>
+                            <strong>Interoperability stories: </strong>
+                            <span class="badge" style="background-color: darkmagenta">
+                                {{ mappings.size }}
+                            </span>
+                        </span>
+                    </li>
+                    {% endif %}
+                    {% assign mappings = site.data.library-interop-stories.ft_fc_mapping
+                    | where: "ftID", item.ftID %}
+                    {% if mappings.size > 0 %}
+                    <li class="list-inline-item m-0 me-3">
+                        <span>
+                            <strong>FAIR Cookbook recipes: </strong>
+                            <span class="badge" style="background-color: darkcyan">
+                                {{ mappings.size }}
+                            </span>
+                        </span>
+                    </li>
+                    {% endif %}
+                    {% assign mappings = site.data.library-interop-stories.ft_fm_mapping
+                    | where: "ftID", item.ftID %}
+                    {% if mappings.size > 0 %}
+                    <li class="list-inline-item m-0 me-3">
+                        <span>
+                            <strong>FAIR Metroline steps: </strong>
+                            <span class="badge" style="background-color: darkorange">
+                                {{ mappings.size }}
+                            </span>
+                        </span>
+                    </li>
+                    {% endif %}
+                </ul>
             </div>
         </div>
         {% endfor %}

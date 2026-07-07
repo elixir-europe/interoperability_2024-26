@@ -1892,7 +1892,7 @@
     {
       "ftID": "ft-data-access",
       "ftStepLevel": 1,
-      "ftSubStepLevel": "1",
+      "ftSubStepLevel": 1,
       "ftStep": "Get the data",
       "ftSubstep": "Data access",
       "ftDescription": "Considerations relating to how data is accessed, eg through APIs, via controlled access"
@@ -1900,7 +1900,7 @@
     {
       "ftID": "ft-data-retrieval",
       "ftStepLevel": 1,
-      "ftSubStepLevel": "2",
+      "ftSubStepLevel": 2,
       "ftStep": "Get the data",
       "ftSubstep": "Data retrieval",
       "ftDescription": "Considerations relating to data retrieval, eg query language, results representation and exporting capabilities"
@@ -1908,7 +1908,7 @@
     {
       "ftID": "ft-identify-data-types",
       "ftStepLevel": 2,
-      "ftSubStepLevel": "1",
+      "ftSubStepLevel": 1,
       "ftStep": "Model the domain",
       "ftSubstep": "Identify data types",
       "ftDescription": "Data type identification informs the selection of appropriate data standards, ontologies and target repositories"
@@ -1916,7 +1916,7 @@
     {
       "ftID": "ft-identifier-minting",
       "ftStepLevel": 3,
-      "ftSubStepLevel": "1",
+      "ftSubStepLevel": 1,
       "ftStep": "Select the identifier scheme",
       "ftSubstep": "Identifier minting",
       "ftDescription": "How to create unique, persistent and resolvable identifiers"
@@ -1924,7 +1924,7 @@
     {
       "ftID": "ft-identifier-reuse",
       "ftStepLevel": 3,
-      "ftSubStepLevel": "2",
+      "ftSubStepLevel": 2,
       "ftStep": "Select the identifier scheme",
       "ftSubstep": "Reusing community identifiers",
       "ftDescription": "How to reuse existing identifiers in a dataset"
@@ -1932,7 +1932,7 @@
     {
       "ftID": "ft-data-standards-reuse",
       "ftStepLevel": 4,
-      "ftSubStepLevel": "1",
+      "ftSubStepLevel": 1,
       "ftStep": "Apply data standards",
       "ftSubstep": "Reusing existing data standards",
       "ftDescription": "How to reuse existing data standards"
@@ -1940,7 +1940,7 @@
     {
       "ftID": "ft-data-standards-development",
       "ftStepLevel": 4,
-      "ftSubStepLevel": "2",
+      "ftSubStepLevel": 2,
       "ftStep": "Apply data standards",
       "ftSubstep": "Developing data standards",
       "ftDescription": "How to develop a new data standard if no appropriate standards exist"
@@ -1948,7 +1948,7 @@
     {
       "ftID": "ft-apply-data-standards",
       "ftStepLevel": 4,
-      "ftSubStepLevel": "3",
+      "ftSubStepLevel": 3,
       "ftStep": "Apply data standards",
       "ftSubstep": "Applying data standards",
       "ftDescription": "How to apply data standards to datasets, especially retroactively"
@@ -1956,7 +1956,7 @@
     {
       "ftID": "ft-validate-against-data-standards",
       "ftStepLevel": 4,
-      "ftSubStepLevel": "4",
+      "ftSubStepLevel": 4,
       "ftStep": "Apply data standards",
       "ftSubstep": "Validating against data standards",
       "ftDescription": "How to use validation to ensure that a dataset is compliant with a data standard"
@@ -1964,7 +1964,7 @@
     {
       "ftID": "ft-select-data-vocabularies",
       "ftStepLevel": 5,
-      "ftSubStepLevel": "1",
+      "ftSubStepLevel": 1,
       "ftStep": "Choose data vocabularies",
       "ftSubstep": "Selecting data vocabularies",
       "ftDescription": "How to select the most appropriate vocabularies to annotate a dataset"
@@ -1972,7 +1972,7 @@
     {
       "ftID": "ft-develop-data-vocabularies",
       "ftStepLevel": 5,
-      "ftSubStepLevel": "2",
+      "ftSubStepLevel": 2,
       "ftStep": "Choose data vocabularies",
       "ftSubstep": "Developing data vocabularies",
       "ftDescription": "How to develop new vocabularies from scratch"
@@ -1980,7 +1980,7 @@
     {
       "ftID": "ft-anotate-with-data-vocabularies",
       "ftStepLevel": 5,
-      "ftSubStepLevel": "3",
+      "ftSubStepLevel": 3,
       "ftStep": "Choose data vocabularies",
       "ftSubstep": "Annotating with data vocabularies",
       "ftDescription": "How to annotate data and metadata with terms from vocabularies"
@@ -1988,7 +1988,7 @@
     {
       "ftID": "ft-manage-vocabularies",
       "ftStepLevel": 5,
-      "ftSubStepLevel": "4",
+      "ftSubStepLevel": 4,
       "ftStep": "Choose data vocabularies",
       "ftSubstep": "Managing vocabularies",
       "ftDescription": "How to manage vocabularies and ontologies"
@@ -1996,7 +1996,7 @@
     {
       "ftID": "ft-identifier-mapping",
       "ftStepLevel": 6,
-      "ftSubStepLevel": "1",
+      "ftSubStepLevel": 1,
       "ftStep": "Transform data for inter-operability",
       "ftSubstep": "Identifier mapping",
       "ftDescription": "How to map between different types of equivalent identifiers"
@@ -2004,7 +2004,7 @@
     {
       "ftID": "ft-vocabulary-alignment",
       "ftStepLevel": 6,
-      "ftSubStepLevel": "2",
+      "ftSubStepLevel": 2,
       "ftStep": "Transform data for inter-operability",
       "ftSubstep": "Vocabulary alignment",
       "ftDescription": "How to map between different equivalent vocabulary terms"
@@ -2012,7 +2012,7 @@
     {
       "ftID": "ft-data-model-mapping",
       "ftStepLevel": 6,
-      "ftSubStepLevel": "3",
+      "ftSubStepLevel": 3,
       "ftStep": "Transform data for inter-operability",
       "ftSubstep": "Data model mapping",
       "ftDescription": "How to map equivalent concepts from different data models"
@@ -2020,7 +2020,7 @@
     {
       "ftID": "ft-data-hosting",
       "ftStepLevel": 7,
-      "ftSubStepLevel": "1",
+      "ftSubStepLevel": 1,
       "ftStep": "Host your data",
       "ftSubstep": "Data hosting",
       "ftDescription": "Considerations around data hosting infrastructure such as markup and search engine optimisation"
@@ -2028,7 +2028,7 @@
     {
       "ftID": "ft-data-versioning",
       "ftStepLevel": 7,
-      "ftSubStepLevel": "2",
+      "ftSubStepLevel": 2,
       "ftStep": "Host your data",
       "ftSubstep": "Data versioning",
       "ftDescription": "Considerations around data versioning"
@@ -2036,7 +2036,7 @@
     {
       "ftID": "ft-data-transfer",
       "ftStepLevel": 7,
-      "ftSubStepLevel": "3",
+      "ftSubStepLevel": 3,
       "ftStep": "Host your data",
       "ftSubstep": "Data transfer",
       "ftDescription": "Considerations around data transfer such as file formats, repository types and checksumming"
@@ -2044,7 +2044,7 @@
     {
       "ftID": "ft-data-licensing",
       "ftStepLevel": 8,
-      "ftSubStepLevel": "1",
+      "ftSubStepLevel": 1,
       "ftStep": "Share your data",
       "ftSubstep": "Data licensing",
       "ftDescription": "Data licensing considerations such as data which license is most appropriate for a given scenario"
@@ -2052,7 +2052,7 @@
     {
       "ftID": "ft-data-anonymisation",
       "ftStepLevel": 8,
-      "ftSubStepLevel": "2",
+      "ftSubStepLevel": 2,
       "ftStep": "Share your data",
       "ftSubstep": "Data anonymisation",
       "ftDescription": "Data anonymisation considerations"
@@ -2060,7 +2060,7 @@
     {
       "ftID": "ft-data-release",
       "ftStepLevel": 8,
-      "ftSubStepLevel": "3",
+      "ftSubStepLevel": 3,
       "ftStep": "Share your data",
       "ftSubstep": "Data release",
       "ftDescription": "Data release considerations such as when to release a dataset and where to release it"
