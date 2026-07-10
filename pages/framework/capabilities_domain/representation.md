@@ -3,7 +3,6 @@ _How the data object and metadata object are represented and formatted_
 {% include image.html file="framework/FAIRplusFAIRificationTemplate-representation.png" caption="The FAIRification Template - Representation and Format capabilities." alt="FAIRificationTemplate" %}
 
 {% assign categories = site.data.library-interop-stories.dsm_data %}
-
 {% for category in categories %}
 {% if category.categoryID == "representation-and-format" %}
 <div class="card mb-4"
