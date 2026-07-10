@@ -1,0 +1,3 @@
+#### A.	Define FAIRification Goal - set realistic and practical goals
+{% include image.html file="framework/FAIRificationProcess-menu-01.png" caption="The FAIRification Process - phase 1." alt="FAIRificationProcess-menu-01" %}
+Before any FAIRification work is undertaken, it is essential to identify the intended usability of the data that cannot be achieved in its current state. From this, one or more clear and specific FAIRification goals should be defined. Since FAIRification efforts incur  costs and may not produce equally valuable benefits, it is advisable to establish an acceptable “FAIR enough” end state – one in which the most critical 
