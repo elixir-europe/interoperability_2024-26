@@ -2,7 +2,7 @@
 _What is reported in the data object and the metadata object_
 {% include image.html file="framework/FAIRplusFAIRificationTemplate-content.png" caption="The FAIRification Template - Content & Context capabilities." alt="FAIRificationTemplate" %}
 
-
+{% assign categories = site.data.library-interop-stories.dsm_data %}
 {% for category in categories %}
 {% if category.categoryID == "content-and-context" %}
 <div class="card mb-4"

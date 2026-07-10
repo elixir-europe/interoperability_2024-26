@@ -1,8 +1,8 @@
 ## Hosting Environment Capabilities
 _What capabilities of the hosting environment are provided to enable and support the use of FAIR data_
 {% include image.html file="framework/FAIRplusFAIRificationTemplate-hosting.png" caption="Hosting capabilities." alt="FAIRificationTemplate" %}
-{% assign categories = site.data.library-interop-stories.dsm_data %}
 
+{% assign categories = site.data.library-interop-stories.dsm_data %}
 {% for category in categories %}
 {% if category.categoryID == "hosting-environment-capabilities" %}
 <div class="card mb-4"
