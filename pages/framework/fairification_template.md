@@ -1,5 +1,6 @@
 ---
 title: The FAIRification Template
+layout: diagram-page
 ---
 
 {% include_relative templated_task_lists/fairplus_template.md %}

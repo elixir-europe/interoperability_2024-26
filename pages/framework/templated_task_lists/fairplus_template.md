@@ -1,4 +1,4 @@
-{% include image.html file="framework/FAIRplusFAIRificationTemplate-upper-bar.png" caption="The FAIRification Template." alt="FAIRificationTemplate" %}
+{% include diagram-mmd.html file="FAIRplusFAIRificationTemplate.mmd" caption="Example: Templated steps from the FAIRplus project for FAIRifying data sets" alt="FAIRplus FAIRification Template" %}
 
 The FAIRification Template operationalizes the FAIRification Process by outlining a set of clear, distinct steps for the implementation stage within the FAIRification Cycle. It comprises eight steps (covering) grouped in 3 main dimensions :  
 * hosting capabilities (e.g., data access, data retrieval, versioning, etc.)
