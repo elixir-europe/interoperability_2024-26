@@ -1,0 +1,40 @@
+---
+config:
+  htmlLabels: true
+  flowchart:
+    wrappingWidth: 260
+---
+flowchart TB;
+    goal@{ shape: doc, label: "**FAIRification goal** <br>In terms of intended *usability of the research object* that isn’t currently possible." }
+
+    requirements@{ shape: doc, label: "**Research object requirements**
+    Indicators and associated targets that specify the actions needed to curate the research object to fulfil the FAIRification goal."}
+
+    capabilities@{ shape: doc, label: "**FAIRification Capabilities**
+    Such as annotation, search and indexing capabilities needed to enable and support the FAIRification process."}
+
+    resources@{ shape: doc, label: "**FAIRification resources**
+    Such as tools, databases, vocabulary services needed to enable and support the FAIRification process."}
+
+    pre_assessment@{ shape: doc, label: "**Pre-FAIRification assement results**
+    Gaps to address, current to projected state after FAIRification." }
+    
+    design@{ shape: doc, label: "**Design decisions**
+    Strategies for dentifiers, metadata, ontologies and research object sharing."} 
+
+    implementation@{ shape: doc, label: "**FAIRification task list**
+    Status, capabilities, responsibilities, supporting resources."} 
+
+    post_assessment@{ shape: doc, label: "**Post-FAIRification assement results**
+    Tasks completed, gaps addressed, FAIRification goal fulfilment" }
+
+
+
+    
+    goal -- Used to determine --> requirements
+    requirements -- Used to indentify --> capabilities & resources
+    requirements -- Used as basis for --> pre_assessment
+    capabilities & resources & pre_assessment -- Used to inform --> design
+    design -- Used to specify --> implementation
+    requirements & implementation -- Used as basis for --> post_assessment
+    post_assessment -- Used to inform --> design

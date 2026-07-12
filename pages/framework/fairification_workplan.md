@@ -1,5 +1,6 @@
 ---
 title: The FAIRification Workplan
+layout: diagram-page
 ---
 
 The Workplan brings together the design decisions and tasks needed to guide the [FAIRification activity]({% link pages/framework/fairification_activity.md %}). It supports iterative design, implementation, and assessment, helping the team work towards the activity’s objectives.
@@ -8,5 +9,4 @@ During the first two phases of the [Process]({% link pages/framework/fairificati
 
 The [Template]({% link pages/framework/fairification_template.md %}) can help identify, define, and scope the tasks for the current implementation cycle. The Workplan can then be used to track decisions, monitor progress, and follow up on actions related to the objectives.
 
-
-{% include image.html file="framework/FAIRificationWorkplan.png" caption="The FAIRification Workplan." alt="FAIRificationWorkplan" %}
+{% include diagram-mmd.html file="FAIRificationWorkplan.mmd" caption="The FAIRification Workplan." alt="FAIRificationWorkplan" %}
