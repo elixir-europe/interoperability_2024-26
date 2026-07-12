@@ -16,23 +16,23 @@ flowchart TB;
     resources@{ shape: doc, label: "**FAIRification resources**
     Such as tools, databases, vocabulary services needed to enable and support the FAIRification process."}
 
-    pre_assessment@{ shape: doc, label: "**Pre-FAIRification assement results**
+    pre_assessment@{ shape: doc, label: "**Pre-FAIRification assessment results**
     Gaps to address, current to projected state after FAIRification." }
     
     design@{ shape: doc, label: "**Design decisions**
-    Strategies for dentifiers, metadata, ontologies and research object sharing."} 
+    Strategies for identifiers, metadata, ontologies and research object sharing."} 
 
     implementation@{ shape: doc, label: "**FAIRification task list**
     Status, capabilities, responsibilities, supporting resources."} 
 
-    post_assessment@{ shape: doc, label: "**Post-FAIRification assement results**
+    post_assessment@{ shape: doc, label: "**Post-FAIRification assessment results**
     Tasks completed, gaps addressed, FAIRification goal fulfilment" }
 
 
 
     
     goal -- Used to determine --> requirements
-    requirements -- Used to indentify --> capabilities & resources
+    requirements -- Used to identify --> capabilities & resources
     requirements -- Used as basis for --> pre_assessment
     capabilities & resources & pre_assessment -- Used to inform --> design
     design -- Used to specify --> implementation
