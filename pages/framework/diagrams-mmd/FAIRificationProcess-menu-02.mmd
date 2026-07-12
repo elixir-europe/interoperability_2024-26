@@ -1,0 +1,11 @@
+flowchart LR;
+    A@{ shape: doc, label: "FAIRification goal" }
+    start@{ shape: sm-circ, label: "Define FAIRification Goal" }
+    PhaseII@{ shape: process, label: "Project Examination"}
+    finish@{ shape: framed-circle, label: "Iterative FAIRification Cycles" }
+    B1@{ shape: doc, label: "FAIRification Work plan" }
+    B2@{ shape: brace, label: "Requirements
+    Capabilities
+    Resources
+    Backlog" }
+    A -.- start --> PhaseII --> finish -.- B1 -.- B2

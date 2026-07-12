@@ -1,5 +1,6 @@
 #### C. Iterative FAIRification Cycles
-{% include image.html file="framework/FAIRificationProcess-menu-03.png" caption="The FAIRification Process - phase 3." alt="FAIRificationProcess-menu-03" %}
+
+{% include diagram-mmd.html file="FAIRificationProcess-menu-03.mmd" alt="FAIRificationProcess-menu-03" %}
 
 The practical phase of the FAIRification Process centers on the FAIRification Cycle, which consists of three distinct stages: Assessment, Design, and Implementation. This phase typically involves multiple FAIRification Cycles applied iteratively. Each cycle focuses on a defined set of tasks within an agreed timeframe.
 -	Assessment

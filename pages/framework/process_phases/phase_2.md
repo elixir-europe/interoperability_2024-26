@@ -1,5 +1,5 @@
 #### B. Project Examination - initial project examination  
-{% include image.html file="framework/FAIRificationProcess-menu-02.png" caption="The FAIRification Process - phase 2." alt="FAIRificationProcess-menu-02" %}
+{% include diagram-mmd.html file="FAIRificationProcess-menu-02.mmd" alt="FAIRificationProcess-menu-02" %}
 
 FAIRification is challenging if the project's capabilities and resources are not fully understood from the beginning. It is therefore essential to:  
 - Identify Data Requirements  

@@ -1,0 +1,22 @@
+---
+config:
+  markdownAutoWrap: false
+---
+flowchart LR;
+    A@{ shape: brace-r, label: "FAIR 
+    compliance 
+    challenge" }
+    start@{ shape: sm-circ, label: "Small start" }
+    PhaseI@{ shape: process, label: "Define 
+    FAIRification 
+    Goal"}
+    finish@{ shape: framed-circle, label: "Stop" }
+    B@{ shape: doc, label: "FAIRification 
+    goal" }
+    B2@{ shape: brace, label: "In terms of *intended 
+    usability* that currently 
+    isn’t possible." }
+    A -.- start --> PhaseI --> finish -.- B -.- B2
+
+    classDef C width:200,padding:0
+    class B2 C

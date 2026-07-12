@@ -1,0 +1,21 @@
+---
+config:
+  markdownAutoWrap: false
+---
+flowchart LR;
+    A1@{ shape: doc, label: "FAIRification 
+    goal" }
+    A2@{ shape: doc, label: "FAIRification 
+    work plan" }
+    A3@{ shape: doc, label: "FAIRification 
+    task report" }
+    start@{ shape: sm-circ, label: "Iterative FAIRification Cycles" }
+    PhaseII@{ shape: process, label: "Post-FAIRification 
+    Review"}
+    finish@{ shape: framed-circle, label: "End" }
+    B1@{ shape: doc, label: "FAIRification 
+    report" }
+    B2@{ shape: brace, label: "Requirements met
+    Uses enabled
+    Lessons learned" }
+    A1 -.- A2 -.- A3 -.- start --> PhaseII --> finish -.- B1 -.- B2
