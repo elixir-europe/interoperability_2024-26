@@ -1,90 +1,26 @@
-## Content and Context
-_What is reported in the data object and the metadata object_
-{% include image.html file="framework/FAIRplusFAIRificationTemplate-content.png" caption="The FAIRification Template - Content & Context capabilities." alt="FAIRificationTemplate" %}
-
 {% assign categories = site.data.library-interop-stories.dsm_data %}
-{% for category in categories %}
-{% if category.categoryID == "content-and-context" %}
-<div class="card mb-4"
-     style="border: 1px solid #cccccc;
-            border-radius: 5px;
-            background-color: {{ category.categoryColor }};
-            color: white">
+{% assign category = categories | find: "categoryID", "content-and-context" %}
 
-    <div class="card-header">
-        <h4>
-            {{ category.categoryLevel }}.
-            {{ category.categoryName }}
-        </h4>
-        <small>{{ category.categoryDescription }}</small>
-    </div>
+## {{ category.categoryName }}
+{{ category.categoryDescription }}
 
-    <div class="card-body">
-
-        {% assign mappings = site.data.library-interop-stories.dsm_ft_mapping
-           | where: "categoryID", category.categoryID %}
-
-        {% for mapping in mappings %}
-
-            {% assign item = site.data.library-interop-stories.ft_data
-               | where: "ftID", mapping.ftID
-               | first %}
-
-            {% if item %}
-
-            <div class="card mb-3"
-                 style="border: 1px solid #cccccc;
-                        border-radius: 5px;
-                        background-color: white;
-                        color: black">
-
-                <div class="card-body">
-                    <h5 class="card-title">
-                        {{ item.ftStepLevel }}.{{ item.ftSubStepLevel }}
-                        {{ item.ftSubstep }}
-                    </h5>
-
-                    <p class="card-text">
-                        {{ item.ftDescription }}
-                    </p>
+{% assign mappings = site.data.library-interop-stories.dsm_ft_mapping
+    | where: "categoryID", category.categoryID %}
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mb-5 navigation-tiles">
+{% for mapping in mappings %}
+{%- assign item = site.data.library-interop-stories.ft_data | find: "ftID", mapping.ftID %}
+    <div class="col" data-affiliations="">
+        <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-center">
+                    <span class=""><small>{{ item.ftStep }}</small></span>
                 </div>
-
-                <div class="card-footer">
-
-                    {% assign story_mappings =
-                       site.data.library-interop-stories.stories_ft_mapping
-                       | where: "ftID", item.ftID %}
-{% comment %}
-                    {% if story_mappings.size > 0 %}
-
-                    <strong>Stories:</strong>
-
-                    {% for story_mapping in story_mappings %}
-
-                        {% assign story =
-                           site.data.library-interop-stories.stories_data
-                           | where: "storyID", story_mapping.storyID
-                           | first %}
-
-                        <span class="badge"
-                              style="background-color: darkmagenta">
-                            {{ story.storyTitle }}
-                        </span>
-
-                    {% endfor %}
-
-                    {% endif %}
-{% endcomment %}
-                </div>
-
+                <a class="stretched-link section-title">
+                    <b>{{ item.ftSubstep }}</b>
+                </a>
+                <p class="card-text h-100">{{ item.ftDescription }}</p>
             </div>
-
-            {% endif %}
-
-        {% endfor %}
-
+        </div>
     </div>
-
+{%- endfor %}
 </div>
-{% endif %}
-{% endfor %}  
