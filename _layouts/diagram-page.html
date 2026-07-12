@@ -1,0 +1,22 @@
+---
+layout: page
+---
+{{content}}
+<script src="{{ 'assets/js/mermaid.js' | relative_url }}"></script>
+<script>
+var config = {
+    startOnLoad:true,
+    theme: 'default',
+    flowchart:{
+            useMaxWidth:true,
+            htmlLabels:true,
+            diagramPadding: 0,
+            padding: 0, 
+            rankSpacing: 20,
+            // nodeSpacing: 0,
+            wrappingWidth: 85
+        }
+};
+mermaid.initialize(config);
+window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+</script>
