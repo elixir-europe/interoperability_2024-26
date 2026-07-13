@@ -1,17 +1,14 @@
----
-title: None
----
----
-config:
-  htmlLabels: true
-  flowchart:
-    wrappingWidth: 110
-    padding: 4
-    rankSpacing: -1
-    diagramPadding: 0
-    nodeSpacing: 4
-    text-align: left
----
+%%{init: {
+  "htmlLabels": true,
+  "flowchart": {
+    "wrappingWidth": 110,
+    "padding": 4,
+    "rankSpacing": -1,
+    "diagramPadding": 0,
+    "nodeSpacing": 4,
+    "text-align": "left"
+  }
+}}%%
 
 {% assign categories = site.data.library-interop-stories.dsm_data %}
 {% assign ft_dsm_mapping = site.data.library-interop-stories.dsm_ft_mapping %}
