@@ -19,4 +19,4 @@ _The FAIRification Template and the FAIRification Workplan are available to supp
 
 {% include diagram-mmd.html file="FAIRificationTemplate.mmd" caption="Example: Templated steps from the FAIRplus project for FAIRifying data sets" alt="FAIRplus FAIRification Template" %}
 
-{% include diagram-mmd.html file="FAIRificationWorkplan.mmd" caption="Recommended workplan structure to support continuous improvements" alt="FAIRplus work plan structure" %}
+{% include diagram-mmd.html file="FAIRificationWorkplanSummary.mmd" caption="Recommended workplan structure to support continuous improvements" alt="FAIRplus work plan structure" %}
