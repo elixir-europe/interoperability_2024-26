@@ -1,0 +1,65 @@
+%%{init: {
+  "htmlLabels": true,
+  "flowchart": {
+    "wrappingWidth": 260,
+    "padding":10,
+    "diagramPadding": 10,
+    "padding": 0, 
+    "rankSpacing": 0,
+    "nodeSpacing": 0
+  }
+}}%%
+flowchart TB;
+
+    %% Process phases
+    phase_2("`Project Examination`")
+    phase_4("`Post-FAIRification Review`")
+
+
+    %% Process inputs
+    fairification_initiative@{ shape: cloud, label: "**FAIRification Idea**
+    Community use case, FAIR compliance challenge or any idea that involves FAIRification."}
+
+
+    %% Process flow elements
+    scoped_input@{ shape: card, label: "**Targeted research assets**
+    E.g. datasets, training materials, workflows to be made FAIR. This can also include references to known constraints that will influence the work."}
+
+    usability_outcome@{shape: card, label: "**Desired usability outcomes**
+    Purpose and specific outcomes of the FAIRification activity, i.e. what will become possible? What degree of compliance with a policy / directive will be achieved?"}
+
+    stakeholder_impact@{ shape: card, label: "**Impact and value assessment**
+    Reflections on how much effort the outcomes are worth and where to set the threshold for what is “good enough”. This can also account for resources developed for / lessons learned from the FAIRification."}
+
+    %% Process outputs
+    fairification_goal@{ shape: doc, label: "**FAIRification goals** 
+    In terms of intended *usability of the research object* that isn’t currently possible. Also covering broader impact and value." }   
+
+
+    %% Relations
+    fairification_initiative -- Made explicit in --> flow
+    scoped_input -- Made FAIR to achieve --> usability_outcome
+    usability_outcome -- Achieved by FAIRifying --> scoped_input
+    usability_outcome -- Realises --> stakeholder_impact
+    stakeholder_impact -- Justifies --> usability_outcome
+    flow --> outputs
+    fairification_goal -- Used to determine target state characteristics, requirements and priorities --> phase_2
+    fairification_goal -- Used as benchmark to evaluate the overall success of the process --> phase_4
+
+
+    %% Structral elements
+    subgraph input["`**Input**`"]
+        fairification_initiative
+    end
+
+    subgraph flow["`**Define FAIRification Goal**`"]
+        scoped_input
+        usability_outcome
+        stakeholder_impact
+    end
+
+    subgraph outputs["`**Output**`"]
+        fairification_goal
+    end
+
+

@@ -1,0 +1,97 @@
+%%{init: {
+  "htmlLabels": true,
+  "flowchart": {
+    "wrappingWidth": 260,
+    "padding":10,
+    "diagramPadding": 10,
+    "padding": 0, 
+    "rankSpacing": 0,
+    "nodeSpacing": 0
+  }
+}}%%
+flowchart TB;
+
+    %% Process phases
+    phase_1("`**Define FAIRification Goal**`")
+    phase_3("`**Iterative FAIRification Cycles**`")
+    phase_4("`**Post-FAIRification Review**`")
+
+
+    %% Process inputs
+    fairification_goal@{ shape: doc, label: "**FAIRification goals**
+    In terms of intended *usability of the research object* that isn’t currently possible. Also covering broader impact and value." }   
+
+
+    %% Process flow elements
+    requirements@{ shape: card, label: "**Target state requirements**
+    Conditions that the results of the FAIRification activity must satisfy. Note: This can also include constraints on how these requirements are to be met."}
+
+    scoped_outputs@{ shape: card, label: "**Research object categories**
+    Scoped at appropriate levels of granularity, including their types, references to related input files, documentation, DTAs and other context."}
+
+    capabilities@{ shape: card, label: "**Courses of action & capabilities**
+    The broad sequence of steps and abilities available to realise and later sustain the FAIRified research objects."}
+
+    supporting_assets@{ shape: card, label: "**Supporting resources & staff**
+    The assets, skills, repositories, vocabulary systems, knowledge resources selected / designed to realise and sustain the results."}
+
+    pre_assessment@{ shape: card, label: "**Initial state assessment report**
+    Assessment of what already is in place and which requirements remains to be met." }
+
+    initial_design@{shape: card, label: "**Gaps and remediation backlog**
+    Which gaps to address and, where applicable, the chosen courses of action / allocated resources." }
+
+
+    %% Process outputs
+    fairification_roadmap@{ shape: doc, label: "**FAIRification roadmap**
+    Current and projected states, requirements and gaps."}
+
+
+    %% Relations
+    phase_1 --> phase_2_input
+    fairification_goal -- Used to determine target state characteristics, requirements and priorities --> phase_2_flow
+    requirements -- Used as basis for --> pre_assessment 
+    pre_assessment -- Used as basis for --> initial_design
+    scoped_outputs -- FAIRified by --> capabilities
+    capabilities -- Relying on --> supporting_assets
+    capabilities -- Enabling FAIRification of --> scoped_outputs
+    supporting_assets -- Can support --> capabilities
+    target_plateau -- Defines the scope of --> states
+    states -- Applies to elements of  --> target_plateau
+    phase_2_flow --> phase_2_outputs
+    fairification_roadmap -- Used to inform scope, initial backlog and implementation design decisions --> phase_3
+    fairification_roadmap -- Used as basis for high-level post-implementation assessment --> phase_4
+
+
+    %% Structral elements
+    subgraph phase_2_input["`**Input**`"]
+        fairification_goal
+    end
+
+    subgraph target_plateau["`*FAIRIfication strategy, capabilities and resources*`"]
+        direction LR
+        scoped_outputs
+        capabilities
+        supporting_assets
+    end
+
+    subgraph states["`*Requirements and FAIRification backlog*`"]
+        direction LR
+        requirements
+        pre_assessment
+        initial_design
+    end
+
+    subgraph phase_2_flow["`**Project Examination**`"]
+        direction TB
+        target_plateau
+        states
+    end
+
+    subgraph phase_2_outputs["`**Output**`"]
+        fairification_roadmap
+    end
+
+
+
+
