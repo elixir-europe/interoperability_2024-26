@@ -44,6 +44,7 @@ defaults:
       path: "pages/portfolio"
     values:
       sidebar: portfolio
+page_excerpts: true
 
 theme_variables:
   # git_host: GitHub
