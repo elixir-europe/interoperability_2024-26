@@ -2,15 +2,25 @@
 layout: page
 ---
 {{content}}
+<svg>
+    <defs>
+    <filter id="blur">
+        <feDropShadow  dx="3" dy="3" stdDeviation="3" flood-opacity="0.1"></feDropShadow>
+    </filter>
+    </defs>
+</svg>
 <script src="{{ 'assets/js/mermaid.js' | relative_url }}"></script>
 <script>
 var config = {
     startOnLoad:true,
-    theme: 'default',
+    theme: 'base', //default
+    themeVariables: {
+        primaryColor: '#f8f9fa',
+    },
     flowchart:{
             useMaxWidth:true,
             htmlLabels:true,
-            diagramPadding: 0,
+            diagramPadding: 10,
             padding: 0, 
             rankSpacing: 20,
             // nodeSpacing: 0,

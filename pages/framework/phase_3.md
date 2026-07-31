@@ -1,4 +1,8 @@
-#### C. Iterative FAIRification Cycles
+---
+layout: diagram-page
+title: C. Iterative FAIRification Cycles
+excerpt_separator: <!--more-->
+---
 
 {% include diagram-mmd.html file="FAIRificationProcess-menu-03.mmd" alt="FAIRificationProcess-menu-03" %}
 
@@ -10,3 +14,8 @@ During the design stage, concrete steps are identified to achieve the FAIRificat
 These steps form the FAIRification workplan to be realised during the implementation stage.
 -	Implementation
 During this phase, the planned tasks are executed within the established timeframe. However, it is important to note that some tasks may remain incomplete, be postponed, or even abandoned during a given iteration.
+
+<!--more-->
+
+### Flowchart
+{% include diagram-mmd.html file="phase_3_flowchart.mmd" alt="phase_3_flowchart" %}
