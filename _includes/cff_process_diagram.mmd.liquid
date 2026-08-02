@@ -1,0 +1,39 @@
+%%{init: {
+  "markdownAutoWrap": false
+}}%%
+{% if page.cff_properties.id == "process" %}
+{% assign cff_process = page.cff_properties %}
+{% else %}
+{% assign cff_process = site.cff.process %}
+{% endif %}
+flowchart LR;
+
+    %% General diagram structure
+    initiation_annotation@{ shape: brace-r } -.- 
+    start@{ shape: sm-circ } === 
+    phase_1@{ shape: rounded } ===
+    phase_2@{ shape: rounded } ===
+    phase_3@{ shape: rounded } ===
+    phase_4@{ shape: rounded } ==>
+    finish@{ shape: framed-circle } -.- 
+    outcome_annotation@{ shape: brace } 
+
+    subgraph process["{{ cff_process.title }}"]
+        phase_1
+        phase_2
+        phase_3
+        phase_4
+    end
+
+    %% Labels
+    initiation_annotation@{ label: "{{ cff_process.flow.pre_annotation }}" }
+
+    phase_1("`{{ site.cff.phase_1.title | replace: " ", "<br>" }}`")
+    
+    phase_2("`{{ site.cff.phase_2.title | replace: " ", "<br>" }}`")
+    
+    phase_3("`{{ site.cff.phase_3.title | replace: " ", "<br>" }}`")
+    
+    phase_4("`{{ site.cff.phase_4.title | replace: " ", "<br>" }}`")
+
+    outcome_annotation@{ label: "{{ cff_process.flow.post_annotation }}" }

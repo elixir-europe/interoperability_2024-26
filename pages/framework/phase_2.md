@@ -2,11 +2,109 @@
 layout: diagram-page
 title: B. Project Examination
 excerpt_separator: <!--more-->
+cff_properties:
+  id: phase_2
+  type: process_phase
+  title: Project examination
+  description: Initial project examination
+  inputs:
+    - id: phase_1_outputs
+      edge_label: Used to determine target state characteristics, requirements and priorities
+  outputs:
+    - id: phase_2_outputs
+      edge_label: Outputs
+  flow:
+    pre_annotation: |-
+      Targeted assets
+      Intended usability
+      Broader impact
+    post_annotation: |-
+      Target requirements
+      Capabilities & resources
+      FAIRification backlog
+    nodes:
+      strategy:
+        title: FAIRification strategy
+        description: >-
+          
+        subgraph:
+          - object_types
+          - capabilities
+          - resources
+      use_case:
+        title: Use case requirements
+        description: >-
+          
+        subgraph:
+          - target_state
+          - initial_state
+          - backlog
+      object_types: 
+        title: Research object categories
+        description: >-
+          Scoped at appropriate levels of granularity, including their types, references to related input files, documentation, DTAs and other context.
+      capabilities: 
+        title: Courses of action & capabilities
+        description: >-
+          The broad sequence of steps and abilities available to realise and later sustain the FAIRified research objects.
+      resources: 
+        title: Supporting resources & staff
+        description: >-
+          The assets, skills, repositories, vocabulary systems, knowledge resources selected / designed to realise and sustain the results.
+      target_state: 
+        title: Target state requirements
+        description: >-
+          Conditions that the results of the FAIRification activity must satisfy. Note: This can also include constraints on how these requirements are to be met.
+      initial_state: 
+        title: Initial state assessment report
+        description: >-
+          Assessment of what already is in place and which requirements remains to be met.
+      backlog: 
+        title: Gaps and remediation backlog
+        description: >-
+          Which gaps to address and, where applicable, the chosen courses of action / allocated resources.
+    edges:
+      - source: strategy
+        target: use_case
+        label: |-
+          Sets scope of
+      - source: use_case
+        target: strategy
+        label: |-
+          Depends on
+      - source: target_state
+        target: initial_state
+        label: Used as basis for
+      - source: initial_state
+        target: backlog
+        label: Used as basis for
+      - source: object_types
+        target: capabilities
+        label: FAIRified by
+      - source: capabilities
+        target: object_types
+        label: |-
+          Enabling
+          FAIRification of
+      - source: capabilities
+        target: resources
+        label: Relying on
+      - source: resources
+        target: capabilities
+        label: Can support
+cff_elements:
+  phase_2_outputs:
+    type: process_object
+    title: FAIRification roadmap
+    description: |-
+      Current and projected states, requirements and gaps.
 ---
 
-> Initial project examination
+> {{page.cff_properties.description}}
 
-{% include diagram-mmd.html file="FAIRificationProcess-menu-02.mmd" alt="FAIRificationProcess-menu-02" %}
+<div class="language-mermaid figure-img img-fluid rounded">
+{% include cff_phase_diagram-outline.mmd.liquid %}
+</div>
 
 FAIRification is challenging if the project's capabilities and resources are not fully understood from the beginning. It is therefore essential to:  
 - Identify Data Requirements  
@@ -19,4 +117,6 @@ For example, for some or all sections of the project examination, list the curre
 <!--more-->
 
 ### Flowchart
-{% include diagram-mmd.html file="phase_2_flowchart.mmd" alt="phase_2_flowchart" %}
+<div class="language-mermaid figure-img img-fluid rounded">
+{% include cff_phase_diagram.mmd.liquid %}
+</div>

@@ -1,8 +1,24 @@
 ---
 title: The FAIRification Process
 layout: diagram-page
+cff_properties:
+  id: process
+  type: process
+  title: Common FAIRification Process
+  flow:
+    pre_annotation: |-
+      FAIR compliance
+      challenges & 
+      use cases
+    post_annotation: |-
+      Uses and research 
+      impact realised by 
+      FAIR implementation
 ---
-{% include image.html file="framework/FAIRificationProcess-menu-00.png" alt="FAIRificationProcess-menu-00" %}
+<div class="language-mermaid figure-img img-fluid rounded">
+{% include cff_process_diagram.mmd.liquid %}
+</div>
+
 
 The FAIRification Process structures the FAIRification project into 4 distinct phases described below.
 

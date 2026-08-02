@@ -15,7 +15,9 @@ The Framework, illustrated in Figure 1, is comprised of three components:
 
 _The FAIRification Template and the FAIRification Workplan are available to support users as needed. Unlike the FAIRification Process however, where every phase should be followed, the Template steps should be selected as appropriate on a case-by-case basis, and inserted into the Workplan in whichever way best addresses the users’ needs._
 
-{% include diagram-mmd.html file="FAIRificationProcess-menu-00.mmd" caption="Common process for any FAIRification activity" alt="FAIRification process" %}
+<div class="language-mermaid figure-img img-fluid rounded">
+{% include cff_process_diagram.mmd.liquid %}
+</div>
 
 {% include diagram-mmd.html file="FAIRificationTemplate.mmd" caption="Example: Templated steps from the FAIRplus project for FAIRifying data sets" alt="FAIRplus FAIRification Template" %}
 

@@ -1,0 +1,104 @@
+{% if page.cff_properties %}
+%%{init: {
+  "htmlLabels": true,
+  "flowchart": {
+    "wrappingWidth": 260,
+    "padding":10,
+    "diagramPadding": 10,
+    "padding": 0, 
+    "rankSpacing": 0,
+    "nodeSpacing": 0
+  }
+}}%%
+flowchart TB;
+
+    %% Process phases
+{% for item in page.cff_properties.outputs  %}
+  {% for output_target in site.cff -%}
+  {%- assign input_role = output_target[1].inputs | find: "id", item.id -%}
+  {%- if input_role -%}
+  {{output_target[0]}}("`**{{ output_target[1].title }}**`")
+  {{item.id}} {% if input_role.edge_label %}-- "`{{ input_role.edge_label }}`"{% endif %}--> {{output_target[0]}}
+  {% endif -%}
+  {%- endfor -%}
+{% endfor %}
+
+{% for item in page.cff_properties.inputs  %}
+{% assign input_index = forloop.index %}
+  {% for input_source in site.cff -%}
+  {%- assign output_role = input_source[1].outputs | find: "id", item.id -%}
+  {%- if output_role -%}
+  {{input_source[0]}}("`**{{ input_source[1].title }}**`")
+  {{input_source[0]}} --> input_{{input_index}}
+  {% endif -%}
+  {%- endfor -%}
+{% endfor %}
+
+    %% Process inputs
+{% for item in page.cff_properties.inputs  %}
+    {{ item.id }}@{ shape: {{ item.shape | default: "doc" }}, label: "**{{ site.cff[item.id].title }}**
+    {{ site.cff[item.id].description }}"}
+{% endfor %}
+    
+
+
+    %% Process flow elements
+
+{% for item in page.cff_properties.flow.nodes  %}
+    {% if item[1].subgraph %}
+        subgraph {{ item[0] }}["`*{{ item[1].title | default: item[0] }}*`"]
+            {% for sub_item in item[1].subgraph  %}
+            {{ sub_item }}
+            {% endfor %}
+        end
+    {% else %}
+    {{ item[0] }}@{ shape: card{% if item[1].title %}, label: "**{{ item[1].title | default: item[0] }}**
+    {{ item[1].description }}"{%endif%}}
+    {% endif %}
+{% endfor %}
+
+    %% Process outputs
+{% for item in page.cff_properties.outputs  %}
+    {{ item.id }}@{ shape: {{ item.shape | default: "doc" }}, label: "**{{ site.cff[item.id].title }}**
+    {{ site.cff[item.id].description }}"}
+{% endfor %}
+
+
+    %% Relations
+    {% for edge in page.cff_properties.flow.edges  %}
+    {{ edge.source }} edge_{{forloop.index}}@{{ edge.link_type | default: "-->" }}{% if edge.label %}|"`{{ edge.label }}`"|{% endif %}{{ edge.target }}
+    {% endfor %}
+
+    {% for item in page.cff_properties.inputs  %}
+    {{ item.id }} {% if item.edge_label %}-- "`{{ item.edge_label }}`"{% endif %}--> flow
+    {% endfor %}
+
+    {% for item in page.cff_properties.outputs  %}
+    flow {% if item.edge_label %}-- "`{{ item.edge_label }}`"{% endif %}--> outputs_{{forloop.index}}
+    {% endfor %}
+
+
+    %% Structral elements
+    {% for item in page.cff_properties.inputs  %}
+    subgraph input_{{forloop.index}}["`**Input{% if page.cff_properties.inputs.length > 1 %} {{forloop.index}}{% endif %}**`"]
+        {{ item.id }}
+    end
+    {% endfor %}
+
+    subgraph flow["`**{{ page.cff_properties.title }}**`"]
+      direction {{ page.cff_properties.flow.layout | default: "LR" }}
+      {% for item in page.cff_properties.flow.nodes  %}
+      {{ item[0] }}
+      {% endfor %}
+    end
+
+    {% for item in page.cff_properties.outputs %}
+    subgraph outputs_{{forloop.index}}["`**Output{% if page.cff_properties.outputs.length > 1 %} {{forloop.index}}{% endif %}**`"]
+        {{ item.id }}
+    end
+    {% endfor %}
+
+{% else %}
+flowchart LR;
+    error("Rendering error, missing `page.cff_properties`")
+{% endif %}
