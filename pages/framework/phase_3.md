@@ -15,14 +15,20 @@ cff_properties:
       edge_label: Outputs
   flow:
     layout: TB
-    pre_annotation: |-
-      Target requirements
-      Capabilities & resources
-      FAIRification backlog
-    post_annotation: |-
-      Decisions
-      Tasks&nbsp;&amp;&nbsp;statuses
-      Improvements
+    pre_conditions: 
+      annotation: |-
+        Target requirements
+        Capabilities & resources
+        FAIRification backlog
+      requirements: 
+        - TBC
+    post_conditions:  
+      annotation: |-
+        Decisions
+        Tasks&nbsp;&amp;&nbsp;statuses
+        Improvements
+      requirements: 
+        - TBC
     nodes:
       backlog:
         title: Refined FAIRification backlog

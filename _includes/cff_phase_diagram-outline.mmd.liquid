@@ -25,25 +25,25 @@ flowchart LR;
 {% endfor %}
 
 {% if page.cff_properties.inputs.size > 1 %}
-subgraph input["`{{ page.cff_properties.flow.pre_annotation | default: " " }}`"]
+subgraph input["`{{ page.cff_properties.flow.pre_conditions.annotation | default: " " }}`"]
     direction LR
 {% for item in page.cff_properties.inputs  %}
     {{ item.id }} {% unless forloop.last %}-.-{% endunless %}
 {% endfor %}
 end
-{% elsif page.cff_properties.flow.pre_annotation %}
-    inputs_annotation@{ shape: brace-r, label: "{{ page.cff_properties.flow.pre_annotation }}" } -.- input
+{% elsif page.cff_properties.flow.pre_conditions.annotation %}
+    inputs_annotation@{ shape: brace-r, label: "{{ page.cff_properties.flow.pre_conditions.annotation }}" } -.- input
 {% endif %}
 
 {% if page.cff_properties.outputs.size > 1 %}
-subgraph output["`{{ page.cff_properties.flow.post_annotation | default: " " }}`"]
+subgraph output["`{{ page.cff_properties.flow.post_conditions.annotation | default: " " }}`"]
     direction LR
 {% for item in page.cff_properties.outputs  %}
     {{ item.id }} {% unless forloop.last %}-.-{% endunless %}
 {% endfor %}
 end
-{% elsif page.cff_properties.flow.post_annotation %}
-    output -.- outputs_annotation@{ shape: brace, label: "{{ page.cff_properties.flow.post_annotation }}" }
+{% elsif page.cff_properties.flow.post_conditions.annotation %}
+    output -.- outputs_annotation@{ shape: brace, label: "{{ page.cff_properties.flow.post_conditions.annotation }}" }
 {% endif %}
 
 

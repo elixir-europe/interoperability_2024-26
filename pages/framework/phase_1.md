@@ -15,14 +15,22 @@ cff_properties:
     - id: phase_1_outputs
       edge_label: Outputs
   flow:
-    pre_annotation: |-
-      FAIR compliance 
-      challenges and 
-      use cases
-    post_annotation: |-
-      Targeted assets
-      Intended usability
-      Broader impact
+    pre_conditions: 
+      annotation: |-
+        FAIR compliance 
+        challenges and 
+        use cases
+      requirements: 
+        - You have a FAIR compliance challenge or use case
+    post_conditions:  
+      annotation: |-
+        Targeted assets
+        Intended usability
+        Broader impact
+      requirements: 
+        - You have identified targeted assets
+        - You have defined their intended use or a FAIR compliance target
+        - You have ideintified what broader impact this will have, i.e. what it’s worth
     nodes:
       scoped_input:
         title: Targeted research assets

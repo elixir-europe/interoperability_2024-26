@@ -18,12 +18,18 @@ cff_properties:
     - id: phase_4_outputs
       edge_label:
   flow:
-    pre_annotation: |-
-      Cumulative outputs of all activities
-    post_annotation: |-
-      Requirements met
-      Uses enabled
-      Lessons learned
+    pre_conditions: 
+      annotation: |-
+        Cumulative outputs of all activities
+      requirements: 
+        - TBC
+    post_conditions:  
+      annotation: |-
+        Requirements met
+        Uses enabled
+        Lessons learned
+      requirements: 
+        - TBC
     nodes:
       key_achievements:
         title: Key achievements

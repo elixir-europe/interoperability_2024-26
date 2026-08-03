@@ -14,14 +14,24 @@ cff_properties:
     - id: phase_2_outputs
       edge_label: Outputs
   flow:
-    pre_annotation: |-
-      Targeted assets
-      Intended usability
-      Broader impact
-    post_annotation: |-
-      Target requirements
-      Capabilities & resources
-      FAIRification backlog
+    pre_conditions: 
+      annotation: |-
+        Targeted assets
+        Intended usability
+        Broader impact
+      requirements: 
+        - You have identified targeted assets
+        - You have defined their intended use or a FAIR compliance target
+        - You have ideintified what broader impact this will have, i.e. what it’s worth
+    post_conditions:  
+      annotation: |-
+        Target requirements
+        Capabilities & resources
+        FAIRification backlog
+      requirements: 
+        - You have identified what the requirements to realise the goals are
+        - You have determined what you kind of changes you plan to make to meet the requirements 
+        - You have secured the capabilities & resources needed to do the work
     nodes:
       strategy:
         title: FAIRification strategy
