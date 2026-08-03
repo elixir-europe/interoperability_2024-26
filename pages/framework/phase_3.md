@@ -76,6 +76,8 @@ These steps form the FAIRification workplan to be realised during the implementa
 During this phase, the planned tasks are executed within the established timeframe. However, it is important to note that some tasks may remain incomplete, be postponed, or even abandoned during a given iteration.
 
 <!--more-->
+### Process elements
+{% include cff-phase.md.liquid %}
 
 ### Flowchart
 <div class="language-mermaid figure-img img-fluid rounded">

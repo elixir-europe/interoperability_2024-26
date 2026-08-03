@@ -1,0 +1,137 @@
+{% assign phase_id = page.cff_properties.id %}
+{% assign cff_phase = site.cff[phase_id] %} <!-- page.cff_properties -->
+
+
+<details markdown="1">
+  <summary><span markdown="1">**Preconditions:**
+{% if cff_phase.pre_phases.size > 0 -%}
+Completed {% for phase_id in cff_phase.pre_phases -%}
+  `{{ site.cff[phase_id].title }}` {% unless forloop.last %},{% endunless %}
+{% endfor %}
+   or equivalent
+{% else %}
+  {{ cff_phase.flow.pre_conditions.annotation }}
+{% endif %}
+  </span>
+  </summary>
+{% for item in cff_phase.flow.pre_conditions.requirements  -%}
+1. {{ item }}<br>
+{% endfor %}
+</details>
+
+<details markdown="1">
+  <summary><span markdown="1">
+  **Postconditions:**
+{% if cff_phase.post_phases.size > 0 -%}
+Outputs ready for {% for phase_id in cff_phase.post_phases -%}
+  `{{ site.cff[phase_id].title }}`{% unless forloop.last %}, {% endunless %} 
+{%- endfor %}
+{% else %}
+  {{ cff_phase.flow.post_conditions.annotation }}
+{% endif %}
+  </span>
+  </summary>
+{% for item in cff_phase.flow.post_conditions.requirements  -%}
+1. {{ item }}
+{% endfor %}
+</details>
+
+<details markdown="1">
+  <summary><span markdown="1">
+  **Inputs:**
+  {% for item in cff_phase.inputs  -%}
+    `{{ site.cff[item.id].title }}`{% unless forloop.last %},{% endunless %}
+  {%- endfor -%}
+  </span></summary>
+{% for item in cff_phase.inputs  %}
+<details markdown="1" open="1">
+<summary><span markdown="1">
+**`{{ site.cff[item.id].title }}`**:   {{ site.cff[item.id].description }}
+</span></summary>
+  - `this → {{ cff_phase.title }}`: {{ item.edge_label }}
+</details>
+{% endfor %}
+</details>
+
+{% assign all_phases = site.cff | where: "type", "process_phase"%}
+
+<details markdown="1">
+  <summary><span markdown="1">
+  **Outputs:** {% for item in cff_phase.outputs -%}
+    `{{ site.cff[item.id].title }}`{% unless forloop.last %}, {% endunless -%}
+  {%- endfor -%}
+  </span></summary>
+
+{% for item in cff_phase.outputs  %}
+<details markdown="1" open="1">
+<summary><span markdown="1">
+ **`{{ site.cff[item.id].title }}`**: {{ site.cff[item.id].description }} 
+</span></summary>
+  - `{{ cff_phase.title }} → this`: {{ item.edge_label }}
+  {% for phase_id in site.cff[item.id].input_of -%}
+  - `this → {{ site.cff[phase_id].title }}`: {{ site.cff[phase_id].inputs | find: "id", item.id | map: "edge_label" }}
+  {%- endfor -%}
+{% endfor %}
+</details>
+</details>
+
+<details markdown="1">
+  <summary><span markdown="1">
+  **Key concepts:** {% for item in cff_phase.flow.nodes  -%}
+    `{{ item[1].title }}`{% unless forloop.last %}, {% endunless -%}
+  {%- endfor -%}
+  </span></summary>
+
+{% assign subgraph_ids = "" | split: "" %}
+{% assign nodes_with_subgraphs = "" | split: "" %}
+{% assign nodes_without_subgraphs = "" | split: "" %}
+
+{% for node in cff_phase.flow.nodes %}
+  {% if node[1].subgraph %}
+    {% assign nodes_with_subgraphs = nodes_with_subgraphs | push: node[1] %}
+    {% assign subgraph_ids = subgraph_ids | push: node[0] %}
+    {% for node_id in node[1].subgraph %}
+      {% assign subgraph_ids = subgraph_ids | push: node_id %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% for node in cff_phase.flow.nodes %}
+  {% unless subgraph_ids contains node[0] %}
+    {% assign nodes_without_subgraphs = nodes_without_subgraphs | push: node[1] %}
+  {% endunless %}
+{% endfor %}
+{{subgraph_ids}}
+{% for node in nodes_with_subgraphs %}
+<details markdown="1" open="1">
+<summary><span markdown="1">
+**Group `{{ node.title }}`**{% if node.description.strip %}: {{ node.description }}{% endif %}
+</span></summary>
+{%- for node_id in node.subgraph -%}
+  * `{{ cff_phase.flow.nodes[node_id].title }}`: 
+    {{ cff_phase.flow.nodes[node_id].description }}
+{% endfor %}
+</details>
+{% endfor %}
+
+{% if nodes_without_subgraphs.size > 0 %}
+<details markdown="1" open="1">
+<summary><span markdown="1">**Enteties**
+</span></summary>
+{% for node in nodes_without_subgraphs  %}
+  * `{{ node.title }}`: 
+    {{ node.description }}
+{% endfor %}
+</details>
+{% endif %}
+
+<details markdown="1" open="1">
+<summary><span markdown="1">**Relations**
+</span></summary>
+{% for edge in cff_phase.flow.edges  %}
+* `{{ cff_phase.flow.nodes[edge.source].title }} → {{ cff_phase.flow.nodes[edge.target].title }}`: {{ edge.label }}
+{% endfor %}
+</details>
+</details>
+
+

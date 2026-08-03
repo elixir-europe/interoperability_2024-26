@@ -5,8 +5,8 @@ excerpt_separator: <!--more-->
 cff_properties:
   id: phase_1
   type: process_phase
-  title: Define FAIRification goal
-  description: Set realistic and practical goals
+  title: Define FAIRification goals
+  description: Determine the goals for FAIRification in terms of desired usability of data that isn't currently possible.
   inputs:
     - id: phase_1_inputs
       shape: cloud
@@ -84,7 +84,10 @@ cff_elements:
 
 Before any FAIRification work is undertaken, it is essential to identify the intended usability of the data that cannot be achieved in its current state. From this, one or more clear and specific FAIRification goals should be defined. Since FAIRification efforts incur  costs and may not produce equally valuable benefits, it is advisable to establish an acceptable “FAIR enough” end state – one in which the most critical capabilities are achieved, while less impactful enhancements may be set aside. To be actionable, these goals must be translated into concrete tasks to transition the data from current to target state.
 
+
 <!--more-->
+### Process elements
+{% include cff-phase.md.liquid %}
 
 ### Flowchart
 

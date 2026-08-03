@@ -2,7 +2,6 @@
 
 //Example for highlighting the active page in the navigation:
 /*-----Top navigation-----*/
-
 .navbar-nav .nav-item > a {
   &.active {
     color: $white;
@@ -39,6 +38,17 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
+/*-----Details-----*/
+details details {
+    margin-left: 0em;
+    padding: 0.5em;
+    border: solid 0.5em $light;
+    border-radius: $border-radius;
+    background-color: $white;
+    // filter: drop-shadow(1px 1px 5px);
+}
+
 
 /*-----Mermaid diagrams-----*/
 .language-mermaid {

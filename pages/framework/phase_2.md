@@ -125,6 +125,8 @@ For example, assess the needed expertise and plan accordingly for budget and per
 For example, for some or all sections of the project examination, list the current and projected status of each individual task. The FAIRification Workplan may support this process – see below for details.  
 
 <!--more-->
+### Process elements
+{% include cff-phase.md.liquid %}
 
 ### Flowchart
 <div class="language-mermaid figure-img img-fluid rounded">

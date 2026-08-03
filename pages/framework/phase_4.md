@@ -82,6 +82,8 @@ cff_elements:
 In this final phase, the cumulative outputs of all FAIRification activities are reviewed against the initial project goals to evaluate the overall success of the process. The review should include a summary of key achievements, documented FAIR improvements, an overview of the FAIRification processes, and any lessons learned.
 
 <!--more-->
+### Process elements
+{% include cff-phase.md.liquid %}
 
 ### Flowchart
 <div class="language-mermaid figure-img img-fluid rounded">
