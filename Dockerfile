@@ -1,5 +1,7 @@
-FROM ruby:3.3.4
+FROM ruby:3.3
 
-RUN gem install jekyll -v '3.10.0'
+# elixir-toolkit-theme 6.x requires Jekyll >= 4.1
+RUN gem install jekyll -v '4.4.1' \
+    && gem install bundler
 
 WORKDIR /usr/src/app
