@@ -2,7 +2,7 @@ services:
   jekyll:
     image: ruby:3.3
     working_dir: /usr/src/app/
-    entrypoint: /bin/bash -c "bundle config set --local path '/usr/gems/' && bundle install && bundle exec jekyll serve --incremental --host 0.0.0.0 --livereload --force_polling --destination /usr/site/"
+    entrypoint: /bin/bash -c "git config --global --add safe.directory /usr/src/app && bundle config set --local path '/usr/gems/' && bundle install && bundle exec jekyll serve --incremental --host 0.0.0.0 --livereload --force_polling --destination /usr/site/"
     ports:
       - 127.0.0.1:4000:4000
       - 127.0.0.1:35729:35729
