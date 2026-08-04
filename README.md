@@ -3,3 +3,22 @@
 # ELIXIR’s Interoperability Platform 2024–26 activities
 
 Repository for content produced and developed during ELIXIR’s Interoperability Platform 2024–26 activities.
+
+## Testing the site locally
+
+With [Docker Compose](https://docs.docker.com/compose/) installed:
+
+```bash
+docker compose up
+```
+
+Then open http://localhost:4000. The site rebuilds automatically as you edit files.
+
+Stop it with:
+
+```bash
+docker compose down
+```
+
+If your checkout is a git worktree rather than the main clone, run `./docker-worktree-setup.sh`
+once first.
