@@ -21,6 +21,10 @@
 // #main CSS grid's `1fr` content row to stretch and fill the leftover
 // viewport height, producing a large empty gap before the footer. There is
 // no theme_variables/Sass-variable toggle for this, so we neutralize it here.
+// Needs !important: Bootstrap generates .min-vh-100 with !important, and a
+// non-important rule can never win over an !important one regardless of
+// selector specificity — without this, the override compiles in but is a
+// silent no-op and the whitespace bug persists.
 #main.min-vh-100 {
-    min-height: auto;
+    min-height: auto !important;
 }
