@@ -30,6 +30,9 @@ services:
   jekyll:
     volumes:
       - ${common_dir}:${common_dir}:rw
+  jekyll-prod:
+    volumes:
+      - ${common_dir}:${common_dir}:rw
 EOF
 
 echo "Wrote docker-compose.override.yml mounting ${common_dir}"
