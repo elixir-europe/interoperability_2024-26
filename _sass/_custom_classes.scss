@@ -10,3 +10,17 @@
         border-radius: $border-radius;
     }
 }
+
+/*-----Main content area-----*/
+
+// elixir-toolkit-theme commit 31ead1a ("fix min height issue on short pages",
+// bundled into https://github.com/ELIXIR-Belgium/elixir-toolkit-theme/pull/380,
+// present since 6.0.0) moved the full-viewport-height constraint from `body`
+// (flex-grow based sticky footer) to a hardcoded `min-vh-100` class on `#main`.
+// On short pages (e.g. our still-mostly-empty index.md) this forces the
+// #main CSS grid's `1fr` content row to stretch and fill the leftover
+// viewport height, producing a large empty gap before the footer. There is
+// no theme_variables/Sass-variable toggle for this, so we neutralize it here.
+#main.min-vh-100 {
+    min-height: auto;
+}

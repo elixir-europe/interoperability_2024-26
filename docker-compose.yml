@@ -2,7 +2,7 @@ services:
   jekyll:
     image: ruby:3.3
     working_dir: /usr/src/app/
-    entrypoint: /bin/bash -c "bundle config set --local path '/usr/gems/' && bundle install && bundle exec jekyll serve --incremental --host 0.0.0.0 --livereload --force_polling --destination /usr/site/"
+    entrypoint: /bin/bash -c "git config --global --add safe.directory /usr/src/app && bundle config set --local path '/usr/gems/' && bundle install && bundle exec jekyll serve --incremental --host 0.0.0.0 --livereload --force_polling --destination /usr/site/"
     ports:
       - 127.0.0.1:4000:4000
       - 127.0.0.1:35729:35729
@@ -11,7 +11,36 @@ services:
       - gems:/usr/gems/:rw
       - site:/usr/site/:rw
 
+  # Reproduces what .github/workflows/jekyll.yml actually runs (jekyll build,
+  # JEKYLL_ENV=production, --baseurl set to the GitHub Pages project path)
+  # instead of the dev server above (jekyll serve --incremental, no baseurl,
+  # JEKYLL_ENV=development). `docker compose up` alone never starts this
+  # service; run it explicitly with `docker compose --profile prod up jekyll-prod`
+  # and open http://localhost:4001/interoperability_2024-26/ to check a page
+  # the way it will actually render once deployed.
+  #
+  # PAGES_REPO_NWO is derived from the 'origin' remote rather than hardcoded,
+  # because jekyll-github-metadata's own git-remote sniffing fallback only
+  # runs when Jekyll.env is development/test (repository_finder.rb) — under
+  # JEKYLL_ENV=production, same as CI, it requires PAGES_REPO_NWO explicitly
+  # or the build fails with "No repo name found", exactly as the GitHub
+  # Actions workflow supplies it via `PAGES_REPO_NWO: ${{ github.repository }}`.
+  jekyll-prod:
+    image: ruby:3.3
+    working_dir: /usr/src/app/
+    profiles: ["prod"]
+    environment:
+      JEKYLL_ENV: production
+    entrypoint: /bin/bash -c "git config --global --add safe.directory /usr/src/app && export PAGES_REPO_NWO=$(git config --get remote.origin.url | sed -E 's#.*[:/]([^/]+/[^/.]+)(\\.git)?$#\\1#') && bundle config set --local path '/usr/gems/' && bundle install && bundle exec jekyll build --baseurl /interoperability_2024-26 --destination /usr/site-prod/interoperability_2024-26 && bundle exec ruby -run -e httpd /usr/site-prod -p 4000"
+    ports:
+      - 127.0.0.1:4001:4000
+    volumes:
+      - .:/usr/src/app/:rw
+      - gems:/usr/gems/:rw
+      - site-prod:/usr/site-prod/:rw
 
-volumes: 
+
+volumes:
   gems:
   site:
+  site-prod:
