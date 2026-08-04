@@ -67,14 +67,15 @@ theme_variables:
   # toc:
   #   min_headings: 2
   #   headings: 'h2'
-  # topnav:
-  # theme: light
-  brand_logo: assets/img/main_logo.svg
-  # github: true
-  # twitter: false
-  # bluesky: false
-  # linkedin: false
-  # fosstodon: false
+  topnav:
+    # theme: light
+    brand_logo: assets/img/main_logo.svg
+    # search: true
+    # github: true
+    # twitter: false
+    # bluesky: false
+    # linkedin: false
+    # fosstodon: false
   # theme_color: 0d6efd
   # fonts:
   #   - url towards a font
@@ -96,6 +97,7 @@ sass:
     - global-builtin
     - color-functions
     - mixed-decls
+    - if-function
 
 github:
   repository_url: https://github.com/elixir-europe/interoperability_2024-26
