@@ -1,0 +1,55 @@
+{% if page.cff_properties %}
+%%{init: {
+  "markdownAutoWrap": false
+}}%%
+flowchart LR;
+
+    %% General diagram structure
+    input@{ shape: doc } -.- 
+    start@{ shape: sm-circ } --> 
+    phase@{ shape: rounded } --> 
+    finish@{ shape: framed-circle } -.- 
+    output@{ shape: doc }
+
+    %% Phase diagram flow element definitions
+
+    %% Process inputs
+{% for item in page.cff_properties.inputs  %}
+    {% if page.cff_properties.inputs.size > 1 %}{{ item.id }}{% else %}input{% endif %}@{ shape: {{ item.shape | default: "doc" }}, label: "{{ site.cff[item.id].title | replace: " ", "
+    " }}"}
+{% endfor %}
+
+{% for item in page.cff_properties.outputs  %}
+    {% if page.cff_properties.outputs.size > 1 %}{{ item.id }}{% else %}output{% endif %}@{ shape: {{ item.shape | default: "doc" }}, label: "{{ site.cff[item.id].title | replace: " ", "
+    " }}"}
+{% endfor %}
+
+{% if page.cff_properties.inputs.size > 1 %}
+subgraph input["`{{ page.cff_properties.flow.pre_conditions.annotation | default: " " }}`"]
+    direction LR
+{% for item in page.cff_properties.inputs  %}
+    {{ item.id }} {% unless forloop.last %}-.-{% endunless %}
+{% endfor %}
+end
+{% elsif page.cff_properties.flow.pre_conditions.annotation %}
+    inputs_annotation@{ shape: brace-r, label: "{{ page.cff_properties.flow.pre_conditions.annotation }}" } -.- input
+{% endif %}
+
+{% if page.cff_properties.outputs.size > 1 %}
+subgraph output["`{{ page.cff_properties.flow.post_conditions.annotation | default: " " }}`"]
+    direction LR
+{% for item in page.cff_properties.outputs  %}
+    {{ item.id }} {% unless forloop.last %}-.-{% endunless %}
+{% endfor %}
+end
+{% elsif page.cff_properties.flow.post_conditions.annotation %}
+    output -.- outputs_annotation@{ shape: brace, label: "{{ page.cff_properties.flow.post_conditions.annotation }}" }
+{% endif %}
+
+
+    phase@{ label: "{{page.cff_properties.title | replace: " ", "
+    "}}" }
+{% else %}
+flowchart LR;
+    error("Rendering error, missing `page.cff_properties`")
+{% endif %}

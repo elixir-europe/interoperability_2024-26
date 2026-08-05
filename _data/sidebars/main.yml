@@ -11,6 +11,15 @@ subitems:
         url: /fairification_activity
       - title: Process
         url: /fairification_process
+        subitems:
+          - title: A. Define FAIRification Goals
+            url: /phase_1
+          - title: B. Project Examination
+            url: /phase_2
+          - title: C. Iterative FAIRification Cycles
+            url: /phase_3
+          - title: D. Post-FAIRification Review
+            url: /phase_4
       - title: Template(s)
         url: /fairification_template
       - title: Workplan structure

@@ -2,7 +2,6 @@
 
 //Example for highlighting the active page in the navigation:
 /*-----Top navigation-----*/
-
 .navbar-nav .nav-item > a {
   &.active {
     color: $white;
@@ -38,4 +37,53 @@ body {
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+/*-----Details-----*/
+details details {
+    margin-left: 0em;
+    padding: 0.5em;
+    border: solid 0.5em $light;
+    border-radius: $border-radius;
+    background-color: $white;
+    // filter: drop-shadow(1px 1px 5px);
+}
+
+
+/*-----Mermaid diagrams-----*/
+.language-mermaid {
+    // Mermaid diagram subgraph element shape
+    .cluster rect {
+        rx: 10px;
+        ry: 10px;
+        stroke-dasharray: 6;
+        stroke-width: 3px !important;
+    }
+
+    // Mermaid node shapes
+    .node>rect, .node>circle, .node>polygon, .node>path, .node>g.outer-path { 
+        filter:url('#svg-drop-shadow'); // Apply drop-shadow using SVG filters
+    };
+
+    
+    foreignObject {
+
+        // Mermaid edge labels
+        &:has(.edgeLabel) {
+
+            // Remove default background
+            .edgeLabel, .labelBkg {
+                background-color: transparent !important;
+            }
+
+            // Label text
+            p {
+                margin-inline: auto !important;
+                max-width: max-content;
+                border-radius: 8px;
+                padding: 0.2em 0.75rem;
+                background-color: rgba($light, 0.95) !important;
+            }
+        }
+    }
 }

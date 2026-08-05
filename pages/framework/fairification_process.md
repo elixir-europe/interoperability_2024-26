@@ -1,13 +1,39 @@
 ---
 title: The FAIRification Process
----
+layout: diagram-page
+cff_properties:
+  id: process
+  type: process
+  title: Common FAIRification Process
+  flow:
+    pre_annotation: |-
+      FAIR compliance
+      challenges & 
+      use cases
+    post_annotation: |-
+      Uses and research 
+      impact realised by 
+      FAIR implementation
+    phases:
+      - phase_1
+      - phase_2
+      - phase_3
+      - phase_4
 
-{% include image.html file="framework/FAIRificationProcess-menu-00.png" alt="FAIRificationProcess-menu-00" %}
+---
+<div class="language-mermaid figure-img img-fluid rounded">
+{% include cff_process_diagram.mmd.liquid %}
+</div>
+
+
 The FAIRification Process structures the FAIRification project into 4 distinct phases described below.
 
 
-{% include_relative process_phases/phase_1.md %}
-{% include_relative process_phases/phase_2.md %}
-{% include_relative process_phases/phase_3.md %}
-{% include_relative process_phases/phase_4.md %}
+{% assign documentation_pages = site.pages | where_exp: "item", "item.path contains 'phase_'" %}
+{% for p in documentation_pages %}
+### {{ p.title }}
+{{ p.excerpt }}
+Continue reading: [{{ p.title }}]({{ p.url | relative_url }})
+{% endfor %}
+
 
