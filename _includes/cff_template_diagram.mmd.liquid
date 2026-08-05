@@ -1,0 +1,43 @@
+{% assign cff_id = include.cff_id | default: page.cff_properties.id | default: "template" -%}
+{% assign cff_element = site.cff[cff_id] -%}
+ %%{init: {
+  "htmlLabels": true,
+  "flowchart": {
+    "wrappingWidth": 110,
+    "padding": 4,
+    "rankSpacing": -1,
+    "diagramPadding": 0,
+    "nodeSpacing": 4,
+    "text-align": "left"
+  }
+}}%%
+flowchart LR;
+{% for step_id in cff_element.flow.phases %}
+    {% assign capability_model = site.cff[step_id].capabilities_model %}
+    subgraph {{step_id}}
+        direction TB
+        {{step_id}}L@{ shape: processes, label: "**{{ forloop.index }}.&nbsp;{{ site.cff[step_id].title }}**" } -.-
+        {% for item in site.cff[step_id].capabilities -%}
+        {{ item.id }}@{ shape: rect, label: "{{ forloop.parentloop.index }}.{{ forloop.index }}&nbsp;{{ site.cff[item.id].title }}" }
+        {%- if forloop.last == false %} -.-{% endif %}
+        {% endfor %} -.->
+        {{step_id}}C@{ shape: notch-rect, label: "**{{site.cff[capability_model].title}}**" }
+    end
+
+    class {{step_id}}C {{capability_model}}
+{% endfor %}
+
+{% for step_id in cff_element.flow.phases -%}
+{{step_id}}{% if forloop.last == false %} ~~~ {% endif -%}
+{%- endfor %}
+
+classDef hide fill:transparent,color:transparent,stroke:transparent,stroke-width:0px
+class {% for step_id in cff_element.flow.phases -%}
+{{step_id}}{% if forloop.last == false %},{% endif -%}
+{%- endfor %} hide
+
+classDef content fill:#1F3864,stroke:#1F3864,color:#FFFFFF,font-weight:bold
+classDef representation fill:#A12964,stroke:#A12964,color:#FFFFFF,font-weight:bold
+classDef hosting fill:#FF7D8D,stroke:#FF7D8D,color:#FFFFFF,font-weight:bold
+
+

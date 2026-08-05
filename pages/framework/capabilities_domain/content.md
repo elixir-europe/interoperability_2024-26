@@ -1,7 +1,7 @@
 {% assign categories = site.data.library-interop-stories.dsm_data %}
 {% assign category = categories | find: "categoryID", "content-and-context" %}
 
-## {{ category.categoryName }}
+### {{ category.categoryName }}
 {{ category.categoryDescription }}
 
 {% assign mappings = site.data.library-interop-stories.dsm_ft_mapping
