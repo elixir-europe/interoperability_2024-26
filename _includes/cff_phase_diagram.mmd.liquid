@@ -1,19 +1,24 @@
-{% if page.cff_properties %}
+{% assign cff_id = include.cff_id | default: page.cff_properties.id -%}
+{% assign cff_element = site.cff[cff_id] -%}
+{% if cff_element %}
 %%{init: {
   "htmlLabels": true,
   "flowchart": {
-    "wrappingWidth": 260,
-    "padding":10,
-    "diagramPadding": 10,
-    "padding": 0, 
-    "rankSpacing": 0,
-    "nodeSpacing": 0
+    "wrappingWidth": {{ include.wrappingWidth | default: 260 }},
+    "diagramPadding": {{ include.diagramPadding | default: 10 }},
+    "padding": {{ include.padding | default: 0 }}, 
+    "rankSpacing": {{ include.rankSpacing | default: 0 }},
+    "nodeSpacing": {{ include.nodeSpacing | default: 0 }},
+    "subGraphTitleMargin": {
+      "top": 0,
+      "bottom": {{ include.titleMargin | default: 0 }}
+    }
   }
 }}%%
 flowchart TB;
 
     %% Process phases
-{% for item in page.cff_properties.outputs  %}
+{% for item in cff_element.outputs  %}
   {% for output_target in site.cff -%}
   {%- assign input_role = output_target[1].inputs | find: "id", item.id -%}
   {%- if input_role -%}
@@ -23,7 +28,7 @@ flowchart TB;
   {%- endfor -%}
 {% endfor %}
 
-{% for item in page.cff_properties.inputs  %}
+{% for item in cff_element.inputs  %}
 {% assign input_index = forloop.index %}
   {% for input_source in site.cff -%}
   {%- assign output_role = input_source[1].outputs | find: "id", item.id -%}
@@ -35,16 +40,21 @@ flowchart TB;
 {% endfor %}
 
     %% Process inputs
-{% for item in page.cff_properties.inputs  %}
-    {{ item.id }}@{ shape: {{ item.shape | default: "doc" }}, label: "**{{ site.cff[item.id].title }}**
-    {{ site.cff[item.id].description }}"}
+{% for item in cff_element.inputs  %}
+    {{ item.id }}@{ shape: {{ item.shape | default: "doc" }}, label: "
+    {%- if include.titles_only!=true -%}
+    **{{ site.cff[item.id].title }}**
+    {{ site.cff[item.id].description }}
+    {%- else -%}
+    {{ site.cff[item.id].title }}
+    {%- endif %}"}
 {% endfor %}
     
 
 
     %% Process flow elements
 
-{% for item in page.cff_properties.flow.nodes  %}
+{% for item in cff_element.flow.nodes  %}
     {% if item[1].subgraph %}
         subgraph {{ item[0] }}["`*{{ item[1].title | default: item[0] }}*`"]
             {% for sub_item in item[1].subgraph  %}
@@ -52,53 +62,63 @@ flowchart TB;
             {% endfor %}
         end
     {% else %}
-    {{ item[0] }}@{ shape: card{% if item[1].title %}, label: "**{{ item[1].title | default: item[0] }}**
-    {{ item[1].description }}"{%endif%}}
+    {{ item[0] }}@{ shape: card{% if item[1].title %}, label: "
+    {%- if include.titles_only!=true -%}
+    **{{ item[1].title | default: item[0] }}**
+    {{ item[1].description }}
+    {%- else -%}
+    {{ item[1].title | default: item[0] }}
+    {%- endif %}"{%endif%}}
     {% endif %}
 {% endfor %}
 
     %% Process outputs
-{% for item in page.cff_properties.outputs  %}
-    {{ item.id }}@{ shape: {{ item.shape | default: "doc" }}, label: "**{{ site.cff[item.id].title }}**
-    {{ site.cff[item.id].description }}"}
+{% for item in cff_element.outputs  %}
+    {{ item.id }}@{ shape: {{ item.shape | default: "doc" }}, label: "
+    {%- if include.titles_only!=true -%}
+    **{{ site.cff[item.id].title }}**
+    {{ site.cff[item.id].description }}
+    {%- else -%}
+    {{ site.cff[item.id].title }}
+    {%- endif %}"}
 {% endfor %}
 
 
     %% Relations
-    {% for edge in page.cff_properties.flow.edges  %}
+    {% for edge in cff_element.flow.edges  %}
     {{ edge.source }} edge_{{forloop.index}}@{{ edge.link_type | default: "-->" }}{% if edge.label %}|"`{{ edge.label }}`"|{% endif %}{{ edge.target }}
     {% endfor %}
 
-    {% for item in page.cff_properties.inputs  %}
+    {% for item in cff_element.inputs  %}
     {{ item.id }} {% if item.edge_label %}-- "`{{ item.edge_label }}`"{% endif %}--> flow
     {% endfor %}
 
-    {% for item in page.cff_properties.outputs  %}
+    {% for item in cff_element.outputs  %}
     flow {% if item.edge_label %}-- "`{{ item.edge_label }}`"{% endif %}--> outputs_{{forloop.index}}
     {% endfor %}
 
 
     %% Structral elements
-    {% for item in page.cff_properties.inputs  %}
-    subgraph input_{{forloop.index}}["`**Input{% if page.cff_properties.inputs.length > 1 %} {{forloop.index}}{% endif %}**`"]
+    {% for item in cff_element.inputs  %}
+    subgraph input_{{forloop.index}}["`Input{% if cff_element.inputs.length > 1 %} {{forloop.index}}{% endif %}`"]
         {{ item.id }}
     end
     {% endfor %}
 
-    subgraph flow["`**{{ page.cff_properties.title }}**`"]
-      direction {{ page.cff_properties.flow.layout | default: "LR" }}
-      {% for item in page.cff_properties.flow.nodes  %}
+    subgraph flow["`{{ include.title | default: cff_element.title }}`"]
+      direction {{ cff_element.flow.layout | default: "LR" }}
+      {% for item in cff_element.flow.nodes  %}
       {{ item[0] }}
       {% endfor %}
     end
 
-    {% for item in page.cff_properties.outputs %}
-    subgraph outputs_{{forloop.index}}["`**Output{% if page.cff_properties.outputs.length > 1 %} {{forloop.index}}{% endif %}**`"]
+    {% for item in cff_element.outputs %}
+    subgraph outputs_{{forloop.index}}["`Output{% if cff_element.outputs.length > 1 %} {{forloop.index}}{% endif %}`"]
         {{ item.id }}
     end
     {% endfor %}
 
 {% else %}
 flowchart LR;
-    error("Rendering error, missing `page.cff_properties`")
+    error("Rendering error, missing cff element with id `{{cff_id}}`")
 {% endif %}

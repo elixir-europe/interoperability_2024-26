@@ -1,7 +1,7 @@
-{% assign phase_id = page.cff_properties.id %}
+{% assign phase_id = include.cff_id | default: page.cff_properties.id %}
 {% assign cff_phase = site.cff[phase_id] %} <!-- page.cff_properties -->
 
-
+{% if cff_phase.flow.pre_conditions or cff_phase.pre_phases.size >0  %}
 <details markdown="1">
   <summary><span markdown="1">**Preconditions:**
 {% if cff_phase.pre_phases.size > 0 -%}
@@ -18,7 +18,9 @@ Completed {% for phase_id in cff_phase.pre_phases -%}
 1. {{ item }}<br>
 {% endfor %}
 </details>
+{% endif %}
 
+{% if cff_phase.flow.post_conditions or cff_phase.pre_phases.size >0  %}
 <details markdown="1">
   <summary><span markdown="1">
   **Postconditions:**
@@ -35,7 +37,9 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 1. {{ item }}
 {% endfor %}
 </details>
+{% endif %}
 
+{% if cff_phase.inputs.size >0  %}
 <details markdown="1">
   <summary><span markdown="1">
   **Inputs:**
@@ -52,9 +56,9 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 </details>
 {% endfor %}
 </details>
+{% endif %}
 
-{% assign all_phases = site.cff | where: "type", "process_phase"%}
-
+{% if cff_phase.outputs.size >0  %}
 <details markdown="1">
   <summary><span markdown="1">
   **Outputs:** {% for item in cff_phase.outputs -%}
@@ -74,7 +78,9 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 {% endfor %}
 </details>
 </details>
+{% endif %}
 
+{% if cff_phase.flow.nodes.size >0 %}
 <details markdown="1">
   <summary><span markdown="1">
   **Key concepts:** {% for item in cff_phase.flow.nodes  -%}
@@ -116,7 +122,7 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 
 {% if nodes_without_subgraphs.size > 0 %}
 <details markdown="1" open="1">
-<summary><span markdown="1">**Enteties**
+<summary><span markdown="1">**Entities**
 </span></summary>
 {% for node in nodes_without_subgraphs  %}
   * `{{ node.title }}`: 
@@ -133,5 +139,5 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 {% endfor %}
 </details>
 </details>
-
+{% endif %}
 
