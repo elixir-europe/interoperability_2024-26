@@ -6,6 +6,7 @@ cff_properties:
   id: phase_4
   type: process_phase
   title: Post-FAIRification review
+  description: Review *outcomes* and assess success against original goals
   inputs:
     - id: phase_1_outputs
       edge_label: Used as benchmark to evaluate the overall success of the process

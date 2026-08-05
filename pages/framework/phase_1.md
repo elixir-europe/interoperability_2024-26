@@ -6,7 +6,7 @@ cff_properties:
   id: phase_1
   type: process_phase
   title: Define FAIRification goals
-  description: Determine the goals for FAIRification in terms of desired usability of data that isn't currently possible.
+  description: Determine the goals for FAIRification, in terms of desired *usability of data* that isn't currently possible.
   inputs:
     - id: phase_1_inputs
       shape: cloud

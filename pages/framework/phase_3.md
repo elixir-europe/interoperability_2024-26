@@ -6,6 +6,7 @@ cff_properties:
   id: phase_3
   type: process_phase
   title: Iterative FAIRification cycles
+  description: Define and deliver *practical, achievable objectives* for a single 3 month rlease cycle that work towards the overall FAIRification goal
   inputs:
     - id: phase_2_outputs
       edge_label: Used to inform scope, initial backlog and implementation design decisions

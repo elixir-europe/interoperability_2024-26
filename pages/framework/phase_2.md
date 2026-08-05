@@ -6,7 +6,7 @@ cff_properties:
   id: phase_2
   type: process_phase
   title: Project examination
-  description: Initial project examination
+  description: Examine the current state of the project with respect to *FAIRification goal*
   inputs:
     - id: phase_1_outputs
       edge_label: Used to determine target state characteristics, requirements and priorities
@@ -50,15 +50,15 @@ cff_properties:
           - initial_state
           - backlog
       object_types: 
-        title: Research object categories
+        title: Research objects in scope
         description: >-
-          Scoped at appropriate levels of granularity, including their types, references to related input files, documentation, DTAs and other context.
+          Categories at appropriate levels of granularity, including object type, references to files, DTAs, documentation and other context.
       capabilities: 
-        title: Courses of action & capabilities
+        title: Approach & required capabilities
         description: >-
           The broad sequence of steps and abilities available to realise and later sustain the FAIRified research objects.
       resources: 
-        title: Supporting resources & staff
+        title: FAIRification resources & staff
         description: >-
           The assets, skills, repositories, vocabulary systems, knowledge resources selected / designed to realise and sustain the results.
       target_state: 
