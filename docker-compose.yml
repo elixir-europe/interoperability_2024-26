@@ -2,16 +2,18 @@ services:
   jekyll:
     image: ruby:3.3
     working_dir: /usr/src/app/
-    entrypoint: /bin/bash -c "bundle config set --local path '/usr/gems/' && bundle install && bundle exec jekyll serve --incremental --host 0.0.0.0 --livereload --force_polling --destination /usr/site/"
+    entrypoint: /bin/bash -c "git config --global --add safe.directory /usr/src/app && bundle config set --local path '/usr/gems/' && bundle install && bundle exec jekyll serve --incremental --host 0.0.0.0 --livereload --force_polling --destination /usr/site/"
     ports:
       - 127.0.0.1:4000:4000
       - 127.0.0.1:35729:35729
     volumes:
+      # rw, not ro: despite --destination pointing elsewhere, Jekyll writes
+      # .jekyll-cache/ and .jekyll-metadata into the *source* dir (this
+      # mount), and `bundle install` can rewrite Gemfile.lock in place.
       - .:/usr/src/app/:rw
       - gems:/usr/gems/:rw
       - site:/usr/site/:rw
 
-
-volumes: 
+volumes:
   gems:
   site:

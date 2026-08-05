@@ -67,14 +67,15 @@ theme_variables:
   # toc:
   #   min_headings: 2
   #   headings: 'h2'
-  # topnav:
-  # theme: light
-  brand_logo: assets/img/main_logo.svg
-  # github: true
-  # twitter: false
-  # bluesky: false
-  # linkedin: false
-  # fosstodon: false
+  topnav:
+    # theme: light
+    brand_logo: assets/img/main_logo.svg
+    # search: true
+    # github: true
+    # twitter: false
+    # bluesky: false
+    # linkedin: false
+    # fosstodon: false
   # theme_color: 0d6efd
   # fonts:
   #   - url towards a font
@@ -91,11 +92,19 @@ plugins:
 sass:
   style: compressed
   sourcemap: always
-  silence_deprecations: # TODO: Fix https://sass-lang.com/documentation/js-api/interfaces/deprecations/
+  # All four below fire from Bootstrap's own SCSS vendored inside the
+  # elixir-toolkit-theme gem (pinned in Gemfile), not from anything in this
+  # repo's _sass/ — confirmed by compiling with silence_deprecations: []
+  # and checking every warning's source path. They'll keep firing on every
+  # build until Bootstrap/the theme migrates off @import and the legacy
+  # global/color function APIs; re-check when bumping the theme version.
+  # (`mixed-decls` produces zero warnings against the current theme + this
+  # repo's SCSS, so it's deliberately left out of this list.)
+  silence_deprecations:
     - import
     - global-builtin
     - color-functions
-    - mixed-decls
+    - if-function
 
 github:
   repository_url: https://github.com/elixir-europe/interoperability_2024-26
