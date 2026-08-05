@@ -19,6 +19,22 @@ _The FAIRification Template and the FAIRification Workplan are available to supp
 {% include cff_process_diagram.mmd.liquid %}
 </div>
 
-{% include diagram-mmd.html file="FAIRificationTemplate.mmd" caption="Example: Templated steps from the FAIRplus project for FAIRifying data sets" alt="FAIRplus FAIRification Template" %}
 
-{% include diagram-mmd.html file="FAIRificationWorkplanSummary.mmd" caption="Recommended workplan structure to support continuous improvements" alt="FAIRplus work plan structure" %}
+<div class="language-mermaid figure-img img-fluid rounded">
+{% include cff_process_diagram.mmd.liquid 
+    cff_id="template" 
+    title="Template: Steps from the FAIRplus project for FAIRifying data sets"
+%}
+</div>
+
+<div class="language-mermaid figure-img img-fluid rounded">
+{% include cff_phase_diagram.mmd.liquid 
+    cff_id="workplan" 
+    title="Recommended workplan structure to support continuous improvements"
+    wrappingWidth="260" 
+    padding="10" 
+    rankSpacing="10"
+    titleMargin="10"
+    titles_only=true 
+%}
+</div>

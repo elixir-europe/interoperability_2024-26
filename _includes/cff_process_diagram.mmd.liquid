@@ -1,39 +1,43 @@
 %%{init: {
-  "markdownAutoWrap": false
+ 
 }}%%
-{% if page.cff_properties.id == "process" %}
-{% assign cff_process = page.cff_properties %}
-{% else %}
-{% assign cff_process = site.cff.process %}
-{% endif %}
+{%- assign process_id = include.cff_id | default: page.cff_properties.id | default: "process" %}
+{%- assign title = include.title | default: site.cff[process_id].title | default: process_id %}
+{%- assign pre_annotation = site.cff[process_id].flow.pre_annotation %}
+{%- assign phases = site.cff[process_id].flow.phases %}
+{%- assign post_annotation = site.cff[process_id].flow.post_annotation %}
 flowchart LR;
 
     %% General diagram structure
+    {%- if pre_annotation %}
     initiation_annotation@{ shape: brace-r } -.- 
+    {%- endif %}
     start@{ shape: sm-circ } === 
-    phase_1@{ shape: rounded } ===
-    phase_2@{ shape: rounded } ===
-    phase_3@{ shape: rounded } ===
-    phase_4@{ shape: rounded } ==>
-    finish@{ shape: framed-circle } -.- 
+    {%- for phase_id in phases %}
+    {{ phase_id }}@{ shape: rounded } {% if forloop.last %}==>{% else %}==={% endif %}
+    {%- endfor %}
+    finish@{ shape: framed-circle } 
+    {%- if post_annotation -%}
+    -.- 
     outcome_annotation@{ shape: brace } 
+    {%- endif %}
 
-    subgraph process["{{ cff_process.title }}"]
-        phase_1
-        phase_2
-        phase_3
-        phase_4
+  
+    subgraph process["{{ title }}"]
+    {%- for phase_id in phases %}
+        {{ phase_id }}
+    {%- endfor %}
     end
 
     %% Labels
-    initiation_annotation@{ label: "{{ cff_process.flow.pre_annotation }}" }
+    {%- if pre_annotation %}
+    initiation_annotation@{ label: "{{ pre_annotation | replace: " ", "&nbsp;" }}" }
+    {%- endif %}
 
-    phase_1("`{{ site.cff.phase_1.title | replace: " ", "<br>" }}`")
-    
-    phase_2("`{{ site.cff.phase_2.title | replace: " ", "<br>" }}`")
-    
-    phase_3("`{{ site.cff.phase_3.title | replace: " ", "<br>" }}`")
-    
-    phase_4("`{{ site.cff.phase_4.title | replace: " ", "<br>" }}`")
+    {%- for phase_id in phases %}
+    {{ phase_id }}("`{{ site.cff[phase_id].title }}`")
+    {%- endfor %}
 
-    outcome_annotation@{ label: "{{ cff_process.flow.post_annotation }}" }
+    {%- if post_annotation %}
+    outcome_annotation@{ label: "{{ post_annotation | replace: " ", "&nbsp;" }}" }
+    {%- endif %}

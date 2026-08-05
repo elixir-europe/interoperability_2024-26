@@ -14,6 +14,12 @@ cff_properties:
       Uses and research 
       impact realised by 
       FAIR implementation
+    phases:
+      - phase_1
+      - phase_2
+      - phase_3
+      - phase_4
+
 ---
 <div class="language-mermaid figure-img img-fluid rounded">
 {% include cff_process_diagram.mmd.liquid %}
