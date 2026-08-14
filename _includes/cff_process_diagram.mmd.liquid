@@ -40,7 +40,7 @@ flowchart LR;
     {%- assign model = site.cff[phase_id].capabilities_model -%}
     <div>{{site.cff[model].title}}</div>
     {%- endif -%}{{ site.cff[phase_id].title }}`")
-    click {{ phase_id }} href "{{site.cff[phase_id].page_url}}" "Go to {{ site.cff[phase_id].title }}"
+    click {{ phase_id }} href "{{site.cff[phase_id].page_url | relative_url}}" "Go to {{ site.cff[phase_id].title }}"
     class {{ phase_id }} {{ phase_id }}
     {% if highlight == phase_id -%}
     class {{ phase_id }} highlight
