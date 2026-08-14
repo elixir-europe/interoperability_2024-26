@@ -60,9 +60,6 @@ cff_elements:
                     <b>{{cap.title}}</b>
                 </a>
                 <div class="card-text h-100">{{ cap.description }}</div>
-                <div><strong>Resources:</strong>
-                {% include cff_library_items.md.liquid cff_id=cap_id %}
-                </div>
             </div>
         </div>
     </div>

@@ -23,6 +23,8 @@ subitems:
       - title: Template
         url: /fairification_template
         subitems:
+          - title: "{{site.cff.templated_steps.title}}"
+            url: /template_steps
           - title: "1. {{site.cff.step_1.title}}"
             url: /template_step_1
           - title: "2. {{site.cff.step_2.title}}"

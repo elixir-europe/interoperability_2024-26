@@ -3,27 +3,34 @@ layout: diagram-page
 title: Course of action
 excerpt_separator: <!--more-->
 toc: false
-
+cff_properties:
+  id: templated_steps
+  type: templated_steps
+  title: Course of action
+  description: Concrete tasks commonly encountered across FAIRification efforts. While the Template presents the different steps in a recommended logical sequence, not all steps will be required for, nor relevant to each FAIRification scenario.
+  flow:
+    phases:
+      - step_1
+      - step_2
+      - step_3
+      - step_4
+      - step_5
+      - step_6
+      - step_7
+      - step_8
+cff_elements:
   
 ---
+
+{{ page.cff_properties.description }}
+
+<!--more-->
+
 <div class="language-mermaid colouring">
 {% include cff_process_diagram.mmd.liquid 
     cff_id="templated_steps"
 %}
 </div>
-
-Template(s) breaks down key elements of the process into a series of steps with links to supporting resources.
-
-
-The FAIRification Template operationalizes the FAIRification Process by outlining a set of clear, distinct steps for the implementation stage within the FAIRification Cycle. It comprises eight steps (covering) grouped in 3 main dimensions :  
-* hosting capabilities (e.g., data access, data retrieval, versioning, etc.)
-* data representation and format (e.g., applying data standards and aligning vocabularies, etc.)
-* data content (e.g., identifier minting and annotation with controlled vocabularies, etc)  
-
-The Template supports users as needed by offering concrete tasks commonly encountered across FAIRification efforts. While the Template presents the different steps in a recommended logical sequence (e.g. data cannot be transformed to an interoperable data model if no such model exists or if the data type is not properly understood), not all steps will be required for, nor relevant to each FAIRification scenario.
-
-
-<!--more-->
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mb-5 navigation-tiles">
 {% for step in page.cff_properties.flow.phases %}
