@@ -47,6 +47,8 @@ subitems:
             url: /template_content
       - title: Workplan structure
         url: /fairification_workplan
+      - title: Contribute
+        url: /framework_contributions
   - title: Library of resources
     url: /stories
     subitems:
@@ -59,6 +61,6 @@ subitems:
       - title: RDMkit
         url: /rdmkit
       - title: Contribute
-        url: /contribute
+        url: /library_contributions
   - title: About
     url: /resources

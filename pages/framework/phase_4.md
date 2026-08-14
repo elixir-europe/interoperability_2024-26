@@ -59,20 +59,7 @@ cff_elements:
     title: FAIRification story
     description: |-
       Structured case study report on key achievements, FAIR implementation approach, and lessons learned.
-  cff_maintenance:
-    id: cff_maintenance
-    type: process_phase
-    title: Maintaining the FAIRification framework
-    inputs:
-    - id: phase_4_outputs
-      edge_label: Used to identify improvements
-  cff_content_creation:
-    id: cff_content_creation
-    type: process_phase
-    title: Contributing to FAIRification resources
-    inputs:
-    - id: phase_4_outputs
-      edge_label: Used to develop content for
+
 
 ---
 
