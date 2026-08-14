@@ -12,24 +12,30 @@ subitems:
       - title: Process
         url: /fairification_process
         subitems:
-          - title: A. Define FAIRification Goals
+          - title: "A. {{site.cff.phase_1.title}}"
             url: /phase_1
-          - title: B. Project Examination
+          - title: "B. {{site.cff.phase_2.title}}"
             url: /phase_2
-          - title: C. Iterative FAIRification Cycles
+          - title: "C. {{site.cff.phase_3.title}}"
             url: /phase_3
-          - title: D. Post-FAIRification Review
+          - title: "D. {{site.cff.phase_4.title}}"
             url: /phase_4
       - title: Template(s)
         url: /fairification_template
       - title: Workplan structure
         url: /fairification_workplan
-  - title: Library of Interoperability stories
+  - title: Library of resources
     url: /stories
     subitems:
-      - title: All stories
-        url: /interoperability_stories
-      - title: Browse by FAIRification Template step
-        url: /alignment
   - title: Resources
+      - title: FAIR Cookbook
+        url: /faircookbook
+      - title: FAIR Metroline
+        url: /fairmetroline
+      - title: ELIXIR Stories
+        url: /elixirstories
+      - title: RDMkit
+        url: /rdmkit
+      - title: Contribute
+        url: /contribute
     url: /resources

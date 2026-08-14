@@ -1,4 +1,25 @@
 Jekyll::Hooks.register :site, :post_read do |site|
+
+  def expand_liquid_variables!(target_hash, keys, variables_hash)
+    keys.each do |key|
+      if target_hash.key?(key)
+        value = target_hash[key]
+        new_value = Liquid::Template.parse(value).render(variables_hash)
+        if value != new_value
+          Jekyll.logger.info(value + " ==> " + new_value)
+          target_hash[key] = new_value
+        end
+      end
+    end
+  end
+
+  def menu_mapping!(item, variables_hash)
+    expand_liquid_variables!(item, ['title', 'url'], variables_hash)
+    if item.key?("subitems") and item['subitems'].is_a?(Array)
+      item['subitems'].each { |subitem| menu_mapping!(subitem, variables_hash) }
+    end
+  end
+
   cff_elements = {}
 
   site.pages.each do |page|
@@ -8,6 +29,12 @@ Jekyll::Hooks.register :site, :post_read do |site|
         cff_elements[key] = page.data['cff_properties']
       else
         raise "Duplicate CFF key “#{key}”"
+      end
+      ['elixirstories','fairmetroline','faircookbook','rdmkit'].each do |cat_id|
+        page.data[cat_id] ||= []
+        data = site.data['library-interop-stories'][cat_id]['data'].to_h { |e| [e['id'], {'name': e['title'], 'url': e['url']}] }
+        mappings = site.data['library-interop-stories'][cat_id]['mappings']
+        mappings.select{ |i| i['cff_id']==key}.each{ |i| page.data[cat_id] << data[i['id']] }
       end
     end
     if page.data['cff_elements'].is_a?(Hash)
@@ -44,6 +71,7 @@ Jekyll::Hooks.register :site, :post_read do |site|
     if page.data['cff_properties'].is_a?(Hash)
       site.regenerator.add_dependency(page.path, cff_elements)
       page.data['cff'] = cff_elements
+      expand_liquid_variables!(page.data, ['title'], page.data['cff_properties'])
     end
   end
   
@@ -51,6 +79,8 @@ Jekyll::Hooks.register :site, :post_read do |site|
   #site.regenerator.regenerate?("pages/framework/phase_2.md")
 
   site.config['cff'] = cff_elements
+
+  menu_mapping!(site.data['sidebars']['main'], {'site' => site.config})
 
   Jekyll.logger.info "CFF Site Variable Hook:", "Injected #{ cff_elements.length } CFF items from #{ site.pages.length } pages."
 end

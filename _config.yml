@@ -28,22 +28,6 @@ defaults:
     scope:
       path: "pages/framework"
     values:
-      sidebar: framework
-  -
-    scope:
-      path: "pages/stories"
-    values:
-      sidebar: stories
-  -
-    scope:
-      path: "pages/resources"
-    values:
-      sidebar: resources
-  -
-    scope:
-      path: "pages/portfolio"
-    values:
-      sidebar: portfolio
 page_excerpts: true
 
 theme_variables:
