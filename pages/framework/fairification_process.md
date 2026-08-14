@@ -19,21 +19,17 @@ cff_properties:
       - phase_2
       - phase_3
       - phase_4
-
 ---
-<div class="language-mermaid figure-img img-fluid rounded">
+<div class="language-mermaid colouring">
 {% include cff_process_diagram.mmd.liquid %}
 </div>
 
 
 The FAIRification Process structures the FAIRification project into 4 distinct phases described below.
-
-
-{% assign documentation_pages = site.pages | where_exp: "item", "item.path contains 'phase_'" %}
-{% for p in documentation_pages %}
-### {{ p.title }}
-{{ p.excerpt }}
-Continue reading: [{{ p.title }}]({{ p.url | relative_url }})
+{% assign pages = page.cff_properties.flow.phases %}
+{% for p in pages %}
+1. **[{{ site.cff[p].title }}]({{ site.cff[p].page_url | relative_url }})**\
+   {{ site.cff[p].description }}
 {% endfor %}
 
 

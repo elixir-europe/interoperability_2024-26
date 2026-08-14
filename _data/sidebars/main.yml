@@ -50,7 +50,6 @@ subitems:
   - title: Library of resources
     url: /stories
     subitems:
-  - title: Resources
       - title: FAIR Cookbook
         url: /faircookbook
       - title: FAIR Metroline
@@ -61,4 +60,5 @@ subitems:
         url: /rdmkit
       - title: Contribute
         url: /contribute
+  - title: About
     url: /resources
