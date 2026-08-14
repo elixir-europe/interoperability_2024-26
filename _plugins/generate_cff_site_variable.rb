@@ -74,10 +74,12 @@ Jekyll::Hooks.register :site, :post_read do |site|
   site.pages.each do |page|
     if page.data['cff_properties'].is_a?(Hash)
       site.regenerator.add_dependency(page.path, cff_elements)
-      page.data['cff'] = cff_elements
+      site.regenerator.add_dependency(page.path, site.data["library-interop-stories"])
+      site.regenerator.add_dependency(page.path, site.data["sidebars"]["framework"])
       expand_liquid_variables!(page.data, ['title'], page.data['cff_properties'])
     end
   end
+
   
   #site.regenerator.add_dependency("_includes/cff-phase.md.liquid", cff_elements)
   #site.regenerator.regenerate?("pages/framework/phase_2.md")

@@ -20,8 +20,31 @@ subitems:
             url: /phase_3
           - title: "D. {{site.cff.phase_4.title}}"
             url: /phase_4
-      - title: Template(s)
+      - title: Template
         url: /fairification_template
+        subitems:
+          - title: "1. {{site.cff.step_1.title}}"
+            url: /template_step_1
+          - title: "2. {{site.cff.step_2.title}}"
+            url: /template_step_2
+          - title: "3. {{site.cff.step_3.title}}"
+            url: /template_step_3
+          - title: "4. {{site.cff.step_4.title}}"
+            url: /template_step_4
+          - title: "5. {{site.cff.step_5.title}}"
+            url: /template_step_5
+          - title: "6. {{site.cff.step_6.title}}"
+            url: /template_step_6
+          - title: "7. {{site.cff.step_7.title}}"
+            url: /template_step_7
+          - title: "8. {{site.cff.step_8.title}}"
+            url: /template_step_8
+          - title: "{{site.cff.hosting.title}}"
+            url: /template_hosting
+          - title: "{{site.cff.representation.title}}"
+            url: /template_representation
+          - title: "{{site.cff.content.title}}"
+            url: /template_content
       - title: Workplan structure
         url: /fairification_workplan
   - title: Library of resources
