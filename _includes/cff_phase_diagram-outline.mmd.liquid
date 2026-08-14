@@ -1,30 +1,50 @@
 {% if page.cff_properties %}
+{%- assign has_many_outputs = page.cff_properties.inputs.size > 1 %}
+{%- if page.cff_properties.inputs.size > 1 %}
+{%-     assign input_id = "input" -%}
+{%-     assign has_many_inputs = true %}
+{%- else -%}
+{%-     assign input_id = page.cff_properties.inputs | map: "id" | first %}
+{%-     assign has_many_inputs = false %}
+{%- endif -%}
+{%- if page.cff_properties.outputs.size > 1 %}
+{%-     assign output_id = "output" -%}
+{%-     assign has_many_outputs = true %}
+{%- else -%}
+{%-     assign output_id = page.cff_properties.outputs | map: "id" | first %}
+{%-     assign has_many_outputs = false %}
+{%- endif -%}
 %%{init: {
   "markdownAutoWrap": false
 }}%%
 flowchart LR;
 
     %% General diagram structure
-    input@{ shape: doc } -.- 
-    start@{ shape: sm-circ } --> 
-    phase@{ shape: rounded } --> 
-    finish@{ shape: framed-circle } -.- 
-    output@{ shape: doc }
+    {{input_id}}@{ shape: doc } 
+    {{input_id}}__start@{ shape: sm-circ } 
+    {{page.cff_properties.id}}@{ shape: rounded }
+    {{page.cff_properties.id}}__finish@{ shape: framed-circle } 
+    {{output_id}}@{ shape: doc }
+
+    {{input_id}} edge__{{input_id}}@-.- 
+    {{input_id}}__start edge__{{input_id}}__phase@==> 
+    {{page.cff_properties.id}} edge__{{page.cff_properties.id}}__phase@==> {{page.cff_properties.id}}__finish
+    {{page.cff_properties.id}}__finish -.- {{output_id}}
 
     %% Phase diagram flow element definitions
 
     %% Process inputs
 {% for item in page.cff_properties.inputs  %}
-    {% if page.cff_properties.inputs.size > 1 %}{{ item.id }}{% else %}input{% endif %}@{ shape: {{ item.shape | default: "doc" }}, label: "{{ site.cff[item.id].title | replace: " ", "
+    {{ item.id }}@{ shape: {{ item.shape | default: "doc" }}, label: "{{ site.cff[item.id].title | replace: " ", "
     " }}"}
 {% endfor %}
 
 {% for item in page.cff_properties.outputs  %}
-    {% if page.cff_properties.outputs.size > 1 %}{{ item.id }}{% else %}output{% endif %}@{ shape: {{ item.shape | default: "doc" }}, label: "{{ site.cff[item.id].title | replace: " ", "
+    {{ item.id }}@{ shape: {{ item.shape | default: "doc" }}, label: "{{ site.cff[item.id].title | replace: " ", "
     " }}"}
 {% endfor %}
 
-{% if page.cff_properties.inputs.size > 1 %}
+{% if has_many_inputs %}
 subgraph input["`{{ page.cff_properties.flow.pre_conditions.annotation | default: " " }}`"]
     direction LR
 {% for item in page.cff_properties.inputs  %}
@@ -32,10 +52,10 @@ subgraph input["`{{ page.cff_properties.flow.pre_conditions.annotation | default
 {% endfor %}
 end
 {% elsif page.cff_properties.flow.pre_conditions.annotation %}
-    inputs_annotation@{ shape: brace-r, label: "{{ page.cff_properties.flow.pre_conditions.annotation }}" } -.- input
+    inputs_annotation@{ shape: brace-r, label: "{{ page.cff_properties.flow.pre_conditions.annotation }}" } -.- {{input_id}}
 {% endif %}
 
-{% if page.cff_properties.outputs.size > 1 %}
+{% if has_many_outputs %}
 subgraph output["`{{ page.cff_properties.flow.post_conditions.annotation | default: " " }}`"]
     direction LR
 {% for item in page.cff_properties.outputs  %}
@@ -43,11 +63,11 @@ subgraph output["`{{ page.cff_properties.flow.post_conditions.annotation | defau
 {% endfor %}
 end
 {% elsif page.cff_properties.flow.post_conditions.annotation %}
-    output -.- outputs_annotation@{ shape: brace, label: "{{ page.cff_properties.flow.post_conditions.annotation }}" }
+    {{output_id}} -.- outputs_annotation@{ shape: brace, label: "{{ page.cff_properties.flow.post_conditions.annotation }}" }
 {% endif %}
 
 
-    phase@{ label: "{{page.cff_properties.title | replace: " ", "
+    {{page.cff_properties.id}}@{ label: "{{page.cff_properties.title | replace: " ", "
     "}}" }
 {% else %}
 flowchart LR;
