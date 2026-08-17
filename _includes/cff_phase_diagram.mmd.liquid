@@ -21,9 +21,11 @@ flowchart TB;
 {% for item in cff_element.outputs  %}
   {% for output_target in site.cff -%}
   {%- assign input_role = output_target[1].inputs | find: "id", item.id -%}
+  {%- assign output_phase_id = output_target[0] -%}
   {%- if input_role -%}
   {{output_target[0]}}("`**{{ output_target[1].title }}**`")
   {{item.id}} edge__{{item.id}}__{{forloop.index}}@-->{% if input_role.edge_label %}|"`{{ input_role.edge_label }}`"|{% endif %} {{output_target[0]}}
+  click {{ output_phase_id }} href "{{site.cff[output_phase_id].page_url | relative_url}}" "Go to {{ site.cff[output_phase_id].title }}"
   {% endif -%}
   {%- endfor -%}
 {% endfor %}
@@ -31,10 +33,12 @@ flowchart TB;
 {% for item in cff_element.inputs  %}
 {% assign input_index = forloop.index %}
   {% for input_source in site.cff -%}
+  {%- assign input_phase_id = input_source[0] -%}
   {%- assign output_role = input_source[1].outputs | find: "id", item.id -%}
   {%- if output_role -%}
   {{input_source[0]}}("`**{{ input_source[1].title }}**`")
   {{input_source[0]}} edge__{{input_source[0]}}__{{forloop.index}}@--> input_{{input_index}}
+  click {{ input_phase_id }} href "{{site.cff[input_phase_id].page_url | relative_url}}" "Go to {{ site.cff[input_phase_id].title }}"
   {% endif -%}
   {%- endfor -%}
 {% endfor %}
@@ -48,6 +52,7 @@ flowchart TB;
     {%- else -%}
     {{ site.cff[item.id].title }}
     {%- endif %}"}
+    click {{ item.id }} href "{{site.cff[item.id].page_url | relative_url}}" "Go to {{ site.cff[item.id].title }}"
 {% endfor %}
     
 
@@ -82,6 +87,7 @@ flowchart TB;
     {%- else -%}
     {{ site.cff[item.id].title }}
     {%- endif %}"}
+    click {{ item.id }} href "{{site.cff[item.id].page_url | relative_url}}" "Go to {{ site.cff[item.id].title }}"
 {% endfor %}
 
 
