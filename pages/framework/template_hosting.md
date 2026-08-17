@@ -5,7 +5,6 @@ excerpt_separator: <!--more-->
 cff_properties:
   id: hosting
   type: capability_dimension
-  hosting:
   title: Hosting
   description: |-
     Capabilities of the environment(s) where the research objects are hosted and made available for access and distributions. Exchange formats for the research objects are covered under *Formats & representation*, while APIs, indexing and query interfaces are covered here.

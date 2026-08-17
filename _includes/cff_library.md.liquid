@@ -10,20 +10,11 @@
 {% assign resource_mappings = site.data.library-interop-stories[cat].mappings | where: "cff_id", cff_item_id %}
 {% for resource_map in resource_mappings %}
 {%- assign cat_item = site.data.library-interop-stories[cat].data | find: "id", resource_map.id %}
-{%- if forloop.first %}
-<table>
-<thead>
-<tr><th scope="col">CFF section<th><th scope="col">{{page.cff_properties.title}} item<th><th scope="col">Relation</th></tr>
-</thead>
-<tbody>
+{%- if forloop.first -%}
+| Resource | Relevance |
+| -------- | ------- |
 {%- endif %}
-<tr>
-    <rtd rowspan="{{resource_map.size}}">
-| <details markdown="1"><summary>{{cat_item.title}}</summary>{{cat_item.description}} | {{resource_map.relevance | default: "Not provided" }}</details> |
-{%- if forloop.last %}
-</tbody>
-</table>
-{%- endif %}
+| [{{cat_item.title}}]({{cat_item.url}})<br>{{cat_item.description}} | {{resource_map.relevance | default: "Not provided" }} |
 {%- endfor %}
 
 {% for sub_section in cff_section[1] %}

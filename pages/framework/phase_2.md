@@ -63,7 +63,7 @@ cff_properties:
       capabilities: 
         title: FAIRification capabilities
         description: >-
-          The courses of action and cabilities available to realise and later sustain the FAIRified research objects.
+          The courses of action and capabilities available to realise and later sustain the FAIRified research objects.
       resources: 
         title: FAIRification resources & staff
         description: >-

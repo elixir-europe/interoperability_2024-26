@@ -1,17 +1,16 @@
 {% if page.cff_properties %}
-{%- assign has_many_outputs = page.cff_properties.inputs.size > 1 %}
 {%- if page.cff_properties.inputs.size > 1 %}
 {%-     assign input_id = "input" -%}
 {%-     assign has_many_inputs = true %}
 {%- else -%}
-{%-     assign input_id = page.cff_properties.inputs | map: "id" | first %}
+{%-     assign input_id = page.cff_properties.inputs | map: "id" | first %}
 {%-     assign has_many_inputs = false %}
 {%- endif -%}
 {%- if page.cff_properties.outputs.size > 1 %}
 {%-     assign output_id = "output" -%}
 {%-     assign has_many_outputs = true %}
 {%- else -%}
-{%-     assign output_id = page.cff_properties.outputs | map: "id" | first %}
+{%-     assign output_id = page.cff_properties.outputs | map: "id" | first %}
 {%-     assign has_many_outputs = false %}
 {%- endif -%}
 %%{init: {
