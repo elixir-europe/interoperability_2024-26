@@ -1,6 +1,8 @@
 ---
 layout: diagram-page
-title: A.	Define FAIRification Goals
+title: "{{title}} (phase 1)"
+type: Phase
+page_id: phase_1
 excerpt_separator: <!--more-->
 cff_properties:
   id: phase_1
@@ -8,7 +10,7 @@ cff_properties:
   title: Define FAIRification goals
   description: Determine the goals for FAIRification, in terms of desired *usability of data* that isn't currently possible.
   inputs:
-    - id: phase_1_inputs
+    - id: idea
       shape: cloud
       edge_label: Made explicit in
   outputs:
@@ -64,7 +66,7 @@ cff_properties:
         target: usability_outcome
         label: Justifies
 cff_elements:
-  phase_1_inputs:
+  idea:
     type: process_object
     title: FAIRification idea
     description: |-
@@ -76,21 +78,25 @@ cff_elements:
       Community use case, FAIR compliance challenge or any idea that involves FAIRification.
 ---
 
-> {{page.cff_properties.description}}
+<div class="language-mermaid">
+{% include cff_process_diagram.mmd.liquid 
+    cff_id="process" 
+    highlight=page.cff_properties.id
+%}
+</div>
 
-<div class="language-mermaid figure-img img-fluid rounded">
+Before any FAIRification work is undertaken, it is essential to identify the intended usability of the data that cannot be achieved in its current state. From this, one or more clear and specific FAIRification goals should be defined—these will make sure that the activity is shaped by tangible impact and associated value to the communities served by the FAIRified resource. At this stage, it is also advisable to make an estimate of how much effort reaching the goals are worth and set priorities for a “FAIR enough” outcome – one in which the most critical uses are enabled, while useful but less impactful enhancements may be set aside for later. In the subsequent Project Examination phase, the goals must also be useful when determining specific requirements on the results of and resources to allocate to the FAIRIfication work.
+
+
+### Phase overview
+<div class="language-mermaid colouring">
 {% include cff_phase_diagram-outline.mmd.liquid %}
 </div>
 
-Before any FAIRification work is undertaken, it is essential to identify the intended usability of the data that cannot be achieved in its current state. From this, one or more clear and specific FAIRification goals should be defined. Since FAIRification efforts incur  costs and may not produce equally valuable benefits, it is advisable to establish an acceptable “FAIR enough” end state – one in which the most critical capabilities are achieved, while less impactful enhancements may be set aside. To be actionable, these goals must be translated into concrete tasks to transition the data from current to target state.
-
-
 <!--more-->
+
 ### Process elements
 {% include cff-phase.md.liquid %}
 
-### Flowchart
-
-<div class="language-mermaid figure-img img-fluid rounded">
-{% include cff_phase_diagram.mmd.liquid %}
-</div>
+### Resources
+{% include cff_library_items.md.liquid cff_id=page.cff_properties.id %}

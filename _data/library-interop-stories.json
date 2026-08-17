@@ -1,1893 +1,2283 @@
 {
-  "stories_data": [
-    {
-      "storyID": "bioschemas",
-      "storyTitle": "Intrinsically Disordered Protein Community Interoperability Showcase: Exploiting Bioschemas Markup",
-      "storyCommunity": "Intrinsically Disordered Protein",
-      "storyDescription": "In this presentation, the audience heard how the intrinsically disordered protein community had identified a challenge in discovery and integration of data that spans several experimental fields studying protein structure and function, using methods that are domain specific. As such, there are no comprehensive single resources containing all IDPs. Therefore, researchers wishing to see the combined knowledge from resources such as ModiDB, DisProt and PED encountered an onerous integration task. As a solution, the IDP community proposed the creation of a central knowledge graph that could be asked common queries. To achieve this goal, the IDP described their use of bioschemas, JSON-LD, SPARQL, OpenAIRE and FAIRsharing to assemble a knowledge graph that can be queried by researchers seeking a consolidated, integrated view of data from across the IDP community.",
-      "storyLink": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Bioschemas"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "storyTitle": "Plant Sciences Community Showcase",
-      "storyCommunity": "Plant Sciences",
-      "storyDescription": "",
-      "storyLink": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Plant-Sciences-Showcase"
-    },
-    {
-      "storyID": "rare-disease-community",
-      "storyTitle": "Rare Disease Community Interoperability Showcase: examples from EJP RD",
-      "storyCommunity": "Rare Disease",
-      "storyDescription": "",
-      "storyLink": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Rare-Disease-Community"
-    },
-    {
-      "storyID": "dcat-bioschemas",
-      "storyTitle": "Mapping the DCAT-based EJP RD Metadata Model to Bioschemas for improved interoperability",
-      "storyCommunity": "Rare Disease",
-      "storyDescription": "",
-      "storyLink": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/DCAT-Bioscema"
-    },
-    {
-      "storyID": "user-journeys",
-      "storyTitle": "User journeys as means of effectively demonstrating value and engaging stakeholders",
-      "storyCommunity": "EOSC?",
-      "storyDescription": "",
-      "storyLink": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/User-Journeys"
-    },
-    {
-      "storyID": "galaxy",
-      "storyTitle": "Galaxy: a story about interoperability",
-      "storyCommunity": "Galaxy",
-      "storyDescription": "",
-      "storyLink": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Galaxy"
-    },
-    {
-      "storyID": "fairtracks",
-      "storyTitle": "FAIRtracks: FAIRtracks and Omnipy - FAIRtracks interoperability story",
-      "storyCommunity": "FAIRtracks?",
-      "storyDescription": "",
-      "storyLink": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/FAIRtracks"
-    },
-    {
-      "storyID": "single-cell-omics-community",
-      "storyTitle": "Single Cell Omics Community Interoperability Showcase",
-      "storyCommunity": "Single Cell Omics",
-      "storyDescription": "",
-      "storyLink": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Single-Cell-Omics-Community"
-    },
-    {
-      "storyID": "metabolomics-community",
-      "storyTitle": "Metabolomics Community & Interoperability Platform - On which subjects could they collaborate?",
-      "storyCommunity": "Metabolomics",
-      "storyDescription": "",
-      "storyLink": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Metabolomics-Community"
-    },
-    {
-      "storyID": "metabolomics-community-24-26",
-      "storyTitle": "Metabolomics Community Use Case",
-      "storyCommunity": "Metabolomics",
-      "storyDescription": "",
-      "storyLink": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Metabolomics-24-26-Community"
-    },
-    {
-      "storyID": "hereditary-project",
-      "storyTitle": "HEREDITARY Project – FAIRification of participating data resources",
-      "storyCommunity": "HEREDITARY Project",
-      "storyDescription": "Casado Barbero, M., Boytcheva, S., Valentinova Barouh, M., & Gyurov, P. (2025). Deliverable 3.6: FAIRification of participating data resources (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.17901862",
-      "storyLink": "https://doi.org/10.5281/zenodo.17901862"
-    }
-  ],
-  "stories_ft_mapping": [
-    {
-      "storyID": "bioschemas",
-      "ftID": "ft-data-access",
-      "relevance": "Cascade mapping from FT 1: easier/better access to data via W3C standardised SPARQL endpoints (ideally machine interpretable) instead of custom APIs (for humans to implement/adapt to)"
-    },
-    {
-      "storyID": "bioschemas",
-      "ftID": "ft-data-retrieval",
-      "relevance": "Cascade mapping from FT 1: easier/better access to data via W3C standardised SPARQL endpoints (ideally machine interpretable) instead of custom APIs (for humans to implement/adapt to)"
-    },
-    {
-      "storyID": "bioschemas",
-      "ftID": "ft-identifier-mapping",
-      "relevance": "Cascade mapping from FT 6: transform data for increased interoperability via creation of knowledge graph"
-    },
-    {
-      "storyID": "bioschemas",
-      "ftID": "ft-vocabulary-alignment",
-      "relevance": "Cascade mapping from FT 6: transform data for increased interoperability via creation of knowledge graph"
-    },
-    {
-      "storyID": "bioschemas",
-      "ftID": "ft-data-model-mapping",
-      "relevance": "Cascade mapping from FT 6: transform data for increased interoperability via creation of knowledge graph"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-identify-data-types",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-identifier-minting",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-identifier-reuse",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-data-standards-reuse",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-data-standards-development",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-apply-data-standards",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-validate-against-data-standards",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-select-data-vocabularies",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-develop-data-vocabularies",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-anotate-with-data-vocabularies",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-manage-vocabularies",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-identifier-mapping",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-vocabulary-alignment",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-data-model-mapping",
-      "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-data-access",
-      "relevance": "Cascade mapping from FT 1, 7: hosting capabilities showcased with FAIRDARE"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-data-retrieval",
-      "relevance": "Cascade mapping from FT 1, 7: hosting capabilities showcased with FAIRDARE"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-data-hosting",
-      "relevance": "Cascade mapping from FT 1, 7: hosting capabilities showcased with FAIRDARE"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-data-versioning",
-      "relevance": "Cascade mapping from FT 1, 7: hosting capabilities showcased with FAIRDARE"
-    },
-    {
-      "storyID": "plant-sciences-showcase",
-      "ftID": "ft-data-transfer",
-      "relevance": "Cascade mapping from FT 1, 7: hosting capabilities showcased with FAIRDARE"
-    },
-    {
-      "storyID": "rare-disease-community",
-      "ftID": "ft-data-standards-reuse",
-      "relevance": "reuse data standards: use existing RIRs where possible"
-    },
-    {
-      "storyID": "rare-disease-community",
-      "ftID": "ft-identifier-mapping",
-      "relevance": "Cascade mapping from FT 6: transform data for increased interoperability by connecting resources via KGs/SPARQL endpoints"
-    },
-    {
-      "storyID": "rare-disease-community",
-      "ftID": "ft-vocabulary-alignment",
-      "relevance": "Cascade mapping from FT 6: transform data for increased interoperability by connecting resources via KGs/SPARQL endpoints"
-    },
-    {
-      "storyID": "rare-disease-community",
-      "ftID": "ft-data-model-mapping",
-      "relevance": "Cascade mapping from FT 6: transform data for increased interoperability by connecting resources via KGs/SPARQL endpoints"
-    },
-    {
-      "storyID": "rare-disease-community",
-      "ftID": "ft-data-transfer",
-      "relevance": "rich data export options explored"
-    },
-    {
-      "storyID": "dcat-bioschemas",
-      "ftID": "ft-select-data-vocabularies",
-      "relevance": "Cascade mapping from FT 5: choose data vocabularies: selecting, developing and annotating with data vocabularies: use of DCAT, DCT, FOAF, EJP RD"
-    },
-    {
-      "storyID": "dcat-bioschemas",
-      "ftID": "ft-develop-data-vocabularies",
-      "relevance": "Cascade mapping from FT 5: choose data vocabularies: selecting, developing and annotating with data vocabularies: use of DCAT, DCT, FOAF, EJP RD"
-    },
-    {
-      "storyID": "dcat-bioschemas",
-      "ftID": "ft-anotate-with-data-vocabularies",
-      "relevance": "Cascade mapping from FT 5: choose data vocabularies: selecting, developing and annotating with data vocabularies: use of DCAT, DCT, FOAF, EJP RD"
-    },
-    {
-      "storyID": "dcat-bioschemas",
-      "ftID": "ft-manage-vocabularies",
-      "relevance": "Cascade mapping from FT 5: choose data vocabularies: selecting, developing and annotating with data vocabularies: use of DCAT, DCT, FOAF, EJP RD"
-    },
-    {
-      "storyID": "dcat-bioschemas",
-      "ftID": "ft-identifier-mapping",
-      "relevance": "Cascade mapping from FT 6: transform data for interoperability: mapping of identifiers and vocabularies to Bioschemas for further analysis and dissemination\n"
-    },
-    {
-      "storyID": "dcat-bioschemas",
-      "ftID": "ft-vocabulary-alignment",
-      "relevance": "Cascade mapping from FT 6: transform data for interoperability: mapping of identifiers and vocabularies to Bioschemas for further analysis and dissemination\n"
-    },
-    {
-      "storyID": "dcat-bioschemas",
-      "ftID": "ft-data-model-mapping",
-      "relevance": "Cascade mapping from FT 6: transform data for interoperability: mapping of identifiers and vocabularies to Bioschemas for further analysis and dissemination\n"
-    },
-    {
-      "storyID": "galaxy",
-      "ftID": "ft-data-standards-development",
-      "relevance": "Cascade mapping from FT 4: Apply data standards: Reuse whenever possible"
-    },
-    {
-      "storyID": "galaxy",
-      "ftID": "ft-apply-data-standards",
-      "relevance": "Cascade mapping from FT 4: Apply data standards: Reuse whenever possible"
-    },
-    {
-      "storyID": "galaxy",
-      "ftID": "ft-validate-against-data-standards",
-      "relevance": "Cascade mapping from FT 4: Apply data standards: Reuse whenever possible"
-    },
-    {
-      "storyID": "galaxy",
-      "ftID": "ft-select-data-vocabularies",
-      "relevance": "Cascade mapping from FT 5: Data vocabularies, 6. Transform data for interop:\nall tools rendered interoperable by describing I/O and filetypes with EDAM, cross referenced with registries"
-    },
-    {
-      "storyID": "galaxy",
-      "ftID": "ft-develop-data-vocabularies",
-      "relevance": "Cascade mapping from FT 5: Data vocabularies, 6. Transform data for interop:\nall tools rendered interoperable by describing I/O and filetypes with EDAM, cross referenced with registries"
-    },
-    {
-      "storyID": "galaxy",
-      "ftID": "ft-anotate-with-data-vocabularies",
-      "relevance": "Cascade mapping from FT 5: Data vocabularies, 6. Transform data for interop:\nall tools rendered interoperable by describing I/O and filetypes with EDAM, cross referenced with registries"
-    },
-    {
-      "storyID": "galaxy",
-      "ftID": "ft-manage-vocabularies",
-      "relevance": "Cascade mapping from FT 5: Data vocabularies, 6. Transform data for interop:\nall tools rendered interoperable by describing I/O and filetypes with EDAM, cross referenced with registries"
-    },
-    {
-      "storyID": "galaxy",
-      "ftID": "ft-data-hosting",
-      "relevance": "Cascade mapping from FT 7: Data hosting, versioning and transfer: all tools are annotated and exportable (workflows, Bioschemas, RO-crate…)"
-    },
-    {
-      "storyID": "galaxy",
-      "ftID": "ft-data-versioning",
-      "relevance": "Cascade mapping from FT 7: Data hosting, versioning and transfer: all tools are annotated and exportable (workflows, Bioschemas, RO-crate…)"
-    },
-    {
-      "storyID": "galaxy",
-      "ftID": "ft-data-transfer",
-      "relevance": "Cascade mapping from FT 7: Data hosting, versioning and transfer: all tools are annotated and exportable (workflows, Bioschemas, RO-crate…)"
-    },
-    {
-      "storyID": "fairtracks",
-      "ftID": "ft-identify-data-types",
-      "relevance": "Model the domain: Learnings published on fairtracks.net and included as ELIXIR RIR"
-    },
-    {
-      "storyID": "fairtracks",
-      "ftID": "ft-identifier-mapping",
-      "relevance": "Cascade mapping from FT 6: Transform data for inter- operability: Convert metadata from avirous schema to Track Hub format and FAIRtracks metadata exchange format using Omnipy ETL flows\n"
-    },
-    {
-      "storyID": "fairtracks",
-      "ftID": "ft-vocabulary-alignment",
-      "relevance": "Cascade mapping from FT 6: Transform data for inter- operability: Convert metadata from avirous schema to Track Hub format and FAIRtracks metadata exchange format using Omnipy ETL flows\n"
-    },
-    {
-      "storyID": "fairtracks",
-      "ftID": "ft-data-model-mapping",
-      "relevance": "Cascade mapping from FT 6: Transform data for inter- operability: Convert metadata from avirous schema to Track Hub format and FAIRtracks metadata exchange format using Omnipy ETL flows\n"
-    },
-    {
-      "storyID": "fairtracks",
-      "ftID": "ft-data-hosting",
-      "relevance": "Cascade mapping from FT 7: Host your data: Submit to Zenodo, index in Track Hub Registry, discover via TrackFind and interfaces integrated into Galaxy and GSuite"
-    },
-    {
-      "storyID": "fairtracks",
-      "ftID": "ft-data-versioning",
-      "relevance": "Cascade mapping from FT 7: Host your data: Submit to Zenodo, index in Track Hub Registry, discover via TrackFind and interfaces integrated into Galaxy and GSuite"
-    },
-    {
-      "storyID": "fairtracks",
-      "ftID": "ft-data-transfer",
-      "relevance": "Cascade mapping from FT 7: Host your data: Submit to Zenodo, index in Track Hub Registry, discover via TrackFind and interfaces integrated into Galaxy and GSuite"
-    },
-    {
-      "storyID": "single-cell-omics-community",
-      "ftID": "ft-identify-data-types",
-      "relevance": "Example of a domain with few standards and little convergence"
-    },
-    {
-      "storyID": "single-cell-omics-community",
-      "ftID": "ft-data-standards-development",
-      "relevance": "Cascade mapping from FT 4: Community-driven work to define standards and cross-mappings between standards through workshop programmes emerging"
-    },
-    {
-      "storyID": "single-cell-omics-community",
-      "ftID": "ft-apply-data-standards",
-      "relevance": "Cascade mapping from FT 4: Community-driven work to define standards and cross-mappings between standards through workshop programmes emerging"
-    },
-    {
-      "storyID": "single-cell-omics-community",
-      "ftID": "ft-validate-against-data-standards",
-      "relevance": "Cascade mapping from FT 4: Community-driven work to define standards and cross-mappings between standards through workshop programmes emerging"
-    },
-    {
-      "storyID": "metabolomics-community",
-      "ftID": "ft-identify-data-types",
-      "relevance": "Model the domain: Learnings published on fairtracks.net and included as ELIXIR RIR"
-    },
-    {
-      "storyID": "metabolomics-community",
-      "ftID": "ft-data-standards-development",
-      "relevance": "Cascade mapping from FT 4: Developing a framework for multi-omic data analysis (transcriptomics, proteomics and metabolomics), e.g. integration of MetaboLights, UniProt, BIoModels, MetabolicAtlas, Rhea, Reactome, BIGG, and http://pickle.gr/"
-    },
-    {
-      "storyID": "metabolomics-community",
-      "ftID": "ft-apply-data-standards",
-      "relevance": "Cascade mapping from FT 4: Developing a framework for multi-omic data analysis (transcriptomics, proteomics and metabolomics), e.g. integration of MetaboLights, UniProt, BIoModels, MetabolicAtlas, Rhea, Reactome, BIGG, and http://pickle.gr/"
-    },
-    {
-      "storyID": "metabolomics-community",
-      "ftID": "ft-validate-against-data-standards",
-      "relevance": "Cascade mapping from FT 4: Developing a framework for multi-omic data analysis (transcriptomics, proteomics and metabolomics), e.g. integration of MetaboLights, UniProt, BIoModels, MetabolicAtlas, Rhea, Reactome, BIGG, and http://pickle.gr/"
-    },
-    {
-      "storyID": "metabolomics-community",
-      "ftID": "ft-data-hosting",
-      "relevance": "Cascade mapping from FT 7: Promote/develop MetaboLights as deposition database"
-    },
-    {
-      "storyID": "metabolomics-community",
-      "ftID": "ft-data-versioning",
-      "relevance": "Cascade mapping from FT 7: Promote/develop MetaboLights as deposition database"
-    },
-    {
-      "storyID": "metabolomics-community",
-      "ftID": "ft-data-transfer",
-      "relevance": "Cascade mapping from FT 7: Promote/develop MetaboLights as deposition database"
-    }
-  ],
-  "stories_process_mapping": [
-    {
-      "storyID": "user-journeys",
-      "processID": "define-fairification-goal",
-      "relevance": "Enabling user journeys categorised as either real-world case studies; business focused use cases; or task focused use cases that are individually optimised for their actors"
-    },
-    {
-      "storyID": "user-journeys",
-      "processID": "post-fairification-review",
-      "relevance": "Key learning captured in a library of community use cases"
-    },
-    {
-      "storyID": "single-cell-omics-community",
-      "processID": "define-fairification-goal",
-      "relevance": "Define goals that could be achieved when data was aligned and distributed within the community in a manner that complied with a lightweight standardised model"
-    },
-    {
-      "storyID": "metabolomics-community-24-26",
-      "processID": "define-fairification-goal",
-      "relevance": ""
-    },
-    {
-      "storyID": "metabolomics-community-24-26",
-      "processID": "project-examination",
-      "relevance": ""
-    },
-    {
-      "storyID": "metabolomics-community-24-26",
-      "processID": "iterative-fairification-cycles",
-      "relevance": ""
-    },
-    {
-      "storyID": "metabolomics-community-24-26",
-      "processID": "post-fairification-review",
-      "relevance": ""
-    }
-  ],
-  "stories_dsm_mapping": [
-    {
-      "storyID": "bioschemas",
-      "dsmID": "hosting-environment-capabilities",
-      "relevance": ""
-    },
-    {
-      "storyID": "bioschemas",
-      "dsmID": "representation-and-format",
-      "relevance": ""
-    },
-    {
-      "storyID": "bioschemas",
-      "dsmID": "content-and-context",
-      "relevance": ""
-    },
-    {
-      "storyID": "metabolomics-community-24-26",
-      "dsmID": "content-and-context",
-      "relevance": ""
-    },
-    {
-      "storyID": "metabolomics-community-24-26",
-      "dsmID": "representation-and-format",
-      "relevance": ""
-    }
-  ],
-  "fm_data": [
-    {
-      "fmID": "define_fairification_objectives",
-      "fmStep": "Define FAIRification objectives",
-      "fmURL": "https://fairmetroline.org/metroline_steps/define_fairification_objectives",
-      "fmDescription": "FAIRification objectives aim to make data more Findable, Accessible, Interoperable, and Reusable (FAIR). They focus on improving how data is organised and shared, ensuring that it can be easily accessed, understood and used by both humans and machines. Achieving such objectives maximises the value of data, enhancing its usefulness and long-term usability."
-    },
-    {
-      "fmID": "",
-      "fmStep": "Build the team",
-      "fmURL": "",
-      "fmDescription": ""
-    },
-    {
-      "fmID": "have_a_fair_data_steward_on_board",
-      "fmStep": "Have a FAIR data steward on board",
-      "fmURL": "https://fairmetroline.org/metroline_steps/have_a_fair_data_steward_on_board",
-      "fmDescription": "A FAIR data steward guides teams in organising, storing, and describing data to meet the FAIR principles, ensuring research data can be understood and reused, making science more efficient and transparent."
-    },
-    {
-      "fmID": "organise_training",
-      "fmStep": "Organise training",
-      "fmURL": "https://fairmetroline.org/metroline_steps/organise_training",
-      "fmDescription": "This page brings forward the training and educational elements available to guide the team in their journey through the Metroline subsequent steps."
-    },
-    {
-      "fmID": "pre_fair_assessment",
-      "fmStep": "Pre-FAIR assessment",
-      "fmURL": "https://fairmetroline.org/metroline_steps/pre_fair_assessment",
-      "fmDescription": "A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability."
-    },
-    {
-      "fmID": "design_solution_plan",
-      "fmStep": "Design solution plan",
-      "fmURL": "https://fairmetroline.org/metroline_steps/design_solution_plan",
-      "fmDescription": "This step is about turning the findings from the pre-FAIR assessment into a clear, actionable plan. It means choosing the right tools, deciding who does what, and making sure the process is simple and effective so data can actually become FAIR."
-    },
-    {
-      "fmID": "data_access_and_retrieval",
-      "fmStep": "Data access and retrieval",
-      "fmURL": "https://fairmetroline.org/metroline_steps/data_access_and_retrieval",
-      "fmDescription": "Before data can be made FAIR, we first need to get it the right way. That means finding trustworthy sources, making sure we're allowed to use the data, and keeping it safe and private. When we do this properly, it ensures that the data can be trusted, shared, and reused to support new research and innovation."
-    },
-    {
-      "fmID": "assess_availability_of_your_metadata",
-      "fmStep": "Assess availability of your metadata",
-      "fmURL": "https://fairmetroline.org/metroline_steps/assess_availability_of_your_metadata",
-      "fmDescription": "Metadata describes a resource, like a book's title and author or a photo's date and location, which help with organization and discovery of that resource. This Metroline step describes the types of metadata, where you can find them for your resource, and how to improve their quality. Filling metadata gaps enhances a resource's visibility and reusability."
-    },
-    {
-      "fmID": "",
-      "fmStep": "Select identifier scheme",
-      "fmURL": "",
-      "fmDescription": ""
-    },
-    {
-      "fmID": "register_resource_level_metadata",
-      "fmStep": "Register resource level metadata",
-      "fmURL": "https://fairmetroline.org/metroline_steps/register_resource_level_metadata",
-      "fmDescription": "To make your resource (e.g. data), available for reuse, its metadata can be published in a catalogue. This step helps you find a catalogue where you can register these resource metadata and explains why adding your resource to such a catalogue is important."
-    },
-    {
-      "fmID": "register_structural_metadata",
-      "fmStep": "Register structural metadata",
-      "fmURL": "https://fairmetroline.org/metroline_steps/register_structural_metadata",
-      "fmDescription": "This step focuses on how to share your resource's structural metadata - an explanation of what each piece of your data means and how it's organised. Publishing it helps others understand, find and reuse your data more easily. This step also shows how to make the metadata readable by computers, which can support specific FAIR objectives you may already have."
-    },
-    {
-      "fmID": "apply_common_data_elements",
-      "fmStep": "Apply common data elements",
-      "fmURL": "https://fairmetroline.org/metroline_steps/apply_common_data_elements",
-      "fmDescription": "Common data elements (CDEs) are standardised data elements, such as variables and measurements, paired with defined rules for how values should be recorded. They are developed to promote consistency and reuse in data collection across different settings, enabling seamless integration and comparison. This step encourages you to search for relevant CDEs and offers guidance on what to do if no suitable CDE is available."
-    },
-    {
-      "fmID": "analyse_data_semantics",
-      "fmStep": "Analyse data semantics",
-      "fmURL": "https://fairmetroline.org/metroline_steps/analyse_data_semantics",
-      "fmDescription": "In this step, the aim is to gain more insight into the existing data, or the data that you aim to collect. Clearly defining the meaning (semantics) of the data is an important step for creating the semantic model, as well as for data collection via, for example, electronic case report forms (eCRFs)."
-    },
-    {
-      "fmID": "design_ecrf",
-      "fmStep": "Design eCRF (data collection)",
-      "fmURL": "https://fairmetroline.org/metroline_steps/design_ecrf",
-      "fmDescription": "A Case Report Form (CRF) is a structured document used to capture information about study participants. When this process is conducted electronically, the form is referred to as an electronic Case Report Form (eCRF). The use of eCRFs offers several advantages: it facilitates efficient data storage, reduces the risk of human error and saves time throughout the study lifecycle. In this step, we will focus on how to design and develop an eCRF in preparation for data collection."
-    },
-    {
-      "fmID": "create_or_reuse_a_semantic_model",
-      "fmStep": "Create or reuse a semantic (meta)data model",
-      "fmURL": "https://fairmetroline.org/metroline_steps/create_or_reuse_a_semantic_model",
-      "fmDescription": "Creating a semantic (meta)data model often requires considerable effort as it is a complex task. Reusing an existing model, where possible, can save time and increase interoperability. Start by checking if a suitable model already exists. If not, follow a structured approach to create one. Once the model is in place, share it using common platforms and provide clear documentation to support reuse by others."
-    },
-    {
-      "fmID": "use_ontologies_in_the_model",
-      "fmStep": "Use ontologies in the model",
-      "fmURL": "https://fairmetroline.org/metroline_steps/use_ontologies_in_the_model",
-      "fmDescription": "This process involves linking your data model to ontologies, which are essentially formal, shared dictionaries that provide precise, computer-readable definitions for concepts. By assigning these standard definitions to the elements in your data model, you make their meanings explicit and clear. This allows different computer systems to correctly understand, combine, and compare data from various sources without confusion, making the data more interoperable and easier to reuse across different projects."
-    },
-    {
-      "fmID": "obtain_informed_consent",
-      "fmStep": "Obtain informed consent",
-      "fmURL": "https://fairmetroline.org/metroline_steps/obtain_informed_consent",
-      "fmDescription": "To ensure your data and materials can be reused in the future, your subject information sheet (SIS) and informed consent form (ICF) must address reuse. This Metroline step provides consideration and resources for preparing your SIS and ICF."
-    },
-    {
-      "fmID": "",
-      "fmStep": "Enter data in eCRF (data collection)",
-      "fmURL": "",
-      "fmDescription": ""
-    },
-    {
-      "fmID": "apply_metadata_model",
-      "fmStep": "Apply (meta)data model",
-      "fmURL": "https://fairmetroline.org/metroline_steps/apply_metadata_model",
-      "fmDescription": "Think of your data like a book in a library. A metadata model is like the card in the catalogue that tells people what the book is about and who wrote it. A data model is like the book's table of contents - it helps everyone understand what's inside and how to read it. Using both makes it easier for people and machines to find, understand, and reuse your data."
-    },
-    {
-      "fmID": "transform_and_expose_fair_metadata",
-      "fmStep": "Transform and expose FAIR (meta)data",
-      "fmURL": "https://fairmetroline.org/metroline_steps/transform_and_expose_fair_metadata",
-      "fmDescription": "Think of your data like a well-written book that's hidden away on a shelf that no one knows about. By transforming it into a standardised, machine-readable format and publishing it through trusted channels, you place it in a public library where everyone, people and machines, can easily find, open, and read it."
-    },
-    {
-      "fmID": "define_access_conditions",
-      "fmStep": "Define access conditions",
-      "fmURL": "https://fairmetroline.org/metroline_steps/define_access_conditions",
-      "fmDescription": "When making health care data FAIR, data holders have to keep the balance between making data accessible for reuse and protecting personal information of subjects present in the data. This Metroline step helps you pick the appropriate access level to your data and publish the necessary information in the metadata."
-    },
-    {
-      "fmID": "query_over_resources",
-      "fmStep": "Query (use) over resources",
-      "fmURL": "https://fairmetroline.org/metroline_steps/query_over_resources",
-      "fmDescription": "Querying FAIR resources is the process of asking structured questions to retrieve data that is easy to find, access, and reuse. When resources follow FAIR principles, queries become more efficient because the data is well-organized and clearly described. In this step, we will explore the tools and platforms that enable effective querying of FAIR-compliant resources."
-    },
-    {
-      "fmID": "assess_fairness",
-      "fmStep": "Assess FAIRness",
-      "fmURL": "https://fairmetroline.org/metroline_steps/assess_fairness",
-      "fmDescription": "Now that you've FAIRified your data, it's time to check the resulting FAIRness and decide if you've reached your goals. Use tools and other methods to assess if your data is truly Findable, Accessible, Interoperable, and Reusable. If needed, adjust or improve things so your data stays FAIR in the long run."
-    },
-    {
-      "fmID": "",
-      "fmStep": "Did you reach your FAIRification objectives",
-      "fmURL": "",
-      "fmDescription": ""
-    },
-    {
-      "fmID": "creating_a_fair_implementation_profile",
-      "fmStep": "Creating a FAIR Implementation Profile (FIP)",
-      "fmURL": "https://fairmetroline.org/metroline_steps/creating_a_fair_implementation_profile",
-      "fmDescription": "A FAIR Implementation Profile (FIP) describes the practical choices a community makes to apply the FAIR data principles using shared standards and tools. It lists the specific resources, such as metadata schemas, ontologies and licences, that make data findable, accessible, interoperable and reusable. Other communities can reuse these profiles to align their practices, fill gaps and improve collaboration."
-    }
-  ],
-  "ft_fm_mapping": [
-    {
-      "ftID": "ft-data-access",
-      "fmID": "data_access_and_retrieval",
-      "relevance": "Focuses on how data is accessed and retrieved from the source, which directly underpins data access."
-    },
-    {
-      "ftID": "ft-data-access",
-      "fmID": "define_access_conditions",
-      "relevance": "Clarifies who can access the data and under which restrictions, making data access operational."
-    },
-    {
-      "ftID": "ft-data-access",
-      "fmID": "obtain_informed_consent",
-      "relevance": "Links data access to the conditions set by consent, especially where future use and reuse are concerned."
-    },
-    {
-      "ftID": "ft-data-retrieval",
-      "fmID": "data_access_and_retrieval",
-      "relevance": "Addresses how data can be obtained from its source, which is central to data retrieval."
-    },
-    {
-      "ftID": "ft-data-retrieval",
-      "fmID": "query_over_resources",
-      "relevance": "Enables retrieval through searching and querying resources in a structured and reusable way."
-    },
-    {
-      "ftID": "ft-identify-data-types",
-      "fmID": "analyse_data_semantics",
-      "relevance": "Clarifying the meaning of the data helps determine which data types are present and relevant."
-    },
-    {
-      "ftID": "ft-identify-data-types",
-      "fmID": "create_or_reuse_a_semantic_model",
-      "relevance": "Defining concepts and structure provides a basis for identifying which data types need to be represented."
-    },
-    {
-      "ftID": "ft-identify-data-types",
-      "fmID": "register_structural_metadata",
-      "relevance": "Describing the structure of a resource helps recognise and distinguish the data types involved."
-    },
-    {
-      "ftID": "ft-identify-data-types",
-      "fmID": "assess_availability_of_your_metadata",
-      "relevance": "Showing which metadata is already available helps identify how data types are currently described."
-    },
-    {
-      "ftID": "ft-identifier-minting",
-      "fmID": "design_solution_plan",
-      "relevance": "Planning how unique, persistent and resolvable identifiers will be created gives direction to identifier minting."
-    },
-    {
-      "ftID": "ft-identifier-reuse",
-      "fmID": "use_ontologies_in_the_model",
-      "relevance": "Linking model elements to established semantic resources supports reuse of community identifiers."
-    },
-    {
-      "ftID": "ft-identifier-reuse",
-      "fmID": "creating_a_fair_implementation_profile",
-      "relevance": "Documenting community choices on identifier systems makes reuse of those identifiers explicit and consistent."
-    },
-    {
-      "ftID": "ft-data-standards-reuse",
-      "fmID": "apply_common_data_elements",
-      "relevance": "Using agreed data elements turns reuse of existing standards into something practical and concrete."
-    },
-    {
-      "ftID": "ft-data-standards-reuse",
-      "fmID": "create_or_reuse_a_semantic_model",
-      "relevance": "Embedding existing standards in a shared semantic model supports their reuse without redefining them."
-    },
-    {
-      "ftID": "ft-data-standards-reuse",
-      "fmID": "creating_a_fair_implementation_profile",
-      "relevance": "Recording which standards a community adopts makes reuse choices transparent and reusable."
-    },
-    {
-      "ftID": "ft-data-standards-development",
-      "fmID": "create_or_reuse_a_semantic_model",
-      "relevance": "Defining concepts, relations and structure supports the development of new standards where these do not yet exist."
-    },
-    {
-      "ftID": "ft-data-standards-development",
-      "fmID": "apply_common_data_elements",
-      "relevance": "Formalising shared data elements can be part of building a new standard."
-    },
-    {
-      "ftID": "ft-apply-data-standards",
-      "fmID": "apply_common_data_elements",
-      "relevance": "Consistent use of agreed data elements is one of the main ways data standards are applied in practice."
-    },
-    {
-      "ftID": "ft-apply-data-standards",
-      "fmID": "apply_metadata_model",
-      "relevance": "Implementing the agreed model in data and metadata makes data standards actionable."
-    },
-    {
-      "ftID": "ft-apply-data-standards",
-      "fmID": "transform_and_expose_fair_metadata",
-      "relevance": "Turning data and metadata into a more structured FAIR form helps put standards into practice."
-    },
-    {
-      "ftID": "ft-apply-data-standards",
-      "fmID": "design_ecrf",
-      "relevance": "Building standards directly into eCRF design connects application of standards to data collection."
-    },
-    {
-      "ftID": "ft-validate-against-data-standards",
-      "fmID": "pre_fair_assessment",
-      "relevance": "An early assessment helps reveal whether data already aligns with relevant standards and where gaps remain."
-    },
-    {
-      "ftID": "ft-validate-against-data-standards",
-      "fmID": "assess_fairness",
-      "relevance": "Checking whether data and metadata meet FAIR requirements complements validation against standards."
-    },
-    {
-      "ftID": "ft-validate-against-data-standards",
-      "fmID": "design_ecrf",
-      "relevance": "Structured forms can support validation by enforcing standard compliant input at the moment of collection."
-    },
-    {
-      "ftID": "ft-select-data-vocabularies",
-      "fmID": "use_ontologies_in_the_model",
-      "relevance": "Choosing ontology terms that make concepts explicit and machine readable is a key part of selecting vocabularies."
-    },
-    {
-      "ftID": "ft-select-data-vocabularies",
-      "fmID": "create_or_reuse_a_semantic_model",
-      "relevance": "The concepts and relations defined in a semantic model guide which vocabularies should be selected."
-    },
-    {
-      "ftID": "ft-select-data-vocabularies",
-      "fmID": "creating_a_fair_implementation_profile",
-      "relevance": "Recording chosen semantic resources in a FIP makes vocabulary selection explicit at community level."
-    },
-    {
-      "ftID": "ft-develop-data-vocabularies",
-      "fmID": "create_or_reuse_a_semantic_model",
-      "relevance": "Defining the concepts needed in the model creates the foundation for developing vocabularies."
-    },
-    {
-      "ftID": "ft-develop-data-vocabularies",
-      "fmID": "use_ontologies_in_the_model",
-      "relevance": "Newly developed terms can become part of the ontology driven model."
-    },
-    {
-      "ftID": "ft-anotate-with-data-vocabularies",
-      "fmID": "use_ontologies_in_the_model",
-      "relevance": "Linking data and metadata to formal ontology or vocabulary terms gives annotation its meaning."
-    },
-    {
-      "ftID": "ft-anotate-with-data-vocabularies",
-      "fmID": "apply_metadata_model",
-      "relevance": "Putting the chosen semantic model into practice includes annotating data and metadata with the right terms."
-    },
-    {
-      "ftID": "ft-manage-vocabularies",
-      "fmID": "creating_a_fair_implementation_profile",
-      "relevance": "Documenting and maintaining community choices over time supports vocabulary management."
-    },
-    {
-      "ftID": "ft-manage-vocabularies",
-      "fmID": "use_ontologies_in_the_model",
-      "relevance": "Sustained and consistent use of ontologies depends on active vocabulary management."
-    },
-    {
-      "ftID": "ft-identifier-mapping",
-      "fmID": "use_ontologies_in_the_model",
-      "relevance": "Semantic relations can help connect equivalent identifiers across systems and contexts."
-    },
-    {
-      "ftID": "ft-identifier-mapping",
-      "fmID": "apply_metadata_model",
-      "relevance": "Representing mapped identifiers consistently in the applied model makes identifier mapping usable in practice."
-    },
-    {
-      "ftID": "ft-vocabulary-alignment",
-      "fmID": "use_ontologies_in_the_model",
-      "relevance": "Alignment depends on relating equivalent or closely related terms through semantic links."
-    },
-    {
-      "ftID": "ft-vocabulary-alignment",
-      "fmID": "creating_a_fair_implementation_profile",
-      "relevance": "Shared documentation of semantic choices can support alignment across communities."
-    },
-    {
-      "ftID": "ft-data-model-mapping",
-      "fmID": "apply_metadata_model",
-      "relevance": "Mapping between data models depends on expressing those mappings in a model that can be implemented consistently."
-    },
-    {
-      "ftID": "ft-data-model-mapping",
-      "fmID": "create_or_reuse_a_semantic_model",
-      "relevance": "Clearly defined semantic models make equivalent concepts across sources easier to compare and map."
-    },
-    {
-      "ftID": "ft-data-hosting",
-      "fmID": "register_resource_level_metadata",
-      "relevance": "Describing hosted resources with sufficient metadata makes them easier to find, understand and reuse."
-    },
-    {
-      "ftID": "ft-data-hosting",
-      "fmID": "transform_and_expose_fair_metadata",
-      "relevance": "Publishing data and metadata in FAIR forms connects hosting to access and reuse."
-    },
-    {
-      "ftID": "ft-data-hosting",
-      "fmID": "query_over_resources",
-      "relevance": "Search and query functions make hosted resources more usable once they are made available."
-    },
-    {
-      "ftID": "ft-data-hosting",
-      "fmID": "assess_availability_of_your_metadata",
-      "relevance": "Checking whether enough metadata is available supports effective hosting and discovery."
-    },
-    {
-      "ftID": "ft-data-versioning",
-      "fmID": "register_resource_level_metadata",
-      "relevance": "Metadata that distinguishes and describes different versions is essential for proper versioning."
-    },
-    {
-      "ftID": "ft-data-versioning",
-      "fmID": "transform_and_expose_fair_metadata",
-      "relevance": "Making different FAIR versions of data and metadata visible supports transparent versioning."
-    },
-    {
-      "ftID": "ft-data-transfer",
-      "fmID": "data_access_and_retrieval",
-      "relevance": "Accessing, moving and obtaining data across systems is part of what data transfer needs to support."
-    },
-    {
-      "ftID": "ft-data-transfer",
-      "fmID": "transform_and_expose_fair_metadata",
-      "relevance": "Structuring data and metadata for exchange helps make transfer more FAIR and reusable."
-    },
-    {
-      "ftID": "ft-data-licensing",
-      "fmID": "define_access_conditions",
-      "relevance": "Setting the terms for access, sharing and reuse makes define access conditions directly relevant to licensing."
-    },
-    {
-      "ftID": "ft-data-licensing",
-      "fmID": "creating_a_fair_implementation_profile",
-      "relevance": "Community documentation of licence choices helps make licensing decisions more transparent and consistent."
-    },
-    {
-      "ftID": "ft-data-anonymisation",
-      "fmID": "define_access_conditions",
-      "relevance": "Access conditions depend in part on how privacy risks are handled through anonymisation."
-    },
-    {
-      "ftID": "ft-data-anonymisation",
-      "fmID": "data_access_and_retrieval",
-      "relevance": "Protecting privacy through anonymisation can enable safer access to and retrieval of data."
-    },
-    {
-      "ftID": "ft-data-anonymisation",
-      "fmID": "obtain_informed_consent",
-      "relevance": "Consent conditions shape how anonymised data may later be used and reused."
-    },
-    {
-      "ftID": "ft-data-release",
-      "fmID": "register_resource_level_metadata",
-      "relevance": "Releasing data requires metadata that makes the resource discoverable and understandable to others."
-    },
-    {
-      "ftID": "ft-data-release",
-      "fmID": "transform_and_expose_fair_metadata",
-      "relevance": "Publishing data and metadata in FAIR ways is a core part of data release."
-    },
-    {
-      "ftID": "ft-data-release",
-      "fmID": "define_access_conditions",
-      "relevance": "Clear decisions on access rights and reuse conditions are necessary before data can be released."
-    },
-    {
-      "ftID": "ft-data-release",
-      "fmID": "assess_availability_of_your_metadata",
-      "relevance": "Availability of sufficient metadata helps determine whether data is ready for release."
-    }
-  ],
-  "process_fm_mapping": [
-    {
-      "processID": "define-fairification-goal",
-      "fmID": "define_fairification_objectives"
-    },
-    {
-      "processID": "project-examination",
-      "fmID": "have_a_fair_data_steward_on_board"
-    },
-    {
-      "processID": "project-examination",
-      "fmID": "organise_training"
-    },
-    {
-      "processID": "project-examination",
-      "fmID": "pre_fair_assessment"
-    },
-    {
-      "processID": "project-examination",
-      "fmID": "design_solution_plan"
-    },
-    {
-      "processID": "project-examination",
-      "fmID": "creating_a_fair_implementation_profile"
-    },
-    {
-      "processID": "iterative-fairification-cycles",
-      "fmID": "assess_fairness"
-    },
-    {
-      "processID": "post-fairification-review",
-      "fmID": "assess_fairness"
-    }
-  ],
-  "fc_data": [
-    {
-      "fcID": "FCB003",
-      "fcTopic": "Introducing vocabulary portals and lookup services",
-      "fcURL": "https://w3id.org/faircookbook/FCB003"
-    },
-    {
-      "fcID": "FCB004",
-      "fcTopic": "Selecting an ontology lookup service",
-      "fcURL": "https://w3id.org/faircookbook/FCB004"
-    },
-    {
-      "fcID": "FCB005",
-      "fcTopic": "Deploying EBI Ontology Lookup Service",
-      "fcURL": "https://w3id.org/faircookbook/FCB005"
-    },
-    {
-      "fcID": "FCB006",
-      "fcTopic": "Introducing unique, persistent identifiers",
-      "fcURL": "https://w3id.org/faircookbook/FCB006"
-    },
-    {
-      "fcID": "FCB007",
-      "fcTopic": "Creating InChI & SMILES identifiers for chemical structures",
-      "fcURL": "https://w3id.org/faircookbook/FCB007"
-    },
-    {
-      "fcID": "FCB008",
-      "fcTopic": "Minting identifiers with Globus Minid client",
-      "fcURL": "https://w3id.org/faircookbook/FCB008"
-    },
-    {
-      "fcID": "FCB009",
-      "fcTopic": "Depositing to generic repositories - Zenodo use case",
-      "fcURL": "https://w3id.org/faircookbook/FCB009"
-    },
-    {
-      "fcID": "FCB010",
-      "fcTopic": "Introducing Search Engine Optimization (SEO)",
-      "fcURL": "https://w3id.org/faircookbook/FCB010"
-    },
-    {
-      "fcID": "FCB011",
-      "fcTopic": "Marking up Data pages with Schema.org & Bioschemas for SEO",
-      "fcURL": "https://w3id.org/faircookbook/FCB011"
-    },
-    {
-      "fcID": "FCB012",
-      "fcTopic": "Marking up Dataset page with Schema.org & Bioschemas for SEO",
-      "fcURL": "https://w3id.org/faircookbook/FCB012"
-    },
-    {
-      "fcID": "FCB013",
-      "fcTopic": "Marking up Data Catalogue page with Schema.org & Bioschemas for SEO",
-      "fcURL": "https://w3id.org/faircookbook/FCB013"
-    },
-    {
-      "fcID": "FCB014",
-      "fcTopic": "Transferring data with SFTP protocol",
-      "fcURL": "https://w3id.org/faircookbook/FCB014"
-    },
-    {
-      "fcID": "FCB015",
-      "fcTopic": "Downloading data with Aspera protocol",
-      "fcURL": "https://w3id.org/faircookbook/FCB015"
-    },
-    {
-      "fcID": "FCB016",
-      "fcTopic": "Interlinking data from different sources",
-      "fcURL": "https://w3id.org/faircookbook/FCB016"
-    },
-    {
-      "fcID": "FCB017",
-      "fcTopic": "Mapping identifiers with BridgeDb",
-      "fcURL": "https://w3id.org/faircookbook/FCB017"
-    },
-    {
-      "fcID": "FCB018",
-      "fcTopic": "Mapping identifiers using BridgeDb web services",
-      "fcURL": "https://w3id.org/faircookbook/FCB018"
-    },
-    {
-      "fcID": "FCB019",
-      "fcTopic": "Introducing terminologies and ontologies",
-      "fcURL": "https://w3id.org/faircookbook/FCB019"
-    },
-    {
-      "fcID": "FCB020",
-      "fcTopic": "Selecting terminologies and ontologies",
-      "fcURL": "https://w3id.org/faircookbook/FCB020"
-    },
-    {
-      "fcID": "FCB021",
-      "fcTopic": "Requesting new terms from terminologies and ontologies",
-      "fcURL": "https://w3id.org/faircookbook/FCB021"
-    },
-    {
-      "fcID": "FCB022",
-      "fcTopic": "Introducing ontology-related tools and services",
-      "fcURL": "https://w3id.org/faircookbook/FCB022"
-    },
-    {
-      "fcID": "FCB023",
-      "fcTopic": "Building an application ontology with ROBOT",
-      "fcURL": "https://w3id.org/faircookbook/FCB023"
-    },
-    {
-      "fcID": "FCB024",
-      "fcTopic": "Building an application ontology for metabolomics - MSIO",
-      "fcURL": "https://w3id.org/faircookbook/FCB024"
-    },
-    {
-      "fcID": "FCB025",
-      "fcTopic": "Creating a data/variable dictionary",
-      "fcURL": "https://w3id.org/faircookbook/FCB025"
-    },
-    {
-      "fcID": "FCB026",
-      "fcTopic": "Creating a metadata profile",
-      "fcURL": "https://w3id.org/faircookbook/FCB026"
-    },
-    {
-      "fcID": "FCB027",
-      "fcTopic": "Outlining a metadata profile for transcriptomics",
-      "fcURL": "https://w3id.org/faircookbook/FCB027"
-    },
-    {
-      "fcID": "FCB028",
-      "fcTopic": "Building a community compliant metadata profile - The Covid19 sample profile use case",
-      "fcURL": "https://w3id.org/faircookbook/FCB028"
-    },
-    {
-      "fcID": "FCB029",
-      "fcTopic": "Converting from proprietary to open format",
-      "fcURL": "https://w3id.org/faircookbook/FCB029"
-    },
-    {
-      "fcID": "FCB030",
-      "fcTopic": "Validating file format - FASTQ example",
-      "fcURL": "https://w3id.org/faircookbook/FCB030"
-    },
-    {
-      "fcID": "FCB031",
-      "fcTopic": "Surveying extraction, transformation, load (ETL) tools",
-      "fcURL": "https://w3id.org/faircookbook/FCB031"
-    },
-    {
-      "fcID": "FCB032",
-      "fcTopic": "Licensing",
-      "fcURL": "https://w3id.org/faircookbook/FCB032"
-    },
-    {
-      "fcID": "FCB033",
-      "fcTopic": "Licensing Software",
-      "fcURL": "https://w3id.org/faircookbook/FCB033"
-    },
-    {
-      "fcID": "FCB034",
-      "fcTopic": "Licensing Data",
-      "fcURL": "https://w3id.org/faircookbook/FCB034"
-    },
-    {
-      "fcID": "FCB035",
-      "fcTopic": "Declaring data permitted uses",
-      "fcURL": "https://w3id.org/faircookbook/FCB035"
-    },
-    {
-      "fcID": "FCB036",
-      "fcTopic": "Introducing Provenance Information",
-      "fcURL": "https://w3id.org/faircookbook/FCB036"
-    },
-    {
-      "fcID": "FCB037",
-      "fcTopic": "Making an omics data matrix FAIR",
-      "fcURL": "https://w3id.org/faircookbook/FCB037"
-    },
-    {
-      "fcID": "FCB038",
-      "fcTopic": "FAIRifying Data Matrices - Step1 - Starting material",
-      "fcURL": "https://w3id.org/faircookbook/FCB038"
-    },
-    {
-      "fcID": "FCB039",
-      "fcTopic": "FAIRifying Data Matrices - Step2 - Structuring data matrices",
-      "fcURL": "https://w3id.org/faircookbook/FCB039"
-    },
-    {
-      "fcID": "FCB040",
-      "fcTopic": "FAIRifying Data Matrices - Step3 - Exploring data with SPARQL",
-      "fcURL": "https://w3id.org/faircookbook/FCB040"
-    },
-    {
-      "fcID": "FCB041",
-      "fcTopic": "FAIRifying Data Matrices - Step4 - Integrating data",
-      "fcURL": "https://w3id.org/faircookbook/FCB041"
-    },
-    {
-      "fcID": "FCB042",
-      "fcTopic": "eTox - omics datasets",
-      "fcURL": "https://w3id.org/faircookbook/FCB042"
-    },
-    {
-      "fcID": "FCB043",
-      "fcTopic": "ND4BB - chemical activities datasets",
-      "fcURL": "https://w3id.org/faircookbook/FCB043"
-    },
-    {
-      "fcID": "FCB044",
-      "fcTopic": "Readying IMI Oncotrack - clinical cohort datasets for deposition to EBI Biosamples",
-      "fcURL": "https://w3id.org/faircookbook/FCB044"
-    },
-    {
-      "fcID": "FCB045",
-      "fcTopic": "Depositing IMI ReSOLUTE transcriptomics datasets to EBI repositories",
-      "fcURL": "https://w3id.org/faircookbook/FCB045"
-    },
-    {
-      "fcID": "FCB046",
-      "fcTopic": "Introducing identifier resolution services",
-      "fcURL": "https://w3id.org/faircookbook/FCB046"
-    },
-    {
-      "fcID": "FCB047",
-      "fcTopic": "Building a catalogue of datasets",
-      "fcURL": "https://w3id.org/faircookbook/FCB047"
-    },
-    {
-      "fcID": "FCB048",
-      "fcTopic": "Deploying a data catalogue - The IMI data catalogue example",
-      "fcURL": "https://w3id.org/faircookbook/FCB048"
-    },
-    {
-      "fcID": "FCB049",
-      "fcTopic": "Assessing with FAIR Evaluator",
-      "fcURL": "https://w3id.org/faircookbook/FCB049"
-    },
-    {
-      "fcID": "FCB050",
-      "fcTopic": "Assessing with FAIRshake",
-      "fcURL": "https://w3id.org/faircookbook/FCB050"
-    },
-    {
-      "fcID": "FCB051",
-      "fcTopic": "Inventorying tools for converting data to RDF",
-      "fcURL": "https://w3id.org/faircookbook/FCB051"
-    },
-    {
-      "fcID": "FCB052",
-      "fcTopic": "Creating file checksums",
-      "fcURL": "https://w3id.org/faircookbook/FCB052"
-    },
-    {
-      "fcID": "FCB053",
-      "fcTopic": "Validating checksums to verify file integrity",
-      "fcURL": "https://w3id.org/faircookbook/FCB053"
-    },
-    {
-      "fcID": "FCB054",
-      "fcTopic": "Enhancing discoverability of EHDEN OHDSI data with Schema.org markup",
-      "fcURL": "https://w3id.org/faircookbook/FCB054"
-    },
-    {
-      "fcID": "FCB055",
-      "fcTopic": "Prioritizing projects for FAIRification",
-      "fcURL": "https://w3id.org/faircookbook/FCB055"
-    },
-    {
-      "fcID": "FCB056",
-      "fcTopic": "Practical Considerations for CROs to play FAIR",
-      "fcURL": "https://w3id.org/faircookbook/FCB056"
-    },
-    {
-      "fcID": "FCB057",
-      "fcTopic": "Outlining a metadata profile for Bioactivity data",
-      "fcURL": "https://w3id.org/faircookbook/FCB057"
-    },
-    {
-      "fcID": "FCB058",
-      "fcTopic": "Expressing Clinical Genetic Information as FHIR JSON",
-      "fcURL": "https://w3id.org/faircookbook/FCB058"
-    },
-    {
-      "fcID": "FCB059",
-      "fcTopic": "Using the VCF2FHIR python library",
-      "fcURL": "https://w3id.org/faircookbook/FCB059"
-    },
-    {
-      "fcID": "FCB060",
-      "fcTopic": "Registering datasets with Wikidata",
-      "fcURL": "https://w3id.org/faircookbook/FCB060"
-    },
-    {
-      "fcID": "FCB061",
-      "fcTopic": "Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases",
-      "fcURL": "https://w3id.org/faircookbook/FCB061"
-    },
-    {
-      "fcID": "FCB062",
-      "fcTopic": "Making Computational Workflows FAIR",
-      "fcURL": "https://w3id.org/faircookbook/FCB062"
-    },
-    {
-      "fcID": "FCB063",
-      "fcTopic": "Minimal Data Maturity with ISA - ISA-Tab and free text",
-      "fcURL": "https://w3id.org/faircookbook/FCB063"
-    },
-    {
-      "fcID": "FCB064",
-      "fcTopic": "Enhanced Data Maturity with ISA - ISA-JSON and ontology markup",
-      "fcURL": "https://w3id.org/faircookbook/FCB064"
-    },
-    {
-      "fcID": "FCB065",
-      "fcTopic": "Moving to a semantically typed version - ISA-JSON-LD",
-      "fcURL": "https://w3id.org/faircookbook/FCB065"
-    },
-    {
-      "fcID": "FCB066",
-      "fcTopic": "Dissemination - Packaging ISA as a Research Object (RO)",
-      "fcURL": "https://w3id.org/faircookbook/FCB066"
-    },
-    {
-      "fcID": "FCB067",
-      "fcTopic": "Depositing High-Content Screening data to EBI BioImage Archive",
-      "fcURL": "https://w3id.org/faircookbook/FCB067"
-    },
-    {
-      "fcID": "FCB068",
-      "fcTopic": "Framing FAIR and the notion of metadata",
-      "fcURL": "https://w3id.org/faircookbook/FCB068"
-    },
-    {
-      "fcID": "FCB069",
-      "fcTopic": "Training for FAIRification with open or synthetic biomedical datasets",
-      "fcURL": "https://w3id.org/faircookbook/FCB069"
-    },
-    {
-      "fcID": "FCB070",
-      "fcTopic": "Understanding the relation between FAIR and Knowledge Graphs",
-      "fcURL": "https://w3id.org/faircookbook/FCB070"
-    },
-    {
-      "fcID": "FCB071",
-      "fcTopic": "Raising Awareness in Public Knowledge Graphs for Life Sciences",
-      "fcURL": "https://w3id.org/faircookbook/FCB071"
-    },
-    {
-      "fcID": "FCB072",
-      "fcTopic": "Reflecting on the ethical values of FAIR",
-      "fcURL": "https://w3id.org/faircookbook/FCB072"
-    },
-    {
-      "fcID": "FCB073",
-      "fcTopic": "Developing FAIR API for the Web",
-      "fcURL": "https://w3id.org/faircookbook/FCB073"
-    },
-    {
-      "fcID": "FCB074",
-      "fcTopic": "Data Protection Impact Assessment and Data Privacy",
-      "fcURL": "https://w3id.org/faircookbook/FCB074"
-    },
-    {
-      "fcID": "FCB075",
-      "fcTopic": "Using OpenRefine and Karma for FAIRification",
-      "fcURL": "https://w3id.org/faircookbook/FCB075"
-    },
-    {
-      "fcID": "FCB076",
-      "fcTopic": "Mapping Ontologies with OxO, EBI Ontology Xref Service",
-      "fcURL": "https://w3id.org/faircookbook/FCB076"
-    },
-    {
-      "fcID": "FCB077",
-      "fcTopic": "Creating resolvable identifiers",
-      "fcURL": "https://w3id.org/faircookbook/FCB077"
-    },
-    {
-      "fcID": "FCB078",
-      "fcTopic": "Mapping datasets to CDISC-SDTM standard",
-      "fcURL": "https://w3id.org/faircookbook/FCB078"
-    },
-    {
-      "fcID": "FCB079",
-      "fcTopic": "Introducing our FAIRification framework",
-      "fcURL": "https://w3id.org/faircookbook/FCB079"
-    },
-    {
-      "fcID": "FCB080",
-      "fcTopic": "Creating InChIKeys for IUPAC names",
-      "fcURL": "https://w3id.org/faircookbook/FCB080"
-    },
-    {
-      "fcID": "FCB081",
-      "fcTopic": "Creating knowledge graphs from unstructured text",
-      "fcURL": "https://w3id.org/faircookbook/FCB081"
-    },
-    {
-      "fcID": "FCB082",
-      "fcTopic": "Introducing the DATS model",
-      "fcURL": "https://w3id.org/faircookbook/FCB082"
-    },
-    {
-      "fcID": "FCB083",
-      "fcTopic": "Publishing plant phenotypic data",
-      "fcURL": "https://w3id.org/faircookbook/FCB083"
-    },
-    {
-      "fcID": "FCB084",
-      "fcTopic": "Creating a metadata profile for clinical trial protocols",
-      "fcURL": "https://w3id.org/faircookbook/FCB084"
-    },
-    {
-      "fcID": "FCB085",
-      "fcTopic": "Registering SwissLipids identifiers in Wikidata",
-      "fcURL": "https://w3id.org/faircookbook/FCB085"
-    },
-    {
-      "fcID": "FCB086",
-      "fcTopic": "Depositing Covid-19 image data to BioImage Archive",
-      "fcURL": "https://w3id.org/faircookbook/FCB086"
-    }
-  ],
-  "process_fc_mapping": [
-    {
-      "processID": "define-fairification-goal",
-      "fcID": "FCB055"
-    },
-    {
-      "processID": "define-fairification-goal",
-      "fcID": "FCB068"
-    },
-    {
-      "processID": "project-examination",
-      "fcID": ""
-    }
-  ],
-  "rdmkit_data": [
-    {
-      "rdmkitID": "plant_pheno_assembly",
-      "rdmkitName": "plant_phenomics_assembly",
-      "rdmkitTitle": "Plant Phenomics",
-      "rdmkitDescription": "Tool assembly for managing plant phenomic data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/plant_phenomics_assembly"
-    },
-    {
-      "rdmkitID": "ifb",
-      "rdmkitName": "ifb_assembly",
-      "rdmkitTitle": "IFB",
-      "rdmkitDescription": "The French Bioinformatics Institute (IFB) offers IT infrastructure and bioinformatics expertise to support researchers in Life Sciences.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/ifb_assembly"
-    },
-    {
-      "rdmkitID": "galaxy",
-      "rdmkitName": "galaxy_assembly",
-      "rdmkitTitle": "Galaxy",
-      "rdmkitDescription": "Galaxy is an open, web-based platform for accessible, reproducible, and transparent computational research.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/galaxy_assembly"
-    },
-    {
-      "rdmkitID": "transmed",
-      "rdmkitName": "transmed_assembly",
-      "rdmkitTitle": "TransMed",
-      "rdmkitDescription": "TransMed tool assembly from ELIXIR Luxembourg supports projects in clinical and translational biomedicine.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/transmed_assembly"
-    },
-    {
-      "rdmkitID": "ome",
-      "rdmkitName": "omero_assembly",
-      "rdmkitTitle": "OMERO",
-      "rdmkitDescription": "OMERO is a software platform for managing, sharing and analysing images data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/omero_assembly"
-    },
-    {
-      "rdmkitID": "nels",
-      "rdmkitName": "nels_assembly",
-      "rdmkitTitle": "NeLS",
-      "rdmkitDescription": "NeLS provides the necessary tools for data management to researchers in Norway and their collaborators.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/nels_assembly"
-    },
-    {
-      "rdmkitID": "fairtracks",
-      "rdmkitName": "fairtracks_assembly",
-      "rdmkitTitle": "FAIRtracks",
-      "rdmkitDescription": "The FAIRtracks ecosystem provides technical solutions for the FAIRification of genome browser track files",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/fairtracks_assembly"
-    },
-    {
-      "rdmkitID": "tsd",
-      "rdmkitName": "tsd_assembly",
-      "rdmkitTitle": "TSD",
-      "rdmkitDescription": "The Sensitive Data Service (TSD) provides a platform to store, compute and analyse research sensitive data in compliance with Norwegian regulations regarding individuals’ privacy.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/tsd_assembly"
-    },
-    {
-      "rdmkitID": "csc",
-      "rdmkitName": "csc_assembly",
-      "rdmkitTitle": "CSC",
-      "rdmkitDescription": "The Center of Science (CSC) provides high-quality ICT expert services for researchers in Finland and their collaborators.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/csc_assembly"
-    },
-    {
-      "rdmkitID": "xnat_pic",
-      "rdmkitName": "xnat_pic_assembly",
-      "rdmkitTitle": "XNAT-PIC",
-      "rdmkitDescription": "XNAT for Preclinical Imaging Centers (XNAT-PIC) is a of set of tools to store, process and share preclinical imaging studies built on top of the XNAT imaging informatics platform.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/xnat_pic_assembly"
-    },
-    {
-      "rdmkitID": "plant_geno_assembly",
-      "rdmkitName": "plant_genomics_assembly",
-      "rdmkitTitle": "Plant Genomics",
-      "rdmkitDescription": "Tool assembly for managing plant genomic data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/plant_genomics_assembly"
-    },
-    {
-      "rdmkitID": "marine_assembly",
-      "rdmkitName": "marine_metagenomics_assembly",
-      "rdmkitTitle": "Marine Metagenomics",
-      "rdmkitDescription": "The Marine Metagenomics tool assembly aims to provide a comprehensive data management toolkit of marine genomics researchers in Norway.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/marine_metagenomics_assembly"
-    },
-    {
-      "rdmkitID": "covid19_data_portal",
-      "rdmkitName": "covid19_data_portal",
-      "rdmkitTitle": "COVID-19 Data Portal",
-      "rdmkitDescription": "The COVID-19 Data Portal brings together relevant datasets for sharing and analysis to accelerate coronavirus research.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/covid19_data_portal"
-    },
-    {
-      "rdmkitID": "molgenis",
-      "rdmkitName": "molgenis_assembly",
-      "rdmkitTitle": "MOLGENIS",
-      "rdmkitDescription": "Molgenis is a modular web application for scientific data. Flexible data integration platform to find, capture, exchange, manage and analyse scientific data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/molgenis_assembly"
-    },
-    {
-      "rdmkitID": "labid",
-      "rdmkitName": "labid_assembly",
-      "rdmkitTitle": "LabID",
-      "rdmkitDescription": "LabID is an all-in-one FAIR data management platform for life sciences institutes. It allows keeping track of datasets, samples, workflows and inventory, while also featuring an Electronic Lab Notebook.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/labid_assembly"
-    },
-    {
-      "rdmkitID": "machine_learning",
-      "rdmkitName": "machine_learning",
-      "rdmkitTitle": "Machine learning",
-      "rdmkitDescription": "This page is about setting best practices for data towards enabling FAIR ML.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/machine_learning"
-    },
-    {
-      "rdmkitID": "toxicology_data",
-      "rdmkitName": "toxicology_data",
-      "rdmkitTitle": "Toxicology data",
-      "rdmkitDescription": "Data management solutions for toxicology data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/toxicology_data"
-    },
-    {
-      "rdmkitID": "rare_disease",
-      "rdmkitName": "rare_disease_data",
-      "rdmkitTitle": "Rare disease data",
-      "rdmkitDescription": "Data management solutions for rare disease data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/rare_disease_data"
-    },
-    {
-      "rdmkitID": "bioimaging_data",
-      "rdmkitName": "bioimaging_data",
-      "rdmkitTitle": "Bioimaging data",
-      "rdmkitDescription": "Data management solutions for bioimaging data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/bioimaging_data"
-    },
-    {
-      "rdmkitID": "struct_bioinfo",
-      "rdmkitName": "structural_bioinformatics",
-      "rdmkitTitle": "Structural Bioinformatics",
-      "rdmkitDescription": "Data management solutions for structural bioinformatics data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/structural_bioinformatics"
-    },
-    {
-      "rdmkitID": "epitrans",
-      "rdmkitName": "epitranscriptome_data",
-      "rdmkitTitle": "Epitranscriptome data",
-      "rdmkitDescription": "Data management solutions for epitranscriptome data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/epitranscriptome_data"
-    },
-    {
-      "rdmkitID": "plants",
-      "rdmkitName": "plant_sciences",
-      "rdmkitTitle": "Plant sciences",
-      "rdmkitDescription": "Data management solutions for plant sciences data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/plant_sciences"
-    },
-    {
-      "rdmkitID": "proteomics",
-      "rdmkitName": "proteomics",
-      "rdmkitTitle": "Proteomics",
-      "rdmkitDescription": "Data management solutions for proteomics data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/proteomics"
-    },
-    {
-      "rdmkitID": "micro_biotech",
-      "rdmkitName": "microbial_biotechnology",
-      "rdmkitTitle": "Microbial biotechnology",
-      "rdmkitDescription": "Data management solutions for microbial biotechnology data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/microbial_biotechnology"
-    },
-    {
-      "rdmkitID": "virology",
-      "rdmkitName": "virology",
-      "rdmkitTitle": "Virology",
-      "rdmkitDescription": "Data management solutions for virology data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/virology"
-    },
-    {
-      "rdmkitID": "human_data",
-      "rdmkitName": "human_data",
-      "rdmkitTitle": "Human data",
-      "rdmkitDescription": "Data management solutions for human data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/human_data"
-    },
-    {
-      "rdmkitID": "enzym_biocat",
-      "rdmkitName": "enzymology_and_biocatalysis",
-      "rdmkitTitle": "Enzymology and biocatalysis",
-      "rdmkitDescription": "Data management solutions for enzymology and biocatalysis data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/enzymology_and_biocatalysis"
-    },
-    {
-      "rdmkitID": "biomol_sim",
-      "rdmkitName": "biomolecular_simulation_data",
-      "rdmkitTitle": "Biomolecular simulation data",
-      "rdmkitDescription": "Data management solutions for biomolecular simulation data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/biomolecular_simulation_data"
-    },
-    {
-      "rdmkitID": "cancer_data",
-      "rdmkitName": "cancer_data",
-      "rdmkitTitle": "Cancer data",
-      "rdmkitDescription": "Data management solutions for human cancer data",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/cancer_data"
-    },
-    {
-      "rdmkitID": "single_cell_sequencing",
-      "rdmkitName": "single_cell_sequencing",
-      "rdmkitTitle": "Single-cell sequencing",
-      "rdmkitDescription": "Managing data generated from single-cell sequencing experiments.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/single_cell_sequencing"
-    },
-    {
-      "rdmkitID": "idp",
-      "rdmkitName": "intrinsically_disordered_proteins",
-      "rdmkitTitle": "Intrinsically disordered proteins",
-      "rdmkitDescription": "Data management solutions for intrinsically disordered proteins data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/intrinsically_disordered_proteins"
-    },
-    {
-      "rdmkitID": "human_pathogen_genomics",
-      "rdmkitName": "human_pathogen_genomics",
-      "rdmkitTitle": "Human pathogen genomics",
-      "rdmkitDescription": "Data management solutions for Human pathogen genomics",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/human_pathogen_genomics"
-    },
-    {
-      "rdmkitID": "biodiversity",
-      "rdmkitName": "biodiversity",
-      "rdmkitTitle": "Biodiversity",
-      "rdmkitDescription": "Data management solutions for biodiversity data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/biodiversity"
-    },
-    {
-      "rdmkitID": "marine",
-      "rdmkitName": "marine_metagenomics",
-      "rdmkitTitle": "Marine metagenomics",
-      "rdmkitDescription": "Data management solutions for marine metagenomics data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/marine_metagenomics"
-    },
-    {
-      "rdmkitID": "health_data",
-      "rdmkitName": "health_data",
-      "rdmkitTitle": "Health data",
-      "rdmkitDescription": "Data management solutions for human health data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/health_data"
-    },
-    {
-      "rdmkitID": "agroecology",
-      "rdmkitName": "agroecology",
-      "rdmkitTitle": "Agroecology",
-      "rdmkitDescription": "Data management solutions for agroecology life science research",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/agroecology"
-    },
-    {
-      "rdmkitID": "data_steward",
-      "rdmkitName": "data_steward",
-      "rdmkitTitle": "Data Steward",
-      "rdmkitDescription": "Data management guidance for data stewards.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_steward"
-    },
-    {
-      "rdmkitID": "trainer",
-      "rdmkitName": "trainer",
-      "rdmkitTitle": "Trainer",
-      "rdmkitDescription": "Data management guidance for trainers.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/trainer"
-    },
-    {
-      "rdmkitID": "researcher",
-      "rdmkitName": "researcher",
-      "rdmkitTitle": "Researcher",
-      "rdmkitDescription": "Data management guidance for researchers, including how to make your data FAIR.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/researcher"
-    },
-    {
-      "rdmkitID": "policy_maker",
-      "rdmkitName": "policy_maker",
-      "rdmkitTitle": "Policy maker",
-      "rdmkitDescription": "Data management guidance for policy makers.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/policy_maker"
-    },
-    {
-      "rdmkitID": "research_software_engineer",
-      "rdmkitName": "research_software_engineer",
-      "rdmkitTitle": "Research Software Engineer (RSE)",
-      "rdmkitDescription": "Data management guidance for Research Software Engineers (RSEs).",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/research_software_engineer"
-    },
-    {
-      "rdmkitID": "principal_investigator",
-      "rdmkitName": "principal_investigator",
-      "rdmkitTitle": "Principal Investigator (PI)",
-      "rdmkitDescription": "Data management guidance for Principal Investigator (PI).",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/principal_investigator"
-    },
-    {
-      "rdmkitID": "storage",
-      "rdmkitName": "storage",
-      "rdmkitTitle": "Data storage",
-      "rdmkitDescription": "How to find appropriate storage solutions.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/storage"
-    },
-    {
-      "rdmkitID": "data_analysis",
-      "rdmkitName": "data_analysis",
-      "rdmkitTitle": "Data analysis",
-      "rdmkitDescription": "How to make data analysis FAIR.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_analysis"
-    },
-    {
-      "rdmkitID": "data_brokering",
-      "rdmkitName": "data_brokering",
-      "rdmkitTitle": "Data brokering",
-      "rdmkitDescription": "Information on brokering data to data repositories on behalf of data producers.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_brokering"
-    },
-    {
-      "rdmkitID": "licensing",
-      "rdmkitName": "licensing",
-      "rdmkitTitle": "Licensing",
-      "rdmkitDescription": "How to license research data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/licensing"
-    },
-    {
-      "rdmkitID": "ethics",
-      "rdmkitName": "ethics",
-      "rdmkitTitle": "Ethical aspects",
-      "rdmkitDescription": "Working on aspects in the management of research data that can raise ethical issues",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/ethics"
-    },
-    {
-      "rdmkitID": "data_provenance",
-      "rdmkitName": "data_provenance",
-      "rdmkitTitle": "Data provenance",
-      "rdmkitDescription": "How to record information about data provenance.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_provenance"
-    },
-    {
-      "rdmkitID": "data_publication",
-      "rdmkitName": "data_publication",
-      "rdmkitTitle": "Data publication",
-      "rdmkitDescription": "How to prepare data and find repositories for publication.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_publication"
-    },
-    {
-      "rdmkitID": "data_interlinking",
-      "rdmkitName": "data_interlinking",
-      "rdmkitTitle": "Data interlinking",
-      "rdmkitDescription": "Best practices to interlink datasets from a multi-omics study deposited in technology-specific repositories.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_interlinking"
-    },
-    {
-      "rdmkitID": "compliance",
-      "rdmkitName": "compliance_monitoring",
-      "rdmkitTitle": "Compliance monitoring & measurement",
-      "rdmkitDescription": "How to measure compliance to data management regulations and standards.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/compliance_monitoring"
-    },
-    {
-      "rdmkitID": "metadata",
-      "rdmkitName": "metadata_management",
-      "rdmkitTitle": "Documentation and metadata",
-      "rdmkitDescription": "How to document and describe your data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/metadata_management"
-    },
-    {
-      "rdmkitID": "existing_data",
-      "rdmkitName": "existing_data",
-      "rdmkitTitle": "Existing data",
-      "rdmkitDescription": "How to find and reuse existing data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/existing_data"
-    },
-    {
-      "rdmkitID": "creating_dataflow_diagram",
-      "rdmkitName": "creating_dataflow_diagram",
-      "rdmkitTitle": "Creating a data-flow diagram",
-      "rdmkitDescription": "Best practices to capture your planned data-flow in a diagram.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/creating_dataflow_diagram"
-    },
-    {
-      "rdmkitID": "data_quality",
-      "rdmkitName": "data_quality",
-      "rdmkitTitle": "Data quality",
-      "rdmkitDescription": "How to ensure high quality of research data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_quality"
-    },
-    {
-      "rdmkitID": "gdpr_compliance",
-      "rdmkitName": "gdpr_compliance",
-      "rdmkitTitle": "GDPR compliance",
-      "rdmkitDescription": "How to protect your research data, and how to make research data compliant to GDPR.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/gdpr_compliance"
-    },
-    {
-      "rdmkitID": "data_organisation",
-      "rdmkitName": "data_organisation",
-      "rdmkitTitle": "Data organisation",
-      "rdmkitDescription": "Best practices to name and organise research data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_organisation"
-    },
-    {
-      "rdmkitID": "costs",
-      "rdmkitName": "costs_data_management",
-      "rdmkitTitle": "Costs of data management",
-      "rdmkitDescription": "Budgeting and costing for data management",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/costs_data_management"
-    },
-    {
-      "rdmkitID": "data_security",
-      "rdmkitName": "data_security",
-      "rdmkitTitle": "Data security",
-      "rdmkitDescription": "How do you ensure that your data is handled securely.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_security"
-    },
-    {
-      "rdmkitID": "data_discoverability",
-      "rdmkitName": "data_discoverability",
-      "rdmkitTitle": "Data discoverability",
-      "rdmkitDescription": "How to make data discoverable",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_discoverability"
-    },
-    {
-      "rdmkitID": "data_deletion",
-      "rdmkitName": "data_deletion",
-      "rdmkitTitle": "Data deletion",
-      "rdmkitDescription": "How to properly delete data",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_deletion"
-    },
-    {
-      "rdmkitID": "dm_coordination",
-      "rdmkitName": "dm_coordination",
-      "rdmkitTitle": "Project data management coordination",
-      "rdmkitDescription": "How to coordinate and organise data management activities in collaborative or multi-parter projects.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/dm_coordination"
-    },
-    {
-      "rdmkitID": "dmp",
-      "rdmkitName": "data_management_plan",
-      "rdmkitTitle": "Data management plan",
-      "rdmkitDescription": "How to write a Data Management Plan (DMP).",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_management_plan"
-    },
-    {
-      "rdmkitID": "transfer",
-      "rdmkitName": "data_transfer",
-      "rdmkitTitle": "Data transfer",
-      "rdmkitDescription": "How to transfer data files.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_transfer"
-    },
-    {
-      "rdmkitID": "machine_actionability",
-      "rdmkitName": "machine_actionability",
-      "rdmkitTitle": "Machine actionability",
-      "rdmkitDescription": "How to make machine-actionable (meta)data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/machine_actionability"
-    },
-    {
-      "rdmkitID": "identifiers",
-      "rdmkitName": "identifiers",
-      "rdmkitTitle": "Identifiers",
-      "rdmkitDescription": "How to use identifiers for research data.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/identifiers"
-    },
-    {
-      "rdmkitID": "sensitive",
-      "rdmkitName": "data_sensitivity",
-      "rdmkitTitle": "Data sensitivity",
-      "rdmkitDescription": "How to identify the sensitivity of different research data types",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/data_sensitivity"
-    },
-    {
-      "rdmkitID": "preserve",
-      "rdmkitName": "preserving",
-      "rdmkitTitle": "Preserving",
-      "rdmkitDescription": "Introduction to data preservation.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/preserving"
-    },
-    {
-      "rdmkitID": "plan",
-      "rdmkitName": "planning",
-      "rdmkitTitle": "Planning",
-      "rdmkitDescription": "Introduction to data management planning.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/planning"
-    },
-    {
-      "rdmkitID": "reuse",
-      "rdmkitName": "reusing",
-      "rdmkitTitle": "Reusing",
-      "rdmkitDescription": "Introduction to data reuse.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/reusing"
-    },
-    {
-      "rdmkitID": "process",
-      "rdmkitName": "processing",
-      "rdmkitTitle": "Processing",
-      "rdmkitDescription": "Introduction to data processing.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/processing"
-    },
-    {
-      "rdmkitID": "analyse",
-      "rdmkitName": "analysing",
-      "rdmkitTitle": "Analysing",
-      "rdmkitDescription": "Introduction to data analysis.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/analysing"
-    },
-    {
-      "rdmkitID": "collect",
-      "rdmkitName": "collecting",
-      "rdmkitTitle": "Collecting",
-      "rdmkitDescription": "Introduction to data collection.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/collecting"
-    },
-    {
-      "rdmkitID": "share",
-      "rdmkitName": "sharing",
-      "rdmkitTitle": "Sharing",
-      "rdmkitDescription": "Introduction to data sharing.",
-      "rdmkitURL": "https://rdmkit.elixir-europe.org/sharing"
-    }
-  ],
+  "elixirstories": {
+    "data": [
+      {
+        "id": "bioschemas",
+        "title": "Intrinsically Disordered Protein Community Interoperability Showcase: Exploiting Bioschemas Markup",
+        "community": "Intrinsically Disordered Protein",
+        "description": "In this presentation, the audience heard how the intrinsically disordered protein community had identified a challenge in discovery and integration of data that spans several experimental fields studying protein structure and function, using methods that are domain specific. As such, there are no comprehensive single resources containing all IDPs. Therefore, researchers wishing to see the combined knowledge from resources such as ModiDB, DisProt and PED encountered an onerous integration task. As a solution, the IDP community proposed the creation of a central knowledge graph that could be asked common queries. To achieve this goal, the IDP described their use of bioschemas, JSON-LD, SPARQL, OpenAIRE and FAIRsharing to assemble a knowledge graph that can be queried by researchers seeking a consolidated, integrated view of data from across the IDP community.",
+        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Bioschemas"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "title": "Plant Sciences Community Showcase",
+        "community": "Plant Sciences",
+        "description": "",
+        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Plant-Sciences-Showcase"
+      },
+      {
+        "id": "rare-disease-community",
+        "title": "Rare Disease Community Interoperability Showcase: examples from EJP RD",
+        "community": "Rare Disease",
+        "description": "",
+        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Rare-Disease-Community"
+      },
+      {
+        "id": "dcat-bioschemas",
+        "title": "Mapping the DCAT-based EJP RD Metadata Model to Bioschemas for improved interoperability",
+        "community": "Rare Disease",
+        "description": "",
+        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/DCAT-Bioscema"
+      },
+      {
+        "id": "user-journeys",
+        "title": "User journeys as means of effectively demonstrating value and engaging stakeholders",
+        "community": "EOSC?",
+        "description": "",
+        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/User-Journeys"
+      },
+      {
+        "id": "galaxy",
+        "title": "Galaxy: a story about interoperability",
+        "community": "Galaxy",
+        "description": "",
+        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Galaxy"
+      },
+      {
+        "id": "fairtracks",
+        "title": "FAIRtracks: FAIRtracks and Omnipy - FAIRtracks interoperability story",
+        "community": "FAIRtracks?",
+        "description": "",
+        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/FAIRtracks"
+      },
+      {
+        "id": "single-cell-omics-community",
+        "title": "Single Cell Omics Community Interoperability Showcase",
+        "community": "Single Cell Omics",
+        "description": "",
+        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Single-Cell-Omics-Community"
+      },
+      {
+        "id": "metabolomics-community",
+        "title": "Metabolomics Community & Interoperability Platform - On which subjects could they collaborate?",
+        "community": "Metabolomics",
+        "description": "",
+        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Metabolomics-Community"
+      },
+      {
+        "id": "metabolomics-community-24-26",
+        "title": "Metabolomics Community Use Case",
+        "community": "Metabolomics",
+        "description": "",
+        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Metabolomics-24-26-Community"
+      },
+      {
+        "id": "hereditary-project",
+        "title": "HEREDITARY Project – FAIRification of participating data resources",
+        "community": "HEREDITARY Project",
+        "description": "Casado Barbero, M., Boytcheva, S., Valentinova Barouh, M., & Gyurov, P. (2025). Deliverable 3.6: FAIRification of participating data resources (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.17901862",
+        "url": "https://doi.org/10.5281/zenodo.17901862"
+      }
+    ],
+    "mappings": [
+      {
+        "id": "bioschemas",
+        "cff_id": "ft-data-access",
+        "relevance": "Cascade mapping from FT 1: easier/better access to data via W3C standardised SPARQL endpoints (ideally machine interpretable) instead of custom APIs (for humans to implement/adapt to)"
+      },
+      {
+        "id": "bioschemas",
+        "cff_id": "ft-data-retrieval",
+        "relevance": "Cascade mapping from FT 1: easier/better access to data via W3C standardised SPARQL endpoints (ideally machine interpretable) instead of custom APIs (for humans to implement/adapt to)"
+      },
+      {
+        "id": "bioschemas",
+        "cff_id": "ft-identifier-mapping",
+        "relevance": "Cascade mapping from FT 6: transform data for increased interoperability via creation of knowledge graph"
+      },
+      {
+        "id": "bioschemas",
+        "cff_id": "ft-vocabulary-alignment",
+        "relevance": "Cascade mapping from FT 6: transform data for increased interoperability via creation of knowledge graph"
+      },
+      {
+        "id": "bioschemas",
+        "cff_id": "ft-data-model-mapping",
+        "relevance": "Cascade mapping from FT 6: transform data for increased interoperability via creation of knowledge graph"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-identify-data-types",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-identifier-minting",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-identifier-reuse",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-data-standards-reuse",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-data-standards-development",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-apply-data-standards",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-validate-against-data-standards",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-select-data-vocabularies",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-develop-data-vocabularies",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-anotate-with-data-vocabularies",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-manage-vocabularies",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-identifier-mapping",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-vocabulary-alignment",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-data-model-mapping",
+        "relevance": "Cascade mapping from FT 2–6: integration of multiple resources, data harmonisation"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-data-access",
+        "relevance": "Cascade mapping from FT 1, 7: hosting capabilities showcased with FAIRDARE"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-data-retrieval",
+        "relevance": "Cascade mapping from FT 1, 7: hosting capabilities showcased with FAIRDARE"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-data-hosting",
+        "relevance": "Cascade mapping from FT 1, 7: hosting capabilities showcased with FAIRDARE"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-data-versioning",
+        "relevance": "Cascade mapping from FT 1, 7: hosting capabilities showcased with FAIRDARE"
+      },
+      {
+        "id": "plant-sciences-showcase",
+        "cff_id": "ft-data-transfer",
+        "relevance": "Cascade mapping from FT 1, 7: hosting capabilities showcased with FAIRDARE"
+      },
+      {
+        "id": "rare-disease-community",
+        "cff_id": "ft-data-standards-reuse",
+        "relevance": "reuse data standards: use existing RIRs where possible"
+      },
+      {
+        "id": "rare-disease-community",
+        "cff_id": "ft-identifier-mapping",
+        "relevance": "Cascade mapping from FT 6: transform data for increased interoperability by connecting resources via KGs/SPARQL endpoints"
+      },
+      {
+        "id": "rare-disease-community",
+        "cff_id": "ft-vocabulary-alignment",
+        "relevance": "Cascade mapping from FT 6: transform data for increased interoperability by connecting resources via KGs/SPARQL endpoints"
+      },
+      {
+        "id": "rare-disease-community",
+        "cff_id": "ft-data-model-mapping",
+        "relevance": "Cascade mapping from FT 6: transform data for increased interoperability by connecting resources via KGs/SPARQL endpoints"
+      },
+      {
+        "id": "rare-disease-community",
+        "cff_id": "ft-data-transfer",
+        "relevance": "rich data export options explored"
+      },
+      {
+        "id": "dcat-bioschemas",
+        "cff_id": "ft-select-data-vocabularies",
+        "relevance": "Cascade mapping from FT 5: choose data vocabularies: selecting, developing and annotating with data vocabularies: use of DCAT, DCT, FOAF, EJP RD"
+      },
+      {
+        "id": "dcat-bioschemas",
+        "cff_id": "ft-develop-data-vocabularies",
+        "relevance": "Cascade mapping from FT 5: choose data vocabularies: selecting, developing and annotating with data vocabularies: use of DCAT, DCT, FOAF, EJP RD"
+      },
+      {
+        "id": "dcat-bioschemas",
+        "cff_id": "ft-anotate-with-data-vocabularies",
+        "relevance": "Cascade mapping from FT 5: choose data vocabularies: selecting, developing and annotating with data vocabularies: use of DCAT, DCT, FOAF, EJP RD"
+      },
+      {
+        "id": "dcat-bioschemas",
+        "cff_id": "ft-manage-vocabularies",
+        "relevance": "Cascade mapping from FT 5: choose data vocabularies: selecting, developing and annotating with data vocabularies: use of DCAT, DCT, FOAF, EJP RD"
+      },
+      {
+        "id": "dcat-bioschemas",
+        "cff_id": "ft-identifier-mapping",
+        "relevance": "Cascade mapping from FT 6: transform data for interoperability: mapping of identifiers and vocabularies to Bioschemas for further analysis and dissemination\n"
+      },
+      {
+        "id": "dcat-bioschemas",
+        "cff_id": "ft-vocabulary-alignment",
+        "relevance": "Cascade mapping from FT 6: transform data for interoperability: mapping of identifiers and vocabularies to Bioschemas for further analysis and dissemination\n"
+      },
+      {
+        "id": "dcat-bioschemas",
+        "cff_id": "ft-data-model-mapping",
+        "relevance": "Cascade mapping from FT 6: transform data for interoperability: mapping of identifiers and vocabularies to Bioschemas for further analysis and dissemination\n"
+      },
+      {
+        "id": "galaxy",
+        "cff_id": "ft-data-standards-development",
+        "relevance": "Cascade mapping from FT 4: Apply data standards: Reuse whenever possible"
+      },
+      {
+        "id": "galaxy",
+        "cff_id": "ft-apply-data-standards",
+        "relevance": "Cascade mapping from FT 4: Apply data standards: Reuse whenever possible"
+      },
+      {
+        "id": "galaxy",
+        "cff_id": "ft-validate-against-data-standards",
+        "relevance": "Cascade mapping from FT 4: Apply data standards: Reuse whenever possible"
+      },
+      {
+        "id": "galaxy",
+        "cff_id": "ft-select-data-vocabularies",
+        "relevance": "Cascade mapping from FT 5: Data vocabularies, 6. Transform data for interop:\nall tools rendered interoperable by describing I/O and filetypes with EDAM, cross referenced with registries"
+      },
+      {
+        "id": "galaxy",
+        "cff_id": "ft-develop-data-vocabularies",
+        "relevance": "Cascade mapping from FT 5: Data vocabularies, 6. Transform data for interop:\nall tools rendered interoperable by describing I/O and filetypes with EDAM, cross referenced with registries"
+      },
+      {
+        "id": "galaxy",
+        "cff_id": "ft-anotate-with-data-vocabularies",
+        "relevance": "Cascade mapping from FT 5: Data vocabularies, 6. Transform data for interop:\nall tools rendered interoperable by describing I/O and filetypes with EDAM, cross referenced with registries"
+      },
+      {
+        "id": "galaxy",
+        "cff_id": "ft-manage-vocabularies",
+        "relevance": "Cascade mapping from FT 5: Data vocabularies, 6. Transform data for interop:\nall tools rendered interoperable by describing I/O and filetypes with EDAM, cross referenced with registries"
+      },
+      {
+        "id": "galaxy",
+        "cff_id": "ft-data-hosting",
+        "relevance": "Cascade mapping from FT 7: Data hosting, versioning and transfer: all tools are annotated and exportable (workflows, Bioschemas, RO-crate…)"
+      },
+      {
+        "id": "galaxy",
+        "cff_id": "ft-data-versioning",
+        "relevance": "Cascade mapping from FT 7: Data hosting, versioning and transfer: all tools are annotated and exportable (workflows, Bioschemas, RO-crate…)"
+      },
+      {
+        "id": "galaxy",
+        "cff_id": "ft-data-transfer",
+        "relevance": "Cascade mapping from FT 7: Data hosting, versioning and transfer: all tools are annotated and exportable (workflows, Bioschemas, RO-crate…)"
+      },
+      {
+        "id": "fairtracks",
+        "cff_id": "ft-identify-data-types",
+        "relevance": "Model the domain: Learnings published on fairtracks.net and included as ELIXIR RIR"
+      },
+      {
+        "id": "fairtracks",
+        "cff_id": "ft-identifier-mapping",
+        "relevance": "Cascade mapping from FT 6: Transform data for inter- operability: Convert metadata from avirous schema to Track Hub format and FAIRtracks metadata exchange format using Omnipy ETL flows\n"
+      },
+      {
+        "id": "fairtracks",
+        "cff_id": "ft-vocabulary-alignment",
+        "relevance": "Cascade mapping from FT 6: Transform data for inter- operability: Convert metadata from avirous schema to Track Hub format and FAIRtracks metadata exchange format using Omnipy ETL flows\n"
+      },
+      {
+        "id": "fairtracks",
+        "cff_id": "ft-data-model-mapping",
+        "relevance": "Cascade mapping from FT 6: Transform data for inter- operability: Convert metadata from avirous schema to Track Hub format and FAIRtracks metadata exchange format using Omnipy ETL flows\n"
+      },
+      {
+        "id": "fairtracks",
+        "cff_id": "ft-data-hosting",
+        "relevance": "Cascade mapping from FT 7: Host your data: Submit to Zenodo, index in Track Hub Registry, discover via TrackFind and interfaces integrated into Galaxy and GSuite"
+      },
+      {
+        "id": "fairtracks",
+        "cff_id": "ft-data-versioning",
+        "relevance": "Cascade mapping from FT 7: Host your data: Submit to Zenodo, index in Track Hub Registry, discover via TrackFind and interfaces integrated into Galaxy and GSuite"
+      },
+      {
+        "id": "fairtracks",
+        "cff_id": "ft-data-transfer",
+        "relevance": "Cascade mapping from FT 7: Host your data: Submit to Zenodo, index in Track Hub Registry, discover via TrackFind and interfaces integrated into Galaxy and GSuite"
+      },
+      {
+        "id": "single-cell-omics-community",
+        "cff_id": "ft-identify-data-types",
+        "relevance": "Example of a domain with few standards and little convergence"
+      },
+      {
+        "id": "single-cell-omics-community",
+        "cff_id": "ft-data-standards-development",
+        "relevance": "Cascade mapping from FT 4: Community-driven work to define standards and cross-mappings between standards through workshop programmes emerging"
+      },
+      {
+        "id": "single-cell-omics-community",
+        "cff_id": "ft-apply-data-standards",
+        "relevance": "Cascade mapping from FT 4: Community-driven work to define standards and cross-mappings between standards through workshop programmes emerging"
+      },
+      {
+        "id": "single-cell-omics-community",
+        "cff_id": "ft-validate-against-data-standards",
+        "relevance": "Cascade mapping from FT 4: Community-driven work to define standards and cross-mappings between standards through workshop programmes emerging"
+      },
+      {
+        "id": "metabolomics-community",
+        "cff_id": "ft-identify-data-types",
+        "relevance": "Model the domain: Learnings published on fairtracks.net and included as ELIXIR RIR"
+      },
+      {
+        "id": "metabolomics-community",
+        "cff_id": "ft-data-standards-development",
+        "relevance": "Cascade mapping from FT 4: Developing a framework for multi-omic data analysis (transcriptomics, proteomics and metabolomics), e.g. integration of MetaboLights, UniProt, BIoModels, MetabolicAtlas, Rhea, Reactome, BIGG, and http://pickle.gr/"
+      },
+      {
+        "id": "metabolomics-community",
+        "cff_id": "ft-apply-data-standards",
+        "relevance": "Cascade mapping from FT 4: Developing a framework for multi-omic data analysis (transcriptomics, proteomics and metabolomics), e.g. integration of MetaboLights, UniProt, BIoModels, MetabolicAtlas, Rhea, Reactome, BIGG, and http://pickle.gr/"
+      },
+      {
+        "id": "metabolomics-community",
+        "cff_id": "ft-validate-against-data-standards",
+        "relevance": "Cascade mapping from FT 4: Developing a framework for multi-omic data analysis (transcriptomics, proteomics and metabolomics), e.g. integration of MetaboLights, UniProt, BIoModels, MetabolicAtlas, Rhea, Reactome, BIGG, and http://pickle.gr/"
+      },
+      {
+        "id": "metabolomics-community",
+        "cff_id": "ft-data-hosting",
+        "relevance": "Cascade mapping from FT 7: Promote/develop MetaboLights as deposition database"
+      },
+      {
+        "id": "metabolomics-community",
+        "cff_id": "ft-data-versioning",
+        "relevance": "Cascade mapping from FT 7: Promote/develop MetaboLights as deposition database"
+      },
+      {
+        "id": "metabolomics-community",
+        "cff_id": "ft-data-transfer",
+        "relevance": "Cascade mapping from FT 7: Promote/develop MetaboLights as deposition database"
+      },
+      {
+        "id": "user-journeys",
+        "cff_id": "phase_1",
+        "relevance": "Enabling user journeys categorised as either real-world case studies; business focused use cases; or task focused use cases that are individually optimised for their actors"
+      },
+      {
+        "id": "user-journeys",
+        "cff_id": "phase_4",
+        "relevance": "Key learning captured in a library of community use cases"
+      },
+      {
+        "id": "single-cell-omics-community",
+        "cff_id": "phase_1",
+        "relevance": "Define goals that could be achieved when data was aligned and distributed within the community in a manner that complied with a lightweight standardised model"
+      },
+      {
+        "id": "metabolomics-community-24-26",
+        "cff_id": "phase_1",
+        "relevance": ""
+      },
+      {
+        "id": "metabolomics-community-24-26",
+        "cff_id": "phase_2",
+        "relevance": ""
+      },
+      {
+        "id": "metabolomics-community-24-26",
+        "cff_id": "phase_3",
+        "relevance": ""
+      },
+      {
+        "id": "metabolomics-community-24-26",
+        "cff_id": "phase_4",
+        "relevance": ""
+      },
+      {
+        "id": "bioschemas",
+        "cff_id": "hosting-environment-capabilities",
+        "relevance": ""
+      },
+      {
+        "id": "bioschemas",
+        "cff_id": "representation-and-format",
+        "relevance": ""
+      },
+      {
+        "id": "bioschemas",
+        "cff_id": "content-and-context",
+        "relevance": ""
+      },
+      {
+        "id": "metabolomics-community-24-26",
+        "cff_id": "content-and-context",
+        "relevance": ""
+      },
+      {
+        "id": "metabolomics-community-24-26",
+        "cff_id": "representation-and-format",
+        "relevance": ""
+      }
+    ]
+  },
+  "fairmetroline": {
+    "data": [
+      {
+        "id": "define_fairification_objectives",
+        "title": "Define FAIRification objectives",
+        "url": "https://fairmetroline.org/metroline_steps/define_fairification_objectives",
+        "description": "FAIRification objectives aim to make data more Findable, Accessible, Interoperable, and Reusable (FAIR). They focus on improving how data is organised and shared, ensuring that it can be easily accessed, understood and used by both humans and machines. Achieving such objectives maximises the value of data, enhancing its usefulness and long-term usability."
+      },
+      {
+        "id": "",
+        "title": "Build the team",
+        "url": "",
+        "description": ""
+      },
+      {
+        "id": "have_a_fair_data_steward_on_board",
+        "title": "Have a FAIR data steward on board",
+        "url": "https://fairmetroline.org/metroline_steps/have_a_fair_data_steward_on_board",
+        "description": "A FAIR data steward guides teams in organising, storing, and describing data to meet the FAIR principles, ensuring research data can be understood and reused, making science more efficient and transparent."
+      },
+      {
+        "id": "organise_training",
+        "title": "Organise training",
+        "url": "https://fairmetroline.org/metroline_steps/organise_training",
+        "description": "This page brings forward the training and educational elements available to guide the team in their journey through the Metroline subsequent steps."
+      },
+      {
+        "id": "pre_fair_assessment",
+        "title": "Pre-FAIR assessment",
+        "url": "https://fairmetroline.org/metroline_steps/pre_fair_assessment",
+        "description": "A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability."
+      },
+      {
+        "id": "design_solution_plan",
+        "title": "Design solution plan",
+        "url": "https://fairmetroline.org/metroline_steps/design_solution_plan",
+        "description": "This step is about turning the findings from the pre-FAIR assessment into a clear, actionable plan. It means choosing the right tools, deciding who does what, and making sure the process is simple and effective so data can actually become FAIR."
+      },
+      {
+        "id": "data_access_and_retrieval",
+        "title": "Data access and retrieval",
+        "url": "https://fairmetroline.org/metroline_steps/data_access_and_retrieval",
+        "description": "Before data can be made FAIR, we first need to get it the right way. That means finding trustworthy sources, making sure we're allowed to use the data, and keeping it safe and private. When we do this properly, it ensures that the data can be trusted, shared, and reused to support new research and innovation."
+      },
+      {
+        "id": "assess_availability_of_your_metadata",
+        "title": "Assess availability of your metadata",
+        "url": "https://fairmetroline.org/metroline_steps/assess_availability_of_your_metadata",
+        "description": "Metadata describes a resource, like a book's title and author or a photo's date and location, which help with organization and discovery of that resource. This Metroline step describes the types of metadata, where you can find them for your resource, and how to improve their quality. Filling metadata gaps enhances a resource's visibility and reusability."
+      },
+      {
+        "id": "",
+        "title": "Select identifier scheme",
+        "url": "",
+        "description": ""
+      },
+      {
+        "id": "register_resource_level_metadata",
+        "title": "Register resource level metadata",
+        "url": "https://fairmetroline.org/metroline_steps/register_resource_level_metadata",
+        "description": "To make your resource (e.g. data), available for reuse, its metadata can be published in a catalogue. This step helps you find a catalogue where you can register these resource metadata and explains why adding your resource to such a catalogue is important."
+      },
+      {
+        "id": "register_structural_metadata",
+        "title": "Register structural metadata",
+        "url": "https://fairmetroline.org/metroline_steps/register_structural_metadata",
+        "description": "This step focuses on how to share your resource's structural metadata - an explanation of what each piece of your data means and how it's organised. Publishing it helps others understand, find and reuse your data more easily. This step also shows how to make the metadata readable by computers, which can support specific FAIR objectives you may already have."
+      },
+      {
+        "id": "apply_common_data_elements",
+        "title": "Apply common data elements",
+        "url": "https://fairmetroline.org/metroline_steps/apply_common_data_elements",
+        "description": "Common data elements (CDEs) are standardised data elements, such as variables and measurements, paired with defined rules for how values should be recorded. They are developed to promote consistency and reuse in data collection across different settings, enabling seamless integration and comparison. This step encourages you to search for relevant CDEs and offers guidance on what to do if no suitable CDE is available."
+      },
+      {
+        "id": "analyse_data_semantics",
+        "title": "Analyse data semantics",
+        "url": "https://fairmetroline.org/metroline_steps/analyse_data_semantics",
+        "description": "In this step, the aim is to gain more insight into the existing data, or the data that you aim to collect. Clearly defining the meaning (semantics) of the data is an important step for creating the semantic model, as well as for data collection via, for example, electronic case report forms (eCRFs)."
+      },
+      {
+        "id": "design_ecrf",
+        "title": "Design eCRF (data collection)",
+        "url": "https://fairmetroline.org/metroline_steps/design_ecrf",
+        "description": "A Case Report Form (CRF) is a structured document used to capture information about study participants. When this process is conducted electronically, the form is referred to as an electronic Case Report Form (eCRF). The use of eCRFs offers several advantages: it facilitates efficient data storage, reduces the risk of human error and saves time throughout the study lifecycle. In this step, we will focus on how to design and develop an eCRF in preparation for data collection."
+      },
+      {
+        "id": "create_or_reuse_a_semantic_model",
+        "title": "Create or reuse a semantic (meta)data model",
+        "url": "https://fairmetroline.org/metroline_steps/create_or_reuse_a_semantic_model",
+        "description": "Creating a semantic (meta)data model often requires considerable effort as it is a complex task. Reusing an existing model, where possible, can save time and increase interoperability. Start by checking if a suitable model already exists. If not, follow a structured approach to create one. Once the model is in place, share it using common platforms and provide clear documentation to support reuse by others."
+      },
+      {
+        "id": "use_ontologies_in_the_model",
+        "title": "Use ontologies in the model",
+        "url": "https://fairmetroline.org/metroline_steps/use_ontologies_in_the_model",
+        "description": "This process involves linking your data model to ontologies, which are essentially formal, shared dictionaries that provide precise, computer-readable definitions for concepts. By assigning these standard definitions to the elements in your data model, you make their meanings explicit and clear. This allows different computer systems to correctly understand, combine, and compare data from various sources without confusion, making the data more interoperable and easier to reuse across different projects."
+      },
+      {
+        "id": "obtain_informed_consent",
+        "title": "Obtain informed consent",
+        "url": "https://fairmetroline.org/metroline_steps/obtain_informed_consent",
+        "description": "To ensure your data and materials can be reused in the future, your subject information sheet (SIS) and informed consent form (ICF) must address reuse. This Metroline step provides consideration and resources for preparing your SIS and ICF."
+      },
+      {
+        "id": "",
+        "title": "Enter data in eCRF (data collection)",
+        "url": "",
+        "description": ""
+      },
+      {
+        "id": "apply_metadata_model",
+        "title": "Apply (meta)data model",
+        "url": "https://fairmetroline.org/metroline_steps/apply_metadata_model",
+        "description": "Think of your data like a book in a library. A metadata model is like the card in the catalogue that tells people what the book is about and who wrote it. A data model is like the book's table of contents - it helps everyone understand what's inside and how to read it. Using both makes it easier for people and machines to find, understand, and reuse your data."
+      },
+      {
+        "id": "transform_and_expose_fair_metadata",
+        "title": "Transform and expose FAIR (meta)data",
+        "url": "https://fairmetroline.org/metroline_steps/transform_and_expose_fair_metadata",
+        "description": "Think of your data like a well-written book that's hidden away on a shelf that no one knows about. By transforming it into a standardised, machine-readable format and publishing it through trusted channels, you place it in a public library where everyone, people and machines, can easily find, open, and read it."
+      },
+      {
+        "id": "define_access_conditions",
+        "title": "Define access conditions",
+        "url": "https://fairmetroline.org/metroline_steps/define_access_conditions",
+        "description": "When making health care data FAIR, data holders have to keep the balance between making data accessible for reuse and protecting personal information of subjects present in the data. This Metroline step helps you pick the appropriate access level to your data and publish the necessary information in the metadata."
+      },
+      {
+        "id": "query_over_resources",
+        "title": "Query (use) over resources",
+        "url": "https://fairmetroline.org/metroline_steps/query_over_resources",
+        "description": "Querying FAIR resources is the process of asking structured questions to retrieve data that is easy to find, access, and reuse. When resources follow FAIR principles, queries become more efficient because the data is well-organized and clearly described. In this step, we will explore the tools and platforms that enable effective querying of FAIR-compliant resources."
+      },
+      {
+        "id": "assess_fairness",
+        "title": "Assess FAIRness",
+        "url": "https://fairmetroline.org/metroline_steps/assess_fairness",
+        "description": "Now that you've FAIRified your data, it's time to check the resulting FAIRness and decide if you've reached your goals. Use tools and other methods to assess if your data is truly Findable, Accessible, Interoperable, and Reusable. If needed, adjust or improve things so your data stays FAIR in the long run."
+      },
+      {
+        "id": "",
+        "title": "Did you reach your FAIRification objectives",
+        "url": "",
+        "description": ""
+      },
+      {
+        "id": "creating_a_fair_implementation_profile",
+        "title": "Creating a FAIR Implementation Profile (FIP)",
+        "url": "https://fairmetroline.org/metroline_steps/creating_a_fair_implementation_profile",
+        "description": "A FAIR Implementation Profile (FIP) describes the practical choices a community makes to apply the FAIR data principles using shared standards and tools. It lists the specific resources, such as metadata schemas, ontologies and licences, that make data findable, accessible, interoperable and reusable. Other communities can reuse these profiles to align their practices, fill gaps and improve collaboration."
+      }
+    ],
+    "mappings": [
+      {
+        "cff_id": "ft-data-access",
+        "id": "data_access_and_retrieval",
+        "relevance": "Focuses on how data is accessed and retrieved from the source, which directly underpins data access."
+      },
+      {
+        "cff_id": "ft-data-access",
+        "id": "define_access_conditions",
+        "relevance": "Clarifies who can access the data and under which restrictions, making data access operational."
+      },
+      {
+        "cff_id": "ft-data-access",
+        "id": "obtain_informed_consent",
+        "relevance": "Links data access to the conditions set by consent, especially where future use and reuse are concerned."
+      },
+      {
+        "cff_id": "ft-data-retrieval",
+        "id": "data_access_and_retrieval",
+        "relevance": "Addresses how data can be obtained from its source, which is central to data retrieval."
+      },
+      {
+        "cff_id": "ft-data-retrieval",
+        "id": "query_over_resources",
+        "relevance": "Enables retrieval through searching and querying resources in a structured and reusable way."
+      },
+      {
+        "cff_id": "ft-identify-data-types",
+        "id": "analyse_data_semantics",
+        "relevance": "Clarifying the meaning of the data helps determine which data types are present and relevant."
+      },
+      {
+        "cff_id": "ft-identify-data-types",
+        "id": "create_or_reuse_a_semantic_model",
+        "relevance": "Defining concepts and structure provides a basis for identifying which data types need to be represented."
+      },
+      {
+        "cff_id": "ft-identify-data-types",
+        "id": "register_structural_metadata",
+        "relevance": "Describing the structure of a resource helps recognise and distinguish the data types involved."
+      },
+      {
+        "cff_id": "ft-identify-data-types",
+        "id": "assess_availability_of_your_metadata",
+        "relevance": "Showing which metadata is already available helps identify how data types are currently described."
+      },
+      {
+        "cff_id": "ft-identifier-minting",
+        "id": "design_solution_plan",
+        "relevance": "Planning how unique, persistent and resolvable identifiers will be created gives direction to identifier minting."
+      },
+      {
+        "cff_id": "ft-identifier-reuse",
+        "id": "use_ontologies_in_the_model",
+        "relevance": "Linking model elements to established semantic resources supports reuse of community identifiers."
+      },
+      {
+        "cff_id": "ft-identifier-reuse",
+        "id": "creating_a_fair_implementation_profile",
+        "relevance": "Documenting community choices on identifier systems makes reuse of those identifiers explicit and consistent."
+      },
+      {
+        "cff_id": "ft-data-standards-reuse",
+        "id": "apply_common_data_elements",
+        "relevance": "Using agreed data elements turns reuse of existing standards into something practical and concrete."
+      },
+      {
+        "cff_id": "ft-data-standards-reuse",
+        "id": "create_or_reuse_a_semantic_model",
+        "relevance": "Embedding existing standards in a shared semantic model supports their reuse without redefining them."
+      },
+      {
+        "cff_id": "ft-data-standards-reuse",
+        "id": "creating_a_fair_implementation_profile",
+        "relevance": "Recording which standards a community adopts makes reuse choices transparent and reusable."
+      },
+      {
+        "cff_id": "ft-data-standards-development",
+        "id": "create_or_reuse_a_semantic_model",
+        "relevance": "Defining concepts, relations and structure supports the development of new standards where these do not yet exist."
+      },
+      {
+        "cff_id": "ft-data-standards-development",
+        "id": "apply_common_data_elements",
+        "relevance": "Formalising shared data elements can be part of building a new standard."
+      },
+      {
+        "cff_id": "ft-apply-data-standards",
+        "id": "apply_common_data_elements",
+        "relevance": "Consistent use of agreed data elements is one of the main ways data standards are applied in practice."
+      },
+      {
+        "cff_id": "ft-apply-data-standards",
+        "id": "apply_metadata_model",
+        "relevance": "Implementing the agreed model in data and metadata makes data standards actionable."
+      },
+      {
+        "cff_id": "ft-apply-data-standards",
+        "id": "transform_and_expose_fair_metadata",
+        "relevance": "Turning data and metadata into a more structured FAIR form helps put standards into practice."
+      },
+      {
+        "cff_id": "ft-apply-data-standards",
+        "id": "design_ecrf",
+        "relevance": "Building standards directly into eCRF design connects application of standards to data collection."
+      },
+      {
+        "cff_id": "ft-validate-against-data-standards",
+        "id": "pre_fair_assessment",
+        "relevance": "An early assessment helps reveal whether data already aligns with relevant standards and where gaps remain."
+      },
+      {
+        "cff_id": "ft-validate-against-data-standards",
+        "id": "assess_fairness",
+        "relevance": "Checking whether data and metadata meet FAIR requirements complements validation against standards."
+      },
+      {
+        "cff_id": "ft-validate-against-data-standards",
+        "id": "design_ecrf",
+        "relevance": "Structured forms can support validation by enforcing standard compliant input at the moment of collection."
+      },
+      {
+        "cff_id": "ft-select-data-vocabularies",
+        "id": "use_ontologies_in_the_model",
+        "relevance": "Choosing ontology terms that make concepts explicit and machine readable is a key part of selecting vocabularies."
+      },
+      {
+        "cff_id": "ft-select-data-vocabularies",
+        "id": "create_or_reuse_a_semantic_model",
+        "relevance": "The concepts and relations defined in a semantic model guide which vocabularies should be selected."
+      },
+      {
+        "cff_id": "ft-select-data-vocabularies",
+        "id": "creating_a_fair_implementation_profile",
+        "relevance": "Recording chosen semantic resources in a FIP makes vocabulary selection explicit at community level."
+      },
+      {
+        "cff_id": "ft-develop-data-vocabularies",
+        "id": "create_or_reuse_a_semantic_model",
+        "relevance": "Defining the concepts needed in the model creates the foundation for developing vocabularies."
+      },
+      {
+        "cff_id": "ft-develop-data-vocabularies",
+        "id": "use_ontologies_in_the_model",
+        "relevance": "Newly developed terms can become part of the ontology driven model."
+      },
+      {
+        "cff_id": "ft-anotate-with-data-vocabularies",
+        "id": "use_ontologies_in_the_model",
+        "relevance": "Linking data and metadata to formal ontology or vocabulary terms gives annotation its meaning."
+      },
+      {
+        "cff_id": "ft-anotate-with-data-vocabularies",
+        "id": "apply_metadata_model",
+        "relevance": "Putting the chosen semantic model into practice includes annotating data and metadata with the right terms."
+      },
+      {
+        "cff_id": "ft-manage-vocabularies",
+        "id": "creating_a_fair_implementation_profile",
+        "relevance": "Documenting and maintaining community choices over time supports vocabulary management."
+      },
+      {
+        "cff_id": "ft-manage-vocabularies",
+        "id": "use_ontologies_in_the_model",
+        "relevance": "Sustained and consistent use of ontologies depends on active vocabulary management."
+      },
+      {
+        "cff_id": "ft-identifier-mapping",
+        "id": "use_ontologies_in_the_model",
+        "relevance": "Semantic relations can help connect equivalent identifiers across systems and contexts."
+      },
+      {
+        "cff_id": "ft-identifier-mapping",
+        "id": "apply_metadata_model",
+        "relevance": "Representing mapped identifiers consistently in the applied model makes identifier mapping usable in practice."
+      },
+      {
+        "cff_id": "ft-vocabulary-alignment",
+        "id": "use_ontologies_in_the_model",
+        "relevance": "Alignment depends on relating equivalent or closely related terms through semantic links."
+      },
+      {
+        "cff_id": "ft-vocabulary-alignment",
+        "id": "creating_a_fair_implementation_profile",
+        "relevance": "Shared documentation of semantic choices can support alignment across communities."
+      },
+      {
+        "cff_id": "ft-data-model-mapping",
+        "id": "apply_metadata_model",
+        "relevance": "Mapping between data models depends on expressing those mappings in a model that can be implemented consistently."
+      },
+      {
+        "cff_id": "ft-data-model-mapping",
+        "id": "create_or_reuse_a_semantic_model",
+        "relevance": "Clearly defined semantic models make equivalent concepts across sources easier to compare and map."
+      },
+      {
+        "cff_id": "ft-data-hosting",
+        "id": "register_resource_level_metadata",
+        "relevance": "Describing hosted resources with sufficient metadata makes them easier to find, understand and reuse."
+      },
+      {
+        "cff_id": "ft-data-hosting",
+        "id": "transform_and_expose_fair_metadata",
+        "relevance": "Publishing data and metadata in FAIR forms connects hosting to access and reuse."
+      },
+      {
+        "cff_id": "ft-data-hosting",
+        "id": "query_over_resources",
+        "relevance": "Search and query functions make hosted resources more usable once they are made available."
+      },
+      {
+        "cff_id": "ft-data-hosting",
+        "id": "assess_availability_of_your_metadata",
+        "relevance": "Checking whether enough metadata is available supports effective hosting and discovery."
+      },
+      {
+        "cff_id": "ft-data-versioning",
+        "id": "register_resource_level_metadata",
+        "relevance": "Metadata that distinguishes and describes different versions is essential for proper versioning."
+      },
+      {
+        "cff_id": "ft-data-versioning",
+        "id": "transform_and_expose_fair_metadata",
+        "relevance": "Making different FAIR versions of data and metadata visible supports transparent versioning."
+      },
+      {
+        "cff_id": "ft-data-transfer",
+        "id": "data_access_and_retrieval",
+        "relevance": "Accessing, moving and obtaining data across systems is part of what data transfer needs to support."
+      },
+      {
+        "cff_id": "ft-data-transfer",
+        "id": "transform_and_expose_fair_metadata",
+        "relevance": "Structuring data and metadata for exchange helps make transfer more FAIR and reusable."
+      },
+      {
+        "cff_id": "ft-data-licensing",
+        "id": "define_access_conditions",
+        "relevance": "Setting the terms for access, sharing and reuse makes define access conditions directly relevant to licensing."
+      },
+      {
+        "cff_id": "ft-data-licensing",
+        "id": "creating_a_fair_implementation_profile",
+        "relevance": "Community documentation of licence choices helps make licensing decisions more transparent and consistent."
+      },
+      {
+        "cff_id": "ft-data-anonymisation",
+        "id": "define_access_conditions",
+        "relevance": "Access conditions depend in part on how privacy risks are handled through anonymisation."
+      },
+      {
+        "cff_id": "ft-data-anonymisation",
+        "id": "data_access_and_retrieval",
+        "relevance": "Protecting privacy through anonymisation can enable safer access to and retrieval of data."
+      },
+      {
+        "cff_id": "ft-data-anonymisation",
+        "id": "obtain_informed_consent",
+        "relevance": "Consent conditions shape how anonymised data may later be used and reused."
+      },
+      {
+        "cff_id": "ft-data-release",
+        "id": "register_resource_level_metadata",
+        "relevance": "Releasing data requires metadata that makes the resource discoverable and understandable to others."
+      },
+      {
+        "cff_id": "ft-data-release",
+        "id": "transform_and_expose_fair_metadata",
+        "relevance": "Publishing data and metadata in FAIR ways is a core part of data release."
+      },
+      {
+        "cff_id": "ft-data-release",
+        "id": "define_access_conditions",
+        "relevance": "Clear decisions on access rights and reuse conditions are necessary before data can be released."
+      },
+      {
+        "cff_id": "ft-data-release",
+        "id": "assess_availability_of_your_metadata",
+        "relevance": "Availability of sufficient metadata helps determine whether data is ready for release."
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "define_fairification_objectives",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_2",
+        "id": "have_a_fair_data_steward_on_board",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_2",
+        "id": "organise_training",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_2",
+        "id": "pre_fair_assessment",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_2",
+        "id": "design_solution_plan",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_2",
+        "id": "creating_a_fair_implementation_profile",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "assess_fairness",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_4",
+        "id": "assess_fairness",
+        "relevance": ""
+      }
+    ]
+  },
+  "faircookbook": {
+    "data": [
+      {
+        "id": "FCB003",
+        "title": "Introducing vocabulary portals and lookup services",
+        "url": "https://w3id.org/faircookbook/FCB003"
+      },
+      {
+        "id": "FCB004",
+        "title": "Selecting an ontology lookup service",
+        "url": "https://w3id.org/faircookbook/FCB004"
+      },
+      {
+        "id": "FCB005",
+        "title": "Deploying EBI Ontology Lookup Service",
+        "url": "https://w3id.org/faircookbook/FCB005"
+      },
+      {
+        "id": "FCB006",
+        "title": "Introducing unique, persistent identifiers",
+        "url": "https://w3id.org/faircookbook/FCB006"
+      },
+      {
+        "id": "FCB007",
+        "title": "Creating InChI & SMILES identifiers for chemical structures",
+        "url": "https://w3id.org/faircookbook/FCB007"
+      },
+      {
+        "id": "FCB008",
+        "title": "Minting identifiers with Globus Minid client",
+        "url": "https://w3id.org/faircookbook/FCB008"
+      },
+      {
+        "id": "FCB009",
+        "title": "Depositing to generic repositories - Zenodo use case",
+        "url": "https://w3id.org/faircookbook/FCB009"
+      },
+      {
+        "id": "FCB010",
+        "title": "Introducing Search Engine Optimization (SEO)",
+        "url": "https://w3id.org/faircookbook/FCB010"
+      },
+      {
+        "id": "FCB011",
+        "title": "Marking up Data pages with Schema.org & Bioschemas for SEO",
+        "url": "https://w3id.org/faircookbook/FCB011"
+      },
+      {
+        "id": "FCB012",
+        "title": "Marking up Dataset page with Schema.org & Bioschemas for SEO",
+        "url": "https://w3id.org/faircookbook/FCB012"
+      },
+      {
+        "id": "FCB013",
+        "title": "Marking up Data Catalogue page with Schema.org & Bioschemas for SEO",
+        "url": "https://w3id.org/faircookbook/FCB013"
+      },
+      {
+        "id": "FCB014",
+        "title": "Transferring data with SFTP protocol",
+        "url": "https://w3id.org/faircookbook/FCB014"
+      },
+      {
+        "id": "FCB015",
+        "title": "Downloading data with Aspera protocol",
+        "url": "https://w3id.org/faircookbook/FCB015"
+      },
+      {
+        "id": "FCB016",
+        "title": "Interlinking data from different sources",
+        "url": "https://w3id.org/faircookbook/FCB016"
+      },
+      {
+        "id": "FCB017",
+        "title": "Mapping identifiers with BridgeDb",
+        "url": "https://w3id.org/faircookbook/FCB017"
+      },
+      {
+        "id": "FCB018",
+        "title": "Mapping identifiers using BridgeDb web services",
+        "url": "https://w3id.org/faircookbook/FCB018"
+      },
+      {
+        "id": "FCB019",
+        "title": "Introducing terminologies and ontologies",
+        "url": "https://w3id.org/faircookbook/FCB019"
+      },
+      {
+        "id": "FCB020",
+        "title": "Selecting terminologies and ontologies",
+        "url": "https://w3id.org/faircookbook/FCB020"
+      },
+      {
+        "id": "FCB021",
+        "title": "Requesting new terms from terminologies and ontologies",
+        "url": "https://w3id.org/faircookbook/FCB021"
+      },
+      {
+        "id": "FCB022",
+        "title": "Introducing ontology-related tools and services",
+        "url": "https://w3id.org/faircookbook/FCB022"
+      },
+      {
+        "id": "FCB023",
+        "title": "Building an application ontology with ROBOT",
+        "url": "https://w3id.org/faircookbook/FCB023"
+      },
+      {
+        "id": "FCB024",
+        "title": "Building an application ontology for metabolomics - MSIO",
+        "url": "https://w3id.org/faircookbook/FCB024"
+      },
+      {
+        "id": "FCB025",
+        "title": "Creating a data/variable dictionary",
+        "url": "https://w3id.org/faircookbook/FCB025"
+      },
+      {
+        "id": "FCB026",
+        "title": "Creating a metadata profile",
+        "url": "https://w3id.org/faircookbook/FCB026"
+      },
+      {
+        "id": "FCB027",
+        "title": "Outlining a metadata profile for transcriptomics",
+        "url": "https://w3id.org/faircookbook/FCB027"
+      },
+      {
+        "id": "FCB028",
+        "title": "Building a community compliant metadata profile - The Covid19 sample profile use case",
+        "url": "https://w3id.org/faircookbook/FCB028"
+      },
+      {
+        "id": "FCB029",
+        "title": "Converting from proprietary to open format",
+        "url": "https://w3id.org/faircookbook/FCB029"
+      },
+      {
+        "id": "FCB030",
+        "title": "Validating file format - FASTQ example",
+        "url": "https://w3id.org/faircookbook/FCB030"
+      },
+      {
+        "id": "FCB031",
+        "title": "Surveying extraction, transformation, load (ETL) tools",
+        "url": "https://w3id.org/faircookbook/FCB031"
+      },
+      {
+        "id": "FCB032",
+        "title": "Licensing",
+        "url": "https://w3id.org/faircookbook/FCB032"
+      },
+      {
+        "id": "FCB033",
+        "title": "Licensing Software",
+        "url": "https://w3id.org/faircookbook/FCB033"
+      },
+      {
+        "id": "FCB034",
+        "title": "Licensing Data",
+        "url": "https://w3id.org/faircookbook/FCB034"
+      },
+      {
+        "id": "FCB035",
+        "title": "Declaring data permitted uses",
+        "url": "https://w3id.org/faircookbook/FCB035"
+      },
+      {
+        "id": "FCB036",
+        "title": "Introducing Provenance Information",
+        "url": "https://w3id.org/faircookbook/FCB036"
+      },
+      {
+        "id": "FCB037",
+        "title": "Making an omics data matrix FAIR",
+        "url": "https://w3id.org/faircookbook/FCB037"
+      },
+      {
+        "id": "FCB038",
+        "title": "FAIRifying Data Matrices - Step1 - Starting material",
+        "url": "https://w3id.org/faircookbook/FCB038"
+      },
+      {
+        "id": "FCB039",
+        "title": "FAIRifying Data Matrices - Step2 - Structuring data matrices",
+        "url": "https://w3id.org/faircookbook/FCB039"
+      },
+      {
+        "id": "FCB040",
+        "title": "FAIRifying Data Matrices - Step3 - Exploring data with SPARQL",
+        "url": "https://w3id.org/faircookbook/FCB040"
+      },
+      {
+        "id": "FCB041",
+        "title": "FAIRifying Data Matrices - Step4 - Integrating data",
+        "url": "https://w3id.org/faircookbook/FCB041"
+      },
+      {
+        "id": "FCB042",
+        "title": "eTox - omics datasets",
+        "url": "https://w3id.org/faircookbook/FCB042"
+      },
+      {
+        "id": "FCB043",
+        "title": "ND4BB - chemical activities datasets",
+        "url": "https://w3id.org/faircookbook/FCB043"
+      },
+      {
+        "id": "FCB044",
+        "title": "Readying IMI Oncotrack - clinical cohort datasets for deposition to EBI Biosamples",
+        "url": "https://w3id.org/faircookbook/FCB044"
+      },
+      {
+        "id": "FCB045",
+        "title": "Depositing IMI ReSOLUTE transcriptomics datasets to EBI repositories",
+        "url": "https://w3id.org/faircookbook/FCB045"
+      },
+      {
+        "id": "FCB046",
+        "title": "Introducing identifier resolution services",
+        "url": "https://w3id.org/faircookbook/FCB046"
+      },
+      {
+        "id": "FCB047",
+        "title": "Building a catalogue of datasets",
+        "url": "https://w3id.org/faircookbook/FCB047"
+      },
+      {
+        "id": "FCB048",
+        "title": "Deploying a data catalogue - The IMI data catalogue example",
+        "url": "https://w3id.org/faircookbook/FCB048"
+      },
+      {
+        "id": "FCB049",
+        "title": "Assessing with FAIR Evaluator",
+        "url": "https://w3id.org/faircookbook/FCB049"
+      },
+      {
+        "id": "FCB050",
+        "title": "Assessing with FAIRshake",
+        "url": "https://w3id.org/faircookbook/FCB050"
+      },
+      {
+        "id": "FCB051",
+        "title": "Inventorying tools for converting data to RDF",
+        "url": "https://w3id.org/faircookbook/FCB051"
+      },
+      {
+        "id": "FCB052",
+        "title": "Creating file checksums",
+        "url": "https://w3id.org/faircookbook/FCB052"
+      },
+      {
+        "id": "FCB053",
+        "title": "Validating checksums to verify file integrity",
+        "url": "https://w3id.org/faircookbook/FCB053"
+      },
+      {
+        "id": "FCB054",
+        "title": "Enhancing discoverability of EHDEN OHDSI data with Schema.org markup",
+        "url": "https://w3id.org/faircookbook/FCB054"
+      },
+      {
+        "id": "FCB055",
+        "title": "Prioritizing projects for FAIRification",
+        "url": "https://w3id.org/faircookbook/FCB055"
+      },
+      {
+        "id": "FCB056",
+        "title": "Practical Considerations for CROs to play FAIR",
+        "url": "https://w3id.org/faircookbook/FCB056"
+      },
+      {
+        "id": "FCB057",
+        "title": "Outlining a metadata profile for Bioactivity data",
+        "url": "https://w3id.org/faircookbook/FCB057"
+      },
+      {
+        "id": "FCB058",
+        "title": "Expressing Clinical Genetic Information as FHIR JSON",
+        "url": "https://w3id.org/faircookbook/FCB058"
+      },
+      {
+        "id": "FCB059",
+        "title": "Using the VCF2FHIR python library",
+        "url": "https://w3id.org/faircookbook/FCB059"
+      },
+      {
+        "id": "FCB060",
+        "title": "Registering datasets with Wikidata",
+        "url": "https://w3id.org/faircookbook/FCB060"
+      },
+      {
+        "id": "FCB061",
+        "title": "Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases",
+        "url": "https://w3id.org/faircookbook/FCB061"
+      },
+      {
+        "id": "FCB062",
+        "title": "Making Computational Workflows FAIR",
+        "url": "https://w3id.org/faircookbook/FCB062"
+      },
+      {
+        "id": "FCB063",
+        "title": "Minimal Data Maturity with ISA - ISA-Tab and free text",
+        "url": "https://w3id.org/faircookbook/FCB063"
+      },
+      {
+        "id": "FCB064",
+        "title": "Enhanced Data Maturity with ISA - ISA-JSON and ontology markup",
+        "url": "https://w3id.org/faircookbook/FCB064"
+      },
+      {
+        "id": "FCB065",
+        "title": "Moving to a semantically typed version - ISA-JSON-LD",
+        "url": "https://w3id.org/faircookbook/FCB065"
+      },
+      {
+        "id": "FCB066",
+        "title": "Dissemination - Packaging ISA as a Research Object (RO)",
+        "url": "https://w3id.org/faircookbook/FCB066"
+      },
+      {
+        "id": "FCB067",
+        "title": "Depositing High-Content Screening data to EBI BioImage Archive",
+        "url": "https://w3id.org/faircookbook/FCB067"
+      },
+      {
+        "id": "FCB068",
+        "title": "Framing FAIR and the notion of metadata",
+        "url": "https://w3id.org/faircookbook/FCB068"
+      },
+      {
+        "id": "FCB069",
+        "title": "Training for FAIRification with open or synthetic biomedical datasets",
+        "url": "https://w3id.org/faircookbook/FCB069"
+      },
+      {
+        "id": "FCB070",
+        "title": "Understanding the relation between FAIR and Knowledge Graphs",
+        "url": "https://w3id.org/faircookbook/FCB070"
+      },
+      {
+        "id": "FCB071",
+        "title": "Raising Awareness in Public Knowledge Graphs for Life Sciences",
+        "url": "https://w3id.org/faircookbook/FCB071"
+      },
+      {
+        "id": "FCB072",
+        "title": "Reflecting on the ethical values of FAIR",
+        "url": "https://w3id.org/faircookbook/FCB072"
+      },
+      {
+        "id": "FCB073",
+        "title": "Developing FAIR API for the Web",
+        "url": "https://w3id.org/faircookbook/FCB073"
+      },
+      {
+        "id": "FCB074",
+        "title": "Data Protection Impact Assessment and Data Privacy",
+        "url": "https://w3id.org/faircookbook/FCB074"
+      },
+      {
+        "id": "FCB075",
+        "title": "Using OpenRefine and Karma for FAIRification",
+        "url": "https://w3id.org/faircookbook/FCB075"
+      },
+      {
+        "id": "FCB076",
+        "title": "Mapping Ontologies with OxO, EBI Ontology Xref Service",
+        "url": "https://w3id.org/faircookbook/FCB076"
+      },
+      {
+        "id": "FCB077",
+        "title": "Creating resolvable identifiers",
+        "url": "https://w3id.org/faircookbook/FCB077"
+      },
+      {
+        "id": "FCB078",
+        "title": "Mapping datasets to CDISC-SDTM standard",
+        "url": "https://w3id.org/faircookbook/FCB078"
+      },
+      {
+        "id": "FCB079",
+        "title": "Introducing our FAIRification framework",
+        "url": "https://w3id.org/faircookbook/FCB079"
+      },
+      {
+        "id": "FCB080",
+        "title": "Creating InChIKeys for IUPAC names",
+        "url": "https://w3id.org/faircookbook/FCB080"
+      },
+      {
+        "id": "FCB081",
+        "title": "Creating knowledge graphs from unstructured text",
+        "url": "https://w3id.org/faircookbook/FCB081"
+      },
+      {
+        "id": "FCB082",
+        "title": "Introducing the DATS model",
+        "url": "https://w3id.org/faircookbook/FCB082"
+      },
+      {
+        "id": "FCB083",
+        "title": "Publishing plant phenotypic data",
+        "url": "https://w3id.org/faircookbook/FCB083"
+      },
+      {
+        "id": "FCB084",
+        "title": "Creating a metadata profile for clinical trial protocols",
+        "url": "https://w3id.org/faircookbook/FCB084"
+      },
+      {
+        "id": "FCB085",
+        "title": "Registering SwissLipids identifiers in Wikidata",
+        "url": "https://w3id.org/faircookbook/FCB085"
+      },
+      {
+        "id": "FCB086",
+        "title": "Depositing Covid-19 image data to BioImage Archive",
+        "url": "https://w3id.org/faircookbook/FCB086"
+      },
+      {
+        "id": "FCB087",
+        "title": "Annotating training materials in ELIXIR TeSS with interoperable keywords/registry entries",
+        "url": "https://w3id.org/faircookbook/FCB087"
+      }
+    ],
+    "mappings": [
+      {
+        "cff_id": "phase_1",
+        "id": "FCB055",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB068",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB072",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_2",
+        "id": "FCB055",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_2",
+        "id": "FCB068",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_2",
+        "id": "FCB074",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB061",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB083",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB037",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB062",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB087",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-access",
+        "id": "FCB014",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-access",
+        "id": "FCB015",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-access",
+        "id": "FCB073",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-retrieval",
+        "id": "FCB040",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-retrieval",
+        "id": "FCB046",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-retrieval",
+        "id": "FCB060",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-retrieval",
+        "id": "FCB070",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-identify-data-types",
+        "id": "FCB027",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-identify-data-types",
+        "id": "FCB057",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-identifier-minting",
+        "id": "FCB006",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-identifier-minting",
+        "id": "FCB007",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-identifier-minting",
+        "id": "FCB008",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-identifier-minting",
+        "id": "FCB077",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-identifier-reuse",
+        "id": "FCB016",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-identifier-reuse",
+        "id": "FCB017",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-standards-reuse",
+        "id": "FCB025",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-standards-development",
+        "id": "FCB025",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-standards-development",
+        "id": "FCB026",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-standards-development",
+        "id": "FCB027",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-apply-data-standards",
+        "id": "FCB025",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-apply-data-standards",
+        "id": "FCB029",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-apply-data-standards",
+        "id": "FCB078",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-validate-against-data-standards",
+        "id": "FCB028",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-validate-against-data-standards",
+        "id": "FCB030",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-select-data-vocabularies",
+        "id": "FCB019",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-select-data-vocabularies",
+        "id": "FCB020",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-develop-data-vocabularies",
+        "id": "FCB021",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-anotate-with-data-vocabularies",
+        "id": "FCB022",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-anotate-with-data-vocabularies",
+        "id": "FCB023",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-manage-vocabularies",
+        "id": "FCB003",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-manage-vocabularies",
+        "id": "FCB004",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-manage-vocabularies",
+        "id": "FCB005",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-manage-vocabularies",
+        "id": "FCB022",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-identifier-mapping",
+        "id": "FCB016",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-identifier-mapping",
+        "id": "FCB017",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-identifier-mapping",
+        "id": "FCB018",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-vocabulary-alignment",
+        "id": "FCB022",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-model-mapping",
+        "id": "FCB016",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-model-mapping",
+        "id": "FCB031",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-model-mapping",
+        "id": "FCB058",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-model-mapping",
+        "id": "FCB059",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-model-mapping",
+        "id": "FCB065",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-hosting",
+        "id": "FCB009",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-hosting",
+        "id": "FCB010",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-hosting",
+        "id": "FCB011",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-hosting",
+        "id": "FCB012",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-hosting",
+        "id": "FCB013",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-hosting",
+        "id": "FCB047",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-hosting",
+        "id": "FCB048",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-versioning",
+        "id": "FCB009",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-versioning",
+        "id": "FCB036",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-transfer",
+        "id": "FCB014",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-transfer",
+        "id": "FCB015",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-transfer",
+        "id": "FCB052",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-transfer",
+        "id": "FCB053",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-licensing",
+        "id": "FCB032",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-licensing",
+        "id": "FCB033",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-licensing",
+        "id": "FCB034",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-licensing",
+        "id": "FCB035",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-licensing",
+        "id": "FCB036",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-release",
+        "id": "FCB009",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-release",
+        "id": "FCB061",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-release",
+        "id": "FCB067",
+        "relevance": ""
+      }
+    ]
+  },
+  "rdmkit": {
+    "data": [
+      {
+        "id": "plant_pheno_assembly",
+        "rdmkitName": "plant_phenomics_assembly",
+        "title": "Plant Phenomics",
+        "description": "Tool assembly for managing plant phenomic data.",
+        "url": "https://rdmkit.elixir-europe.org/plant_phenomics_assembly"
+      },
+      {
+        "id": "ifb",
+        "rdmkitName": "ifb_assembly",
+        "title": "IFB",
+        "description": "The French Bioinformatics Institute (IFB) offers IT infrastructure and bioinformatics expertise to support researchers in Life Sciences.",
+        "url": "https://rdmkit.elixir-europe.org/ifb_assembly"
+      },
+      {
+        "id": "galaxy",
+        "rdmkitName": "galaxy_assembly",
+        "title": "Galaxy",
+        "description": "Galaxy is an open, web-based platform for accessible, reproducible, and transparent computational research.",
+        "url": "https://rdmkit.elixir-europe.org/galaxy_assembly"
+      },
+      {
+        "id": "transmed",
+        "rdmkitName": "transmed_assembly",
+        "title": "TransMed",
+        "description": "TransMed tool assembly from ELIXIR Luxembourg supports projects in clinical and translational biomedicine.",
+        "url": "https://rdmkit.elixir-europe.org/transmed_assembly"
+      },
+      {
+        "id": "ome",
+        "rdmkitName": "omero_assembly",
+        "title": "OMERO",
+        "description": "OMERO is a software platform for managing, sharing and analysing images data.",
+        "url": "https://rdmkit.elixir-europe.org/omero_assembly"
+      },
+      {
+        "id": "nels",
+        "rdmkitName": "nels_assembly",
+        "title": "NeLS",
+        "description": "NeLS provides the necessary tools for data management to researchers in Norway and their collaborators.",
+        "url": "https://rdmkit.elixir-europe.org/nels_assembly"
+      },
+      {
+        "id": "fairtracks",
+        "rdmkitName": "fairtracks_assembly",
+        "title": "FAIRtracks",
+        "description": "The FAIRtracks ecosystem provides technical solutions for the FAIRification of genome browser track files",
+        "url": "https://rdmkit.elixir-europe.org/fairtracks_assembly"
+      },
+      {
+        "id": "tsd",
+        "rdmkitName": "tsd_assembly",
+        "title": "TSD",
+        "description": "The Sensitive Data Service (TSD) provides a platform to store, compute and analyse research sensitive data in compliance with Norwegian regulations regarding individuals’ privacy.",
+        "url": "https://rdmkit.elixir-europe.org/tsd_assembly"
+      },
+      {
+        "id": "csc",
+        "rdmkitName": "csc_assembly",
+        "title": "CSC",
+        "description": "The Center of Science (CSC) provides high-quality ICT expert services for researchers in Finland and their collaborators.",
+        "url": "https://rdmkit.elixir-europe.org/csc_assembly"
+      },
+      {
+        "id": "xnat_pic",
+        "rdmkitName": "xnat_pic_assembly",
+        "title": "XNAT-PIC",
+        "description": "XNAT for Preclinical Imaging Centers (XNAT-PIC) is a of set of tools to store, process and share preclinical imaging studies built on top of the XNAT imaging informatics platform.",
+        "url": "https://rdmkit.elixir-europe.org/xnat_pic_assembly"
+      },
+      {
+        "id": "plant_geno_assembly",
+        "rdmkitName": "plant_genomics_assembly",
+        "title": "Plant Genomics",
+        "description": "Tool assembly for managing plant genomic data.",
+        "url": "https://rdmkit.elixir-europe.org/plant_genomics_assembly"
+      },
+      {
+        "id": "marine_assembly",
+        "rdmkitName": "marine_metagenomics_assembly",
+        "title": "Marine Metagenomics",
+        "description": "The Marine Metagenomics tool assembly aims to provide a comprehensive data management toolkit of marine genomics researchers in Norway.",
+        "url": "https://rdmkit.elixir-europe.org/marine_metagenomics_assembly"
+      },
+      {
+        "id": "covid19_data_portal",
+        "rdmkitName": "covid19_data_portal",
+        "title": "COVID-19 Data Portal",
+        "description": "The COVID-19 Data Portal brings together relevant datasets for sharing and analysis to accelerate coronavirus research.",
+        "url": "https://rdmkit.elixir-europe.org/covid19_data_portal"
+      },
+      {
+        "id": "molgenis",
+        "rdmkitName": "molgenis_assembly",
+        "title": "MOLGENIS",
+        "description": "Molgenis is a modular web application for scientific data. Flexible data integration platform to find, capture, exchange, manage and analyse scientific data.",
+        "url": "https://rdmkit.elixir-europe.org/molgenis_assembly"
+      },
+      {
+        "id": "labid",
+        "rdmkitName": "labid_assembly",
+        "title": "LabID",
+        "description": "LabID is an all-in-one FAIR data management platform for life sciences institutes. It allows keeping track of datasets, samples, workflows and inventory, while also featuring an Electronic Lab Notebook.",
+        "url": "https://rdmkit.elixir-europe.org/labid_assembly"
+      },
+      {
+        "id": "machine_learning",
+        "rdmkitName": "machine_learning",
+        "title": "Machine learning",
+        "description": "This page is about setting best practices for data towards enabling FAIR ML.",
+        "url": "https://rdmkit.elixir-europe.org/machine_learning"
+      },
+      {
+        "id": "toxicology_data",
+        "rdmkitName": "toxicology_data",
+        "title": "Toxicology data",
+        "description": "Data management solutions for toxicology data.",
+        "url": "https://rdmkit.elixir-europe.org/toxicology_data"
+      },
+      {
+        "id": "rare_disease",
+        "rdmkitName": "rare_disease_data",
+        "title": "Rare disease data",
+        "description": "Data management solutions for rare disease data.",
+        "url": "https://rdmkit.elixir-europe.org/rare_disease_data"
+      },
+      {
+        "id": "bioimaging_data",
+        "rdmkitName": "bioimaging_data",
+        "title": "Bioimaging data",
+        "description": "Data management solutions for bioimaging data.",
+        "url": "https://rdmkit.elixir-europe.org/bioimaging_data"
+      },
+      {
+        "id": "struct_bioinfo",
+        "rdmkitName": "structural_bioinformatics",
+        "title": "Structural Bioinformatics",
+        "description": "Data management solutions for structural bioinformatics data.",
+        "url": "https://rdmkit.elixir-europe.org/structural_bioinformatics"
+      },
+      {
+        "id": "epitrans",
+        "rdmkitName": "epitranscriptome_data",
+        "title": "Epitranscriptome data",
+        "description": "Data management solutions for epitranscriptome data.",
+        "url": "https://rdmkit.elixir-europe.org/epitranscriptome_data"
+      },
+      {
+        "id": "plants",
+        "rdmkitName": "plant_sciences",
+        "title": "Plant sciences",
+        "description": "Data management solutions for plant sciences data.",
+        "url": "https://rdmkit.elixir-europe.org/plant_sciences"
+      },
+      {
+        "id": "proteomics",
+        "rdmkitName": "proteomics",
+        "title": "Proteomics",
+        "description": "Data management solutions for proteomics data.",
+        "url": "https://rdmkit.elixir-europe.org/proteomics"
+      },
+      {
+        "id": "micro_biotech",
+        "rdmkitName": "microbial_biotechnology",
+        "title": "Microbial biotechnology",
+        "description": "Data management solutions for microbial biotechnology data.",
+        "url": "https://rdmkit.elixir-europe.org/microbial_biotechnology"
+      },
+      {
+        "id": "virology",
+        "rdmkitName": "virology",
+        "title": "Virology",
+        "description": "Data management solutions for virology data.",
+        "url": "https://rdmkit.elixir-europe.org/virology"
+      },
+      {
+        "id": "human_data",
+        "rdmkitName": "human_data",
+        "title": "Human data",
+        "description": "Data management solutions for human data.",
+        "url": "https://rdmkit.elixir-europe.org/human_data"
+      },
+      {
+        "id": "enzym_biocat",
+        "rdmkitName": "enzymology_and_biocatalysis",
+        "title": "Enzymology and biocatalysis",
+        "description": "Data management solutions for enzymology and biocatalysis data.",
+        "url": "https://rdmkit.elixir-europe.org/enzymology_and_biocatalysis"
+      },
+      {
+        "id": "biomol_sim",
+        "rdmkitName": "biomolecular_simulation_data",
+        "title": "Biomolecular simulation data",
+        "description": "Data management solutions for biomolecular simulation data.",
+        "url": "https://rdmkit.elixir-europe.org/biomolecular_simulation_data"
+      },
+      {
+        "id": "cancer_data",
+        "rdmkitName": "cancer_data",
+        "title": "Cancer data",
+        "description": "Data management solutions for human cancer data",
+        "url": "https://rdmkit.elixir-europe.org/cancer_data"
+      },
+      {
+        "id": "single_cell_sequencing",
+        "rdmkitName": "single_cell_sequencing",
+        "title": "Single-cell sequencing",
+        "description": "Managing data generated from single-cell sequencing experiments.",
+        "url": "https://rdmkit.elixir-europe.org/single_cell_sequencing"
+      },
+      {
+        "id": "idp",
+        "rdmkitName": "intrinsically_disordered_proteins",
+        "title": "Intrinsically disordered proteins",
+        "description": "Data management solutions for intrinsically disordered proteins data.",
+        "url": "https://rdmkit.elixir-europe.org/intrinsically_disordered_proteins"
+      },
+      {
+        "id": "human_pathogen_genomics",
+        "rdmkitName": "human_pathogen_genomics",
+        "title": "Human pathogen genomics",
+        "description": "Data management solutions for Human pathogen genomics",
+        "url": "https://rdmkit.elixir-europe.org/human_pathogen_genomics"
+      },
+      {
+        "id": "biodiversity",
+        "rdmkitName": "biodiversity",
+        "title": "Biodiversity",
+        "description": "Data management solutions for biodiversity data.",
+        "url": "https://rdmkit.elixir-europe.org/biodiversity"
+      },
+      {
+        "id": "marine",
+        "rdmkitName": "marine_metagenomics",
+        "title": "Marine metagenomics",
+        "description": "Data management solutions for marine metagenomics data.",
+        "url": "https://rdmkit.elixir-europe.org/marine_metagenomics"
+      },
+      {
+        "id": "health_data",
+        "rdmkitName": "health_data",
+        "title": "Health data",
+        "description": "Data management solutions for human health data.",
+        "url": "https://rdmkit.elixir-europe.org/health_data"
+      },
+      {
+        "id": "agroecology",
+        "rdmkitName": "agroecology",
+        "title": "Agroecology",
+        "description": "Data management solutions for agroecology life science research",
+        "url": "https://rdmkit.elixir-europe.org/agroecology"
+      },
+      {
+        "id": "data_steward",
+        "rdmkitName": "data_steward",
+        "title": "Data Steward",
+        "description": "Data management guidance for data stewards.",
+        "url": "https://rdmkit.elixir-europe.org/data_steward"
+      },
+      {
+        "id": "trainer",
+        "rdmkitName": "trainer",
+        "title": "Trainer",
+        "description": "Data management guidance for trainers.",
+        "url": "https://rdmkit.elixir-europe.org/trainer"
+      },
+      {
+        "id": "researcher",
+        "rdmkitName": "researcher",
+        "title": "Researcher",
+        "description": "Data management guidance for researchers, including how to make your data FAIR.",
+        "url": "https://rdmkit.elixir-europe.org/researcher"
+      },
+      {
+        "id": "policy_maker",
+        "rdmkitName": "policy_maker",
+        "title": "Policy maker",
+        "description": "Data management guidance for policy makers.",
+        "url": "https://rdmkit.elixir-europe.org/policy_maker"
+      },
+      {
+        "id": "research_software_engineer",
+        "rdmkitName": "research_software_engineer",
+        "title": "Research Software Engineer (RSE)",
+        "description": "Data management guidance for Research Software Engineers (RSEs).",
+        "url": "https://rdmkit.elixir-europe.org/research_software_engineer"
+      },
+      {
+        "id": "principal_investigator",
+        "rdmkitName": "principal_investigator",
+        "title": "Principal Investigator (PI)",
+        "description": "Data management guidance for Principal Investigator (PI).",
+        "url": "https://rdmkit.elixir-europe.org/principal_investigator"
+      },
+      {
+        "id": "storage",
+        "rdmkitName": "storage",
+        "title": "Data storage",
+        "description": "How to find appropriate storage solutions.",
+        "url": "https://rdmkit.elixir-europe.org/storage"
+      },
+      {
+        "id": "data_analysis",
+        "rdmkitName": "data_analysis",
+        "title": "Data analysis",
+        "description": "How to make data analysis FAIR.",
+        "url": "https://rdmkit.elixir-europe.org/data_analysis"
+      },
+      {
+        "id": "data_brokering",
+        "rdmkitName": "data_brokering",
+        "title": "Data brokering",
+        "description": "Information on brokering data to data repositories on behalf of data producers.",
+        "url": "https://rdmkit.elixir-europe.org/data_brokering"
+      },
+      {
+        "id": "licensing",
+        "rdmkitName": "licensing",
+        "title": "Licensing",
+        "description": "How to license research data.",
+        "url": "https://rdmkit.elixir-europe.org/licensing"
+      },
+      {
+        "id": "ethics",
+        "rdmkitName": "ethics",
+        "title": "Ethical aspects",
+        "description": "Working on aspects in the management of research data that can raise ethical issues",
+        "url": "https://rdmkit.elixir-europe.org/ethics"
+      },
+      {
+        "id": "data_provenance",
+        "rdmkitName": "data_provenance",
+        "title": "Data provenance",
+        "description": "How to record information about data provenance.",
+        "url": "https://rdmkit.elixir-europe.org/data_provenance"
+      },
+      {
+        "id": "data_publication",
+        "rdmkitName": "data_publication",
+        "title": "Data publication",
+        "description": "How to prepare data and find repositories for publication.",
+        "url": "https://rdmkit.elixir-europe.org/data_publication"
+      },
+      {
+        "id": "data_interlinking",
+        "rdmkitName": "data_interlinking",
+        "title": "Data interlinking",
+        "description": "Best practices to interlink datasets from a multi-omics study deposited in technology-specific repositories.",
+        "url": "https://rdmkit.elixir-europe.org/data_interlinking"
+      },
+      {
+        "id": "compliance",
+        "rdmkitName": "compliance_monitoring",
+        "title": "Compliance monitoring & measurement",
+        "description": "How to measure compliance to data management regulations and standards.",
+        "url": "https://rdmkit.elixir-europe.org/compliance_monitoring"
+      },
+      {
+        "id": "metadata",
+        "rdmkitName": "metadata_management",
+        "title": "Documentation and metadata",
+        "description": "How to document and describe your data.",
+        "url": "https://rdmkit.elixir-europe.org/metadata_management"
+      },
+      {
+        "id": "existing_data",
+        "rdmkitName": "existing_data",
+        "title": "Existing data",
+        "description": "How to find and reuse existing data.",
+        "url": "https://rdmkit.elixir-europe.org/existing_data"
+      },
+      {
+        "id": "creating_dataflow_diagram",
+        "rdmkitName": "creating_dataflow_diagram",
+        "title": "Creating a data-flow diagram",
+        "description": "Best practices to capture your planned data-flow in a diagram.",
+        "url": "https://rdmkit.elixir-europe.org/creating_dataflow_diagram"
+      },
+      {
+        "id": "data_quality",
+        "rdmkitName": "data_quality",
+        "title": "Data quality",
+        "description": "How to ensure high quality of research data.",
+        "url": "https://rdmkit.elixir-europe.org/data_quality"
+      },
+      {
+        "id": "gdpr_compliance",
+        "rdmkitName": "gdpr_compliance",
+        "title": "GDPR compliance",
+        "description": "How to protect your research data, and how to make research data compliant to GDPR.",
+        "url": "https://rdmkit.elixir-europe.org/gdpr_compliance"
+      },
+      {
+        "id": "data_organisation",
+        "rdmkitName": "data_organisation",
+        "title": "Data organisation",
+        "description": "Best practices to name and organise research data.",
+        "url": "https://rdmkit.elixir-europe.org/data_organisation"
+      },
+      {
+        "id": "costs",
+        "rdmkitName": "costs_data_management",
+        "title": "Costs of data management",
+        "description": "Budgeting and costing for data management",
+        "url": "https://rdmkit.elixir-europe.org/costs_data_management"
+      },
+      {
+        "id": "data_security",
+        "rdmkitName": "data_security",
+        "title": "Data security",
+        "description": "How do you ensure that your data is handled securely.",
+        "url": "https://rdmkit.elixir-europe.org/data_security"
+      },
+      {
+        "id": "data_discoverability",
+        "rdmkitName": "data_discoverability",
+        "title": "Data discoverability",
+        "description": "How to make data discoverable",
+        "url": "https://rdmkit.elixir-europe.org/data_discoverability"
+      },
+      {
+        "id": "data_deletion",
+        "rdmkitName": "data_deletion",
+        "title": "Data deletion",
+        "description": "How to properly delete data",
+        "url": "https://rdmkit.elixir-europe.org/data_deletion"
+      },
+      {
+        "id": "dm_coordination",
+        "rdmkitName": "dm_coordination",
+        "title": "Project data management coordination",
+        "description": "How to coordinate and organise data management activities in collaborative or multi-parter projects.",
+        "url": "https://rdmkit.elixir-europe.org/dm_coordination"
+      },
+      {
+        "id": "dmp",
+        "rdmkitName": "data_management_plan",
+        "title": "Data management plan",
+        "description": "How to write a Data Management Plan (DMP).",
+        "url": "https://rdmkit.elixir-europe.org/data_management_plan"
+      },
+      {
+        "id": "transfer",
+        "rdmkitName": "data_transfer",
+        "title": "Data transfer",
+        "description": "How to transfer data files.",
+        "url": "https://rdmkit.elixir-europe.org/data_transfer"
+      },
+      {
+        "id": "machine_actionability",
+        "rdmkitName": "machine_actionability",
+        "title": "Machine actionability",
+        "description": "How to make machine-actionable (meta)data.",
+        "url": "https://rdmkit.elixir-europe.org/machine_actionability"
+      },
+      {
+        "id": "identifiers",
+        "rdmkitName": "identifiers",
+        "title": "Identifiers",
+        "description": "How to use identifiers for research data.",
+        "url": "https://rdmkit.elixir-europe.org/identifiers"
+      },
+      {
+        "id": "sensitive",
+        "rdmkitName": "data_sensitivity",
+        "title": "Data sensitivity",
+        "description": "How to identify the sensitivity of different research data types",
+        "url": "https://rdmkit.elixir-europe.org/data_sensitivity"
+      },
+      {
+        "id": "preserve",
+        "rdmkitName": "preserving",
+        "title": "Preserving",
+        "description": "Introduction to data preservation.",
+        "url": "https://rdmkit.elixir-europe.org/preserving"
+      },
+      {
+        "id": "plan",
+        "rdmkitName": "planning",
+        "title": "Planning",
+        "description": "Introduction to data management planning.",
+        "url": "https://rdmkit.elixir-europe.org/planning"
+      },
+      {
+        "id": "reuse",
+        "rdmkitName": "reusing",
+        "title": "Reusing",
+        "description": "Introduction to data reuse.",
+        "url": "https://rdmkit.elixir-europe.org/reusing"
+      },
+      {
+        "id": "process",
+        "rdmkitName": "processing",
+        "title": "Processing",
+        "description": "Introduction to data processing.",
+        "url": "https://rdmkit.elixir-europe.org/processing"
+      },
+      {
+        "id": "analyse",
+        "rdmkitName": "analysing",
+        "title": "Analysing",
+        "description": "Introduction to data analysis.",
+        "url": "https://rdmkit.elixir-europe.org/analysing"
+      },
+      {
+        "id": "collect",
+        "rdmkitName": "collecting",
+        "title": "Collecting",
+        "description": "Introduction to data collection.",
+        "url": "https://rdmkit.elixir-europe.org/collecting"
+      },
+      {
+        "id": "share",
+        "rdmkitName": "sharing",
+        "title": "Sharing",
+        "description": "Introduction to data sharing.",
+        "url": "https://rdmkit.elixir-europe.org/sharing"
+      }
+    ],
+    "mappings": [
+      {
+        "cff_id": "phase_2",
+        "id": "compliance",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_2",
+        "id": "costs",
+        "relevance": ""
+      },
+      {
+        "cff_id": "ft-data-retrieval",
+        "id": "transfer",
+        "relevance": ""
+      }
+    ]
+  },
   "ft_data": [
     {
       "ftID": "ft-data-access",
@@ -2066,172 +2456,6 @@
       "ftDescription": "Data release considerations such as when to release a dataset and where to release it"
     }
   ],
-  "ft_fc_mapping": [
-    {
-      "ftID": "ft-data-access",
-      "fcID": "FCB014"
-    },
-    {
-      "ftID": "ft-data-access",
-      "fcID": "FCB015"
-    },
-    {
-      "ftID": "ft-data-access",
-      "fcID": "FCB073"
-    },
-    {
-      "ftID": "ft-data-retrieval",
-      "fcID": "FCB040"
-    },
-    {
-      "ftID": "ft-data-retrieval",
-      "fcID": "FCB046"
-    },
-    {
-      "ftID": "ft-data-retrieval",
-      "fcID": "FCB060"
-    },
-    {
-      "ftID": "ft-data-retrieval",
-      "fcID": "FCB070"
-    },
-    {
-      "ftID": "ft-identify-data-types",
-      "fcID": "FCB027"
-    },
-    {
-      "ftID": "ft-identify-data-types",
-      "fcID": "FCB057"
-    },
-    {
-      "ftID": "ft-identifier-minting",
-      "fcID": "FCB006"
-    },
-    {
-      "ftID": "ft-identifier-minting",
-      "fcID": "FCB007"
-    },
-    {
-      "ftID": "ft-identifier-minting",
-      "fcID": "FCB008"
-    },
-    {
-      "ftID": "ft-identifier-minting",
-      "fcID": "FCB077"
-    },
-    {
-      "ftID": "ft-identifier-reuse",
-      "fcID": "FCB016"
-    },
-    {
-      "ftID": "ft-identifier-reuse",
-      "fcID": "FCB017"
-    },
-    {
-      "ftID": "ft-data-standards-reuse",
-      "fcID": "FCB025"
-    },
-    {
-      "ftID": "ft-data-standards-development",
-      "fcID": "FCB025"
-    },
-    {
-      "ftID": "ft-data-standards-development",
-      "fcID": "FCB026"
-    },
-    {
-      "ftID": "ft-data-standards-development",
-      "fcID": "FCB027"
-    },
-    {
-      "ftID": "ft-apply-data-standards",
-      "fcID": "FCB025"
-    },
-    {
-      "ftID": "ft-apply-data-standards",
-      "fcID": "FCB029"
-    },
-    {
-      "ftID": "ft-apply-data-standards",
-      "fcID": "FCB078"
-    },
-    {
-      "ftID": "ft-validate-against-data-standards",
-      "fcID": "FCB028"
-    },
-    {
-      "ftID": "ft-validate-against-data-standards",
-      "fcID": "FCB030"
-    },
-    {
-      "ftID": "ft-select-data-vocabularies",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-develop-data-vocabularies",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-anotate-with-data-vocabularies",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-anotate-with-data-vocabularies",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-manage-vocabularies",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-manage-vocabularies",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-manage-vocabularies",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-manage-vocabularies",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-identifier-mapping",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-identifier-mapping",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-identifier-mapping",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-vocabulary-alignment",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-data-model-mapping",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-data-model-mapping",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-data-model-mapping",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-data-model-mapping",
-      "fcID": ""
-    },
-    {
-      "ftID": "ft-data-model-mapping",
-      "fcID": ""
-    }
-  ],
   "dsm_data": [
     {
       "categoryID": "hosting-environment-capabilities",
@@ -2350,25 +2574,25 @@
   ],
   "process_data": [
     {
-      "processID": "define-fairification-goal",
+      "processID": "phase_1",
       "processLevel": "A",
       "processName": "Define FAIRification Goal ",
       "processDescription": "Determine goal for FAIRification, in terms of desired usability of data that isn’t currently possible"
     },
     {
-      "processID": "project-examination",
+      "processID": "phase_2",
       "processLevel": "B",
       "processName": "Project Examination",
       "processDescription": "Examine the current state of the project with respect to FAIRification goal"
     },
     {
-      "processID": "iterative-fairification-cycles",
+      "processID": "phase_3",
       "processLevel": "C",
       "processName": "Iterative FAIRification Cycles",
       "processDescription": "Define and deliver practical, achievable objectives for a single 3 month release cycle that work towards the overall FAIRification goal"
     },
     {
-      "processID": "post-fairification-review",
+      "processID": "phase_4",
       "processLevel": "D",
       "processName": "Post-FAIRification Review",
       "processDescription": "Review outcomes and assess success against original goals"

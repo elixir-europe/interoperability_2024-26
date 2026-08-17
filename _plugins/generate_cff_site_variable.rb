@@ -27,6 +27,8 @@ Jekyll::Hooks.register :site, :post_read do |site|
       key = page.data['cff_properties']["id"]
       if !cff_elements.key?(key)
         cff_elements[key] = page.data['cff_properties']
+        cff_elements[key]['excerpt'] = page.excerpt
+        cff_elements[key]['page_url'] = page.url
       else
         raise "Duplicate CFF key “#{key}”"
       end
@@ -41,6 +43,8 @@ Jekyll::Hooks.register :site, :post_read do |site|
       page.data['cff_elements'].each do |key, value|
         if !cff_elements.key?(key)
           cff_elements[key] = value
+          cff_elements[key]['excerpt'] = page.excerpt
+          cff_elements[key]['page_url'] = page.url
         else
           raise "Duplicate CFF key “#{key}”"
         end
