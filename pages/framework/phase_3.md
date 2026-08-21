@@ -1,12 +1,14 @@
 ---
 layout: diagram-page
-title: C. Iterative FAIRification Cycles
+title: "{{title}} (phase 3)"
+type: Phase
+page_id: phase_3
 excerpt_separator: <!--more-->
 cff_properties:
   id: phase_3
   type: process_phase
   title: Iterative FAIRification cycles
-  description: Define and deliver *practical, achievable objectives* for a single 3 month rlease cycle that work towards the overall FAIRification goal
+  description: Define and deliver *practical, achievable objectives* for a single 3 month release cycle that work towards the overall FAIRification goal
   inputs:
     - id: phase_2_outputs
       edge_label: Used to inform scope, initial backlog and implementation design decisions
@@ -32,11 +34,11 @@ cff_properties:
         - TBC
     nodes:
       backlog:
-        title: Refined FAIRification backlog
+        title: Design decisions
         description: >-
-          Design decisions for identifiers, metadata, ontologies, supporting systems and research object sharing.
+          For identifiers, metadata, ontologies, supporting systems and research object sharing.
       task_tracker:
-        title: FAIRification task tracker
+        title: FAIRification task list
         description: >-
           Planned, active and completed tasks, including responsibilities, status, dependencies, supporting resources and results.
       assessment_report:
@@ -61,26 +63,34 @@ cff_elements:
       Design decisions, FAIRification task tracker record and assessment reports from each iteration.
 ---
 
-> {{page.cff_properties.description}}
-
-<div class="language-mermaid figure-img img-fluid rounded">
-{% include cff_phase_diagram-outline.mmd.liquid %}
+<div class="language-mermaid">
+{% include cff_process_diagram.mmd.liquid 
+    cff_id="process" 
+    highlight=page.cff_properties.id
+%}
 </div>
 
+{{page.cff_properties.description}}
+
 The practical phase of the FAIRification Process centers on the FAIRification Cycle, which consists of three distinct stages: Assessment, Design, and Implementation. This phase typically involves multiple FAIRification Cycles applied iteratively. Each cycle focuses on a defined set of tasks within an agreed timeframe.
--	Assessment
-Pre- and post-assessments are conducted at the beginning and end of each FAIRification Cycle iteration to evaluate FAIR improvements and track the status of individual tasks.
--	Design
-During the design stage, concrete steps are identified to achieve the FAIRification tasks identified for this cycle. If needed, one could also use the concrete steps identified from the FAIRification template.
-These steps form the FAIRification workplan to be realised during the implementation stage.
--	Implementation
-During this phase, the planned tasks are executed within the established timeframe. However, it is important to note that some tasks may remain incomplete, be postponed, or even abandoned during a given iteration.
+1. **Assessment**
+   Pre- and post-assessments are conducted at the beginning and end of each FAIRification Cycle iteration to evaluate FAIR improvements and track the status of individual tasks.
+2. **Design**
+   During the design stage, concrete steps are identified to achieve the FAIRification tasks identified for this cycle. If needed, one could also use the concrete steps identified from the FAIRification template.
+   These steps form the FAIRification workplan to be realised during the implementation stage.
+3. **Implementation**
+   During this phase, the planned tasks are executed within the established timeframe. However, it is important to note that some tasks may remain incomplete, be postponed, or even abandoned during a given iteration.
+
+
+
+### Phase overview
+<div class="language-mermaid colouring">
+{% include cff_phase_diagram-outline.mmd.liquid %}
+</div>
 
 <!--more-->
 ### Process elements
 {% include cff-phase.md.liquid %}
 
-### Flowchart
-<div class="language-mermaid figure-img img-fluid rounded">
-{% include cff_phase_diagram.mmd.liquid %}
-</div>
+### Resources
+{% include cff_library_items.md.liquid cff_id=page.cff_properties.id %}

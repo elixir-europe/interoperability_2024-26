@@ -21,9 +21,11 @@ flowchart TB;
 {% for item in cff_element.outputs  %}
   {% for output_target in site.cff -%}
   {%- assign input_role = output_target[1].inputs | find: "id", item.id -%}
+  {%- assign output_phase_id = output_target[0] -%}
   {%- if input_role -%}
   {{output_target[0]}}("`**{{ output_target[1].title }}**`")
-  {{item.id}} {% if input_role.edge_label %}-- "`{{ input_role.edge_label }}`"{% endif %}--> {{output_target[0]}}
+  {{item.id}} edge__{{item.id}}__{{forloop.index}}@-->{% if input_role.edge_label %}|"`{{ input_role.edge_label }}`"|{% endif %} {{output_target[0]}}
+  click {{ output_phase_id }} href "{{site.cff[output_phase_id].page_url | relative_url}}" "Go to {{ site.cff[output_phase_id].title }}"
   {% endif -%}
   {%- endfor -%}
 {% endfor %}
@@ -31,10 +33,12 @@ flowchart TB;
 {% for item in cff_element.inputs  %}
 {% assign input_index = forloop.index %}
   {% for input_source in site.cff -%}
+  {%- assign input_phase_id = input_source[0] -%}
   {%- assign output_role = input_source[1].outputs | find: "id", item.id -%}
   {%- if output_role -%}
   {{input_source[0]}}("`**{{ input_source[1].title }}**`")
-  {{input_source[0]}} --> input_{{input_index}}
+  {{input_source[0]}} edge__{{input_source[0]}}__{{forloop.index}}@--> input_{{input_index}}
+  click {{ input_phase_id }} href "{{site.cff[input_phase_id].page_url | relative_url}}" "Go to {{ site.cff[input_phase_id].title }}"
   {% endif -%}
   {%- endfor -%}
 {% endfor %}
@@ -48,6 +52,7 @@ flowchart TB;
     {%- else -%}
     {{ site.cff[item.id].title }}
     {%- endif %}"}
+    click {{ item.id }} href "{{site.cff[item.id].page_url | relative_url}}" "Go to {{ site.cff[item.id].title }}"
 {% endfor %}
     
 
@@ -57,6 +62,7 @@ flowchart TB;
 {% for item in cff_element.flow.nodes  %}
     {% if item[1].subgraph %}
         subgraph {{ item[0] }}["`*{{ item[1].title | default: item[0] }}*`"]
+            direction {{ item[1].layout | default: "TB" }}
             {% for sub_item in item[1].subgraph  %}
             {{ sub_item }}
             {% endfor %}
@@ -81,31 +87,32 @@ flowchart TB;
     {%- else -%}
     {{ site.cff[item.id].title }}
     {%- endif %}"}
+    click {{ item.id }} href "{{site.cff[item.id].page_url | relative_url}}" "Go to {{ site.cff[item.id].title }}"
 {% endfor %}
 
 
     %% Relations
     {% for edge in cff_element.flow.edges  %}
-    {{ edge.source }} edge_{{forloop.index}}@{{ edge.link_type | default: "-->" }}{% if edge.label %}|"`{{ edge.label }}`"|{% endif %}{{ edge.target }}
+    {{ edge.source }} edge__{{ edge.source }}__{{forloop.index}}@{{ edge.link_type | default: "-->" }}{% if edge.label %}|"`{{ edge.label }}`"|{% endif %}{{ edge.target }}
     {% endfor %}
 
     {% for item in cff_element.inputs  %}
-    {{ item.id }} {% if item.edge_label %}-- "`{{ item.edge_label }}`"{% endif %}--> flow
+    {{ item.id }} edge__{{ item.id }}__{{forloop.index}}@-->{% if item.edge_label %}|"`{{ item.edge_label }}`"|{% endif %} {{cff_element.id}}
     {% endfor %}
 
     {% for item in cff_element.outputs  %}
-    flow {% if item.edge_label %}-- "`{{ item.edge_label }}`"{% endif %}--> outputs_{{forloop.index}}
+    {{ cff_element.id }} edge__{{ cff_element.id }}__{{forloop.index}}@-->{% if item.edge_label %}|"`{{ item.edge_label }}`"|{% endif %} outputs_{{forloop.index}}
     {% endfor %}
 
 
     %% Structral elements
     {% for item in cff_element.inputs  %}
-    subgraph input_{{forloop.index}}["`Input{% if cff_element.inputs.length > 1 %} {{forloop.index}}{% endif %}`"]
+    subgraph input_{{forloop.index}}["`Input{% if cff_element.inputs.size > 1 %} {{ "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | slice: forloop.index0 }}{% endif %}`"]
         {{ item.id }}
     end
     {% endfor %}
 
-    subgraph flow["`{{ include.title | default: cff_element.title }}`"]
+    subgraph {{cff_element.id}}["`{{ include.title | default: cff_element.title }}`"]
       direction {{ cff_element.flow.layout | default: "LR" }}
       {% for item in cff_element.flow.nodes  %}
       {{ item[0] }}
@@ -113,7 +120,7 @@ flowchart TB;
     end
 
     {% for item in cff_element.outputs %}
-    subgraph outputs_{{forloop.index}}["`Output{% if cff_element.outputs.length > 1 %} {{forloop.index}}{% endif %}`"]
+    subgraph outputs_{{forloop.index}}["`Output{% if cff_element.outputs.size > 1 %} {{ "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | slice: forloop.index0 }}{% endif %}`"]
         {{ item.id }}
     end
     {% endfor %}

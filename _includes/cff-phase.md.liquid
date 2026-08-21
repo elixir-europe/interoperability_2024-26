@@ -22,8 +22,7 @@ Completed {% for phase_id in cff_phase.pre_phases -%}
 
 {% if cff_phase.flow.post_conditions or cff_phase.pre_phases.size >0  %}
 <details markdown="1">
-  <summary><span markdown="1">
-  **Postconditions:**
+  <summary><span markdown="1">**Postconditions:**
 {% if cff_phase.post_phases.size > 0 -%}
 Outputs ready for {% for phase_id in cff_phase.post_phases -%}
   `{{ site.cff[phase_id].title }}`{% unless forloop.last %}, {% endunless %} 
@@ -41,16 +40,14 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 
 {% if cff_phase.inputs.size >0  %}
 <details markdown="1">
-  <summary><span markdown="1">
-  **Inputs:**
+  <summary><span markdown="1">**Inputs:**
   {% for item in cff_phase.inputs  -%}
     `{{ site.cff[item.id].title }}`{% unless forloop.last %},{% endunless %}
   {%- endfor -%}
   </span></summary>
 {% for item in cff_phase.inputs  %}
 <details markdown="1" open="1">
-<summary><span markdown="1">
-**`{{ site.cff[item.id].title }}`**:   {{ site.cff[item.id].description }}
+<summary><span markdown="1">**`{{ site.cff[item.id].title }}`**:   {{ site.cff[item.id].description }}
 </span></summary>
   - `this → {{ cff_phase.title }}`: {{ item.edge_label }}
 </details>
@@ -60,8 +57,7 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 
 {% if cff_phase.outputs.size >0  %}
 <details markdown="1">
-  <summary><span markdown="1">
-  **Outputs:** {% for item in cff_phase.outputs -%}
+  <summary><span markdown="1">**Outputs:** {% for item in cff_phase.outputs -%}
     `{{ site.cff[item.id].title }}`{% unless forloop.last %}, {% endunless -%}
   {%- endfor -%}
   </span></summary>
@@ -82,8 +78,7 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 
 {% if cff_phase.flow.nodes.size >0 %}
 <details markdown="1">
-  <summary><span markdown="1">
-  **Key concepts:** {% for item in cff_phase.flow.nodes  -%}
+  <summary><span markdown="1">**Key concepts:** {% for item in cff_phase.flow.nodes  -%}
     `{{ item[1].title }}`{% unless forloop.last %}, {% endunless -%}
   {%- endfor -%}
   </span></summary>
@@ -110,8 +105,7 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 {{subgraph_ids}}
 {% for node in nodes_with_subgraphs %}
 <details markdown="1" open="1">
-<summary><span markdown="1">
-**Group `{{ node.title }}`**{% if node.description.strip %}: {{ node.description }}{% endif %}
+<summary><span markdown="1">**Group `{{ node.title }}`**{% if node.description.strip %}: {{ node.description }}{% endif %}
 </span></summary>
 {%- for node_id in node.subgraph -%}
   * `{{ cff_phase.flow.nodes[node_id].title }}`: 
@@ -141,3 +135,9 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 </details>
 {% endif %}
 
+<details>
+<summary><span markdown="1">**Flowchart:** {{cff_phase.description}}</span></summary>
+<div class="language-mermaid colouring">
+{% include cff_phase_diagram.mmd.liquid %}
+</div>
+</details>

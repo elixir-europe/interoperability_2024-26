@@ -1,6 +1,8 @@
 ---
 layout: diagram-page
-title: D. Post-FAIRification Review
+title: "{{title}} (phase 4)"
+type: Phase
+page_id: phase_4
 excerpt_separator: <!--more-->
 cff_properties:
   id: phase_4
@@ -57,36 +59,30 @@ cff_elements:
     title: FAIRification story
     description: |-
       Structured case study report on key achievements, FAIR implementation approach, and lessons learned.
-  cff_maintenance:
-    id: cff_maintenance
-    type: process_phase
-    title: Maintaining the FAIRification framework
-    inputs:
-    - id: phase_4_outputs
-      edge_label: Used to identify improvements
-  cff_content_creation:
-    id: cff_content_creation
-    type: process_phase
-    title: Contributing to FAIRification resources
-    inputs:
-    - id: phase_4_outputs
-      edge_label: Used to develop content for
+
 
 ---
 
-> {{page.cff_properties.description}}
-
-<div class="language-mermaid figure-img img-fluid rounded">
-{% include cff_phase_diagram-outline.mmd.liquid %}
+<div class="language-mermaid">
+{% include cff_process_diagram.mmd.liquid 
+    cff_id="process" 
+    highlight=page.cff_properties.id
+%}
 </div>
+
+{{page.cff_properties.description}}
+
 
 In this final phase, the cumulative outputs of all FAIRification activities are reviewed against the initial project goals to evaluate the overall success of the process. The review should include a summary of key achievements, documented FAIR improvements, an overview of the FAIRification processes, and any lessons learned.
 
+### Phase overview
+<div class="language-mermaid colouring">
+{% include cff_phase_diagram-outline.mmd.liquid %}
+</div>
+
 <!--more-->
-### Process elements
+### Phase elements
 {% include cff-phase.md.liquid %}
 
-### Flowchart
-<div class="language-mermaid figure-img img-fluid rounded">
-{% include cff_phase_diagram.mmd.liquid %}
-</div>
+### Resources
+{% include cff_library_items.md.liquid cff_id=page.cff_properties.id %}

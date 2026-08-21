@@ -51,7 +51,14 @@ details details {
 
 
 /*-----Mermaid diagrams-----*/
+@import "diagrams.scss";
+
 .language-mermaid {
+    a {
+      overflow-wrap: inherit !important;
+      word-break: inherit !important;
+      word-wrap: inherit !important;
+    }
     // Mermaid diagram subgraph element shape
     .cluster rect {
         rx: 10px;
@@ -61,13 +68,44 @@ details details {
     }
 
     // Mermaid node shapes
-    .node>rect, .node>circle, .node>polygon, .node>path, .node>g.outer-path { 
-        filter:url('#svg-drop-shadow'); // Apply drop-shadow using SVG filters
+    .node {
+        rect, circle, polygon, path, g.outer-path { 
+            filter:url('#svg-drop-shadow'); // Apply drop-shadow using SVG filters
+                stroke-width: 2px !important;
+        }
+        .nodeLabel {
+          //color: $text !important;
+          div {
+            background-color: #333;
+            color: $light;
+            padding: 1px;
+            font-size: 70%;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 10%;
+            font-weight: bold;
+          }
+        }
     };
 
-    
-    foreignObject {
+    .fixed_height_card {
+      .nodeLabel {
+        p {
+          min-height:70px; 
+          width: 120px; 
+          justify-content: center; 
+          align-items: center; 
+          display: flex; 
+          margin: 5px;
+        }
+        div {
+          margin-bottom: 5px;
+        }
+      }
+    }
 
+
+    foreignObject {
         // Mermaid edge labels
         &:has(.edgeLabel) {
 
@@ -82,7 +120,7 @@ details details {
                 max-width: max-content;
                 border-radius: 8px;
                 padding: 0.2em 0.75rem;
-                background-color: rgba($light, 0.95) !important;
+                background-color: rgba($light, 0.95);
             }
         }
     }

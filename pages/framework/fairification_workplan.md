@@ -5,6 +5,7 @@ cff_properties:
   id: workplan
   type: workplan
   title: FAIRification Workplan
+  description: Organises design decisions and tasks to guide iterative design, implementation and assessment towards achieving the activity’s objectives.
   flow:
     layout: TB
     nodes:
@@ -80,9 +81,5 @@ The [Template]({% link pages/framework/fairification_template.md %}) can help id
 ### Workplan elements
 {% include cff-phase.md.liquid %}
 
-### Flowchart
-<div class="language-mermaid figure-img img-fluid rounded">
-{% include cff_phase_diagram.mmd.liquid %}
-</div>
-    
+
 

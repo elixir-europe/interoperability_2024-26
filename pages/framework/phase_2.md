@@ -1,6 +1,8 @@
 ---
 layout: diagram-page
-title: B. Project Examination
+title: "{{title}} (phase 2)"
+type: Phase
+page_id: phase_2
 excerpt_separator: <!--more-->
 cff_properties:
   id: phase_2
@@ -14,6 +16,7 @@ cff_properties:
     - id: phase_2_outputs
       edge_label: Outputs
   flow:
+    layout: LR
     pre_conditions: 
       annotation: |-
         Targeted assets
@@ -22,7 +25,7 @@ cff_properties:
       requirements: 
         - You have identified targeted assets
         - You have defined their intended use or a FAIR compliance target
-        - You have ideintified what broader impact this will have, i.e. what it’s worth
+        - You have identified what broader impact this will have, i.e. what it’s worth
     post_conditions:  
       annotation: |-
         Target requirements
@@ -33,40 +36,44 @@ cff_properties:
         - You have determined what you kind of changes you plan to make to meet the requirements 
         - You have secured the capabilities & resources needed to do the work
     nodes:
+      reqs:
+        title: Research object requirements
+        description:
+        subgraph:
+          - target_state
+          - object_types
       strategy:
-        title: FAIRification strategy
+        title: Capabilities & resources
         description: >-
           
         subgraph:
-          - object_types
           - capabilities
           - resources
       use_case:
-        title: Use case requirements
+        title: Use case requirements & gaps   
         description: >-
           
         subgraph:
-          - target_state
           - initial_state
           - backlog
       object_types: 
-        title: Research objects in scope
+        title: Research objects by category
         description: >-
           Categories at appropriate levels of granularity, including object type, references to files, DTAs, documentation and other context.
       capabilities: 
-        title: Approach & required capabilities
+        title: FAIRification capabilities
         description: >-
-          The broad sequence of steps and abilities available to realise and later sustain the FAIRified research objects.
+          The courses of action and capabilities available to realise and later sustain the FAIRified research objects.
       resources: 
         title: FAIRification resources & staff
         description: >-
           The assets, skills, repositories, vocabulary systems, knowledge resources selected / designed to realise and sustain the results.
       target_state: 
-        title: Target state requirements
+        title: Use case requirements
         description: >-
           Conditions that the results of the FAIRification activity must satisfy. Note: This can also include constraints on how these requirements are to be met.
       initial_state: 
-        title: Initial state assessment report
+        title: Initial assessment
         description: >-
           Assessment of what already is in place and which requirements remains to be met.
       backlog: 
@@ -74,34 +81,39 @@ cff_properties:
         description: >-
           Which gaps to address and, where applicable, the chosen courses of action / allocated resources.
     edges:
-      - source: strategy
-        target: use_case
+      - source: object_types
+        target: target_state
         label: |-
-          Sets scope of
-      - source: use_case
-        target: strategy
-        label: |-
-          Depends on
+          Constrained by
       - source: target_state
         target: initial_state
-        label: Used as basis for
+        label: |-
+          Used as 
+          basis for
       - source: initial_state
         target: backlog
-        label: Used as basis for
+        label: |-
+          Determines
       - source: object_types
         target: capabilities
-        label: FAIRified by
+        label: |-
+          What do
+          you need?
       - source: capabilities
         target: object_types
         label: |-
-          Enabling
-          FAIRification of
+          What can 
+          you do?
       - source: capabilities
         target: resources
-        label: Relying on
+        label: |-
+          What do
+          you need?
       - source: resources
         target: capabilities
-        label: Can support
+        label: |-
+          What can 
+          you do?
 cff_elements:
   phase_2_outputs:
     type: process_object
@@ -110,25 +122,33 @@ cff_elements:
       Current and projected states, requirements and gaps.
 ---
 
-> {{page.cff_properties.description}}
-
-<div class="language-mermaid figure-img img-fluid rounded">
-{% include cff_phase_diagram-outline.mmd.liquid %}
+<div class="language-mermaid">
+{% include cff_process_diagram.mmd.liquid 
+    cff_id="process" 
+    highlight=page.cff_properties.id
+%}
 </div>
 
-FAIRification is challenging if the project's capabilities and resources are not fully understood from the beginning. It is therefore essential to:  
-- Identify Data Requirements  
-For example, goals relating to data hosting improvements cannot be fulfilled if data is not available or accessible or if the project partners have not reached an agreement on the appropriate licensing and data use conditions.
-- Identify FAIRification Capabilities & Resources  
-For example, assess the needed expertise and plan accordingly for budget and personnel availability.
-- Produce the FAIRification Backlog  
-For example, for some or all sections of the project examination, list the current and projected status of each individual task. The FAIRification Workplan may support this process – see below for details.  
+{{page.cff_properties.description}}
 
+FAIRification is challenging if the project’s capabilities and resources are not fully understood from the beginning. It is therefore essential to:  
+- **Identify Research Object Requirements**
+  Indicators and associated targets that specify the actions needed to curate the research object to fulfil the FAIRification Goal. For example, goals relating to data hosting improvements cannot be fulfilled if data is not available or accessible or if the project partners have not reached an agreement on the appropriate licensing and data use conditions.
+- **Identify FAIRification Capabilities & Resources**
+  Given the research object requirements, what capabilities and resources will be needed to complete the FAIRification. For example, personnel with certain skills and expertise, access to deploying (changes to) databases/APIs, and a general course of actions that can be supported by available budget and personnel.
+  * *FAIRification Capabilities* – Such as annotation, search and indexing capabilities needed to enable and support the FAIRification process.
+  * *FAIRification Resources* – Such as tools, databases, vocabulary services needed to enable and support the FAIRification process.
+- **Determine the FAIRification Gaps to address (Backlog)**  
+  Gaps to address, i.e. current to projected state after FAIRification. For example, for some or all sections above, list the gaps to address for each indicator and for the capabilities and resources needed to complete the FAIRification.
+
+
+### Phase overview
+<div class="language-mermaid colouring">
+{% include cff_phase_diagram-outline.mmd.liquid %}
+</div>
 <!--more-->
 ### Process elements
 {% include cff-phase.md.liquid %}
 
-### Flowchart
-<div class="language-mermaid figure-img img-fluid rounded">
-{% include cff_phase_diagram.mmd.liquid %}
-</div>
+### Resources
+{% include cff_library_items.md.liquid cff_id=page.cff_properties.id %}
