@@ -67,6 +67,10 @@ details details {
         stroke-width: 3px !important;
     }
 
+    .pre {
+      white-space: preserve nowrap;
+    }
+
     // Mermaid node shapes
     .node {
         rect, circle, polygon, path, g.outer-path { 

@@ -14,7 +14,6 @@
 {%-     assign has_many_outputs = false %}
 {%- endif -%}
 %%{init: {
-  "markdownAutoWrap": false
 }}%%
 flowchart LR;
 
@@ -51,7 +50,7 @@ subgraph input["`{{ page.cff_properties.flow.pre_conditions.annotation | default
 {% endfor %}
 end
 {% elsif page.cff_properties.flow.pre_conditions.annotation %}
-    inputs_annotation@{ shape: brace-r, label: "{{ page.cff_properties.flow.pre_conditions.annotation }}" } -.- {{input_id}}
+    inputs_annotation@{ shape: brace-r, label: "<span class='pre'>{{ page.cff_properties.flow.pre_conditions.annotation }}</span>" } -.- {{input_id}}
 {% endif %}
 
 {% if has_many_outputs %}
@@ -62,12 +61,11 @@ subgraph output["`{{ page.cff_properties.flow.post_conditions.annotation | defau
 {% endfor %}
 end
 {% elsif page.cff_properties.flow.post_conditions.annotation %}
-    {{output_id}} -.- outputs_annotation@{ shape: brace, label: "{{ page.cff_properties.flow.post_conditions.annotation }}" }
+    {{output_id}} -.- outputs_annotation@{ shape: brace, label: "<span class='pre'>{{ page.cff_properties.flow.post_conditions.annotation }}</span>" }
 {% endif %}
 
 
-    {{page.cff_properties.id}}@{ label: "{{page.cff_properties.title | replace: " ", "
-    "}}" }
+    {{page.cff_properties.id}}@{ label: "{{page.cff_properties.title}}" }
 {% else %}
 flowchart LR;
     error("Rendering error, missing `page.cff_properties`")
