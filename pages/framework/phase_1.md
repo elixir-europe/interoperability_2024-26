@@ -7,8 +7,8 @@ excerpt_separator: <!--more-->
 cff_properties:
   id: phase_1
   type: process_phase
-  title: Define FAIRification goals
-  description: Determine the goals for FAIRification, in terms of desired *usability of data* that isn't currently possible.
+  title: Define goals
+  description: Determine the purpose and expected outcome of FAIRification, in terms of desired *usability of the research asset* that isn’t currently possible.
   inputs:
     - id: idea
       shape: cloud

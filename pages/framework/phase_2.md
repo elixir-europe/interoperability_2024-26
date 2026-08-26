@@ -7,8 +7,8 @@ excerpt_separator: <!--more-->
 cff_properties:
   id: phase_2
   type: process_phase
-  title: Project examination
-  description: Examine the current state of the project with respect to *FAIRification goal*
+  title: Examine requirements
+  description: Assess the current state of the activity against the FAIRification goal, including available tools, software, expertise, budget, and time constraints.
   inputs:
     - id: phase_1_outputs
       edge_label: Used to determine target state characteristics, requirements and priorities
