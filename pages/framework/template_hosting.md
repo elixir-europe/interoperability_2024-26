@@ -19,34 +19,78 @@ cff_properties:
     - ft-data-release
 cff_elements:
   ft-data-access:
-    title: Data access
-    description: Considerations relating to how data is accessed, eg through APIs, via controlled access
+    title: Research object access
+    description: |
+      Ensure that the FAIRification team is permitted and technically able to reach the research object and its associated metadata. 
+
+      Examples of concerns:
+
+      * Open, registered or controlled access  
+      * Authentication and authorisation  
+      * Data-access applications and approvals  
+      * Secure-environment requirements  
+      * API or repository availability  
+      * Applicable conditions affecting acquisition and project use 
   ft-data-retrieval:
-    title: Data retrieval
-    description: Considerations relating to data retrieval, eg query language, results representation and exporting capabilities
+    title: Research object retrieval
+    description: |
+      Ensure that the required research object, version, components and metadata can be selected, obtained/downloaded and verified by the FAIRification team.
+
+      Considerations relating to research object retrieval, eg query language, results representation and exporting capabilities
   ft-data-hosting:
-    title: Data hosting
-    description: Considerations around data hosting infrastructure such as markup and search engine optimisation
+    title: Research object deposition
+    description: |
+      Persist, manage, expose and operate research objects, metadata, mappings, alternative representations and supporting services in an environment suitable for their intended uses.
+
+      This capability includes selecting or confirming a hosting environment, deploying the required objects and services, and establishing the storage, preservation, discovery, security, operational and sustainability arrangements needed to support them.
+
+      The capability may be provided by an external repository, institutional infrastructure, community platform, secure environment, commercial provider or project-operated service. The FAIRification team does not necessarily have to operate the environment itself.
   ft-data-versioning:
-    title: Data versioning
-    description: Considerations around data versioning
+    title: Research object versioning
+    description: |
+      Identify, relate, preserve and manage changes to deployed research objects and their associated metadata, mappings, representations and services.
+
+      This capability allows users and machines to distinguish a changing research object from a particular reproducible version and to understand how versions, releases, components and derived representations relate.
+
+      The capability may be provided by a repository, version-control system, package registry, storage service, workflow platform or project-operated versioning process.
   ft-data-transfer:
-    title: Data transfer
-    description: Considerations around data transfer such as file formats, repository types and checksumming
+    title: Research object transfer
+    description: |
+      Move, ingest, synchronise or register research objects and associated information between environments securely, completely and verifiably.
+
+      This capability may involve transferring files or packages, migrating databases or object stores, depositing through a repository interface, synchronising environments or registering an object in place without copying it.
+
+      Transfer is distinct from retrieval. Retrieval concerns what a user or service can select and receive. Transfer concerns the operational movement or ingestion of research objects between source, staging and target environments.
+
+      Transfer is not required where the research object remains in place and the existing environment is upgraded to fulfil the target role.
   ft-data-licensing:
-    title: Data licensing
-    description: Data licensing considerations such as data which license is most appropriate for a given scenario
+    title: Rights and reuse conditions
+    description: |
+      Authorise and communicate the terms under which a research object and its components may be accessed, used, modified, combined and redistributed.
+
+      This capability includes declaring  rights holders and release authorities; evaluating licences, contracts and third-party terms; selecting suitable licences or rights statements; defining permitted uses; and communicating the resulting conditions to people and machines.
+
+      The capability may be provided by rights holders, legal advisers, research organisations, repositories, data-access committees, ethics or information-governance functions, community authorities or other authorised decision-makers.
   ft-data-anonymisation:
-    title: Data anonymisation
-    description: Data anonymisation considerations
+    title: Privacy and disclosure control
+    description: |
+      Identify, assess and manage the risk that releasing a research object, metadata or associated information could expose personal, confidential, sensitive or otherwise restricted information.
+
+      This capability is broad and complex and its nature will vary greatly depending on the research object and intended use. For example, anonymisation may be inappropriate or insufficient where the information is highly distinctive, where external information creates linkage risks or where removing sufficient detail would undermine the intended use. 
+
+      The capability may be provided by information-governance, data-protection, statistical-disclosure, ethics, security or domain specialists and by authorised data-access or release bodies.
   ft-data-release:
-    title: Data release
-    description: Data release considerations such as when to release a dataset and where to release it
+    title: Release management
+    description: |
+      Define, approve, activate, document and manage a specific release of the research object.
+
+      This capability controls when and  what is being released through which channels and interfaces, which version and representations are included, where they are available, who may access them and which conditions apply.
+
+      The capability may be provided through repository deposition and approval workflows, institutional release procedures, community governance, project release management or combinations of these.
 ---
 {{ page.cff_properties.description }}
 
 <!--more-->
-
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mb-5 navigation-tiles">
 {%- assign steps = site.cff.templated_steps.flow.phases 

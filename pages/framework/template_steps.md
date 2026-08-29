@@ -24,6 +24,8 @@ cff_elements:
 
 {{ page.cff_properties.description }}
 
+Each step is linked to related capabilities across three dimensions: *Hosting environment*, *Representation & format*, and *Content & context*. 
+
 <!--more-->
 
 <div class="language-mermaid colouring">

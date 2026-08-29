@@ -72,16 +72,16 @@ cff_elements:
 
 {{page.cff_properties.description}}
 
-The practical phase of the FAIRification Process centers on the FAIRification Cycle, which consists of three distinct stages: Assessment, Design, and Implementation. This phase typically involves multiple FAIRification Cycles applied iteratively. Each cycle focuses on a defined set of tasks within an agreed timeframe.
-1. **Assessment**
-   Pre- and post-assessments are conducted at the beginning and end of each FAIRification Cycle iteration to evaluate FAIR improvements and track the status of individual tasks.
-2. **Design**
-   During the design stage, concrete steps are identified to achieve the FAIRification tasks identified for this cycle. If needed, one could also use the concrete steps identified from the FAIRification template.
-   These steps form the FAIRification workplan to be realised during the implementation stage.
-3. **Implementation**
-   During this phase, the planned tasks are executed within the established timeframe. However, it is important to note that some tasks may remain incomplete, be postponed, or even abandoned during a given iteration.
+The practical phase of the FAIRification Process turns the selected FAIRification tasks into concrete changes. It brings together four connected activities: Pre-assessment, Design, Implementation and Post-assessment. The work may be completed as one bounded implementation effort or divided into several iterations where this is useful for managing scope, dependencies, resources or uncertainty.
 
-
+1. **Pre-assessment**   
+   Conducted at the beginning to clearly indicate the starting state, and being able to compare / contrast with the end state. Focusing on what is within scope of the team’s capabilities.  
+2. **Design**   
+   During the design stage, concrete steps are identified to achieve the FAIRification tasks identified for this cycle. If needed, one could also use the concrete steps identified from the FAIRification template. These steps form the FAIRification workplan to be realised during the implementation stage.  
+3. **Implementation**   
+   During this phase, the planned tasks are executed within the established timeframe. However, it is important to note that some tasks may remain incomplete, be postponed, or even abandoned during a given iteration.  
+4. **Post-assessment**  
+   Assess the achieved state using the same criteria or comparable evidence as the pre-assessment. Compare the results with the starting state and agreed objectives to identify demonstrated FAIR improvements, remaining gaps and any further work required.
 
 ### Phase overview
 <div class="language-mermaid colouring">

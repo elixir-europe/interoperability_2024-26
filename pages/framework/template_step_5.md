@@ -7,7 +7,7 @@ cff_properties:
   id: step_5
   type: template_step
   title: Harmonise vocabulary elements
-  description: At this step, you would look in depth about the data content and harmonize it with ontologies either pre-existing or formulate an application ontology for your use case.
+  description: This step establishes which controlled vocabularies, terminologies and ontologies will be used to describe the research object and its associated metadata, and applies their terms in ways that support consistent interpretation and reuse.
   capabilities_model: content
   capabilities: 
     - ft-select-data-vocabularies
@@ -26,6 +26,11 @@ cff_properties:
 
 
 <!--more-->
+
+Semantic resources provide agreed identifiers, labels, definitions and relationships for concepts. They can make the meaning of research object content and metadata clearer to people and machines and help different research objects, services and communities refer consistently to the same concepts.
+A controlled vocabulary may define a permitted list of values, while an ontology may also provide formal relationships and constraints. The FAIRification activity should select the level of semantic detail needed for its intended uses.
+Use this step during project examination to identify semantic requirements, inventory current vocabulary use, assess available capabilities and select candidate resources. During an implementation cycle, use it to extend or develop semantic resources where necessary, apply annotations and establish the required management arrangements.
+
 
 {% assign step_id = page.cff_properties.id %}
 {%- assign step = site.cff[step_id] %}

@@ -131,16 +131,23 @@ cff_elements:
 
 {{page.cff_properties.description}}
 
-FAIRification is challenging if the project’s capabilities and resources are not fully understood from the beginning. It is therefore essential to:  
+FAIRification is challenging if the capabilities and resources available to the activity are not fully understood from the beginning. It is therefore essential to:
 - **Identify Research Object Requirements**
-  Indicators and associated targets that specify the actions needed to curate the research object to fulfil the FAIRification Goal. For example, goals relating to data hosting improvements cannot be fulfilled if data is not available or accessible or if the project partners have not reached an agreement on the appropriate licensing and data use conditions.
+  Identify indicators and associated targets that specify what is needed to curate the research object to fulfil the FAIRification Goal. For example, goals relating to data hosting improvements cannot be fulfilled if the data is unavailable or inaccessible, or if project partners have not agreed on appropriate licensing and data-use conditions.  
 - **Identify FAIRification Capabilities & Resources**
-  Given the research object requirements, what capabilities and resources will be needed to complete the FAIRification. For example, personnel with certain skills and expertise, access to deploying (changes to) databases/APIs, and a general course of actions that can be supported by available budget and personnel.
-  * *FAIRification Capabilities* – Such as annotation, search and indexing capabilities needed to enable and support the FAIRification process.
-  * *FAIRification Resources* – Such as tools, databases, vocabulary services needed to enable and support the FAIRification process.
+  Given the research object requirements, identify the capabilities and resources needed to complete the FAIRification. These may include personnel with relevant skills and expertise, the ability to deploy changes to databases or APIs, and a general course of action that can be supported by the available budget and personnel.  
+  * *FAIRification Capabilities* – Such as annotation, validation, search and indexing capabilities needed to enable and support the FAIRification activity.  
+  * *FAIRification Resources* – Such as tools, databases, standards and vocabulary services needed to provide those capabilities.  
 - **Determine the FAIRification Gaps to address (Backlog)**  
-  Gaps to address, i.e. current to projected state after FAIRification. For example, for some or all sections above, list the gaps to address for each indicator and for the capabilities and resources needed to complete the FAIRification.
+  Compare the current state with the projected state after FAIRification and identify the gaps to be addressed. This may include gaps relating to the indicators and targets, the capabilities and resources needed to complete the FAIRification, and other financial, technical, legal or organisational constraints. Together, these form the FAIRification roadmap and backlog for the practical work.
 
+In this phase, you can optionally use the [Template]({% link pages/framework/fairification_template.md %}) to identify relevant actions, capabilities and resources needed to execute the FAIRification activity.
+
+**Assessment approach**  
+Select an assessment approach that can establish the current state and later determine whether the projected state has been reached. The approach may combine tool-based assessment with expert or user evaluation, but should focus on indicators relevant to the FAIRification Goal and record sufficient evidence to support comparison before and after implementation.
+
+**Practical and important considerations**  
+Consider the financial costs and expected benefits; the available technical infrastructure, tools and methodologies; legal requirements relating to rights, access and reuse; and organisational requirements such as responsibilities, training and support. These considerations help determine what is feasible, what is within the team’s control or influence, and which gaps depend on other people, organisations or services.
 
 ### Phase overview
 <div class="language-mermaid colouring">
