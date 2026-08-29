@@ -58,11 +58,13 @@ Jekyll::Hooks.register :site, :post_read do |site|
 
     phase['outputs'].each do |output|
       # output.update(cff_elements[output['id']].merge(output))
+      cff_elements[output['id']]['output_of'] ||= []
       cff_elements[output['id']]['output_of'] = phase_id
     end
     phase['inputs'].each do |input|
       # input.update(cff_elements[input['id']].merge(input))
-      cff_elements[input['id']]['input_of'] = phase_id
+      cff_elements[input['id']]['input_of'] ||= []
+      cff_elements[input['id']]['input_of'].append(phase_id)
     end
   end
 

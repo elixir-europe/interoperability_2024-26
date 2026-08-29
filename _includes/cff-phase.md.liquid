@@ -70,7 +70,7 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
   - `{{ cff_phase.title }} → this`: {{ item.edge_label }}
   {% for phase_id in site.cff[item.id].input_of -%}
   - `this → {{ site.cff[phase_id].title }}`: {{ site.cff[phase_id].inputs | find: "id", item.id | map: "edge_label" }}
-  {%- endfor -%}
+  {% endfor -%}
 {% endfor %}
 </details>
 </details>
