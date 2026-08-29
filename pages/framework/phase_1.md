@@ -30,9 +30,9 @@ cff_properties:
         Intended usability
         Broader impact
       requirements: 
-        - You have identified targeted assets
-        - You have defined their intended use or a FAIR compliance target
-        - You have ideintified what broader impact this will have, i.e. what it’s worth
+        - You have identified target assets
+        - You have defined their intended use or a FAIR compliance objective
+        - You have ideintified what broader impact this will have, i.e. scientific value
     nodes:
       scoped_input:
         title: Targeted research assets
@@ -70,7 +70,7 @@ cff_elements:
     type: process_object
     title: FAIRification idea
     description: |-
-      Community use case, FAIR compliance challenge or any idea that involves FAIRification.
+      Community use case, FAIR compliance challenge or any idea that involves improving the FAIR level of some research asset.
   phase_1_outputs:
     type: process_object
     title: FAIRification goals

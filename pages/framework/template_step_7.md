@@ -6,8 +6,8 @@ excerpt_separator: <!--more-->
 cff_properties:
   id: step_7
   type: template_step
-  title: Deploy to hosting solutions
-  description: Once the dataset is ready, hosting and search engine optimization inputs for the dataset need to be in place. Alongside hosting, data versioning and data formats need to also be considered.
+  title: Deploy to hosting environments
+  description: This step deploys the research object, its alternative representations and any supporting resources to one or more hosting environments that meet the functional, operational, security and preservation requirements of the FAIRification activity.
   capabilities_model: hosting
   capabilities: 
     - ft-data-hosting
@@ -25,6 +25,13 @@ cff_properties:
 
 
 <!--more-->
+
+A hosting environment may be a domain repository, general-purpose repository, institutional service, object store, package registry, version-control platform, workflow repository, catalogue, knowledge-graph platform, secure processing environment or project-operated infrastructure.
+
+The environment from which the research object was obtained may be retained, upgraded or complemented as part of the deployment. Source and target are roles: they may be fulfilled by the same environment, by overlapping services or by different systems.
+
+Deployment does not have to wait until every FAIRification task is complete. Canonical and alternative representations may be deployed iteratively to development, staging or production environments during successive FAIRification cycles.
+
 
 {% assign step_id = page.cff_properties.id %}
 {%- assign step = site.cff[step_id] %}

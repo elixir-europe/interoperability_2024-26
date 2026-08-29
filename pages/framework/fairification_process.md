@@ -25,7 +25,7 @@ cff_properties:
 </div>
 
 
-The FAIRification Process structures the FAIRification project into 4 distinct phases described below.
+The **FAIRification Process** is structured as 4 distinct phases described below.
 {% assign pages = page.cff_properties.flow.phases %}
 {% for p in pages %}
 1. **[{{ site.cff[p].title }}]({{ site.cff[p].page_url | relative_url }})**\

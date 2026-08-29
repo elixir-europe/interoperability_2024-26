@@ -7,7 +7,7 @@ cff_properties:
   id: step_4
   type: template_step
   title: Convert to standard formats
-  description: At this step, data standard validation and identification is done to ensure that the representation of the data is in community or domain specified formats for interoperability purposes.
+  description: This step establishes which community or domain standards, profiles, formats and serialisations will be used to represent the research object and applies and validates them in ways that support the intended uses.
   capabilities_model: representation
   capabilities: 
     - ft-data-standards-reuse
@@ -24,8 +24,11 @@ cff_properties:
 </div>
 {{page.cff_properties.description}}
 
-
 <!--more-->
+
+Standards can make research objects easier to interpret, exchange, process and combine across people, tools, services and communities. They can define required information, structural elements, datatypes, relationships, metadata, file formats, serialisations, packaging arrangements, terminology requirements and conformance rules.
+
+A standard is not necessarily the same as a file format. A file may use a common format without complying with a community standard, while a standard may support several formats or serialisations. A research object can require more than one standard or representation.
 
 {% assign step_id = page.cff_properties.id %}
 {%- assign step = site.cff[step_id] %}

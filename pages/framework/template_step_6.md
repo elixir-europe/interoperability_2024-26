@@ -6,8 +6,8 @@ excerpt_separator: <!--more-->
 cff_properties:
   id: step_6
   type: template_step
-  title: Transform for broad reusability
-  description: Not only would you represent the data in one ontology but also link or map to corresponding ontologies such that the data is interoperable with multiple vocabularies and terminologies rather than just one.
+  title: Transform for broad reuse
+  description: This step creates mappings, translations and alternative representations that allow the research object to meet integration and interoperability requirements of the primary  use cases.
   capabilities_model: representation
   capabilities: 
     - ft-identifier-mapping
@@ -25,6 +25,15 @@ cff_properties:
 
 
 <!--more-->
+
+Different communities, repositories, services, tools and workflows may use other identifier schemes, vocabularies, models or representations. This step connects the canonical representation, developed through the previous steps, to those external requirements through documented mappings and transformations.
+
+An alternative representation may be stored, generated on demand or exposed through a service. Its relationship to the canonical representation and its status as an authoritative, derived, provisional or application-specific representation should be explicit.
+
+This step does not require every transformation to be bidirectional or lossless. A one-way or simplified representation may be appropriate where it meets the intended use, provided that its direction, limitations and information loss are documented.
+
+Use this step during project examination to identify integration requirements, assess available mapping and transformation capabilities and define the required outputs. During an implementation cycle, use it to create, apply and validate the mappings, translations and alternative representations within scope.
+
 
 {% assign step_id = page.cff_properties.id %}
 {%- assign step = site.cff[step_id] %}

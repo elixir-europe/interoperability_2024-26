@@ -73,7 +73,7 @@ cff_elements:
 {{page.cff_properties.description}}
 
 
-In this final phase, the cumulative outputs of all FAIRification activities are reviewed against the initial project goals to evaluate the overall success of the process. The review should include a summary of key achievements, documented FAIR improvements, an overview of the FAIRification processes, and any lessons learned.
+In this final phase, the cumulative outputs of all FAIRification activities are reviewed against the initial project goals to evaluate the overall success of the process. The review includes a check to ensure all documentation on the FAIRification activity is complete, all outputs are recorded, and downstream actions are in progress. The review should include a summary of key achievements, documented FAIR improvements, an overview of the FAIRification processes, and any lessons learned.
 
 ### Phase overview
 <div class="language-mermaid colouring">
