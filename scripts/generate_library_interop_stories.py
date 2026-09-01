@@ -1,19 +1,17 @@
 #!/usr/bin/env python3
-"""Regenerate _data/library-interop-stories.json from the source spreadsheet.
+"""Regenerate _data/library-interop-stories.json from a source URL.
 
 Standalone, local replacement for the Google Apps Script exporter
 (appscript.js/appscript.html) that used to be run from the spreadsheet's
 Extensions > Apps Script menu. This reads each sheet tab straight from
 Google's public CSV export endpoint (Google Visualization API), so no
-Google API credentials/OAuth are needed -- the spreadsheet just needs to be
+Google API credentials/OAuth are needed -- the source just needs to be
 shared as "Anyone with the link can view".
 
-Source spreadsheet:
-https://docs.google.com/spreadsheets/d/1AqXKfmGw_iicBEDJFRfRbXDkArqYAmbRVtv4_0HbJ4k/edit
-
 Usage:
-    python3 scripts/generate_library_interop_stories.py
+    python3 scripts/generate_library_interop_stories.py SOURCE_URL
 """
+import argparse
 import csv
 import io
 import json
@@ -22,7 +20,6 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-SPREADSHEET_ID = "1AqXKfmGw_iicBEDJFRfRbXDkArqYAmbRVtv4_0HbJ4k"
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "_data" / "library-interop-stories.json"
 
 # Each entry mirrors one getSheetData(...) call in appscript.js:
@@ -65,9 +62,19 @@ SHEET_SPECS = {
 }
 
 
-def fetch_sheet_rows(sheet_name):
+def fetch_sheet_rows(source_url, sheet_name):
+    parsed_url = urllib.parse.urlparse(source_url)
+    path_parts = parsed_url.path.split("/")
+    try:
+        document_id = path_parts[path_parts.index("d") + 1]
+    except (ValueError, IndexError):
+        raise ValueError(
+            "SOURCE_URL must contain a Google Sheets document ID, for example "
+            "https://docs.google.com/spreadsheets/d/DOCUMENT_ID/edit"
+        ) from None
+
     url = (
-        f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}/gviz/tq"
+        f"https://docs.google.com/spreadsheets/d/{document_id}/gviz/tq"
         f"?tqx=out:csv&sheet={urllib.parse.quote(sheet_name)}"
     )
     try:
@@ -81,8 +88,8 @@ def fetch_sheet_rows(sheet_name):
     return list(csv.reader(io.StringIO(raw)))
 
 
-def get_sheet_data(sheet_name, column_indices, headers):
-    rows = fetch_sheet_rows(sheet_name)
+def get_sheet_data(source_url, sheet_name, column_indices, headers):
+    rows = fetch_sheet_rows(source_url, sheet_name)
     data_rows = rows[1:]  # drop header row
 
     # Mirror getLastNonEmptyRowIndex(): the original script only ever checks
@@ -103,7 +110,11 @@ def get_sheet_data(sheet_name, column_indices, headers):
 
 
 def main():
-    data = {key: get_sheet_data(*spec) for key, spec in SHEET_SPECS.items()}
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("source_url", metavar="SOURCE_URL", help="Google Sheets document URL")
+    args = parser.parse_args()
+
+    data = {key: get_sheet_data(args.source_url, *spec) for key, spec in SHEET_SPECS.items()}
 
     final_object = {
         "elixirstories": {
