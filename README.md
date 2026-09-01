@@ -49,18 +49,16 @@ docker compose -f docker-compose.prod.yml -f docker-compose.prod.override.yml up
 
 `_data/library-interop-stories.json` (interoperability stories, FAIR Metroline, FAIR
 Cookbook, RDMkit, FAIRification Template, DSM and Process data, plus their cross-mappings)
-is sourced from a
-[Google spreadsheet](https://docs.google.com/spreadsheets/d/1AqXKfmGw_iicBEDJFRfRbXDkArqYAmbRVtv4_0HbJ4k/edit).
-It used to be exported by hand via an Apps Script bound to that sheet; `scripts/generate_library_interop_stories.py`
+is sourced from a Google Sheets document. It used to be exported by hand via an Apps Script bound to that document; `scripts/generate_library_interop_stories.py`
 does the same export locally instead, with no dependencies beyond the Python 3 standard library.
 
 Run it from the repo root:
 
 ```bash
-python3 scripts/generate_library_interop_stories.py
+python3 scripts/generate_library_interop_stories.py SOURCE_URL
 ```
 
-It reads each relevant sheet tab straight from Google's public CSV export endpoint (so the
-spreadsheet must stay shared as "Anyone with the link can view"), rebuilds the same JSON
+It reads each relevant tab straight from Google's public CSV export endpoint (so the
+document must stay shared as "Anyone with the link can view"), rebuilds the same JSON
 structure the old Apps Script produced, and overwrites `_data/library-interop-stories.json`.
 Review the resulting diff before committing.
