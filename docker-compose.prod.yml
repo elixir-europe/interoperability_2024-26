@@ -1,0 +1,50 @@
+# Reproduces what .github/workflows/jekyll.yml actually runs (jekyll build,
+# JEKYLL_ENV=production, --baseurl set to the GitHub Pages project path)
+# instead of the dev server in docker-compose.yml (jekyll serve --incremental,
+# no baseurl, JEKYLL_ENV=development). Kept in its own file — rather than a
+# "prod" profile inside docker-compose.yml — so a plain `docker compose up`
+# never starts it by accident and no --profile flag is needed to opt in. Run
+# it explicitly with:
+#
+#   docker compose -f docker-compose.prod.yml up
+#
+# then open http://localhost:4001/interoperability_2024-26/ to check a page
+# the way it will actually render once deployed. This is a one-shot build,
+# not a live-reloading dev server; re-run the command after making changes.
+#
+# Declares its own "gems" named volume, but since Compose derives the project
+# name from the directory (not the -f file) by default, it resolves to the
+# same underlying volume as the "gems" volume in docker-compose.yml — the
+# bundle install cache is shared between dev and prod runs.
+#
+# /usr/site-prod is NOT a named volume — it's a plain `jekyll build` (no
+# --incremental), which deletes .jekyll-metadata and fully reconciles the
+# destination against a from-scratch render on every run (see Jekyll's
+# Cleaner#cleanup!), so nothing from a previous run is ever reused. A
+# persistent volume there would cache nothing; the container's own
+# writable layer produces the same result with no leftover state to reset.
+#
+# PAGES_REPO_NWO is derived from the 'origin' remote rather than hardcoded,
+# because jekyll-github-metadata's own git-remote sniffing fallback only
+# runs when Jekyll.env is development/test (repository_finder.rb) — under
+# JEKYLL_ENV=production, same as CI, it requires PAGES_REPO_NWO explicitly
+# or the build fails with "No repo name found", exactly as the GitHub
+# Actions workflow supplies it via `PAGES_REPO_NWO: ${{ github.repository }}`.
+services:
+  jekyll-prod:
+    image: ruby:3.3
+    working_dir: /usr/src/app/
+    environment:
+      JEKYLL_ENV: production
+    entrypoint: /bin/bash -c "git config --global --add safe.directory /usr/src/app && export PAGES_REPO_NWO=$(git config --get remote.origin.url | sed -E 's#.*[:/]([^/]+/[^/.]+)(\\.git)?$#\\1#') && bundle config set --local path '/usr/gems/' && bundle install && bundle exec jekyll build --baseurl /interoperability_2024-26 --destination /usr/site-prod/interoperability_2024-26 && bundle exec ruby -run -e httpd /usr/site-prod -p 4000"
+    ports:
+      - 127.0.0.1:4001:4000
+    volumes:
+      # rw, not ro: despite --destination pointing elsewhere, Jekyll writes
+      # .jekyll-cache/ and .jekyll-metadata into the *source* dir (this
+      # mount), and `bundle install` can rewrite Gemfile.lock in place.
+      - .:/usr/src/app/:rw
+      - gems:/usr/gems/:rw
+
+volumes:
+  gems:

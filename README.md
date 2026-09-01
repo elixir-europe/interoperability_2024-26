@@ -17,20 +17,30 @@ Then open http://localhost:4000. The site rebuilds automatically as you edit fil
 Stop it with:
 
 ```bash
-docker compose down
+docker compose down -v
 ```
+
+`-v` also removes the `gems`/`site` cache volumes, so the next `docker compose up` reinstalls everything from scratch.
 
 If your checkout is a git worktree rather than the main clone, run `./docker-worktree-setup.sh`
 once first.
 
-`docker compose up` runs `jekyll serve` (dev server, no `--baseurl`, `JEKYLL_ENV=development`),
-which is *not* what the GitHub Actions workflow builds and deploys. To check a page the way it
-will actually render on GitHub Pages, build and serve it the same way CI does:
+`docker compose up` (`docker-compose.yml`) runs `jekyll serve` (dev server, no `--baseurl`,
+`JEKYLL_ENV=development`), which is *not* what the GitHub Actions workflow builds and deploys.
+To check a page the way it will actually render on GitHub Pages, build and serve it the same way
+CI does, using the separate production compose file:
 
 ```bash
-docker compose --profile prod up jekyll-prod
+docker compose -f docker-compose.prod.yml up
 ```
 
 Then open http://localhost:4001/interoperability_2024-26/ (note the path — GitHub Pages serves
 this site under `/interoperability_2024-26/`, not `/`). This is a one-shot build, not a
 live-reloading dev server; re-run the command after making changes.
+
+If your checkout is a git worktree, `./docker-worktree-setup.sh` also generates a prod override
+file, which must be passed explicitly (unlike the dev override, it isn't merged automatically):
+
+```bash
+docker compose -f docker-compose.prod.yml -f docker-compose.prod.override.yml up
+```

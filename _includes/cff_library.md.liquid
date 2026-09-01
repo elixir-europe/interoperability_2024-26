@@ -1,0 +1,55 @@
+
+{% assign cat = page.cff_properties.id %}
+
+{% for cff_section in site.cff.library.structure %}
+{% assign cff_item_id = cff_section[0] %}
+{% assign cff_item = site.cff[cff_item_id] %}
+## {{cff_item.title}}
+{{cff_item.description}}
+
+{% assign resource_mappings = site.data.library-interop-stories[cat].mappings | where: "cff_id", cff_item_id %}
+{% for resource_map in resource_mappings %}
+{%- assign cat_item = site.data.library-interop-stories[cat].data | find: "id", resource_map.id %}
+{%- if forloop.first -%}
+| Resource | Relevance |
+| -------- | ------- |
+{%- endif %}
+| [{{cat_item.title}}]({{cat_item.url}})<br>{{cat_item.description}} | {{resource_map.relevance | default: "Not provided" }} |
+{%- endfor %}
+
+{% for sub_section in cff_section[1] %}
+{% assign cff_item_id = sub_section[0] %}
+{% assign cff_item = site.cff[cff_item_id] %}
+### {{cff_item.title}}
+{{cff_item.description}}
+
+{% assign resource_mappings = site.data.library-interop-stories[cat].mappings | where: "cff_id", cff_item_id %}
+{% for resource_map in resource_mappings %}
+{%- assign cat_item = site.data.library-interop-stories[cat].data | find: "id", resource_map.id %}
+{%- if forloop.first -%}
+| Resource | Relevance |
+| -------- | ------- |
+{%- endif %}
+| [{{cat_item.title}}]({{cat_item.url}})<br>{{cat_item.description}} | {{resource_map.relevance | default: "Not provided" }} |
+{%- endfor %}
+
+{% for sub2_section in sub_section[1] %}
+{% assign cff_item_id = sub2_section[0] %}
+{% assign cff_item = site.cff[cff_item_id] %}
+
+#### {{ cff_item.title }}
+{{cff_item.description}}
+
+{% assign resource_mappings = site.data.library-interop-stories[cat].mappings | where: "cff_id", cff_item_id %}
+{% for resource_map in resource_mappings %}
+{%- assign cat_item = site.data.library-interop-stories[cat].data | find: "id", resource_map.id %}
+{%- if forloop.first %}
+| Resource | Relevance |
+| -------- | ------- |
+{%- endif %}
+| [{{cat_item.title}}]({{cat_item.url}})<br>{{cat_item.description}} | {{resource_map.relevance | default: "Not provided" }} |
+{%- endfor %}
+
+{% endfor %}
+{% endfor %}
+{% endfor %}

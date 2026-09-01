@@ -1,0 +1,15 @@
+{% assign catalogues = "elixirstories,fairmetroline,faircookbook,rdmkit" | split: "," %}
+
+{% for cat in catalogues %}
+{% assign resource_mappings = site.data.library-interop-stories[cat].mappings | where: "cff_id", include.cff_id %}
+
+{% if resource_mappings.size >0 %}
+<details markdown="1">
+  <summary><span markdown="1">{{resource_mappings.size}} {{ site.cff[cat].title }} items</span></summary>
+{% for resource_map in resource_mappings %}
+{%- assign item = site.data.library-interop-stories[cat].data | find: "id", resource_map.id %}
+  * [{{item.title}}]({{item.url}}) {{resource_map.relevance}}
+{%- endfor %}
+</details>
+{% endif %}
+{% endfor %}

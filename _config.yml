@@ -28,22 +28,7 @@ defaults:
     scope:
       path: "pages/framework"
     values:
-      sidebar: framework
-  -
-    scope:
-      path: "pages/stories"
-    values:
-      sidebar: stories
-  -
-    scope:
-      path: "pages/resources"
-    values:
-      sidebar: resources
-  -
-    scope:
-      path: "pages/portfolio"
-    values:
-      sidebar: portfolio
+page_excerpts: true
 
 theme_variables:
   # git_host: GitHub
@@ -92,11 +77,18 @@ plugins:
 sass:
   style: compressed
   sourcemap: always
-  silence_deprecations: # TODO: Fix https://sass-lang.com/documentation/js-api/interfaces/deprecations/
+  # All four below fire from Bootstrap's own SCSS vendored inside the
+  # elixir-toolkit-theme gem (pinned in Gemfile), not from anything in this
+  # repo's _sass/ — confirmed by compiling with silence_deprecations: []
+  # and checking every warning's source path. They'll keep firing on every
+  # build until Bootstrap/the theme migrates off @import and the legacy
+  # global/color function APIs; re-check when bumping the theme version.
+  # (`mixed-decls` produces zero warnings against the current theme + this
+  # repo's SCSS, so it's deliberately left out of this list.)
+  silence_deprecations:
     - import
     - global-builtin
     - color-functions
-    - mixed-decls
     - if-function
 
 github:

@@ -1,0 +1,72 @@
+{% if page.cff_properties %}
+{%- if page.cff_properties.inputs.size > 1 %}
+{%-     assign input_id = "input" -%}
+{%-     assign has_many_inputs = true %}
+{%- else -%}
+{%-     assign input_id = page.cff_properties.inputs | map: "id" | first %}
+{%-     assign has_many_inputs = false %}
+{%- endif -%}
+{%- if page.cff_properties.outputs.size > 1 %}
+{%-     assign output_id = "output" -%}
+{%-     assign has_many_outputs = true %}
+{%- else -%}
+{%-     assign output_id = page.cff_properties.outputs | map: "id" | first %}
+{%-     assign has_many_outputs = false %}
+{%- endif -%}
+%%{init: {
+}}%%
+flowchart LR;
+
+    %% General diagram structure
+    {{input_id}}@{ shape: doc } 
+    {{input_id}}__start@{ shape: sm-circ } 
+    {{page.cff_properties.id}}@{ shape: rounded }
+    {{page.cff_properties.id}}__finish@{ shape: framed-circle } 
+    {{output_id}}@{ shape: doc }
+
+    {{input_id}} edge__{{input_id}}@-.- 
+    {{input_id}}__start edge__{{input_id}}__phase@==> 
+    {{page.cff_properties.id}} edge__{{page.cff_properties.id}}__phase@==> {{page.cff_properties.id}}__finish
+    {{page.cff_properties.id}}__finish -.- {{output_id}}
+
+    %% Phase diagram flow element definitions
+
+    %% Process inputs
+{% for item in page.cff_properties.inputs  %}
+    {{ item.id }}@{ shape: {{ item.shape | default: "doc" }}, label: "{{ site.cff[item.id].title | replace: " ", "
+    " }}"}
+{% endfor %}
+
+{% for item in page.cff_properties.outputs  %}
+    {{ item.id }}@{ shape: {{ item.shape | default: "doc" }}, label: "{{ site.cff[item.id].title | replace: " ", "
+    " }}"}
+{% endfor %}
+
+{% if has_many_inputs %}
+subgraph input["`{{ page.cff_properties.flow.pre_conditions.annotation | default: " " }}`"]
+    direction LR
+{% for item in page.cff_properties.inputs  %}
+    {{ item.id }} {% unless forloop.last %}-.-{% endunless %}
+{% endfor %}
+end
+{% elsif page.cff_properties.flow.pre_conditions.annotation %}
+    inputs_annotation@{ shape: brace-r, label: "<span class='pre'>{{ page.cff_properties.flow.pre_conditions.annotation }}</span>" } -.- {{input_id}}
+{% endif %}
+
+{% if has_many_outputs %}
+subgraph output["`{{ page.cff_properties.flow.post_conditions.annotation | default: " " }}`"]
+    direction LR
+{% for item in page.cff_properties.outputs  %}
+    {{ item.id }} {% unless forloop.last %}-.-{% endunless %}
+{% endfor %}
+end
+{% elsif page.cff_properties.flow.post_conditions.annotation %}
+    {{output_id}} -.- outputs_annotation@{ shape: brace, label: "<span class='pre'>{{ page.cff_properties.flow.post_conditions.annotation }}</span>" }
+{% endif %}
+
+
+    {{page.cff_properties.id}}@{ label: "{{page.cff_properties.title}}" }
+{% else %}
+flowchart LR;
+    error("Rendering error, missing `page.cff_properties`")
+{% endif %}

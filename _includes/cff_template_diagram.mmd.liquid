@@ -1,0 +1,47 @@
+%%{init: {
+   "htmlLabels": true,
+  "flowchart": {
+    "wrappingWidth": 120,
+    "diagramPadding": 10,
+    "padding": 1, 
+    "rankSpacing": 10,
+    "nodeSpacing": 10,
+    "subGraphTitleMargin": {
+      "top": 5,
+      "bottom": 15
+    }
+  }
+}}%%
+{%- assign cff_id = include.cff_id | default: "templated_steps" -%}
+{%- assign cff_element = site.cff[cff_id] -%}
+{%- assign cap_dims = site.cff.template.capabilities %}
+flowchart LR;
+  {%- for cap_dim_id in cap_dims %}
+  {%- assign cap_dim = site.cff[cap_dim_id] %} 
+  {%- assign caps = cap_dim.capabilities %}
+  subgraph {{cap_dim_id}}[{{cap_dim.title}}]
+    direction LR
+    {% for cap_id in caps %}
+    {%- assign cap = site.cff[cap_id] %} 
+    {%- assign row_index = forloop.index | modulo: 2 %}
+    {{cap_dim_id}}__{{ cap_id }}@{ shape: card, label: "<p>{{ cap.title }}</p><div>{{cap_dim.title}}</div>" }
+    {% unless row_index == 0 or forloop.last %}
+    ~~~
+    {% endunless %}
+    {%- endfor %}
+  end
+  {%- endfor %}
+
+  {%- for cap_dim_id in cap_dims %}
+  {%- assign cap_dim = site.cff[cap_dim_id] %} 
+  {%- assign caps = cap_dim.capabilities %}
+  {%- for cap_id in caps %}
+  {%- assign step = site.cff | where: "type", "template_step" | find_exp: "item", "item.capabilities contains cap_id" %}
+  class {{cap_dim_id}}__{{ cap_id }} fixed_height_card
+  click {{cap_dim_id}}__{{ cap_id }} href "{{step.page_url | relative_url}}"
+  {%- endfor %}
+  {%- endfor %}
+
+  {%- for cap_dim_id in cap_dims %}
+  {{ cap_dim_id }}{% unless forloop.last %}~~~{% endunless %}
+  {%- endfor %}

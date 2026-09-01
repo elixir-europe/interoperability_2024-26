@@ -1,0 +1,19 @@
+<figure class="{% if include.inline == true %}my-0{% else %}my-4{%- endif %}{% if include.class %} {{ include.class }}{%- endif %}"{% if include.max_width %} style="max-width:{{ include.max_width }}"{% endif %}>
+    {%- capture file_url -%}diagrams-mmd/{{ include.file }}{%- endcapture -%}
+    {%- if include.url %}
+    <a target="_blank" rel="noopener noreferrer" href="{{ include.url }}">
+    {%- elsif include.click == true %}
+    <a target="_blank" rel="noopener noreferrer" href="{{ file_url }}">
+    {%- endif %}
+    <div class="language-mermaid figure-img img-fluid rounded" role="img"{% if include.alt %} aria-label="{{ include.alt }}"{% endif %}>
+        {% include_relative {{ file_url }} %}
+    </div>
+    {%- if include.url or include.click == true %}
+    </a>
+    {%- endif %}
+    {%- if include.caption %}
+    <figcaption class="figure-caption">
+    {{ include.caption | markdownify }}
+    </figcaption>
+    {%- endif %}
+</figure>

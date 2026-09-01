@@ -1,0 +1,223 @@
+/*
+  This is a naive diagram coloring scheme for Mermaid flowcharts
+  that rely on conventions for generating id:s for nodes and edges
+  to match the Process phases and Steps that should be targeted. 
+
+  Target diagrams
+  The diagrams are located in _includes with file endings .mmd.liquid
+  and an approach can be to generate predictable node and edge elements
+  that can be targeted with CSS. Element id:s for nodes follow the pattern:
+    mermaid-[mermaid generated number]-flowchart-[id in flowchart]
+  
+  Elements for edges has an attibute data-id that contains the id
+  assigned to the edge in Mermaid and a pattern like this is proposed:
+     edge__[source Node id]__[1...N]
+
+  “Highlighting”
+  To enable selective “Highlighting” (coloring individual nodes) 
+  a class named colouring can be applied to the to the diagram or the 
+  a class named highlight to elements that should be coloured. 
+  Note that there is no way to assign classes to edges.
+*/
+
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+
+$edge-width: 4;
+$label-opacity: 0.9;
+
+$mermaid-themes: (
+  phase-1: (
+    stroke: rgb(208, 103, 110),
+    fill: rgb(255, 216, 219),
+    text: rgb(146, 53, 59),
+    edges: (
+      "edge__phase_1_",
+      "edge__goal_",
+      "phase_1_outputs__phase"
+    ),
+    nodes: (
+      "flowchart-phase_1",
+      "flowchart-goal-"
+    )
+  ),
+
+  phase-2: (
+    stroke: rgb(243, 195, 147),
+    fill: rgb(252, 232, 210),
+    text: rgb(146, 117, 89),
+    edges: (
+      "edge__phase_2_",
+      "edge__requirements_",
+      "edge__capabilities_",
+      "edge__resources_",
+      "edge__pre_assessment_"
+    ),
+    nodes: (
+      "flowchart-phase_2",
+      "flowchart-requirements-",
+      "flowchart-capabilities-",
+      "flowchart-resources-",
+      "flowchart-pre_assessment-",
+      "flowchart-object_types-",
+      "flowchart-target_state-"
+    )
+  ),
+
+  phase-3: (
+    stroke: rgb(164, 147, 186),
+    fill: rgb(240, 229, 255),
+    text: rgb(114, 102, 130),
+    edges: (
+      "edge__phase_3_",
+      "edge__design_",
+      "edge__implementation_",
+      "edge__post_assessment_",
+    ),
+    nodes: (
+      "flowchart-phase_3",
+      "flowchart-design-",
+      "flowchart-implementation-",
+      "flowchart-post_assessment-"
+    )
+  ),
+
+  phase-4: (
+    stroke: rgb(166, 77, 121),
+    fill: rgb(249, 212, 235),
+    text: rgb(108, 50, 79),
+    edges: (
+      "edge__phase_4_"
+    ),
+    nodes: (
+      "flowchart-phase_4"
+    )
+  ),
+
+  hosting: (
+    stroke: #25690e,
+    fill: #cbfdba,
+    text: #25690e,
+    edges: (
+      "edge__step_1_",
+      "edge__step_7_",
+      "edge__step_8_"
+    ),
+    nodes: (
+      "flowchart-step_1",
+      "flowchart-step_7",
+      "flowchart-step_8",
+      "flowchart-hosting"
+    )
+  ),
+
+  content: (
+    stroke: #1F3864,
+    fill: #bdd0ef,
+    text: #1F3864,
+    edges: (
+      "edge__step_2_",
+      "edge__step_3_",
+      "edge__step_5_"
+    ),
+    nodes: (
+      "flowchart-step_2",
+      "flowchart-step_3",
+      "flowchart-step_5",
+      "flowchart-content"
+    )
+  ),
+
+  format: (
+    stroke: #A12964,
+    fill: #f9bad9,
+    text: #A12964,
+    edges: (
+      "edge__step_4_",
+      "edge__step_6_"
+    ),
+    nodes: (
+      "flowchart-step_4",
+      "flowchart-step_6",
+      "flowchart-representation"
+    )
+  )
+);
+
+@function contains-selectors($attribute, $values) {
+  $selectors: ();
+
+  @each $value in $values {
+    $selector_1: ('[#{$attribute}*="#{$value}"].highlight');
+    $selector_2: ('&.colouring g[#{$attribute}*="#{$value}"]');
+    $selectors: list.append($selectors, $selector_1, comma);
+    $selectors: list.append($selectors, $selector_2, comma);
+  }
+
+  @return $selectors;
+}
+
+@mixin mermaid-theme($config) {
+  $stroke: map.get($config, stroke);
+  $fill: map.get($config, fill);
+  $text: map.get($config, text);
+
+  $edges: map.get($config, edges);
+  $nodes: map.get($config, nodes);
+
+  $edge-selectors: contains-selectors("data-id", $edges);
+  $edge-label-selectors: contains-selectors("data-id", $edges);
+  $node-selectors: contains-selectors("id", $nodes);
+
+  #{$edge-label-selectors} {
+    p {
+        background-color: rgba($fill, $label-opacity) !important;
+        color: $text !important;
+    }
+  }
+
+  #{$edge-selectors} {
+    @supports (fill: context-stroke) {
+      stroke: $stroke !important;
+      stroke-width: $edge-width !important;
+    }
+  }
+
+  #{$node-selectors} {
+      circle,
+      rect,
+      polygon,
+      path,
+      g.outer-pat {
+        stroke: $stroke !important;
+        fill: $fill !important;
+      }
+    .nodeLabel {
+      color: $text !important;
+      div {
+        background-color: $text !important;
+        color: $fill !important;
+        padding: 1px;
+        font-size: 70%;
+        border-radius: 3px;
+        text-transform: uppercase;
+        letter-spacing: 10%;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.language-mermaid {
+  .marker * {
+    @supports (fill: context-stroke) { 
+      fill: context-stroke !important;
+      stroke: context-stroke !important;
+    }
+  }
+
+  @each $name, $config in $mermaid-themes {
+    @include mermaid-theme($config);
+  }
+}

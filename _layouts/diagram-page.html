@@ -1,0 +1,32 @@
+---
+layout: page
+---
+{{content}}
+<svg>
+    <defs>
+    <filter id="svg-drop-shadow">
+        <feDropShadow  dx="3" dy="3" stdDeviation="3" flood-opacity="0.1"></feDropShadow>
+    </filter>
+    </defs>
+</svg>
+<script src="{{ 'assets/js/mermaid.js' | relative_url }}"></script>
+<script>
+var config = {
+    startOnLoad:true,
+    theme: 'base', //default
+    themeVariables: {
+        primaryColor: '#f8f9fa',
+    },
+    flowchart:{
+            useMaxWidth:true,
+            htmlLabels:true,
+            diagramPadding: 10,
+            padding: 0, 
+            rankSpacing: 20,
+            // nodeSpacing: 0,
+            wrappingWidth: 85
+        }
+};
+mermaid.initialize(config);
+window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+</script>

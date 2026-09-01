@@ -1,0 +1,52 @@
+%%{init: {
+ 
+}}%%
+{%- assign process_id = include.cff_id | default: page.cff_properties.id | default: "process" %}
+{%- assign title = include.title | default: site.cff[process_id].title | default: process_id %}
+{%- assign pre_annotation = site.cff[process_id].flow.pre_annotation %}
+{%- assign phases = site.cff[process_id].flow.phases %}
+{%- assign post_annotation = site.cff[process_id].flow.post_annotation %}
+{%- assign highlight = include.highlight | default: "" %}
+flowchart LR;
+
+    %% General diagram structure
+    {%- if pre_annotation %}
+    initiation_annotation@{ shape: brace-r } -.- 
+    {%- endif %}
+    start@{ shape: sm-circ } === 
+    {%- for phase_id in phases %}
+    {{ phase_id }} edge__{{ phase_id }}_process@{% if forloop.last %}==>{% else %}==>{% endif %}
+    {%- endfor %}
+    finish@{ shape: framed-circle } 
+    {%- if post_annotation -%}
+    -.- 
+    outcome_annotation@{ shape: brace } 
+    {%- endif %}
+
+  
+    subgraph process["{{ title }}"]
+    {%- for phase_id in phases %}
+        {{ phase_id }}
+    {%- endfor %}
+    end
+
+    %% Labels
+    {%- if pre_annotation %}
+    initiation_annotation@{ label: "{{ pre_annotation | replace: " ", "&nbsp;" }}" }
+    {%- endif %}
+
+    {%- for phase_id in phases %}
+    {{ phase_id }}("`{%- if site.cff[phase_id].capabilities_model -%}
+    {%- assign model = site.cff[phase_id].capabilities_model -%}
+    <div>{{site.cff[model].title}}</div>
+    {%- endif -%}{{ site.cff[phase_id].title }}`")
+    click {{ phase_id }} href "{{site.cff[phase_id].page_url | relative_url}}" "Go to {{ site.cff[phase_id].title }}"
+    class {{ phase_id }} {{ phase_id }}
+    {% if highlight == phase_id -%}
+    class {{ phase_id }} highlight
+    {%- endif %}
+    {%- endfor %}
+
+    {%- if post_annotation %}
+    outcome_annotation@{ label: "{{ post_annotation | replace: " ", "&nbsp;" }}" }
+    {%- endif %}

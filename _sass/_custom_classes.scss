@@ -1,14 +1,13 @@
-// Include here all custom classes to add extra styling on top of what the theme and bootstrap variables offer. 
+// Include here all custom classes to add extra styling on top of what the theme and bootstrap variables offer.
 
 //Example for highlighting the active page in the navigation:
 /*-----Top navigation-----*/
-
 .navbar-nav .nav-item > a {
-    &.active {
-        color: $white;
-        background-color: $primary;
-        border-radius: $border-radius;
-    }
+  &.active {
+    color: $white;
+    background-color: $primary;
+    border-radius: $border-radius;
+  }
 }
 
 /*-----Main content area-----*/
@@ -26,5 +25,107 @@
 // selector specificity — without this, the override compiles in but is a
 // silent no-op and the whitespace bug persists.
 #main.min-vh-100 {
-    min-height: auto !important;
+  min-height: auto !important;
+}
+
+nav#side-nav {
+  height: auto;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/*-----Details-----*/
+details details {
+    margin-left: 0em;
+    padding: 0.5em;
+    border: solid 0.5em $light;
+    border-radius: $border-radius;
+    background-color: $white;
+    // filter: drop-shadow(1px 1px 5px);
+}
+
+
+/*-----Mermaid diagrams-----*/
+@import "diagrams.scss";
+
+.language-mermaid {
+    a {
+      overflow-wrap: inherit !important;
+      word-break: inherit !important;
+      word-wrap: inherit !important;
+    }
+    // Mermaid diagram subgraph element shape
+    .cluster rect {
+        rx: 10px;
+        ry: 10px;
+        stroke-dasharray: 6;
+        stroke-width: 3px !important;
+    }
+
+    .pre {
+      white-space: preserve nowrap;
+    }
+
+    // Mermaid node shapes
+    .node {
+        rect, circle, polygon, path, g.outer-path { 
+            filter:url('#svg-drop-shadow'); // Apply drop-shadow using SVG filters
+                stroke-width: 2px !important;
+        }
+        .nodeLabel {
+          //color: $text !important;
+          div {
+            background-color: #333;
+            color: $light;
+            padding: 1px;
+            font-size: 70%;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 10%;
+            font-weight: bold;
+          }
+        }
+    };
+
+    .fixed_height_card {
+      .nodeLabel {
+        p {
+          min-height:70px; 
+          width: 120px; 
+          justify-content: center; 
+          align-items: center; 
+          display: flex; 
+          margin: 5px;
+        }
+        div {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+
+    foreignObject {
+        // Mermaid edge labels
+        &:has(.edgeLabel) {
+
+            // Remove default background
+            .edgeLabel, .labelBkg {
+                background-color: transparent !important;
+            }
+
+            // Label text
+            p {
+                margin-inline: auto !important;
+                max-width: max-content;
+                border-radius: 8px;
+                padding: 0.2em 0.75rem;
+                background-color: rgba($light, 0.95);
+            }
+        }
+    }
 }
