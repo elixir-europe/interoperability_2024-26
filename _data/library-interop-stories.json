@@ -1368,8 +1368,98 @@
     ],
     "mappings": [
       {
+        "cff_id": "phase_3",
+        "id": "FCB006",
+        "relevance": "Supports the creation of persistent and resolvable identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB007",
+        "relevance": "Supports the creation of standard chemical identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB008",
+        "relevance": "Supports minting persistent and resolvable identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB014",
+        "relevance": "Supports secure data access and transfer"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB015",
+        "relevance": "Supports efficient data access and transfer"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB016",
+        "relevance": "Supports interoperability by interlinking data from different sources"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB017",
+        "relevance": "Supports mapping and reuse of community identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB018",
+        "relevance": "Supports mapping between equivalent identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB025",
+        "relevance": "Supports defining and applying data standards"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB026",
+        "relevance": "Supports the development of metadata standards"
+      },
+      {
+        "cff_id": "phase_2",
+        "id": "FCB027",
+        "relevance": "Supports identifying data types and defining appropiate metadata requirements"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB029",
+        "relevance": "Supports applying open data standards and formats"
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB037",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB040",
+        "relevance": "Supports data retrieval using SPARQL"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB046",
+        "relevance": "Supports data retrieval through identifier resolution"
+      },
+      {
         "cff_id": "phase_1",
         "id": "FCB055",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB060",
+        "relevance": "Supports datasets registration and retrieval through Wikidata"
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB061",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB062",
         "relevance": ""
       },
       {
@@ -1383,14 +1473,9 @@
         "relevance": ""
       },
       {
-        "cff_id": "phase_2",
-        "id": "FCB055",
-        "relevance": ""
-      },
-      {
-        "cff_id": "phase_2",
-        "id": "FCB068",
-        "relevance": ""
+        "cff_id": "phase_3",
+        "id": "FCB073",
+        "relevance": "Supports FAIR data access through APIs"
       },
       {
         "cff_id": "phase_2",
@@ -1398,23 +1483,18 @@
         "relevance": ""
       },
       {
-        "cff_id": "phase_1",
-        "id": "FCB061",
-        "relevance": ""
+        "cff_id": "phase_3",
+        "id": "FCB077",
+        "relevance": "Supports the creation of resolvable identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB078",
+        "relevance": "Supports mapping datasets to a dtandard data model"
       },
       {
         "cff_id": "phase_1",
         "id": "FCB083",
-        "relevance": ""
-      },
-      {
-        "cff_id": "phase_1",
-        "id": "FCB037",
-        "relevance": ""
-      },
-      {
-        "cff_id": "phase_1",
-        "id": "FCB062",
         "relevance": ""
       },
       {

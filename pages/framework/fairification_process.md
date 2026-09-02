@@ -32,4 +32,9 @@ The **FAIRification Process** is structured as 4 distinct phases described below
    {{ site.cff[p].description }}
 {% endfor %}
 
+Two supporting processes ensures that the Framework and surrounding ecosystem can grow and improve to address a broader range of challenges:
 
+* **{{ site.cff.cff_maintenance.title }}**  
+  {{ site.cff.cff_maintenance.description }}  
+* **{{ site.cff.cff_content_creation.title }}**  
+  {{ site.cff.cff_content_creation.description }}
