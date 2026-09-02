@@ -23,8 +23,6 @@ subitems:
       - title: Template
         url: /fairification_template
         subitems:
-          - title: "{{site.cff.templated_steps.title}}"
-            url: /template_steps
           - title: "1. {{site.cff.step_1.title}}"
             url: /template_step_1
           - title: "2. {{site.cff.step_2.title}}"
@@ -41,14 +39,17 @@ subitems:
             url: /template_step_7
           - title: "8. {{site.cff.step_8.title}}"
             url: /template_step_8
-          - title: "{{site.cff.hosting.title}}"
-            url: /template_hosting
-          - title: "{{site.cff.representation.title}}"
-            url: /template_representation
-          - title: "{{site.cff.content.title}}"
-            url: /template_content
       - title: Workplan structure
         url: /fairification_workplan
+        subitems:
+          - title: "{{site.cff.phase_1_outputs.title}}"
+            url: "{{site.cff.phase_1_outputs.page_url}}"
+          - title: "{{site.cff.phase_2_outputs.title}}"
+            url: "{{site.cff.phase_2_outputs.page_url}}"
+          - title: "{{site.cff.phase_3_outputs.title}}"
+            url: "{{site.cff.phase_3_outputs.page_url}}"
+          - title: "{{site.cff.phase_4_outputs.title}}"
+            url: "{{site.cff.phase_4_outputs.page_url}}"
       - title: Contribute
         url: /framework_contributions
   - title: Library of resources

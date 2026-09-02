@@ -18,8 +18,6 @@ cff_properties:
       - step_6
       - step_7
       - step_8
-cff_elements:
-  
 ---
 
 {{ page.cff_properties.description }}

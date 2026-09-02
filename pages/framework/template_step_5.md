@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 cff_properties:
   id: step_5
   type: template_step
-  title: Harmonise vocabulary elements
+  title: Harmonise content elements
   description: This step establishes which controlled vocabularies, terminologies and ontologies will be used to describe the research object and its associated metadata, and applies their terms in ways that support consistent interpretation and reuse.
   capabilities_model: content
   capabilities: 

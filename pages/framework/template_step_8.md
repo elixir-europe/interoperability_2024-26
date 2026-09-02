@@ -24,7 +24,7 @@ cff_properties:
 {{page.cff_properties.description}}
 
 
-\<\!--more--\>
+<!--more-->
 
 A research object does not need to be openly accessible to be FAIR. Depending on its content, intended users and applicable conditions, release may be:
 

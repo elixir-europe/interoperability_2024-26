@@ -11,6 +11,7 @@ cff_properties:
   capabilities_model: content
   capabilities: 
     - ft-identify-data-types
+    - ft-select-domain-model
 ---
 
 <div class="language-mermaid">

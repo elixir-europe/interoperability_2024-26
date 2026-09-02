@@ -5,38 +5,35 @@ cff_properties:
   id: template
   type: template
   title: FAIRification template
+  description: Outlines a general course of action in eight steps with links to related capabilities across the dimensions Hosting, Format and Content
   steps: templated_steps
   capabilities:
     - hosting
     - representation
     - content
 ---
+
+The Template is not required but can be a helpful place to start, as it offers links to guidance for tasks commonly encountered across FAIRification efforts.
+
+### {{ site.cff.templated_steps.title }}
+{{ site.cff.templated_steps.excerpt -}}
+
+
 <div class="language-mermaid colouring">
 {% include cff_process_diagram.mmd.liquid 
     cff_id="templated_steps"
 %}
 </div>
 
-The FAIRification Template supports the FAIRification Process by outlining a general course of action in  
-eight steps with links to related capabilities across three dimensions:
-* **Hosting environment**   
-  e.g., research object access, retrieval, versioning, etc.  
-* **Formats & representation**   
-  e.g., applying standards and aligning vocabularies, etc.  
-* **Content & context**  
-  e.g., identifier minting and annotation with controlled vocabularies, etc
-
-<div class="language-mermaid colouring">
-{% include cff_template_diagram.mmd.liquid %}
-</div>
-
-The Template supports users as needed by offering concrete tasks commonly encountered across FAIRification efforts. While the Template presents the different steps in a recommended logical sequence (e.g. research object cannot be transformed to an interoperable research object model if no such model exists or if the research object type is not properly understood), not all steps will be required for, nor relevant to each FAIRification scenario.
-
-
-{% assign pages = page.cff_properties.capabilities | unshift: page.cff_properties.steps %}
+{% assign pages = page.cff_properties.capabilities %}
 {% for p in pages %}
+
 ### {{ site.cff[p].title }}
 {{ site.cff[p].excerpt -}}
-Continue reading: [{{ site.cff[p].title }}]({{ site.cff[p].page_url | relative_url }})
+
+
+<div class="language-mermaid colouring">
+{% include cff_template_diagram.mmd.liquid cff_ids=p %}
+</div>
 {% endfor %}
 

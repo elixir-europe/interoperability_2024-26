@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 cff_properties:
   id: step_6
   type: template_step
-  title: Transform for broad reuse
+  title: Transform to match use cases
   description: This step creates mappings, translations and alternative representations that allow the research object to meet integration and interoperability requirements of the primary  use cases.
   capabilities_model: representation
   capabilities: 
