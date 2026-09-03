@@ -36,6 +36,13 @@ Not every internal component requires a globally resolvable persistent identifie
 
 Use this step during project examination to inventory existing identifiers, define identifier requirements, assess candidate schemes and identify dependencies. During an implementation cycle, use it to reuse established identifiers, mint new identifiers where needed and validate the resulting identification and resolution arrangements.
 
+<div class="language-mermaid">
+{% assign highlight = page.cff_properties.capabilities | join: "," %}
+{% include cff_template_diagram.mmd.liquid 
+    cff_ids=page.cff_properties.capabilities_model 
+    highlight=highlight
+%}
+</div>
 
 {% assign step_id = page.cff_properties.id %}
 {%- assign step = site.cff[step_id] %}

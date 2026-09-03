@@ -41,6 +41,14 @@ Rights, privacy and release requirements should be considered throughout the FAI
 
 Use this step during project examination to identify rights, privacy, release and reuse-support requirements and the authorities responsible for them. During an implementation cycle, use it to review and approve a release candidate, activate the agreed access mechanisms, publish the required information and establish ongoing support and monitoring.
 
+<div class="language-mermaid">
+{% assign highlight = page.cff_properties.capabilities | join: "," %}
+{% include cff_template_diagram.mmd.liquid 
+    cff_ids=page.cff_properties.capabilities_model 
+    highlight=highlight
+%}
+</div>
+
 {% assign step_id = page.cff_properties.id %}
 {%- assign step = site.cff[step_id] %}
 {% for cap_item_id in step.capabilities %}

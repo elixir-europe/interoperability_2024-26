@@ -34,6 +34,13 @@ This step does not require every transformation to be bidirectional or lossless.
 
 Use this step during project examination to identify integration requirements, assess available mapping and transformation capabilities and define the required outputs. During an implementation cycle, use it to create, apply and validate the mappings, translations and alternative representations within scope.
 
+<div class="language-mermaid">
+{% assign highlight = page.cff_properties.capabilities | join: "," %}
+{% include cff_template_diagram.mmd.liquid 
+    cff_ids=page.cff_properties.capabilities_model 
+    highlight=highlight
+%}
+</div>
 
 {% assign step_id = page.cff_properties.id %}
 {%- assign step = site.cff[step_id] %}
