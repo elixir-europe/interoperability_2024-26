@@ -10,13 +10,13 @@ columns:
     link: 'https://elixir-europe.org/platforms/interoperability'
   - type: links
     width: 8
-    children:
-      - url_text: Home
-        url: /
-      - url_text: About Interoperability Platform
-        url: /about
-      - url_text: Documents
-        url: /documents
+    # children:
+    #   - url_text: Home
+    #     url: /
+    #   - url_text: About Interoperability Platform
+    #     url: /about
+    #   - url_text: Documents
+    #     url: /documents
   - type: image
     image_width: 88px
     width: 2

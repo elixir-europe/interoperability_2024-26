@@ -41,15 +41,15 @@ subitems:
             url: /template_step_8
       - title: Workplan structure
         url: /fairification_workplan
-        subitems:
-          - title: "{{site.cff.phase_1_outputs.title}}"
-            url: "{{site.cff.phase_1_outputs.page_url}}"
-          - title: "{{site.cff.phase_2_outputs.title}}"
-            url: "{{site.cff.phase_2_outputs.page_url}}"
-          - title: "{{site.cff.phase_3_outputs.title}}"
-            url: "{{site.cff.phase_3_outputs.page_url}}"
-          - title: "{{site.cff.phase_4_outputs.title}}"
-            url: "{{site.cff.phase_4_outputs.page_url}}"
+        # subitems:
+        #   - title: "{{site.cff.phase_1_outputs.title}}"
+        #     url: "{{site.cff.phase_1_outputs.page_url}}"
+        #   - title: "{{site.cff.phase_2_outputs.title}}"
+        #     url: "{{site.cff.phase_2_outputs.page_url}}"
+        #   - title: "{{site.cff.phase_3_outputs.title}}"
+        #     url: "{{site.cff.phase_3_outputs.page_url}}"
+        #   - title: "{{site.cff.phase_4_outputs.title}}"
+        #     url: "{{site.cff.phase_4_outputs.page_url}}"
       - title: Contribute
         url: /framework_contributions
   - title: Library of resources
@@ -65,5 +65,5 @@ subitems:
         url: /rdmkit
       - title: Contribute
         url: /library_contributions
-  - title: About
-    url: /resources
+  # - title: About
+  #   url: /resources
