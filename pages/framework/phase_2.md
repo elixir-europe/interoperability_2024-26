@@ -32,9 +32,9 @@ cff_properties:
         Capabilities & resources
         FAIRification backlog
       requirements: 
-        - You have identified what the requirements to realise the goals are
-        - You have determined what you kind of changes you plan to make to meet the requirements 
-        - You have secured the capabilities & resources needed to do the work
+        - Requirements, gaps to be addressed and assessment approaches agreed and documented.
+        - Access to hostig environments and/or research assets with any necessary permissions or agreements secured.
+        - Implementation team, capabilities and resources allocated to start design & implementation.
     nodes:
       reqs:
         title: Research object requirements
@@ -50,7 +50,7 @@ cff_properties:
           - capabilities
           - resources
       use_case:
-        title: Use case requirements & gaps   
+        title: FAIRification Gaps to address   
         description: >-
           
         subgraph:
@@ -69,11 +69,11 @@ cff_properties:
         description: >-
           The assets, skills, repositories, vocabulary systems, knowledge resources selected / designed to realise and sustain the results.
       target_state: 
-        title: Use case requirements
+        title: Intended use requirements
         description: >-
           Conditions that the results of the FAIRification activity must satisfy. Note: This can also include constraints on how these requirements are to be met.
       initial_state: 
-        title: Initial assessment
+        title: Initial assessment & approach
         description: >-
           Assessment of what already is in place and which requirements remains to be met.
       backlog: 
@@ -129,19 +129,17 @@ cff_elements:
 %}
 </div>
 
-{{page.cff_properties.description}}
+{{page.cff_properties.description}} This phase ensures that the goals and the capabilities, resources and skills needed to complete the FAIRification activity are fully understood before the technical work begins.
 
-FAIRification is challenging if the capabilities and resources available to the activity are not fully understood from the beginning. It is therefore essential to:
-- **Identify Research Object Requirements**
-  Identify indicators and associated targets that specify what is needed to curate the research object to fulfil the FAIRification Goal. For example, goals relating to data hosting improvements cannot be fulfilled if the data is unavailable or inaccessible, or if project partners have not agreed on appropriate licensing and data-use conditions.  
-- **Identify FAIRification Capabilities & Resources**
-  Given the research object requirements, identify the capabilities and resources needed to complete the FAIRification. These may include personnel with relevant skills and expertise, the ability to deploy changes to databases or APIs, and a general course of action that can be supported by the available budget and personnel.  
-  * *FAIRification Capabilities* – Such as annotation, validation, search and indexing capabilities needed to enable and support the FAIRification activity.  
-  * *FAIRification Resources* – Such as tools, databases, standards and vocabulary services needed to provide those capabilities.  
-- **Determine the FAIRification Gaps to address (Backlog)**  
-  Compare the current state with the projected state after FAIRification and identify the gaps to be addressed. This may include gaps relating to the indicators and targets, the capabilities and resources needed to complete the FAIRification, and other financial, technical, legal or organisational constraints. Together, these form the FAIRification roadmap and backlog for the practical work.
 
-In this phase, you can optionally use the [Template]({% link pages/framework/fairification_template.md %}) to identify relevant actions, capabilities and resources needed to execute the FAIRification activity.
+**Research Object Requirements**  
+Identify indicators and associated targets that specify what is needed to curate the research object to fulfil the FAIRification Goal. For example, goals relating to data hosting improvements cannot be fulfilled if the data is unavailable or inaccessible, or if project partners have not agreed on appropriate licensing and data-use conditions.  
+
+**FAIRification Capabilities & Resources**  
+Given the research object requirements, identify and allocate the capabilities and resources needed to complete the agreed FAIRification work. These may include personnel with relevant skills and expertise, access to the research objects and technical environments, tools and infrastructure, and sufficient time and budget. In this phase, you can optionally use the [Template]({% link pages/framework/fairification_template.md %}) to identify relevant actions, capabilities and resources needed to execute the FAIRification activity.
+
+**FAIRification Gaps to address (Backlog)**  
+Compare the current state with the projected state after FAIRification and identify the gaps to be addressed. This may include gaps relating to the indicators and targets, the capabilities and resources needed to complete the FAIRification, and other financial, technical, legal or organisational constraints. Together, these form the FAIRification roadmap and backlog for the practical work.
 
 **Assessment approach**  
 Select an assessment approach that can establish the current state and later determine whether the projected state has been reached. The approach may combine tool-based assessment with expert or user evaluation, but should focus on indicators relevant to the FAIRification Goal and record sufficient evidence to support comparison before and after implementation.

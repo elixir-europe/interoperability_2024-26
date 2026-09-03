@@ -32,7 +32,11 @@ cff_properties:
         Uses enabled
         Lessons learned
       requirements: 
-        - TBC
+        - Key achievements and remaining gaps assessed against initial goals and requirements.
+        - Design decisions, work performed and list of outputs and changes made are described. 
+        - Lessons learned recorded, including suggested improvements to the framework and the capabilities / resources used.
+        - Improvement actions assigned.
+        - Final report reviewed, accepted and shared.
     nodes:
       key_achievements:
         title: Key achievements
@@ -74,6 +78,13 @@ cff_elements:
 
 
 In this final phase, the cumulative outputs of all FAIRification activities are reviewed against the initial project goals to evaluate the overall success of the process. The review includes a check to ensure all documentation on the FAIRification activity is complete, all outputs are recorded, and downstream actions are in progress. The review should include a summary of key achievements, documented FAIR improvements, an overview of the FAIRification processes, and any lessons learned.
+
+Here you can also plan how to share your experiences and lessons learned. While improving the framework and the surrounding ecosystem of resources, this can also increase the visibility and recognistion of the work that you do and create opportunities to expand your professional network:
+
+* **[{{ site.cff.cff_maintenance.title }}]({{ site.cff.cff_maintenance.page_url | relative_url }})**  
+  {{ site.cff.cff_maintenance.description }}  
+* **[{{ site.cff.cff_content_creation.title }}]({{ site.cff.cff_content_creation.page_url | relative_url }})**  
+  {{ site.cff.cff_content_creation.description }}
 
 ### Phase overview
 <div class="language-mermaid colouring">
