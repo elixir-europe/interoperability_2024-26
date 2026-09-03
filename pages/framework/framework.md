@@ -1,6 +1,10 @@
 ---
 title: The FAIRification Framework
 layout: diagram-page
+cff_properties:
+  id: cff_framework
+  title: The FAIRification Framework
+  description: A structured, step-by-step approach and supporting resources for transforming datasets or digital objects into FAIR-compliant assets.
 ---
 
 The ELIXIR Common FAIRification Framework (FAIRification Framework)  provides a structured, step-by-step approach and supporting resources for transforming datasets or digital objects into FAIR-compliant assets. It guides users through the entire FAIRification journey—defining goals based on practical utility and scientific value, developing a roadmap and implementing the changes required to achieve a result that is “FAIR enough”, and finally validating your successes and lessons learned. 
@@ -9,15 +13,15 @@ The Framework supports the implementation of the FAIR principles by helping orga
 
 The Framework, illustrated in below, comprises three components:
 
-1. **The Process**  
-   Outlines the four main phases of FAIRification activities,  with references to relevant and helpful types of tools. These tools can include FAIR assessment tools, and in future work we will incorporate links to components in other toolkits to enable users to arrive at a more tailored approach for their specific use case.  
-2. **The Template**  
+1. [**The Process**]({{ site.cff.process.page_url | relative_url }})\
+   Outlines the four main phases of FAIRification activities, with references to relevant and helpful types of tools. These tools can include FAIR assessment tools, and in future work we will incorporate links to components in other toolkits to enable users to arrive at a more tailored approach for their specific use case.  
+2. [**The Template**]({{ site.cff.template.page_url | relative_url }})\
    Breaks down key elements of the process into a series of steps with links to supporting resources. The template more specifically targets and links to the implementation solutions. Note: There is currently only one ‘template’ which provides a set of possible steps in the FAIRification of a dataset. As the FAIRification Framework generates more outputs, and engages other types of research outputs, we envisage developing an extended set of templates to support different FAIRification activity contexts.   
-3. **The Workplan structure**  
+3. [**The Workplan structure**]({{ site.cff.workplan.page_url | relative_url }})\
    Organises the whole FAIRification activity, including tasks to guide iterative design, implementation and assessment towards achieving the activity’s objectives. The workplan in practice has historically been useful as a communication and planning tool, enabling a quick overview of the tasks in progress, their state of completeness, and metrics and links to implementations that have been generated to date. 
 
 <div class="language-mermaid colouring">
-{% include cff_process_diagram.mmd.liquid %}
+{% include cff_process_diagram.mmd.liquid cff_id="process"  %}
 </div>
 
 
@@ -41,7 +45,7 @@ The Framework, illustrated in below, comprises three components:
 %}
 </div>
 
-## Background
+### Background
 
 Using the FAIRplus [FAIRification Framework](https://www.nature.com/articles/s41597-023-02167-2) as a starting point, the ELIXIR Interoperability Platform seeks to assess and improve that framework for use in broader contexts; the FAIRplus framework was designed specifically to operate on datasets, while the needs of the ELIXIR community are much broader, including tools, services, diverse data types (e.g. specialised or purpose-enabling materials such as those needed for training). While the practical use of this frame in the context of FAIRplus was on ‘datasets’, practically the steps across the FAIRification process can be applied to other research object types.
 
