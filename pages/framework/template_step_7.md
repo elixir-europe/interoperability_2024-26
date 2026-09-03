@@ -32,6 +32,13 @@ The environment from which the research object was obtained may be retained, upg
 
 Deployment does not have to wait until every FAIRification task is complete. Canonical and alternative representations may be deployed iteratively to development, staging or production environments during successive FAIRification cycles.
 
+<div class="language-mermaid">
+{% assign highlight = page.cff_properties.capabilities | join: "," %}
+{% include cff_template_diagram.mmd.liquid 
+    cff_ids=page.cff_properties.capabilities_model 
+    highlight=highlight
+%}
+</div>
 
 {% assign step_id = page.cff_properties.id %}
 {%- assign step = site.cff[step_id] %}

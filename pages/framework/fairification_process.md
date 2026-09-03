@@ -32,4 +32,9 @@ The **FAIRification Process** is structured as 4 distinct phases described below
    {{ site.cff[p].description }}
 {% endfor %}
 
+Consider planning ahead to share your experiences. While improving the framework and the surrounding ecosystem of resources, this can also increase the visibility and recognistion of the work that you do and create opportunities to expand your professional network:
 
+* **[{{ site.cff.cff_maintenance.title }}]({{ site.cff.cff_maintenance.page_url | relative_url }})**  
+  {{ site.cff.cff_maintenance.description }}  
+* **[{{ site.cff.cff_content_creation.title }}]({{ site.cff.cff_content_creation.page_url | relative_url }})**  
+  {{ site.cff.cff_content_creation.description }}

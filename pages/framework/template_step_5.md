@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 cff_properties:
   id: step_5
   type: template_step
-  title: Harmonise vocabulary elements
+  title: Harmonise content elements
   description: This step establishes which controlled vocabularies, terminologies and ontologies will be used to describe the research object and its associated metadata, and applies their terms in ways that support consistent interpretation and reuse.
   capabilities_model: content
   capabilities: 
@@ -31,6 +31,13 @@ Semantic resources provide agreed identifiers, labels, definitions and relations
 A controlled vocabulary may define a permitted list of values, while an ontology may also provide formal relationships and constraints. The FAIRification activity should select the level of semantic detail needed for its intended uses.
 Use this step during project examination to identify semantic requirements, inventory current vocabulary use, assess available capabilities and select candidate resources. During an implementation cycle, use it to extend or develop semantic resources where necessary, apply annotations and establish the required management arrangements.
 
+<div class="language-mermaid">
+{% assign highlight = page.cff_properties.capabilities | join: "," %}
+{% include cff_template_diagram.mmd.liquid 
+    cff_ids=page.cff_properties.capabilities_model 
+    highlight=highlight
+%}
+</div>
 
 {% assign step_id = page.cff_properties.id %}
 {%- assign step = site.cff[step_id] %}

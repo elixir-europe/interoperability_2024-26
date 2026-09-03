@@ -11,6 +11,7 @@ cff_properties:
   capabilities_model: content
   capabilities: 
     - ft-identify-data-types
+    - ft-select-domain-model
 ---
 
 <div class="language-mermaid">
@@ -32,6 +33,13 @@ Adopting a domain model does not mean that the research object must be transform
 
 Use this step during project examination to identify relevant types, models and requirements and to compare the current and required states. During an implementation cycle, use it to select, adapt or define the domain model that will guide the agreed FAIRification work.
 
+<div class="language-mermaid">
+{% assign highlight = page.cff_properties.capabilities | join: "," %}
+{% include cff_template_diagram.mmd.liquid 
+    cff_ids=page.cff_properties.capabilities_model 
+    highlight=highlight
+%}
+</div>
 
 {% assign step_id = page.cff_properties.id %}
 {%- assign step = site.cff[step_id] %}

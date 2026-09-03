@@ -6,9 +6,10 @@ cff_properties:
   id: content
   title: Content
   description: |-
-    How the data object & metadata object are represented and formatted.
+    What is reported in the research object set (research object) & the research object set Descriptor (metaresearch object).
   capabilities: 
     - ft-identify-data-types
+    - ft-select-domain-model
     - ft-identifier-minting
     - ft-identifier-reuse
     - ft-select-data-vocabularies

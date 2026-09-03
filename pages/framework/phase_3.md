@@ -31,7 +31,11 @@ cff_properties:
         Tasks&nbsp;&amp;&nbsp;statuses
         Improvements
       requirements: 
-        - TBC
+        - Assessment results indicate to what degree the requirements and gaps have been addressed.
+        - Final FAIR implementation design with underlying decisions and assumptions documented.
+        - Completion statuses, results and lessons learned from FAIRification work captured.
+        - Achieved state compared with the starting state using the agreed assessment approach.
+        - Remaining gaps and proposed follow-up work recorded.
     nodes:
       backlog:
         title: Design decisions
@@ -42,19 +46,10 @@ cff_properties:
         description: >-
           Planned, active and completed tasks, including responsibilities, status, dependencies, supporting resources and results.
       assessment_report:
-        title: Current state assessment report
+        title: Pre & post assessment reports
         description: >-
           Updated assessment of what has been put in place and which requirements/gaps remains to be addressed.
-    edges:
-      - source: backlog
-        target: task_tracker
-        label: Guides *implementation* activities
-      - source: task_tracker
-        target: assessment_report
-        label: Serves as the basis for *assessment* activities
-      - source: assessment_report
-        target: backlog
-        label: Informs remaining *design* activities
+
 cff_elements:
   phase_3_outputs:
     type: process_object

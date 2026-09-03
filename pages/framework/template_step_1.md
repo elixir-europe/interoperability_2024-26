@@ -37,6 +37,14 @@ During project examination you can use the related capabilities as a guide to de
 During an implementation cycle, you can use the related capabilities to identify potential tasks and relevant resources to establish and validate the required access and retrieval arrangements.
 
 
+<div class="language-mermaid">
+{% assign highlight = page.cff_properties.capabilities | join: "," %}
+{% include cff_template_diagram.mmd.liquid 
+    cff_ids=page.cff_properties.capabilities_model 
+    highlight=highlight
+%}
+</div>
+
 {% assign step_id = page.cff_properties.id %}
 {%- assign step = site.cff[step_id] %}
 {% for cap_item_id in step.capabilities %}

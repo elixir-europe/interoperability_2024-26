@@ -6,70 +6,70 @@
         "title": "Intrinsically Disordered Protein Community Interoperability Showcase: Exploiting Bioschemas Markup",
         "community": "Intrinsically Disordered Protein",
         "description": "In this presentation, the audience heard how the intrinsically disordered protein community had identified a challenge in discovery and integration of data that spans several experimental fields studying protein structure and function, using methods that are domain specific. As such, there are no comprehensive single resources containing all IDPs. Therefore, researchers wishing to see the combined knowledge from resources such as ModiDB, DisProt and PED encountered an onerous integration task. As a solution, the IDP community proposed the creation of a central knowledge graph that could be asked common queries. To achieve this goal, the IDP described their use of bioschemas, JSON-LD, SPARQL, OpenAIRE and FAIRsharing to assemble a knowledge graph that can be queried by researchers seeking a consolidated, integrated view of data from across the IDP community.",
-        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Bioschemas"
+        "url": "https://doi.org/10.5281/zenodo.14808615"
       },
       {
         "id": "plant-sciences-showcase",
         "title": "Plant Sciences Community Showcase",
         "community": "Plant Sciences",
         "description": "",
-        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Plant-Sciences-Showcase"
+        "url": "https://doi.org/10.5281/zenodo.14808615"
       },
       {
         "id": "rare-disease-community",
         "title": "Rare Disease Community Interoperability Showcase: examples from EJP RD",
         "community": "Rare Disease",
         "description": "",
-        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Rare-Disease-Community"
+        "url": "https://doi.org/10.5281/zenodo.14808615"
       },
       {
         "id": "dcat-bioschemas",
         "title": "Mapping the DCAT-based EJP RD Metadata Model to Bioschemas for improved interoperability",
         "community": "Rare Disease",
         "description": "",
-        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/DCAT-Bioscema"
+        "url": "https://doi.org/10.5281/zenodo.14808615"
       },
       {
         "id": "user-journeys",
         "title": "User journeys as means of effectively demonstrating value and engaging stakeholders",
         "community": "EOSC?",
         "description": "",
-        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/User-Journeys"
+        "url": "https://doi.org/10.5281/zenodo.14808615"
       },
       {
         "id": "galaxy",
         "title": "Galaxy: a story about interoperability",
         "community": "Galaxy",
         "description": "",
-        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Galaxy"
+        "url": "https://doi.org/10.5281/zenodo.14808615"
       },
       {
         "id": "fairtracks",
         "title": "FAIRtracks: FAIRtracks and Omnipy - FAIRtracks interoperability story",
         "community": "FAIRtracks?",
         "description": "",
-        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/FAIRtracks"
+        "url": "https://doi.org/10.5281/zenodo.14808615"
       },
       {
         "id": "single-cell-omics-community",
         "title": "Single Cell Omics Community Interoperability Showcase",
         "community": "Single Cell Omics",
         "description": "",
-        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Single-Cell-Omics-Community"
+        "url": "https://doi.org/10.5281/zenodo.14808615"
       },
       {
         "id": "metabolomics-community",
         "title": "Metabolomics Community & Interoperability Platform - On which subjects could they collaborate?",
         "community": "Metabolomics",
         "description": "",
-        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Metabolomics-Community"
+        "url": "https://doi.org/10.5281/zenodo.14808615"
       },
       {
         "id": "metabolomics-community-24-26",
         "title": "Metabolomics Community Use Case",
         "community": "Metabolomics",
         "description": "",
-        "url": "https://elixir-europe.github.io/interoperability_2024-26/interoperability_stories/Metabolomics-24-26-Community"
+        "url": "https://doi.org/10.5281/zenodo.14808615"
       },
       {
         "id": "hereditary-project",
@@ -1368,8 +1368,98 @@
     ],
     "mappings": [
       {
+        "cff_id": "phase_3",
+        "id": "FCB006",
+        "relevance": "Supports the creation of persistent and resolvable identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB007",
+        "relevance": "Supports the creation of standard chemical identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB008",
+        "relevance": "Supports minting persistent and resolvable identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB014",
+        "relevance": "Supports secure data access and transfer"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB015",
+        "relevance": "Supports efficient data access and transfer"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB016",
+        "relevance": "Supports interoperability by interlinking data from different sources"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB017",
+        "relevance": "Supports mapping and reuse of community identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB018",
+        "relevance": "Supports mapping between equivalent identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB025",
+        "relevance": "Supports defining and applying data standards"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB026",
+        "relevance": "Supports the development of metadata standards"
+      },
+      {
+        "cff_id": "phase_2",
+        "id": "FCB027",
+        "relevance": "Supports identifying data types and defining appropiate metadata requirements"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB029",
+        "relevance": "Supports applying open data standards and formats"
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB037",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB040",
+        "relevance": "Supports data retrieval using SPARQL"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB046",
+        "relevance": "Supports data retrieval through identifier resolution"
+      },
+      {
         "cff_id": "phase_1",
         "id": "FCB055",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB060",
+        "relevance": "Supports datasets registration and retrieval through Wikidata"
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB061",
+        "relevance": ""
+      },
+      {
+        "cff_id": "phase_1",
+        "id": "FCB062",
         "relevance": ""
       },
       {
@@ -1383,14 +1473,9 @@
         "relevance": ""
       },
       {
-        "cff_id": "phase_2",
-        "id": "FCB055",
-        "relevance": ""
-      },
-      {
-        "cff_id": "phase_2",
-        "id": "FCB068",
-        "relevance": ""
+        "cff_id": "phase_3",
+        "id": "FCB073",
+        "relevance": "Supports FAIR data access through APIs"
       },
       {
         "cff_id": "phase_2",
@@ -1398,23 +1483,18 @@
         "relevance": ""
       },
       {
-        "cff_id": "phase_1",
-        "id": "FCB061",
-        "relevance": ""
+        "cff_id": "phase_3",
+        "id": "FCB077",
+        "relevance": "Supports the creation of resolvable identifiers"
+      },
+      {
+        "cff_id": "phase_3",
+        "id": "FCB078",
+        "relevance": "Supports mapping datasets to a dtandard data model"
       },
       {
         "cff_id": "phase_1",
         "id": "FCB083",
-        "relevance": ""
-      },
-      {
-        "cff_id": "phase_1",
-        "id": "FCB037",
-        "relevance": ""
-      },
-      {
-        "cff_id": "phase_1",
-        "id": "FCB062",
         "relevance": ""
       },
       {

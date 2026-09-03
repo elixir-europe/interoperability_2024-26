@@ -1,6 +1,7 @@
 {% assign phase_id = include.cff_id | default: page.cff_properties.id %}
 {% assign cff_phase = site.cff[phase_id] %} <!-- page.cff_properties -->
 
+<!--
 {% if cff_phase.flow.pre_conditions or cff_phase.pre_phases.size >0  %}
 <details markdown="1">
   <summary><span markdown="1">**Preconditions:**
@@ -19,9 +20,10 @@ Completed {% for phase_id in cff_phase.pre_phases -%}
 {% endfor %}
 </details>
 {% endif %}
+-->
 
 {% if cff_phase.flow.post_conditions or cff_phase.pre_phases.size >0  %}
-<details markdown="1">
+<details markdown="1" open="1">
   <summary><span markdown="1">**Postconditions:**
 {% if cff_phase.post_phases.size > 0 -%}
 Outputs ready for {% for phase_id in cff_phase.post_phases -%}
@@ -76,6 +78,7 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 </details>
 {% endif %}
 
+<!--
 {% if cff_phase.flow.nodes.size >0 %}
 <details markdown="1">
   <summary><span markdown="1">**Key concepts:** {% for item in cff_phase.flow.nodes  -%}
@@ -134,6 +137,7 @@ Outputs ready for {% for phase_id in cff_phase.post_phases -%}
 </details>
 </details>
 {% endif %}
+-->
 
 <details>
 <summary><span markdown="1">**Flowchart:** {{cff_phase.description}}</span></summary>

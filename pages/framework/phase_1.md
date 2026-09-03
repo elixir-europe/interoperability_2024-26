@@ -30,9 +30,9 @@ cff_properties:
         Intended usability
         Broader impact
       requirements: 
-        - You have identified target assets
-        - You have defined their intended use or a FAIR compliance objective
-        - You have ideintified what broader impact this will have, i.e. scientific value
+        - Targeted research assets identified.
+        - Intended use or FAIR compliance target agreed.
+        - Expected value and initial priority recorded.
     nodes:
       scoped_input:
         title: Targeted research assets
@@ -85,7 +85,7 @@ cff_elements:
 %}
 </div>
 
-Before any FAIRification work is undertaken, it is essential to identify the intended usability of the data that cannot be achieved in its current state. From this, one or more clear and specific FAIRification goals should be defined—these will make sure that the activity is shaped by tangible impact and associated value to the communities served by the FAIRified resource. At this stage, it is also advisable to make an estimate of how much effort reaching the goals are worth and set priorities for a “FAIR enough” outcome – one in which the most critical uses are enabled, while useful but less impactful enhancements may be set aside for later. In the subsequent Project Examination phase, the goals must also be useful when determining specific requirements on the results of and resources to allocate to the FAIRification work.
+Before any FAIRification work is undertaken, it is essential to identify the intended usability of the research asset that cannot be achieved in its current state. From this, one or more clear and specific goals should be defined—these will make sure that the activity is shaped by tangible impact and associated value to the communities served by the FAIRified resource. At this stage, it is also advisable to make an estimate of how much effort reaching the goals are worth and setting priorities for a “FAIR enough” outcome – one in which the most critical uses are enabled, while useful but less impactful enhancements may be set aside for later. In the subsequent *{{ site.cff.phase_2.title }}* phase, the goals must also be useful when determining specific requirements on the results of and resources to allocate to the FAIRIfication work.
 
 
 ### Phase overview

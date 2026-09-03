@@ -12,10 +12,11 @@
     }
   }
 }}%%
-{%- assign cff_id = include.cff_id | default: "templated_steps" -%}
-{%- assign cff_element = site.cff[cff_id] -%}
-{%- assign cap_dims = site.cff.template.capabilities %}
-flowchart LR;
+{%- assign highlight = include.highlight | default: "" %}
+{%- assign highlight = highlight | split: "," %}
+{%- assign cff_ids = include.cff_ids | default: "hosting,representation,content" -%}
+{%- assign cap_dims = cff_ids | split: "," %}
+flowchart TB;
   {%- for cap_dim_id in cap_dims %}
   {%- assign cap_dim = site.cff[cap_dim_id] %} 
   {%- assign caps = cap_dim.capabilities %}
@@ -23,7 +24,7 @@ flowchart LR;
     direction LR
     {% for cap_id in caps %}
     {%- assign cap = site.cff[cap_id] %} 
-    {%- assign row_index = forloop.index | modulo: 2 %}
+    {%- assign row_index = forloop.index | modulo: 4 %}
     {{cap_dim_id}}__{{ cap_id }}@{ shape: card, label: "<p>{{ cap.title }}</p><div>{{cap_dim.title}}</div>" }
     {% unless row_index == 0 or forloop.last %}
     ~~~
@@ -39,6 +40,9 @@ flowchart LR;
   {%- assign step = site.cff | where: "type", "template_step" | find_exp: "item", "item.capabilities contains cap_id" %}
   class {{cap_dim_id}}__{{ cap_id }} fixed_height_card
   click {{cap_dim_id}}__{{ cap_id }} href "{{step.page_url | relative_url}}"
+  {% if highlight contains cap_id -%}
+  class {{cap_dim_id}}__{{ cap_id }} highlight
+  {%- endif %}
   {%- endfor %}
   {%- endfor %}
 
