@@ -50,6 +50,8 @@ subitems:
         #     url: "{{site.cff.phase_3_outputs.page_url}}"
         #   - title: "{{site.cff.phase_4_outputs.title}}"
         #     url: "{{site.cff.phase_4_outputs.page_url}}"
+      - title: Training and outreach
+        url: /training_recommendations
       - title: Contribute
         url: /framework_contributions
   - title: Library of resources

@@ -20,6 +20,8 @@ The Framework, illustrated in below, comprises three components:
 3. [**The Workplan structure**]({{ site.cff.workplan.page_url | relative_url }})\
    Organises the whole FAIRification activity, including tasks to guide iterative design, implementation and assessment towards achieving the activity’s objectives. The workplan in practice has historically been useful as a communication and planning tool, enabling a quick overview of the tasks in progress, their state of completeness, and metrics and links to implementations that have been generated to date. 
 
+For guidance on making training and outreach materials interoperable, and on using the Framework in workshops, see [Training and outreach]({{ site.cff.training.page_url | relative_url }}).
+
 <div class="language-mermaid colouring">
 {% include cff_process_diagram.mmd.liquid cff_id="process"  %}
 </div>
