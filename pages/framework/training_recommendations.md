@@ -14,13 +14,13 @@ Interoperability work produces documentation, tutorials and course material that
 
 ## What we found
 
-In 2024 and 2025 the Interoperability Platform surveyed five use-case communities: Metabolomics, Modelling, Metagenomics, Lipidomics and Disease Maps. Most respondents share documentation and training material on GitHub, Zenodo or institutional repositories. These generalist platforms make it harder to follow interoperability practices, because they ask for little domain metadata.
+In 2024 and 2025, the Interoperability Platform surveyed five use-case communities: Metabolomics, Modelling, Metagenomics, Lipidomics, and Disease Maps. Most respondents share documentation and training material on GitHub, Zenodo or institutional repositories. These generalist platforms make it harder to follow interoperability practices, because they require little domain-specific metadata.
 
-We then listed the training materials available for Metabolomics. They ranged from custom websites to YouTube videos. Few carried metadata or even simple tags, it was often unclear when a material was last updated, and the tools and methods they referred to were rarely described in a structured way.
+We then listed the training materials available for Metabolomics. They ranged from custom websites to YouTube videos. Few carried metadata or even simple tags, it was often unclear when a material was last updated, and the tools and methods they referred to were rarely described in a structured way, for example by a bio.tools or FAIRsharing identifier.
 
 ## Resources to start from
 
-- **[TeSS](https://tess.elixir-europe.org)**, ELIXIR's training portal, registers materials and events. Each entry gets its own page that can be annotated with [EDAM](https://edamontology.org) terms and linked to FAIRsharing and bio.tools, even when the original material has little metadata. *Collections* group curated materials around a topic or use case, and *learning paths* order materials into a course-like sequence. If your materials carry [Bioschemas](https://bioschemas.org) markup and your site is registered as a content provider, TeSS [harvests them automatically](https://elixir-europe-training.github.io/ELIXIR-TrP-TeSS/chapters/chapter_04/) and keeps them up to date.
+- **[TeSS](https://tess.elixir-europe.org)**, ELIXIR's training portal, registers materials and events. Each entry gets its own page that can be annotated with [EDAM](https://edamontology.org) terms (Topic and Operation classes) and with FAIRsharing and bio.tools identifiers, even when the original material has little metadata. *Collections* group curated materials around a topic or use case, and *learning paths* order materials into a course-like sequence. If your materials carry [Bioschemas TrainingMaterial](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE) markup and your site is registered as a content provider, TeSS [harvests them automatically](https://elixir-europe-training.github.io/ELIXIR-TrP-TeSS/chapters/chapter_04/) and keeps them up to date.
 - **[RDMkit]({{ site.cff.rdmkit.page_url | relative_url }})** has pages for specific communities and tasks, each with TeSS queries for related training.
 - **[FAIR Cookbook]({{ site.cff.faircookbook.page_url | relative_url }})** has citable, technical recipes. One recipe shows how to [annotate training materials in TeSS](https://faircookbook.elixir-europe.org/content/recipes/findability/annotation-tess.html) with qualified references to the data they use.
 - **[FAIRsharing](https://fairsharing.org)** catalogues the standards, databases and policies a training material may depend on.
@@ -31,10 +31,10 @@ These resources link to each other. A [user-journey report](https://doi.org/10.5
 
 ## Recommendations
 
-1. **Describe materials with Bioschemas** and register them in TeSS, so they can be harvested and stay current.
+1. **Describe materials with the [Bioschemas TrainingMaterial profile](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE)** and register them in TeSS, so they can be harvested and stay current. Give each material a persistent identifier, such as a Zenodo DOI, and record it in the `identifier` property.
 2. **Annotate with ontology terms.** Use EDAM for topics and operations in TeSS, and stable identifiers for anything else you reference.
-3. **Link materials to what they use.** Point to the datasets, standards and databases ([FAIRsharing](https://fairsharing.org)), tools ([bio.tools](https://bio.tools)) and workflows ([WorkflowHub](https://workflowhub.eu)) a material relies on, instead of describing them in free text.
-4. **Record versions and update dates**, and mark materials that are obsolete.
+3. **Link materials to what they use.** Point to the datasets, standards and databases ([FAIRsharing](https://fairsharing.org)), tools ([bio.tools](https://bio.tools)) and workflows ([WorkflowHub](https://workflowhub.eu)) a material relies on, by their identifiers instead of describing them in free text. In your Bioschemas markup, list them under `mentions`. TeSS does not harvest these links yet, so add the FAIRsharing and bio.tools identifiers to the TeSS entry by hand.
+4. **Record versions and update dates**, and retire obsolete materials in TeSS. TeSS stores the version as plain text and its activity log has little detail, so keep the version history where the material lives, for example as Git tags or Zenodo versions.
 5. **Group related materials** into a TeSS collection for a use case, or a learning path when the order matters.
 6. **Contribute back.** If a practice you teach is missing from RDMkit or the FAIR Cookbook, propose a page or recipe there.
 
